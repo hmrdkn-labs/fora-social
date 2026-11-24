@@ -26,7 +26,7 @@ function topics(c: Ctx, heading: string): string {
   return c.s.topics.length === 0 ? "" : `${heading}\n${c.s.topics.map((t) => `• ${t}`).join("\n")}`;
 }
 
-function recapBody(c: Ctx): string {
+function recapBody(c: Ctx): string[] {
   const r = c.s.recap!;
   const points = r.points.map((p, i) => `${i + 1}. ${p.title}${p.body ? `: ${p.body}` : ""}`).join("\n");
   const links = r.links?.length ? `Bacaan lanjutan:\n${r.links.map((l) => `• ${l.label}: ${l.url}`).join("\n")}` : "";
