@@ -57,7 +57,8 @@ host:                             # required
   role: Platform Engineer         # optional
   handle: rina_contoh             # optional. Without "@" and without spaces
 speakers: []                      # optional, default []. Same fields as host
-description: Sesi pertama Cloud Native 101. Kita kenalan dengan Kubernetes dari nol.   # required. At most 280 characters
+note: Dulu saya baru paham Pod setelah sengaja mematikan satu. # optional. One or two sentences in your voice; captions lead with it
+description: Sesi pertama Cloud Native 101. Kita mulai dari kenapa container butuh orkestrasi.   # required. At most 280 characters
 topics:                           # optional. 0 to 6 short items
   - Pod, Deployment, dan Service
 discord: https://discord.gg/rSepJu7Wb   # optional. Overrides the invite in community.yaml
@@ -94,6 +95,10 @@ The run carries on with the other images, lists every failure and exits with sta
 
 Captions have limits too. An X post over 280 weighted characters fails with `X post cannot fit in 280 characters`. A very long title can trigger it, because the X recap post quotes the title; shorten the title in that case.
 
+## Voice
+
+The copy should read like the organisers wrote it, not a model. [docs/voice.md](docs/voice.md) has the rules, the ban list and before/after rewrites. `pnpm check` lints every caption, image text and sample session against it. The optional `note:` field in a session file is a sentence or two in your own words; every caption leads with it.
+
 ## Add a new SIG
 
 A SIG needs its own colour, a wordmark and a `sigs/<id>.yaml` file. [brand/README.md](brand/README.md#adding-a-new-sig) has the full steps. In short:
@@ -115,7 +120,7 @@ A SIG needs its own colour, a wordmark and a `sigs/<id>.yaml` file. [brand/READM
 ├── templates/        one TypeScript template per post type, plus base.css
 ├── src/              CLI, YAML loader and schema, renderer, gallery, and caption builders (src/captions/)
 ├── test/             tests and fixtures for the loader, overflow checks and renderer
-├── docs/             the project brief
+├── docs/             the project brief and the voice guide (voice.md)
 ├── briefs/           build briefs for the workers
 ├── .github/workflows/ CI (render.yml)
 └── out/              rendered output (gitignored)
