@@ -43,3 +43,22 @@ Commit on `05-readme`, push the branch. Do not merge to `main`.
 ## Report
 
 Fill in below: model, commits, commands you ran. Reply to the orchestrator in at most 10 lines.
+
+### Result (2026-11-24)
+
+- **Model:** anthropic/claude-haiku-5-5, thinking xhigh.
+- **Commits:** `9fb4cb1` docs(readme): root README for the kit. Pushed to `05-readme`; not merged.
+- **Checks run in the worktree:**
+  - `pnpm install --frozen-lockfile` (CI's form; the README documents `pnpm install`), `pnpm exec playwright install chromium` (Chromium already cached, exit 0).
+  - `pnpm check`: tsc clean, 57 of 57 tests pass.
+  - `pnpm render examples/sessions/sigcn-kubernetes-pemula.yaml`: 55 outputs, 0 failures. Sizes checked with `sips`: ig-feed 1080×1350, x 1600×900, li-link 1200×627, ig-story 1080×1920. `li-doc` PDF written.
+  - The README's YAML block saved as a session and rendered: 55 outputs, 0 failures. The same file without `recap`: 44 outputs, no recap files.
+  - `pnpm examples`: 220 writes, 0 failures, gallery regenerated. The output was removed afterwards; nothing from it is committed.
+  - Failure probe (a deliberately long title): FAILED lines name session, post type, format and element; exit 1; other images still written. The same title also trips the X caption limit, because the X recap post quotes the title.
+  - Loader probe: a bad date, a bad time and an unknown key were reported together; exit 1.
+  - Not checked: how GitHub renders the README's tables and `<details>` blocks.
+- **Open questions for the orchestrator:**
+  1. No GUST licence file is in the repo: the ∫ outline is embedded, the font is not shipped. The README links the official text. Add a licence file under `brand/` (01's files), or keep the link?
+  2. `examples/README.md` is not on this branch yet. The README's gallery link resolves once 04 or 05 commits it.
+  3. The licence for `brand/logos/*.svg` is not stated anywhere. The README says only "Code is MIT".
+  4. Templates here are still 02's placeholders. Re-check the README's text-fit notes after 04 merges.
