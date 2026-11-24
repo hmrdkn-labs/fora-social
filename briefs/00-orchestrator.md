@@ -65,3 +65,7 @@ brief relies on. Workers: read `~/workspace/AGENTS.md`, `docs/BRIEF.md` and this
 ## Status
 
 - 2026-11-24: plan written; 01, 02, 03 started.
+
+- 2026-11-24: 03, 01, 02, 05 and 04 merged to `main` in that order. Orchestrator reviewed the
+  contact sheets of all four samples and individual images (feed, story, X, LinkedIn link,
+  doc slides); no overflow or clipping found. Open questions sent to the person.
