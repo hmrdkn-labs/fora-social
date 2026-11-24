@@ -5,14 +5,13 @@ name: Cloud Native
 color: "#0086FF"
 colorInk: "#0B0C10"
 lockup: brand/logos/fora-x-sigcn.svg
-tagline: Ngobrol santai soal Kubernetes dan ekosistem cloud native.
+tagline: Ngobrol soal Kubernetes dan cloud native di voice channel.
 description: >-
-  SIG CN adalah special interest group FORA untuk topik cloud native: container,
-  Kubernetes, GitOps, observability, dan seterusnya. Sesi SIG CN berupa talk santai
-  di voice channel Discord, bukan webinar. Siapa pun boleh join dan ikut bicara,
-  dari yang baru mulai sampai yang sudah di production.
+  SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema,
+  misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang
+  cerita, yang lain nyela dan nanya.
 hashtags:
   - SIGCN
   - CloudNative
   - Kubernetes
-  - DevOps
+  - DevOpsIndonesia

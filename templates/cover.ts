@@ -69,7 +69,7 @@ function single(ctx: TemplateContext): string {
   ${block(ctx, isWide ? SOLO_WIDTH : TALL_WIDTH, isWide ? WIDE_SIZES : TALL_SIZES, room)}
   ${wave(ctx.session.id, isWide ? 72 : 52)}
 </main>
-<p class="whisper" data-fit><span>Voice channel · Discord · siapa pun boleh ikut ngobrol</span><b>${e(url)}</b></p>`,
+<p class="whisper" data-fit><span>Voice channel · Discord · dengerin aja boleh</span><b>${e(url)}</b></p>`,
     "post--cover",
   );
 }

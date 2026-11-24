@@ -38,8 +38,8 @@ const WIDE_SIZES = [46, 40, 36, 32, 28];
 const NAME_SIZES = [176, 152, 128, 108, 88, 72];
 const NEXT_SIZES = [88, 76, 66, 56, 48, 42];
 
-const WHO = "Siapa pun yang penasaran, dari yang baru mulai sampai praktisi";
-const HOW = "Talk santai lewat suara di voice channel, bukan webinar";
+const WHO = "Yang penasaran. Pemula juga boleh nanya";
+const HOW = "Ngobrol lewat suara di voice channel Discord";
 
 /** The nearest session, on the accent colour. `width` is the strip's inner width. */
 function nextSession(ctx: TemplateContext, width: number, titleSize: number, withTitle = true): Block {
@@ -132,7 +132,7 @@ function slides(ctx: TemplateContext): string[] {
 </main>`,
       `<main class="main" data-fit>
   <div class="lede">
-    <p class="kicker">Apa itu ${e(sig.short)}?</p>
+    <p class="kicker">Soal ${e(sig.short)}</p>
     ${description(ctx, TALL_WIDTH, room - 50 - facts.height - GAP - 8, [48, 44, 40, 36, 32, 28]).html}
   </div>
   ${facts.html}

@@ -2,7 +2,7 @@ sig: sig-cn
 series: Cloud Native 101
 theme: Observability
 title: "Observability: Logs, Metrics, Traces"
-subtitle: Tiga sinyal untuk memahami sistem yang sedang jalan
+subtitle: Aplikasinya lambat, dan ke mana kita cari jawabannya
 date: "2027-01-14"
 time: "20:00"
 durationMinutes: 90
@@ -13,14 +13,14 @@ host:
 speakers:
   - name: Eko (contoh)
     role: SRE
-description: Aplikasi jalan, tapi kenapa lambat? Kita kenalan dengan tiga sinyal observability, kapan memakai masing-masing, dan cara mulai tanpa harus memasang semuanya sekaligus.
+description: Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dijawab logs, metrics, dan traces, dan cara mulai tanpa pasang semuanya sekaligus.
 topics:
   - Monitoring vs observability
   - Logs terstruktur
   - Metrics dan Prometheus
   - Distributed tracing
-  - OpenTelemetry sebagai standar
-  - Alert yang tidak bikin lelah
+  - OpenTelemetry dan OTLP
+  - Alert yang nggak bikin capek
 hashtags:
   - OpenTelemetry
   - Prometheus
@@ -28,15 +28,15 @@ recap:
   attendees: 16
   points:
     - title: Logs menjawab apa yang terjadi
-      body: Pakai format terstruktur seperti JSON supaya mudah dicari dan difilter.
+      body: Pakai format terstruktur seperti JSON supaya gampang dicari dan difilter.
     - title: Metrics menjawab seberapa sering dan seberapa lama
-      body: Angka agregat yang murah disimpan dan cocok untuk dashboard dan alert.
+      body: Angka agregat itu murah disimpan, dan cocok untuk dashboard dan alert.
     - title: Traces menjawab di mana waktunya habis
-      body: Satu request diikuti lintas service, sehingga bagian yang lambat terlihat jelas.
+      body: Satu request diikuti lintas service, jadi bagian yang lambat kelihatan.
     - title: OpenTelemetry memisahkan instrumentasi dari backend
-      body: Kode diinstrumentasi sekali, lalu data bisa dikirim ke backend mana pun yang mendukung OTLP.
+      body: Kode diinstrumentasi sekali, datanya bisa dikirim ke backend apa saja yang mendukung OTLP.
     - title: Alert pada gejala yang dirasakan pengguna
-      body: Contohnya error rate dan latency, bukan CPU yang kebetulan tinggi sebentar.
+      body: Contohnya error rate dan latency. CPU tinggi sebentar belum tentu masalah.
   links:
     - label: Dokumentasi OpenTelemetry
       url: https://opentelemetry.io/docs/

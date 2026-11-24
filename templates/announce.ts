@@ -60,7 +60,7 @@ function people(ctx: TemplateContext): Block {
   const { host, speakers } = ctx.session;
   const hostHeight = personHeight(host, RIGHT);
   if (speakers.length === 0) {
-    const format = "Diskusi terbuka, tanpa pembicara tamu";
+    const format = "Diskusi terbuka, tanpa tamu";
     return {
       html: fact("Host", person(host)) + fact("Format", format),
       height: factHeight(Math.max(personHeight(host, LEFT), textHeight(format, 34, RIGHT, 1.18))),
@@ -128,7 +128,7 @@ function cast(ctx: TemplateContext): string {
   const hostCard = { ...host, role: ["Host", host.role].filter(Boolean).join(" · ") };
   const count = speakers.length + 1;
   const heading =
-    speakers.length > 0 ? "Ngobrol langsung dengan yang menjalaninya." : "Diskusi terbuka: bawa cerita dan pertanyaanmu.";
+    speakers.length > 0 ? "Yang bakal cerita di depan." : "Bawa cerita dan pertanyaanmu.";
   const size = count <= 3 ? "person--card" : "person--mid";
   const cards =
     count <= 6
@@ -148,7 +148,7 @@ function slides(ctx: TemplateContext): string[] {
   const { session } = ctx;
   const date = when(ctx);
   const place = `Voice channel ${session.voiceChannel} · Discord`;
-  const open = "Siapa pun boleh ikut ngobrol";
+  const open = "Dengerin aja boleh";
   const placeHeight = factHeight(Math.max(textHeight(place, 34, LEFT, 1.18), textHeight(open, 34, RIGHT, 1.18)));
   const room = tallRoom(ctx, "paper", FOOT) - date.height - 28 - placeHeight - 2 * GAP - WAVE_MIN;
   return deck(

@@ -6,13 +6,11 @@ name: Forum Rangkai
 color: "#F2A03D"
 colorInk: "#0B0C10"
 lockup: brand/logos/fora-mark.svg
-tagline: Komunitas teknologi Indonesia untuk belajar dan ngobrol bareng.
+tagline: Komunitas tech kecil yang ngobrol lewat suara di Discord.
 description: >-
-  FORA (Forum Rangkai) adalah komunitas tech kecil berbahasa Indonesia di Discord.
-  Kami mengadakan talk santai di voice channel, dikelompokkan dalam SIG (special
-  interest group) sesuai topik. Semua orang boleh join, bertanya, dan ikut bicara,
-  tanpa perlu jadi pembicara.
+  FORA (Forum Rangkai) itu komunitas tech kecil berbahasa Indonesia di Discord.
+  Kami ngobrol di voice channel. Topiknya dibagi ke beberapa SIG (special interest
+  group), dan tiap SIG pegang satu bidang.
 hashtags:
   - FORA
-  - ForumRangkai
   - KomunitasTech

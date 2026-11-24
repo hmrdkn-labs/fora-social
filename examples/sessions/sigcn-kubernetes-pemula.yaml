@@ -2,7 +2,7 @@ sig: sig-cn
 series: Cloud Native 101
 theme: Kubernetes
 title: Kubernetes untuk Pemula
-subtitle: Dari container ke cluster, tanpa istilah yang bikin pusing
+subtitle: Satu cluster lokal, dari nol
 date: "2026-12-12"
 time: "19:30"
 durationMinutes: 90
@@ -18,12 +18,13 @@ speakers:
   - name: Sari (contoh)
     role: Backend Developer
     handle: sari_contoh
-description: Sesi pertama Cloud Native 101. Kita kenalan dengan Kubernetes dari nol, mulai dari kenapa container butuh orkestrasi sampai deploy aplikasi pertama ke cluster lokal.
+note: Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
+description: Sesi pertama Cloud Native 101. Kita mulai dari kenapa container butuh orkestrasi, lalu deploy aplikasi pertama ke cluster lokal pakai minikube.
 topics:
-  - Container vs Kubernetes, kenapa butuh orkestrasi
+  - Kenapa container butuh orkestrasi
   - Pod, Deployment, dan Service
-  - Deploy aplikasi pertama di cluster lokal
-  - Debug dasar dengan kubectl
+  - Deploy aplikasi pertama di minikube
+  - Debug dasar pakai kubectl describe dan logs
 hashtags:
   - Container
   - DevOps
@@ -31,13 +32,13 @@ recap:
   attendees: 14
   points:
     - title: Pod adalah unit terkecil yang dijadwalkan
-      body: Satu Pod bisa berisi satu atau beberapa container yang berbagi network dan storage.
+      body: Satu Pod bisa berisi beberapa container yang berbagi network dan storage.
     - title: Deployment menjaga jumlah replika
-      body: Kalau sebuah Pod mati, Deployment membuat penggantinya supaya jumlah replika sesuai yang diminta.
+      body: Kalau satu Pod mati, Deployment langsung membuat gantinya sampai jumlah replika sesuai.
     - title: Service memberi alamat yang stabil
-      body: IP Pod berubah setiap kali dibuat ulang, jadi akses aplikasi lewat Service, bukan lewat IP Pod.
+      body: IP Pod berubah tiap kali dibuat ulang, jadi akses aplikasi lewat Service. Jangan pakai IP Pod langsung.
     - title: Mulai debug dari kubectl describe dan logs
-      body: Event di describe dan output logs biasanya sudah cukup untuk menemukan penyebab Pod gagal jalan.
+      body: Event di describe dan output logs biasanya sudah cukup untuk tahu kenapa Pod gagal jalan.
   links:
     - label: Dokumentasi Kubernetes
       url: https://kubernetes.io/docs/home/
