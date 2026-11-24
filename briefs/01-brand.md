@@ -68,3 +68,18 @@ Look at every specimen image yourself before you finish. Commit in small logical
 
 Fill in below: model, commits, font identification with evidence, open questions for the
 person (colours, accent). Reply to the orchestrator in at most 20 lines.
+
+### Result (2026-11-24)
+
+- **Model:** anthropic/claude-sonnet-5-5, thinking medium.
+- **Commits:** on `01-brand`: fonts (OFL), outlined SVG logos + specimens, tokens + sigs + README.
+- **SIG CN = Montserrat:** "SIG" Regular (I stem 74/1000 em; Light 51, Medium 100), "CN" and
+  "CLOUD NATIVE" Bold (N width 641 vs Bold 642, C 668 vs 668).
+- **FORA = Libertinus Serif** (closest open match; IoU 0.72 vs STIX Two 0.64, Caladea 0.61, Latin
+  Modern 0.58). Original is probably Cambria + Cambria Math (inference). Integral = Latin Modern
+  Math `integral.v1` outline (GUST licence, embedded as path only, font not shipped); bbox aspect
+  0.40 equals the PNG's.
+- **Sampled blue:** `#0086FF`.
+- **Open questions:** approve FORA accent `#F2A03D` (proposal); `Sig.lockup` for sig-cn points to
+  `fora-x-sigcn.svg` (white variant has the `-white` suffix; `sigcn.svg` is the wordmark alone);
+  white text on the SIG blue is only 3.59:1, so `colorInk` is ink `#0B0C10` (5.45:1).
