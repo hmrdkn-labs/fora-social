@@ -68,6 +68,11 @@ export interface Session {
   speakers: Person[];
   /** Short description, at most 280 characters. */
   description: string;
+  /**
+   * Optional, one or two sentences in the host's own words (why this topic, what went wrong
+   * for them once, what they want to hear from others). Captions lead with it when present.
+   */
+  note?: string;
   /** What will be discussed, 0 to 6 short items. */
   topics: string[];
   /** Overrides Community.discord. */
