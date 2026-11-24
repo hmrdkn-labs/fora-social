@@ -891,7 +891,7 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 **Instagram**
 
 ```text
-SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain nyela dan nanya.
+SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain ikut nimbrung atau nanya.
 
 Yang terdekat "GitOps dengan Argo CD", Sab, 19 Des jam 19.30 WIB. Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
 
@@ -1216,7 +1216,7 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 **Instagram**
 
 ```text
-SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain nyela dan nanya.
+SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain ikut nimbrung atau nanya.
 
 Yang terdekat "Observability: Logs, Metrics, Traces", Kam, 14 Jan jam 20.00 WIB. Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
@@ -1236,7 +1236,7 @@ https://discord.gg/rSepJu7Wb
 **LinkedIn**
 
 ```text
-SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain nyela dan nanya.
+SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain ikut nimbrung atau nanya.
 
 Sesi terdekat soal "Observability: Logs, Metrics, Traces", Kamis, 14 Januari 2027, 20.00–21.30 WIB.
 

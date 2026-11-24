@@ -76,4 +76,4 @@ Hits: emoji opening a line, "bukan webinar", a rhetorical question, label-colon 
 
 **After**
 
-> SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain nyela dan nanya.
+> SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain ikut nimbrung atau nanya.
