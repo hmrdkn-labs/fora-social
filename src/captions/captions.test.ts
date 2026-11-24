@@ -14,7 +14,7 @@ const community: Community = {
 };
 
 const sigcn: Sig = {
-  id: "sigcn",
+  id: "sig-cn",
   short: "SIG CN",
   code: "CN",
   name: "Cloud Native",
@@ -42,7 +42,7 @@ const foraSig: Sig = {
 
 const base: Session = {
   id: "x",
-  sig: "sigcn",
+  sig: "sig-cn",
   theme: "Kubernetes",
   title: "Kubernetes untuk Pemula",
   date: "2026-12-12",

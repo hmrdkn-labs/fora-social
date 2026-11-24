@@ -1,4 +1,4 @@
-sig: sigcn
+sig: sig-cn
 series: Cloud Native 101
 theme: GitOps
 title: "GitOps dengan Argo CD: dari commit di Git sampai deploy"

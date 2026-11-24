@@ -149,7 +149,7 @@ Gabung lewat undangan Discord: https://discord.gg/rSepJu7Wb
   - `speakerLine(s, withHandles?)` has an optional second parameter; handles render as "Nama @handle".
   - Voice channels are written without "#" ("voice channel sig-cn-voice"), because "#sig" would become a hashtag on IG/X.
   - X threads only when the single post does not fit; recap is always a thread of 3 or 4 posts (titles only, no bodies).
-  - Samples have no `id` key (the loader adds it from the file name). Sample sessions reference `sig: sigcn`, which needs `sigs/sigcn.yaml` from brief 01.
+  - Samples have no `id` key (the loader adds it from the file name). Sample sessions reference `sig: sig-cn`, which needs `sigs/sig-cn.yaml` from brief 01.
 - **Open questions for the person:**
   1. FORA social handles (Instagram, X, LinkedIn): left out of `community.yaml`.
   2. Voice channel names: samples use `sig-cn-voice` and `fora-voice`; confirm the real ones.
