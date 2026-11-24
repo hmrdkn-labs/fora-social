@@ -78,3 +78,80 @@ on `03-copy`, push the branch. Do not merge to `main`.
 
 Fill in below: model, commits, check results, one full sample caption per platform pasted
 here, open questions for the person. Reply to the orchestrator in at most 20 lines.
+
+- **Model:** anthropic/claude-sonnet-5-5, thinking medium.
+- **Checks:** `node --test src/` passes (31 tests). All four samples x five post types x three platforms printed and read.
+- **Sample, kubernetes-pemula / announce / Instagram:**
+
+```
+🎙 Kubernetes untuk Pemula
+Sesi SIG CN × FORA
+
+Sesi pertama Cloud Native 101. Kita kenalan dengan Kubernetes dari nol, mulai dari kenapa container butuh orkestrasi sampai deploy aplikasi pertama ke cluster lokal.
+
+📅 Sabtu, 12 Desember 2026, 19.30–21.00 WIB
+Di voice channel sig-cn-voice Discord FORA. Ngobrol langsung lewat suara, bukan webinar.
+Bersama Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh.
+
+Yang kita bahas:
+• Container vs Kubernetes, kenapa butuh orkestrasi
+• Pod, Deployment, dan Service
+• Deploy aplikasi pertama di cluster lokal
+• Debug dasar dengan kubectl
+
+Cara ikut:
+1. Buka Discord FORA lewat link di bio, atau langsung ke discord.gg/rSepJu7Wb
+2. Masuk ke voice channel sig-cn-voice
+3. Siapa pun boleh ikut ngobrol dan bertanya, tinggal masuk.
+
+💬 Simpan postingan ini dan ajak teman yang mungkin tertarik.
+
+#FORA #KomunitasTech #SIGCN #CloudNative #Container #DevOps #Kubernetes
+```
+
+- **X:**
+
+```
+[193] 🎙 Kubernetes untuk Pemula
+Sab, 12 Des, 19.30–21.00 WIB
+Ngobrol santai di voice channel sig-cn-voice Discord FORA, siapa pun boleh ikut bicara dan bertanya.
+https://discord.gg/rSepJu7Wb
+#SIGCN #FORA
+```
+
+- **LinkedIn:**
+
+```
+Kubernetes untuk Pemula
+Sesi SIG CN × FORA
+
+Sesi pertama Cloud Native 101. Kita kenalan dengan Kubernetes dari nol, mulai dari kenapa container butuh orkestrasi sampai deploy aplikasi pertama ke cluster lokal.
+
+Sabtu, 12 Desember 2026, 19.30–21.00 WIB, bersama Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh.
+
+Yang akan kita bahas:
+• Container vs Kubernetes, kenapa butuh orkestrasi
+• Pod, Deployment, dan Service
+• Deploy aplikasi pertama di cluster lokal
+• Debug dasar dengan kubectl
+
+Cocok untuk siapa pun yang tertarik pada topik ini, dari yang baru mulai sampai yang sudah berpengalaman.
+
+Formatnya talk santai di voice channel sig-cn-voice Discord FORA, bukan webinar. Tidak perlu daftar: cukup masuk, dan siapa pun boleh bicara serta bertanya langsung.
+
+Gabung lewat undangan Discord: https://discord.gg/rSepJu7Wb
+
+#SIGCN #CloudNative #Kubernetes #Container #DevOps
+```
+
+- **Notes:**
+  - The brief's example "Sabtu, 6 Desember 2026" is a Sunday; `formatDate` is correct, tests use real dates.
+  - `speakerLine(s, withHandles?)` has an optional second parameter; handles render as "Nama @handle".
+  - Voice channels are written without "#" ("voice channel sig-cn-voice"), because "#sig" would become a hashtag on IG/X.
+  - X threads only when the single post does not fit; recap is always a thread of 3 or 4 posts (titles only, no bodies).
+  - Samples have no `id` key (the loader adds it from the file name). Sample sessions reference `sig: sig-cn`, which needs `sigs/sig-cn.yaml` from brief 01.
+- **Open questions for the person:**
+  1. FORA social handles (Instagram, X, LinkedIn): left out of `community.yaml`.
+  2. Voice channel names: samples use `sig-cn-voice` and `fora-voice`; confirm the real ones.
+  3. Hashtags `FORA`, `KomunitasTech` are my choice; confirm.
+  4. "Tidak perlu daftar" assumes no registration; confirm.
