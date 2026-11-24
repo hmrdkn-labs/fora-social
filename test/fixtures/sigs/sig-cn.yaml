@@ -1,0 +1,12 @@
+id: sig-cn
+short: SIG CN
+code: CN
+name: Cloud Native
+color: "#0A84FF"
+colorInk: "#FFFFFF"
+lockup: brand/logos/fora-x-sigcn.svg
+tagline: Ngobrol santai soal Kubernetes dan cloud native.
+description: SIG CN adalah kelompok belajar cloud native FORA. Sesinya berupa obrolan santai di voice channel Discord; siapa pun boleh ikut, bertanya, atau bicara.
+hashtags:
+  - cloudnative
+  - kubernetes

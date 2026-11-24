@@ -1,0 +1,26 @@
+{
+  "name": "fora-social",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Render on-brand social posts for FORA sessions.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=26"
+  },
+  "packageManager": "pnpm@12.18.0",
+  "scripts": {
+    "render": "node src/cli.ts render",
+    "examples": "node src/cli.ts examples",
+    "check": "tsc --noEmit && node --test \"test/**/*.test.ts\" \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "playwright": "^1.65.1",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}
