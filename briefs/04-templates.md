@@ -71,3 +71,85 @@ branch. Do not merge to `main`.
 Fill in below: model, commits, design summary (layout per type, how text sizing works), the
 images you looked at and what you fixed, open questions. Reply to the orchestrator in at most
 20 lines.
+
+### Result (2026-11-24)
+
+- **Model:** anthropic/claude-fable-5-2.
+- **Commits** on `04-templates` (pushed, not merged):
+  - 43c4caf feat(templates): shared visual system, type fitting and layout parts
+  - 52c7d1d feat(templates): designs for announce, reminder, recap, cover and sig-intro
+  - 1f425ea docs(examples): render the gallery for the four sample sessions
+  - docs(brief): record 04-templates result (this file)
+- **Checks:** `pnpm check` passes (tsc clean, 57/57 tests). `pnpm examples` exits 0: 240 PNG and 20 PDF, no
+  failures, 27 s. The PNG total 27.8 MB (119 KB on average, 197 KB at most); `examples/` is 33 MB.
+  `src/render.ts` and `src/types.ts` are unchanged.
+
+**Design**
+
+- **One canvas.** Every post is laid out 1080 units wide and scaled to the format's pixels
+  (`transform: scale`), so X and LinkedIn link share one landscape layout and type follows `width / 1080`.
+  Three layouts: `tall` (feed, carousel, doc), `story` (the tall layout between the top 250 and bottom 340 px,
+  with a faint wave in the bottom zone), `wide` (main column plus an ink side panel; content is at least 60
+  units, 66 px on LinkedIn and 89 px on X, from every edge).
+- **Each type has its own surface:** announce white, reminder the SIG's accent colour, recap light grey,
+  cover ink, SIG intro white with the lockup as hero. The accent is only a fill, a graphic, or text on ink,
+  because amber and blue both fail as text on white (brand/README.md).
+- **Motifs:** a voice wave whose bars are seeded by the session id (same wave on every post of a session),
+  the mark's ∫ as a faint figure on covers, and a ring with the person's initial that echoes the FORA seal.
+- **Join block** on every post: "Voice channel · Discord", the channel, "siapa pun boleh ikut ngobrol", the
+  short invite URL. A bar closes tall posts, a column closes the side panel of wide ones; the cover carries it
+  as one line; every deck ends with a three-step join slide.
+- **Layout per type**
+  - announce: kicker (series · theme), title, serif subtitle, wave, ruled grid of date, time, speakers, host.
+    Deck: cover, "what we discuss" (description and topics), people, join.
+  - reminder: "HARI INI" over the outlined start time, wave, title; the story says "LIVE SEKARANG". Deck:
+    state, topics, join (worded for "now").
+  - recap: serif "Recap", title, numbered takeaway titles, thanks. Deck: cover, one takeaway per slide with a
+    serif numeral and a progress bar, closing slide with thanks, up to three links and the join block. Wide:
+    takeaways in the main column, attendee count in the side panel.
+  - cover: series, the theme in the largest type that fits, the title as a serif line, a tall wave.
+  - sig-intro: tagline, description, "for whom" and "format", the nearest session on the accent colour.
+- **Text sizing** (`templates/fit.ts`, `templates/parts.ts`): widths are estimated in TypeScript from string
+  length (per-character classes; against Chromium the estimate ran at most 3% narrow on the strings I
+  measured, and lines keep 5% spare). Each layout budgets its height: fixed
+  pieces report their height, the title takes the largest step that fits what is left, lists step down and
+  then end in "+N lagi di caption", and optional pieces (subtitle, speaker line, wave, links) drop in a fixed
+  order. Nothing is measured in the browser; `data-fit` on every `<main>`, side panel and join block is the
+  backstop.
+- **Shared pieces** are all in `templates/parts.ts`; post types only arrange them.
+
+**What I looked at and fixed**
+
+- Contact sheets from `.scratch/sheet.ts` (not committed): per session, one overview, one sheet of the four
+  single images and one of the carousel per post type, and one of every li-doc page (48 sheets). I read the
+  large sheets while iterating, and after the last change the four overviews and the four li-doc sheets,
+  which together show all 240 PNG; plus several images at full size and one PDF page rasterised.
+- Fixed on the way: padding of the tag and URL chip lost to a reset rule; the channel name breaking at its
+  hyphens; "Argo / CD:" split across lines (short tokens now stay with their neighbour); a dangling "·" in
+  person lines; widows in list items and fact values; empty middles on deck slides (larger type, a third
+  block, a progress bar); the ∫ running into the wave; a thin outline on the story's start time; lists cut
+  short by over-cautious estimates; a flat wave in the side panel; "Forum Rangkai" shown twice on the FORA cover.
+- Stress data, rendered with `pnpm render` and not committed: a 91-character title with four speakers, a
+  20-character channel, a custom invite URL, six long topics and eight recap points renders in every format;
+  so does a session with a two-letter title, no description, no topics and one recap point.
+
+**Limits**
+
+- The budgets are estimates. Data far beyond the stress case (for example a 120-character title together with
+  a 60-character invite URL) still fails the build with the renderer's message instead of clipping.
+- The smallest text in wide formats is 18 to 20 units (20 px on LinkedIn at the least): the "Sesi terdekat"
+  label, the side panel's join label, and long recap lists. brand/README.md asks for 24 units; tall formats
+  keep to it.
+- `templates/base.css` keeps a small `.card` rule only because `test/render.test.ts` lays its fixtures out
+  with it.
+
+**Open questions**
+
+1. Reminder wording: feed, X, LinkedIn and decks say "HARI INI" plus the start time; only the story says "LIVE
+   SEKARANG". Should there be a "live now" variant of the other formats too?
+2. The `-white` lockup is found by file name (`x.svg` → `x-white.svg`), since `Sig` has one `lockup` field. Is
+   that convention acceptable, or should `Sig` carry both paths?
+3. FORA's amber accent is still a proposal (brief 01); the FORA reminder is a full amber surface.
+4. `Community.handles` is empty, so slide footers show "SIG CN × FORA" or "Forum Rangkai"; a handle appears
+   there once it is set.
+5. `examples/` adds 33 MB to the repo and changes on every re-render. Keep all 240 images, or commit a subset?

@@ -79,35 +79,1096 @@ body {
   background: var(--color-paper);
 }
 
+/* A bare full-canvas card, without the post shell: the renderer's tests (test/render.test.ts)
+   lay their fixtures out with it. Posts use .post below. */
 .card {
   position: absolute;
   inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 32px;
   padding: 96px;
 }
 
-.kicker {
-  margin: 0;
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: var(--color-sigcn-text);
+/* ── Canvas ──────────────────────────────────────────────────────────────────────────────
+   Every post is laid out 1080 units wide and scaled to the format's pixels (--k, --h and the
+   SIG colours come from templates/parts.ts). All lengths below are in those units. */
+.post {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1080px;
+  height: var(--h);
+  transform: scale(var(--k));
+  transform-origin: 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding: 72px;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.4;
+  overflow-wrap: break-word;
 }
 
-.title {
+:where(.post) :where(p, h1, h2, ol, ul) {
   margin: 0;
-  font-size: 84px;
-  line-height: 1.05;
+  padding: 0;
+  list-style: none;
+}
+
+.post > :not(.integral, .wave--zone) {
+  position: relative;
+}
+
+/* Story: key content stays out of the top 250 and the bottom 340. */
+.post--story {
+  padding: 266px 72px 356px;
+}
+
+/* Wide: main column and side panel; content keeps at least 60 units (≥ 64 px) from the edges. */
+.post--wide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 400px;
+  grid-template-rows: minmax(0, 1fr);
+  gap: 0;
+  padding: 0;
+}
+
+.post--wide.post--cover {
+  display: flex;
+  gap: 22px;
+  padding: 60px;
+}
+
+.wide__main {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+  min-height: 0;
+  padding: 60px 40px 60px 60px;
+}
+
+.side {
+  --fg: var(--color-paper);
+  --soft: var(--color-grey-300);
+  --muted: var(--color-grey-300);
+  --wave: var(--accent);
+  --join-bg: transparent;
+  --join-fg: var(--color-paper);
+  --join-accent: var(--accent);
+  --join-chip-bg: var(--accent);
+  --join-chip-fg: var(--accent-ink);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  min-width: 0;
+  min-height: 0;
+  padding: 60px 60px 60px 36px;
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+/* ── Themes ──────────────────────────────────────────────────────────────────────────────
+   The accent is only ever a fill, a graphic, or text on ink: as text on a light surface it
+   fails contrast for some SIG colours (brand/README.md). */
+.t-paper,
+.t-mist {
+  --bg: var(--color-paper);
+  --fg: var(--color-ink);
+  --soft: var(--color-grey-700);
+  --muted: var(--color-grey-500);
+  --rule: var(--color-grey-100);
+  --mark: var(--accent);
+  --wave: var(--accent);
+  --chip-bg: var(--accent);
+  --chip-fg: var(--accent-ink);
+  --join-bg: var(--color-ink);
+  --join-fg: var(--color-paper);
+  --join-accent: var(--accent);
+  --join-chip-bg: var(--accent);
+  --join-chip-fg: var(--accent-ink);
+}
+
+.t-mist {
+  --bg: var(--color-grey-50);
+  --rule: var(--color-grey-300);
+}
+
+.t-ink {
+  --bg: var(--color-ink);
+  --fg: var(--color-paper);
+  --soft: var(--color-grey-300);
+  --muted: var(--color-grey-300);
+  --rule: var(--color-grey-700);
+  --mark: var(--accent);
+  --wave: var(--accent);
+  --chip-bg: var(--accent);
+  --chip-fg: var(--accent-ink);
+  --join-bg: var(--accent);
+  --join-fg: var(--accent-ink);
+  --join-accent: var(--accent-ink);
+  --join-chip-bg: var(--color-ink);
+  --join-chip-fg: var(--color-paper);
+}
+
+.t-accent {
+  --bg: var(--accent);
+  --fg: var(--accent-ink);
+  --soft: var(--accent-ink);
+  --muted: var(--accent-ink);
+  --rule: color-mix(in srgb, var(--accent-ink) 35%, transparent);
+  --mark: var(--accent-ink);
+  --wave: var(--accent-ink);
+  --chip-bg: var(--color-ink);
+  --chip-fg: var(--color-paper);
+  --join-bg: var(--color-ink);
+  --join-fg: var(--color-paper);
+  --join-accent: var(--accent);
+  --join-chip-bg: var(--accent);
+  --join-chip-fg: var(--accent-ink);
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────────────────────── */
+.head {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  height: 116px;
+}
+
+.head--hero {
+  height: 152px;
+}
+
+/* The tag as a word: the recap's serif "Recap" in the header of wide posts. */
+.post .head--word .tag {
+  padding: 0;
+  border: 0;
+  font-family: "Libertinus Serif", serif;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  height: 100%;
+}
+
+.brand__logo {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+.brand__name {
+  font-family: "Libertinus Serif", serif;
+  font-size: 40px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.head--hero .brand__name {
+  font-size: 64px;
+}
+
+/* The logos are black or white only, so on the accent colour they sit on a white plate. */
+.t-accent .head {
+  height: 124px;
+}
+
+.t-accent .brand {
+  padding: 14px 26px;
+  border-radius: 24px;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.tag {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 26px;
+  border: 3px solid currentColor;
+  border-radius: 999px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.t-accent .tag {
+  border-color: var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.t-accent .tag::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ── Type ───────────────────────────────────────────────────────────────────────────────── */
+.main {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  min-height: 0;
+}
+
+.lede {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.kicker::before {
+  content: "";
+  flex: none;
+  width: 18px;
+  height: 18px;
+  background: var(--mark);
+}
+
+.title,
+.h2 {
   font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.h2 {
+  font-size: 72px;
+}
+
+.subtitle {
+  font-family: "Libertinus Serif", serif;
+  font-size: 44px;
+  font-style: italic;
+  line-height: 1.15;
+  color: var(--soft);
+  text-wrap: balance;
+}
+
+.lead {
+  font-size: 36px;
+  line-height: 1.4;
+  color: var(--soft);
+  text-wrap: pretty;
+}
+
+.label {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.byline {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.byline b {
+  font-weight: 800;
+}
+
+/* ── Voice wave ─────────────────────────────────────────────────────────────────────────── */
+.wave {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  max-height: 240px;
+}
+
+.post--cover .wave {
+  max-height: 400px;
+}
+
+/* Story: a faint echo of the wave in the bottom zone, which the platform's own UI covers. */
+.wave--zone {
+  position: absolute;
+  right: 72px;
+  bottom: 96px;
+  left: 72px;
+  height: 180px;
+  max-height: none;
+}
+
+.wave.wave--zone i {
+  background: color-mix(in srgb, var(--wave) 22%, var(--bg));
+}
+
+.wave i {
+  flex: 1;
+  min-width: 0;
+  border-radius: 999px;
+  background: var(--wave);
+}
+
+/* ── Facts and people ───────────────────────────────────────────────────────────────────── */
+.facts {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 28px 40px;
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding-top: 18px;
+  border-top: 3px solid var(--fg);
+}
+
+.fact__value {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+
+.fact__value b {
+  font-weight: 800;
+}
+
+.facts--text {
+  grid-template-columns: 1fr 1fr;
+}
+
+.facts--text .fact__value {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.person + .person {
+  margin-top: 16px;
+}
+
+.person__seal {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-family: "Libertinus Serif", serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.person__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.person__name {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.person__meta {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.6em;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--muted);
+}
+
+.person--card {
+  gap: 28px;
+}
+
+.person--card + .person--card {
+  margin-top: 28px;
+}
+
+.person--card .person__seal {
+  width: 104px;
+  height: 104px;
+  font-size: 56px;
+}
+
+.person--card .person__name {
+  font-size: 42px;
+}
+
+.person--card .person__meta {
+  font-size: 28px;
+}
+
+.person--mid {
+  gap: 22px;
+}
+
+.person--mid + .person--mid {
+  margin-top: 22px;
+}
+
+.person--mid .person__seal {
+  width: 80px;
+  height: 80px;
+  font-size: 42px;
+}
+
+.person--mid .person__name {
+  font-size: 34px;
+}
+
+.person__name,
+.person__meta span {
+  min-width: 0;
   overflow-wrap: anywhere;
 }
 
-.meta {
-  margin: 0;
-  font-size: 36px;
-  line-height: 1.35;
+.main--top {
+  justify-content: flex-start;
+}
+
+/* ── Join block ─────────────────────────────────────────────────────────────────────────── */
+.join {
+  flex: none;
+  background: var(--join-bg);
+  color: var(--join-fg);
+}
+
+.join--bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px 32px;
+  padding: 30px 36px;
+  border-radius: 28px;
+}
+
+.join__label {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--join-accent);
+}
+
+.join__icon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 28px;
+}
+
+.join__icon i {
+  width: 5px;
+  height: 40%;
+  border-radius: 3px;
+  background: currentColor;
+}
+
+.join__icon i:nth-child(2) {
+  height: 75%;
+}
+
+.join__icon i:nth-child(3) {
+  height: 100%;
+}
+
+.join__icon i:nth-child(4) {
+  height: 55%;
+}
+
+.join__icon i:nth-child(5) {
+  height: 30%;
+}
+
+.join__line {
+  font-size: 28px;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.join__line b {
+  font-weight: 800;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.join__url {
+  justify-self: end;
+  padding: 16px 28px;
+  border-radius: 999px;
+  background: var(--join-chip-bg);
+  color: var(--join-chip-fg);
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.join--long {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.join--long .join__url {
+  justify-self: start;
+  border-radius: 20px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.join--stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding-top: 20px;
+  border-top: 2px solid var(--color-grey-700);
+}
+
+.join--stack .join__label {
+  gap: 10px;
+  font-size: 20px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.join--stack .join__icon {
+  gap: 3px;
+  height: 20px;
+}
+
+.join--stack .join__icon i {
+  width: 4px;
+}
+
+.join--stack .join__line {
+  font-size: 21px;
+}
+
+.join--stack .join__url {
+  margin-top: 8px;
+  padding: 10px 18px;
+}
+
+/* ── Lists ──────────────────────────────────────────────────────────────────────────────── */
+.list,
+.steps,
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.list li,
+.steps li,
+.points li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 0.6em;
+}
+
+.list li > p,
+.steps li > p {
+  padding-top: 0.08em;
+  text-wrap: pretty;
+}
+
+.n {
+  display: grid;
+  place-items: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 0.4em;
+  background: var(--chip-bg);
+  color: var(--chip-fg);
+  font-size: 0.7em;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.list .list__more {
+  display: block;
+  padding-left: 2em;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.steps {
+  gap: 32px;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.steps b {
+  font-weight: 800;
+}
+
+.points__title {
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.points__body {
+  margin-top: 0.3em;
+  font-size: 0.7em;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--soft);
+}
+
+.cast {
+  display: flex;
+  flex-direction: column;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 22px;
+  border-top: 3px solid var(--fg);
+  font-size: 26px;
+  line-height: 1.3;
+}
+
+.links li {
+  display: flex;
+  flex-direction: column;
+}
+
+.links__label {
+  font-weight: 700;
+}
+
+.links__url {
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+/* ── Join slide ─────────────────────────────────────────────────────────────────────────── */
+.invite {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 36px 40px;
+  border-radius: 28px;
+  background: var(--join-bg);
+  color: var(--join-fg);
+}
+
+.invite .label {
+  color: var(--join-accent);
+}
+
+.invite__url {
+  font-weight: 800;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+
+/* ── Reminder ───────────────────────────────────────────────────────────────────────────── */
+.now {
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.94;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Outlined: the stroke is painted under a fill in the surface colour, which leaves half of it. */
+.now__time {
+  color: var(--bg);
+  -webkit-text-stroke: max(7px, 0.05em) var(--fg);
+  paint-order: stroke fill;
+}
+
+/* ── Recap ──────────────────────────────────────────────────────────────────────────────── */
+.recap-word {
+  font-family: "Libertinus Serif", serif;
+  font-size: 88px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.recap-word--big {
+  font-size: 160px;
+}
+
+.point {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.numeral {
+  font-family: "Libertinus Serif", serif;
+  font-size: 280px;
+  line-height: 0.8;
+}
+
+.progress {
+  display: flex;
+  gap: 12px;
+}
+
+.progress i {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--rule);
+}
+
+.progress .on {
+  background: var(--mark);
+}
+
+.stat {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.stat__n {
+  font-family: "Libertinus Serif", serif;
+  font-size: 96px;
+  line-height: 0.9;
+  color: var(--accent);
+}
+
+.stat__label {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* ── Cover ──────────────────────────────────────────────────────────────────────────────── */
+.cover {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cover__series {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.cover__theme {
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.whisper {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+.whisper b {
+  font-weight: 700;
+  color: var(--fg);
+}
+
+/* The FORA mark's integral, as a very quiet background figure. */
+.integral {
+  position: absolute;
+  top: 90px;
+  right: 64px;
+  font-family: "Libertinus Serif", serif;
+  font-size: 720px;
+  line-height: 1;
+  color: color-mix(in srgb, var(--color-grey-700) 40%, var(--color-ink));
+}
+
+.post--story .integral {
+  top: 240px;
+}
+
+/* ── SIG intro ──────────────────────────────────────────────────────────────────────────── */
+.next {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px 32px;
+  border-radius: 24px;
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.next .label {
+  color: inherit;
+}
+
+.next__title {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.next__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2px 24px;
+}
+
+.next__when {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* ── Slide footer ───────────────────────────────────────────────────────────────────────── */
+.foot {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding-top: 22px;
+  border-top: 2px solid var(--rule);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--muted);
+}
+
+.foot__who {
+  flex: 1;
+}
+
+.foot__hint--next::after {
+  content: " →";
+}
+
+.foot__page {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--fg);
+}
+
+/* ── Wide formats ───────────────────────────────────────────────────────────────────────── */
+.post--wide .head {
+  height: 84px;
+}
+
+.post--wide.t-accent .head {
+  height: 104px;
+}
+
+.post--wide.t-accent .brand {
+  padding: 8px 18px;
+  border-radius: 18px;
+}
+
+.post--wide .brand__name {
+  font-size: 32px;
+}
+
+.post--wide .tag {
+  padding: 12px 20px;
+  border-width: 2px;
+  font-size: 20px;
+}
+
+.post--wide .main {
+  gap: 20px;
+}
+
+.post--wide .lede {
+  gap: 12px;
+}
+
+.post--wide .kicker {
+  gap: 12px;
+  font-size: 21px;
+}
+
+.post--wide .kicker::before {
+  width: 14px;
+  height: 14px;
+}
+
+.post--wide .subtitle {
+  font-size: 28px;
+}
+
+.post--wide .lead {
+  line-height: 1.45;
+}
+
+.post--wide .byline {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.post--wide .wave {
+  gap: 5px;
+  min-height: 24px;
+  max-height: 96px;
+}
+
+.post--wide .recap-word {
+  font-size: 48px;
+}
+
+.post--wide .list {
+  gap: 0.5em;
+}
+
+.post--wide .cover {
+  gap: 12px;
+}
+
+.post--wide .cover__series {
+  font-size: 22px;
+}
+
+.post--wide .whisper {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 20px;
+}
+
+.post--wide .integral {
+  top: 8px;
+  right: 72px;
+  font-size: 440px;
+}
+
+.when {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.when__day {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.when__date {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.when__time {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.side__top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.side .byline {
+  color: var(--color-grey-300);
+}
+
+.side .wave {
+  flex: none;
+  height: 44px;
+}
+
+.side .next {
+  gap: 4px;
+  padding: 20px 22px;
+  border-radius: 18px;
+}
+
+.side .next .label {
+  font-size: 18px;
+}
+
+.side .next__title {
+  font-size: 24px;
+}
+
+.side .next__when {
+  font-size: 20px;
 }
