@@ -69,3 +69,5 @@ brief relies on. Workers: read `~/workspace/AGENTS.md`, `docs/BRIEF.md` and this
 - 2026-11-24: 03, 01, 02, 05 and 04 merged to `main` in that order. Orchestrator reviewed the
   contact sheets of all four samples and individual images (feed, story, X, LinkedIn link,
   doc slides); no overflow or clipping found. Open questions sent to the person.
+- 2026-11-24: 06 human voice merged (voice guide, varied caption shapes, style linter,
+  optional `Session.note`). CI green.
