@@ -140,3 +140,134 @@ Commit in small logical commits on `06-human-voice`, push the branch. Do not mer
 
 Fill in below: model, commits, check results, before/after samples, open questions. Reply to
 the orchestrator in at most 20 lines.
+
+
+### Report (Sonnet 5.5, medium)
+
+- **Checks:** `pnpm check` passes (144 tests); `pnpm examples` renders all 4 sessions with no overflow failures. The style tests fail if "menyelami" or "bukan webinar" returns to a caption, template or sample.
+- **Shapes:** IG 3 for announce, reminder and cover, 2 for recap and sig-intro; X 3 for announce, reminder and cover, 2 for recap; LinkedIn 3 for announce, 2 for the rest. Chosen by FNV-1a of `session.id|platform|type` (`shape()` in `context.ts`).
+- **Decisions from t8x applied:** (1) the join phrase has 3 wordings per register (casual for IG and X, tidy for LinkedIn), picked by `openDoor()` in `context.ts`; the text on the images stays one fixed phrase. (2) An X post leads with the host's note only when everything fits in one post; otherwise the note is left out and no thread is made (announce, reminder, cover). (3) "kita" everywhere, LinkedIn and `sigs/fora.yaml` included.
+- **Acceptance read-through:** all captions of the four samples read. Fixed: recaps no longer lead with the pre-talk note (it promised a future session); SIG intro no longer says the tagline and the description twice; titles that contain commas or colons no longer sit inside comma lists; a redundant "Judulnya ..." line and a duplicated topic sentence in the Karier description are gone.
+- **Images:** looked at announce, reminder, sig-intro, cover and recap in feed, story, X, link and carousel for all four sessions (contact sheets; X and link sheets are small, the overflow check also passes). Nothing overflows or looks emptier.
+- **Still yours to change:** the two `note` texts (Kubernetes, GitOps) are invented; hashtags (`ForumRangkai` dropped from `sigs/fora.yaml`, `DevOps` became `DevOpsIndonesia` in `sigs/sig-cn.yaml`).
+
+#### Before: GitOps announce, all platforms
+
+#### Instagram
+
+🎙 GitOps dengan Argo CD: dari commit di Git sampai deploy
+Sesi SIG CN × FORA
+
+Bagaimana kalau deploy cukup dengan merge pull request? Kita bahas prinsip GitOps dan cara Argo CD menjaga cluster tetap sama dengan isi repo Git.
+
+📅 Sabtu, 19 Desember 2026, 19.30–21.00 WIB
+Di voice channel sig-cn-voice Discord FORA. Ngobrol langsung lewat suara, bukan webinar.
+Bersama Dani (contoh), dipandu Rina (contoh).
+
+Yang kita bahas:
+• Prinsip GitOps
+• Argo CD Application dan sync
+• Struktur repo manifest
+• Rollback lewat git revert
+
+Cara ikut:
+1. Buka Discord FORA lewat link di bio, atau langsung ke discord.gg/rSepJu7Wb
+2. Masuk ke voice channel sig-cn-voice
+3. Siapa pun boleh ikut ngobrol dan bertanya, tinggal masuk.
+
+💬 Simpan postingan ini dan ajak teman yang mungkin tertarik.
+
+#FORA #KomunitasTech #SIGCN #CloudNative #Kubernetes #DevOps #ArgoCD #GitOps
+
+#### X
+
+🎙 GitOps dengan Argo CD: dari commit di Git sampai deploy
+Sab, 19 Des, 19.30–21.00 WIB
+Ngobrol santai di voice channel sig-cn-voice Discord FORA, siapa pun boleh ikut bicara dan bertanya.
+https://discord.gg/rSepJu7Wb
+#SIGCN #FORA
+
+#### LinkedIn
+
+GitOps dengan Argo CD: dari commit di Git sampai deploy
+Sesi SIG CN × FORA
+
+Bagaimana kalau deploy cukup dengan merge pull request? Kita bahas prinsip GitOps dan cara Argo CD menjaga cluster tetap sama dengan isi repo Git.
+
+Sabtu, 19 Desember 2026, 19.30–21.00 WIB, bersama Dani (contoh), dipandu Rina (contoh).
+
+Yang akan kita bahas:
+• Prinsip GitOps
+• Argo CD Application dan sync
+• Struktur repo manifest
+• Rollback lewat git revert
+
+Cocok untuk siapa pun yang tertarik pada topik ini, dari yang baru mulai sampai yang sudah berpengalaman.
+
+Formatnya talk santai di voice channel sig-cn-voice Discord FORA, bukan webinar. Tidak perlu daftar: cukup masuk, dan siapa pun boleh bicara serta bertanya langsung.
+
+Gabung lewat undangan Discord: https://discord.gg/rSepJu7Wb
+
+#SIGCN #CloudNative #Kubernetes #DevOps #GitOps
+
+
+#### After: GitOps announce, all platforms
+
+#### Instagram
+
+GitOps dengan Argo CD
+
+Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
+
+Sab, 19 Des, 19.30–21.00 WIB. Bersama Dani (contoh), dipandu Rina (contoh).
+
+- Prinsip GitOps
+- Argo CD Application dan sync
+- Struktur repo manifest
+- Rollback pakai git revert
+
+Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja boleh, mic juga boleh.
+
+#FORA #SIGCN #GitOps #ArgoCD
+
+#### X
+
+GitOps dengan Argo CD
+Sab, 19 Des jam 19.30 WIB.
+Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
+https://discord.gg/rSepJu7Wb
+#GitOps
+
+#### LinkedIn
+
+Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
+
+GitOps dengan Argo CD. Sabtu, 19 Desember 2026, 19.30–21.00 WIB. Bersama Dani (contoh), dipandu Rina (contoh).
+
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Boleh dengarkan saja, boleh juga ikut bicara.
+
+#GitOps #CloudNative #Kubernetes
+
+
+#### After: GitOps recap, X thread
+
+#### X 1/3
+
+Rekap "GitOps dengan Argo CD". 11 orang ngobrol di voice channel. Makasih Dani (contoh).
+
+#### X 2/3
+
+Intinya:
+1. Git jadi source of truth
+2. Argo CD membandingkan live state dengan Git
+3. Pisahkan repo manifest dari repo kode aplikasi
+4. Rollback cukup dengan git revert
+
+#### X 3/3
+
+Dokumentasi Argo CD https://argo-cd.readthedocs.io/
+Sesi berikutnya diumumkan di Discord FORA. Dengerin aja nggak apa-apa, ngomong juga silakan.
+https://discord.gg/rSepJu7Wb
+#GitOps
+
+

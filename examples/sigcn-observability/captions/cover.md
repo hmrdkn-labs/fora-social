@@ -2,44 +2,31 @@
 
 ## Instagram
 
-🎙 Cloud Native 101 bareng SIG CN × FORA
+Observability: Logs, Metrics, Traces
 
-Aplikasi jalan, tapi kenapa lambat? Kita kenalan dengan tiga sinyal observability, kapan memakai masing-masing, dan cara mulai tanpa harus memasang semuanya sekaligus.
+Cloud Native 101 di SIG CN × FORA.
 
-Sesi: Observability: Logs, Metrics, Traces
-📅 Kamis, 14 Januari 2027, 20.00–21.30 WIB
-Di voice channel sig-cn-voice Discord FORA. Ngobrol langsung lewat suara, bukan webinar.
+Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dijawab logs, metrics, dan traces, dan cara mulai tanpa pasang semuanya sekaligus.
 
-Cara ikut:
-1. Buka Discord FORA lewat link di bio, atau langsung ke discord.gg/rSepJu7Wb
-2. Masuk ke voice channel sig-cn-voice
-3. Siapa pun boleh ikut ngobrol dan bertanya, tinggal masuk.
+Kamis, 14 Januari 2027, 20.00–21.30 WIB. Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
-💬 Ikuti akun ini supaya nggak ketinggalan sesi Cloud Native 101 berikutnya.
-
-#FORA #KomunitasTech #SIGCN #CloudNative #Kubernetes #DevOps #OpenTelemetry #Prometheus
+#FORA #SIGCN #Observability #OpenTelemetry
 
 ## X
 
-Cloud Native 101 bareng SIG CN × FORA
-Sesi: Observability: Logs, Metrics, Traces
+Cloud Native 101 bareng SIG CN × FORA.
+Observability: Logs, Metrics, Traces
 Kam, 14 Jan, 20.00–21.30 WIB
-Ngobrol santai di voice channel sig-cn-voice Discord FORA, siapa pun boleh ikut bicara dan bertanya.
+Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
-#SIGCN #FORA
+#Observability
 
 ## LinkedIn
 
-Cloud Native 101 bareng SIG CN × FORA
+Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dijawab logs, metrics, dan traces, dan cara mulai tanpa pasang semuanya sekaligus.
 
-Aplikasi jalan, tapi kenapa lambat? Kita kenalan dengan tiga sinyal observability, kapan memakai masing-masing, dan cara mulai tanpa harus memasang semuanya sekaligus.
+Cloud Native 101 di SIG CN × FORA. Sesinya "Observability: Logs, Metrics, Traces", Kam, 14 Jan, 20.00–21.30 WIB.
 
-Sesi: Observability: Logs, Metrics, Traces, Kamis, 14 Januari 2027, 20.00–21.30 WIB.
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Dengarkan saja boleh, ikut bicara juga boleh.
 
-Cocok untuk siapa pun yang tertarik pada topik ini, dari yang baru mulai sampai yang sudah berpengalaman.
-
-Formatnya talk santai di voice channel sig-cn-voice Discord FORA, bukan webinar. Tidak perlu daftar: cukup masuk, dan siapa pun boleh bicara serta bertanya langsung.
-
-Gabung lewat undangan Discord: https://discord.gg/rSepJu7Wb
-
-#SIGCN #CloudNative #Kubernetes #DevOps #Observability
+#Observability #CloudNative #Kubernetes

@@ -1,62 +1,54 @@
-# GitOps dengan Argo CD: dari commit di Git sampai deploy · recap
+# GitOps dengan Argo CD · recap
 
 ## Instagram
 
-✅ Rangkuman sesi
-GitOps dengan Argo CD: dari commit di Git sampai deploy
+Rekap "GitOps dengan Argo CD", Sab, 19 Des.
 
-Makasih Dani (contoh)! Ada 11 orang yang ikut ngobrol di voice channel.
+11 orang ikut ngobrol di voice channel. Makasih Dani (contoh).
 
-Poin-poin yang kita bawa pulang:
-1. Git adalah sumber kebenaran: Kondisi yang diinginkan ditulis di repo; controller yang menyamakan cluster dengan repo, bukan orang yang menjalankan kubectl apply.
-2. Argo CD membandingkan live state dengan Git: Kalau berbeda, aplikasi berstatus OutOfSync, dan sync akan menerapkan perubahan.
-3. Pisahkan repo manifest dari repo kode aplikasi: Dengan begitu perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih bersih.
-4. Rollback adalah git revert: Commit baru yang membatalkan perubahan lalu disinkronkan, jadi riwayatnya tetap tercatat.
+1. Git jadi source of truth. Kondisi yang diinginkan ditulis di repo, dan controller yang menyamakan cluster dengan repo. Tidak ada kubectl apply manual.
+2. Argo CD membandingkan live state dengan Git. Kalau beda, aplikasi berstatus OutOfSync, dan sync menerapkan perubahannya.
+3. Pisahkan repo manifest dari repo kode aplikasi. Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
+4. Rollback cukup dengan git revert. Commit baru yang membatalkan perubahan, lalu disync. Riwayatnya tetap tercatat.
 
-Bacaan lanjutan:
-• Dokumentasi Argo CD: https://argo-cd.readthedocs.io/
+Dokumentasi Argo CD: https://argo-cd.readthedocs.io/
 
-Sesi berikutnya diumumkan di Discord FORA. Gabung dulu lewat link di bio atau discord.gg/rSepJu7Wb, biar nggak ketinggalan.
+Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Mau dengerin aja boleh, mau nyalain mic juga boleh.
 
-Simpan postingan ini buat dibaca ulang.
-
-#FORA #KomunitasTech #SIGCN #CloudNative #Kubernetes #DevOps #ArgoCD #GitOps
+#FORA #SIGCN #GitOps #ArgoCD
 
 ## X 1/3
 
-Rangkuman "GitOps dengan Argo CD: dari commit di Git sampai deploy". 11 orang ngobrol di voice channel. Makasih Dani (contoh)!
+Rekap "GitOps dengan Argo CD". 11 orang ngobrol di voice channel. Makasih Dani (contoh).
 
 ## X 2/3
 
-Poin-poin utamanya:
-1. Git adalah sumber kebenaran
+Intinya:
+1. Git jadi source of truth
 2. Argo CD membandingkan live state dengan Git
 3. Pisahkan repo manifest dari repo kode aplikasi
-4. Rollback adalah git revert
+4. Rollback cukup dengan git revert
 
 ## X 3/3
 
-Bacaan: Dokumentasi Argo CD https://argo-cd.readthedocs.io/
-Sesi berikutnya diumumkan di Discord FORA. Gabung dulu, siapa pun boleh ikut ngobrol dan bertanya:
+Dokumentasi Argo CD https://argo-cd.readthedocs.io/
+Sesi berikutnya diumumkan di Discord FORA. Dengerin aja nggak apa-apa, ngomong juga silakan.
 https://discord.gg/rSepJu7Wb
-#SIGCN #FORA
+#GitOps
 
 ## LinkedIn
 
-Rangkuman sesi SIG CN × FORA
-GitOps dengan Argo CD: dari commit di Git sampai deploy
+Rekap "GitOps dengan Argo CD" (Sab, 19 Des).
 
 Terima kasih Dani (contoh). 11 orang ikut ngobrol di voice channel.
 
-Beberapa poin yang kami bawa pulang:
-1. Git adalah sumber kebenaran: Kondisi yang diinginkan ditulis di repo; controller yang menyamakan cluster dengan repo, bukan orang yang menjalankan kubectl apply.
-2. Argo CD membandingkan live state dengan Git: Kalau berbeda, aplikasi berstatus OutOfSync, dan sync akan menerapkan perubahan.
-3. Pisahkan repo manifest dari repo kode aplikasi: Dengan begitu perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih bersih.
-4. Rollback adalah git revert: Commit baru yang membatalkan perubahan lalu disinkronkan, jadi riwayatnya tetap tercatat.
+1. Git jadi source of truth. Kondisi yang diinginkan ditulis di repo, dan controller yang menyamakan cluster dengan repo. Tidak ada kubectl apply manual.
+2. Argo CD membandingkan live state dengan Git. Kalau beda, aplikasi berstatus OutOfSync, dan sync menerapkan perubahannya.
+3. Pisahkan repo manifest dari repo kode aplikasi. Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
+4. Rollback cukup dengan git revert. Commit baru yang membatalkan perubahan, lalu disync. Riwayatnya tetap tercatat.
 
-Bacaan lanjutan:
-• Dokumentasi Argo CD: https://argo-cd.readthedocs.io/
+Dokumentasi Argo CD: https://argo-cd.readthedocs.io/
 
-Sesi berikutnya akan diumumkan di Discord FORA. Format tetap sama: talk santai di voice channel, terbuka untuk siapa pun. https://discord.gg/rSepJu7Wb
+Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel sig-cn-voice. Boleh dengarkan saja, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
 
-#SIGCN #CloudNative #Kubernetes #DevOps #GitOps
+#GitOps #CloudNative #Kubernetes

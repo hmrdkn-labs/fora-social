@@ -195,7 +195,7 @@ function closingMain(ctx: TemplateContext): string {
 
 function slides(ctx: TemplateContext, points: readonly RecapPoint[]): string[] {
   const { session } = ctx;
-  const notes = `${points.length} hal yang kami bawa pulang`;
+  const notes = `${points.length} catatan`;
   const facts = factHeight(Math.max(40, textHeight(notes, 34, 390, 1.18)));
   const coverRoom = tallRoom(ctx, "mist", FOOT) - facts - 2 * GAP - WAVE_MIN - 160 - 20;
   // One takeaway per slide; with more than five, several share a slide.

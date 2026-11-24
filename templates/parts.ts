@@ -210,7 +210,7 @@ export type JoinMode = "soon" | "now" | "next";
 const JOIN_LEAD: Record<JoinMode, string> = {
   soon: "Masuk",
   now: "Masuk sekarang ke",
-  next: "Ikut sesi berikutnya di",
+  next: "Sesi berikutnya di",
 };
 
 /**
@@ -226,7 +226,7 @@ function join(ctx: TemplateContext, variant: "bar" | "stack", mode: JoinMode): B
   // A long invite URL gets its own row and breaks where it must; a normal one stays on one line.
   const long = emWidth(url) * min > room;
   const size = long ? min : fitLine(url, room, max, min);
-  const line = `${JOIN_LEAD[mode]} ${session.voiceChannel}, siapa pun boleh ikut ngobrol`;
+  const line = `${JOIN_LEAD[mode]} ${session.voiceChannel}. Dengerin aja boleh, mic juga boleh.`;
   const chipWidth = emWidth(url) * size * 1.03 + (bar ? 56 : 36);
   const chipHeight = (long ? textHeight(url, size, (bar ? 864 : SIDE_WIDTH) - 56, 1.2) : size * 1.2) + (bar ? 32 : 20);
   const lineWidth = bar ? (long ? 864 : 864 - 32 - chipWidth) : SIDE_WIDTH;
@@ -237,7 +237,7 @@ function join(ctx: TemplateContext, variant: "bar" | "stack", mode: JoinMode): B
   const icon = '<span class="join__icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>';
   const html = `<aside class="join join--${variant}${long ? " join--long" : ""}" data-fit>
   <p class="join__label">${icon}Voice channel · Discord</p>
-  <p class="join__line">${JOIN_LEAD[mode]} ${channel(session.voiceChannel)}, siapa pun boleh ikut ngobrol</p>
+  <p class="join__line">${JOIN_LEAD[mode]} ${channel(session.voiceChannel)}. Dengerin aja boleh, mic juga boleh.</p>
   <p class="join__url" style="font-size:${size}px">${e(url)}</p>
 </aside>`;
   return { html, height };
@@ -319,9 +319,9 @@ export function joinMain(ctx: TemplateContext, theme: Theme, mode: JoinMode = "s
   const when = mode === "now" ? "sekarang" : `pada ${formatDateShort(session)}, ${formatTime(session)}`;
   const urlSize = fitBlock(url, TALL_WIDTH - 80, 120, [48, 40, 34, 28], 1.15) ?? 28;
   const steps = [
-    `Gabung ke server Discord ${community.name} lewat link di bawah.`,
+    `Buka server Discord ${community.name} lewat link di bawah.`,
     `Masuk ke voice channel ${session.voiceChannel} ${when}.`,
-    "Dengarkan dulu atau langsung nyalakan mic. Siapa pun boleh ikut ngobrol dan bertanya.",
+    "Dengerin aja boleh, mau langsung nyalain mic juga boleh.",
   ];
   const inviteHeight = 72 + 29 + 14 + textHeight(url, urlSize, TALL_WIDTH - 80, 1.15);
   const stepsRoom = tallRoom(ctx, theme, FOOT) - 50 - 150 - inviteHeight - 2 * GAP;
@@ -329,7 +329,7 @@ export function joinMain(ctx: TemplateContext, theme: Theme, mode: JoinMode = "s
   return `<main class="main" data-fit>
   <div class="lede">
     <p class="kicker">Cara ikut</p>
-    <h2 class="h2">Masuk, dengarkan, ikut ngobrol.</h2>
+    <h2 class="h2">Link-nya ada di bawah.</h2>
   </div>
   <ol class="steps" style="font-size:${size}px">
     <li><span class="n">1</span><p>${e(steps[0] ?? "")}</p></li>

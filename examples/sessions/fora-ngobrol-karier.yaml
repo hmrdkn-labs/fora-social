@@ -1,7 +1,7 @@
 sig: fora
 theme: Karier
 title: Ngobrol Karier di Tech
-subtitle: Cerita, tanya jawab, dan saran, tanpa slide
+subtitle: Cerita dan tanya jawab, tanpa slide
 date: "2027-01-23"
 time: "19:30"
 durationMinutes: 90
@@ -11,19 +11,19 @@ host:
   role: Software Engineer
   handle: dika_contoh
 speakers: []
-description: "Diskusi terbuka tanpa pembicara tamu. Bawa cerita dan pertanyaan soal kerja di tech, mulai dari cari kerja pertama, pindah peran, sampai belajar sambil kerja."
+description: "Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech."
 topics:
   - Cari kerja pertama di tech
   - Belajar sambil kerja
-  - Pindah peran, misalnya dari developer ke SRE
+  - Pindah dari developer ke SRE
 hashtags:
   - KarierTech
 recap:
   attendees: 9
   points:
     - title: Proyek kecil yang selesai lebih berguna daripada banyak kursus
-      body: Satu proyek yang bisa dijelaskan dari awal sampai akhir lebih mudah dinilai daripada daftar sertifikat.
+      body: Satu proyek yang bisa dijelaskan tuntas lebih gampang dinilai daripada daftar sertifikat.
     - title: Belajar dengan target yang jelas
-      body: Pilih satu masalah nyata di pekerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
+      body: Pilih satu masalah nyata di kerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
     - title: Pindah peran bisa dimulai dari tugas di sekitar peran tujuan
-      body: Ambil pekerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.
+      body: Ambil kerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.

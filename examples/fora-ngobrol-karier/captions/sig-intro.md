@@ -2,43 +2,26 @@
 
 ## Instagram
 
-🎙 Kenalan sama FORA: Komunitas teknologi Indonesia untuk belajar dan ngobrol bareng.
+FORA (Forum Rangkai) itu komunitas tech kecil berbahasa Indonesia di Discord. Kita ngobrol di voice channel. Topiknya dibagi ke beberapa SIG (special interest group), dan tiap SIG pegang satu bidang.
 
-FORA (Forum Rangkai) adalah komunitas tech kecil berbahasa Indonesia di Discord. Kami mengadakan talk santai di voice channel, dikelompokkan dalam SIG (special interest group) sesuai topik. Semua orang boleh join, bertanya, dan ikut bicara, tanpa perlu jadi pembicara.
+Yang terdekat "Ngobrol Karier di Tech", Sab, 23 Jan jam 19.30 WIB. Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
-Untuk siapa? Siapa pun yang suka ngobrol soal tech, dari mahasiswa sampai yang sudah bertahun-tahun bekerja. Pemula sangat boleh, nggak ada pertanyaan yang terlalu dasar.
-
-Sesi terdekat: Ngobrol Karier di Tech
-📅 Sabtu, 23 Januari 2027, 19.30–21.00 WIB
-Di voice channel fora-voice Discord FORA. Ngobrol langsung lewat suara, bukan webinar.
-
-Cara ikut:
-1. Buka Discord FORA lewat link di bio, atau langsung ke discord.gg/rSepJu7Wb
-2. Masuk ke voice channel fora-voice
-3. Siapa pun boleh ikut ngobrol dan bertanya, tinggal masuk.
-
-💬 Ajak teman yang tertarik ikut ngobrol di FORA.
-
-#FORA #KomunitasTech #ForumRangkai #KarierTech #Karier
+#FORA #Karier #KarierTech #KomunitasTech
 
 ## X
 
-Kenalan sama FORA: Komunitas teknologi Indonesia untuk belajar dan ngobrol bareng.
-Sesi terdekat: Ngobrol Karier di Tech, Sab, 23 Jan.
-Ngobrol santai di voice channel fora-voice Discord FORA, pemula boleh banget ikut.
+FORA. Komunitas tech kecil yang ngobrol lewat suara di Discord.
+Sesi terdekat soal "Ngobrol Karier di Tech", Sab, 23 Jan.
+Di voice channel fora-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
-#FORA #Karier
+#Karier
 
 ## LinkedIn
 
-Kenalan dengan FORA: Komunitas teknologi Indonesia untuk belajar dan ngobrol bareng.
+FORA. Komunitas tech kecil yang ngobrol lewat suara di Discord.
 
-FORA (Forum Rangkai) adalah komunitas tech kecil berbahasa Indonesia di Discord. Kami mengadakan talk santai di voice channel, dikelompokkan dalam SIG (special interest group) sesuai topik. Semua orang boleh join, bertanya, dan ikut bicara, tanpa perlu jadi pembicara.
+Sesi terdekat soal "Ngobrol Karier di Tech", Sab, 23 Jan, 19.30–21.00 WIB.
 
-Untuk siapa? Siapa pun yang suka ngobrol soal tech, dari mahasiswa sampai yang sudah bertahun-tahun bekerja.
+Kita ngobrol di voice channel fora-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
-Formatnya talk santai di voice channel fora-voice Discord FORA, bukan webinar. Tidak perlu daftar: cukup masuk, dan siapa pun boleh bicara serta bertanya langsung. Sesi terdekat: Ngobrol Karier di Tech, Sabtu, 23 Januari 2027, 19.30–21.00 WIB.
-
-Gabung lewat undangan Discord: https://discord.gg/rSepJu7Wb
-
-#FORA #ForumRangkai #KomunitasTech #Karier #KarierTech
+#Karier #KomunitasTech #FORA

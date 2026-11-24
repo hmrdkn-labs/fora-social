@@ -52,6 +52,7 @@ export const SessionSchema = z.strictObject({
   description: z.string().refine((s) => Array.from(s).length <= 280, {
     error: (i) => `must be at most 280 characters, got ${Array.from(String(i.input)).length}`,
   }),
+  note: nonEmpty.optional(),
   topics: z.array(nonEmpty).max(6, {
     error: (i) => `must have at most 6 items, got ${Array.isArray(i.input) ? i.input.length : "?"}`,
   }).default([]),

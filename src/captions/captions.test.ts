@@ -1,139 +1,9 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { discordUrl, displayUrl, formatDate, formatDateShort, formatTime, formatTimeRange, speakerLine } from "../format.ts";
-import { POST_TYPES, type Community, type Session, type Sig } from "../types.ts";
+import { POST_TYPES } from "../types.ts";
+import { base, community, variants } from "./fixtures.ts";
 import { buildCaptions, xLength } from "./index.ts";
-
-const community: Community = {
-  name: "FORA",
-  fullName: "Forum Rangkai",
-  discord: "https://discord.gg/rSepJu7Wb",
-  handles: {},
-  hashtags: ["FORA", "KomunitasTech"],
-  logo: "brand/logos/fora-mark.svg",
-};
-
-const sigcn: Sig = {
-  id: "sig-cn",
-  short: "SIG CN",
-  code: "CN",
-  name: "Cloud Native",
-  color: "#0A84FF",
-  colorInk: "#FFFFFF",
-  lockup: "brand/logos/sigcn.svg",
-  tagline: "Belajar Kubernetes dan ekosistem cloud native bareng-bareng.",
-  description:
-    "SIG CN adalah ruang belajar Cloud Native di FORA. Kita ngobrol soal Kubernetes, GitOps, observability, dan praktik deploy sehari-hari. Semua level boleh ikut.",
-  hashtags: ["SIGCN", "CloudNative", "Kubernetes"],
-};
-
-const foraSig: Sig = {
-  id: "fora",
-  short: "FORA",
-  code: "FORA",
-  name: "FORA",
-  color: "#111111",
-  colorInk: "#FFFFFF",
-  lockup: "brand/logos/fora-mark.svg",
-  tagline: "Komunitas tech yang ngobrol santai di Discord.",
-  description: "FORA adalah komunitas tech kecil di Discord. Kita ngobrol soal banyak hal di voice channel, dari karier sampai open source.",
-  hashtags: ["FORA"],
-};
-
-const base: Session = {
-  id: "x",
-  sig: "sig-cn",
-  theme: "Kubernetes",
-  title: "Kubernetes untuk Pemula",
-  date: "2026-12-12",
-  time: "19:30",
-  durationMinutes: 90,
-  voiceChannel: "sig-cn-voice",
-  host: { name: "Rina (contoh)" },
-  speakers: [],
-  description: "Kenalan dengan Kubernetes dari nol.",
-  topics: ["Pod", "Deployment", "Service"],
-  recap: { points: [{ title: "Pod adalah unit terkecil", body: "Berisi satu atau beberapa container." }] },
-};
-
-const person = (n: string) => ({ name: `${n} (contoh)`, role: "Engineer", handle: `${n.toLowerCase()}_contoh` });
-
-const variants: Record<string, { session: Session; sig: Sig }> = {
-  "two speakers, role and handle everywhere": {
-    sig: sigcn,
-    session: {
-      ...base,
-      series: "Cloud Native 101",
-      host: person("Rina"),
-      speakers: [person("Bima"), person("Sari")],
-      recap: {
-        attendees: 14,
-        points: [
-          { title: "Pod adalah unit terkecil yang dijadwalkan", body: "Satu Pod berisi satu atau beberapa container." },
-          { title: "Deployment menjaga jumlah replika" },
-          { title: "Service memberi alamat yang stabil" },
-          { title: "Mulai debug dari kubectl describe dan logs" },
-        ],
-        links: [{ label: "Dokumentasi Kubernetes", url: "https://kubernetes.io/docs/home/" }],
-      },
-    },
-  },
-  "long title, one speaker": {
-    sig: sigcn,
-    session: {
-      ...base,
-      theme: "GitOps",
-      title: "GitOps dengan Argo CD: dari commit di Git sampai deploy",
-      speakers: [{ name: "Dani (contoh)", handle: "dani_contoh" }],
-      hashtags: ["ArgoCD", "DevOps"],
-    },
-  },
-  "six topics, five recap points": {
-    sig: sigcn,
-    session: {
-      ...base,
-      theme: "Observability",
-      title: "Observability: Logs, Metrics, Traces",
-      speakers: [{ name: "Eko (contoh)" }],
-      topics: [
-        "Monitoring vs observability",
-        "Logs terstruktur",
-        "Metrics dan Prometheus",
-        "Distributed tracing",
-        "OpenTelemetry sebagai standar",
-        "Alert yang tidak bikin lelah",
-      ],
-      recap: {
-        attendees: 16,
-        points: [
-          { title: "Logs menjawab apa yang terjadi", body: "Pakai format terstruktur seperti JSON." },
-          { title: "Metrics menjawab seberapa sering dan seberapa lama" },
-          { title: "Traces menjawab di mana waktunya habis" },
-          { title: "OpenTelemetry memisahkan instrumentasi dari backend" },
-          { title: "Alert pada gejala yang dirasakan pengguna" },
-        ],
-        links: [{ label: "Dokumentasi OpenTelemetry", url: "https://opentelemetry.io/docs/" }],
-      },
-    },
-  },
-  "no speakers, general FORA session": {
-    sig: foraSig,
-    session: {
-      ...base,
-      sig: "fora",
-      theme: "Karier",
-      title: "Ngobrol Karier di Tech",
-      voiceChannel: "fora-voice",
-      host: person("Dika"),
-      topics: [],
-      recap: { points: [{ title: "Proyek kecil yang selesai lebih berguna daripada banyak kursus" }] },
-    },
-  },
-  "no topics, custom invite, bare names": {
-    sig: sigcn,
-    session: { ...base, topics: [], discord: "https://discord.gg/custom123" },
-  },
-};
 
 const emoji = (t: string) => (t.match(/\p{Extended_Pictographic}/gu) ?? []).length;
 const hashtags = (t: string) => t.match(/#[\p{L}\p{N}_]+/gu) ?? [];
@@ -147,23 +17,23 @@ for (const [name, { session, sig }] of Object.entries(variants)) {
       // Instagram
       assert.ok(c.instagram.length <= 2200, `IG ${c.instagram.length}`);
       const igTags = hashtags(c.instagram);
-      assert.ok(igTags.length >= 1 && igTags.length <= 8, `IG tags ${igTags.length}`);
+      assert.ok(igTags.length >= 2 && igTags.length <= 4, `IG tags ${igTags.length}`);
       assert.equal(new Set(igTags.map((t) => t.toLowerCase())).size, igTags.length, "IG tags are unique");
       assert.ok(emoji(c.instagram) <= 4, "IG emoji");
       assert.ok(c.instagram.includes(displayUrl(url)), "IG short URL");
-      assert.match(c.instagram, /link di bio/);
+      assert.match(c.instagram, /bio/);
 
       // X
       assert.ok(c.x.length >= 1 && c.x.length <= 4, `X posts ${c.x.length}`);
       for (const post of c.x) assert.ok(xLength(post) <= 280, `X post ${xLength(post)}: ${post}`);
       const xTags = hashtags(c.x.join("\n"));
-      assert.ok(xTags.length >= 1 && xTags.length <= 2, `X tags ${xTags.length}`);
+      assert.ok(xTags.length === 1, `X tags ${xTags.length}`);
       assert.ok(emoji(c.x.join("\n")) <= 2, "X emoji");
 
       // LinkedIn
       assert.ok(c.linkedin.length <= 3000, `LinkedIn ${c.linkedin.length}`);
       const liTags = hashtags(c.linkedin);
-      assert.ok(liTags.length >= 3 && liTags.length <= 5, `LinkedIn tags ${liTags.length}`);
+      assert.ok(liTags.length >= 2 && liTags.length <= 3, `LinkedIn tags ${liTags.length}`);
       assert.ok(emoji(c.linkedin) <= 2, "LinkedIn emoji");
 
       // Invite link and voice-channel nature, on every platform and post type.
@@ -172,8 +42,8 @@ for (const [name, { session, sig }] of Object.entries(variants)) {
       for (const text of [c.instagram, c.x.join("\n"), c.linkedin]) {
         assert.match(text, /voice channel/);
       }
-      if (type !== "recap") {
-        assert.match(c.instagram, /ngobrol dan bertanya/);
+      for (const text of [c.instagram, c.x.join("\n"), c.linkedin]) {
+        assert.match(text, /dengerin|dengarkan/i, "says that listening is fine");
       }
     });
   }

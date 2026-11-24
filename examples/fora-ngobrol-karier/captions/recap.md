@@ -2,51 +2,42 @@
 
 ## Instagram
 
-✅ Rangkuman sesi
-Ngobrol Karier di Tech
+Ini yang tercatat dari "Ngobrol Karier di Tech" (Sab, 23 Jan).
 
-Makasih Dika (contoh) @dika_contoh! Ada 9 orang yang ikut ngobrol di voice channel.
+- Proyek kecil yang selesai lebih berguna daripada banyak kursus. Satu proyek yang bisa dijelaskan tuntas lebih gampang dinilai daripada daftar sertifikat.
+- Belajar dengan target yang jelas. Pilih satu masalah nyata di kerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
+- Pindah peran bisa dimulai dari tugas di sekitar peran tujuan. Ambil kerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.
 
-Poin-poin yang kita bawa pulang:
-1. Proyek kecil yang selesai lebih berguna daripada banyak kursus: Satu proyek yang bisa dijelaskan dari awal sampai akhir lebih mudah dinilai daripada daftar sertifikat.
-2. Belajar dengan target yang jelas: Pilih satu masalah nyata di pekerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
-3. Pindah peran bisa dimulai dari tugas di sekitar peran tujuan: Ambil pekerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.
+9 orang ikut ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh, sampai ketemu lagi. Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, mic juga boleh.
 
-Sesi berikutnya diumumkan di Discord FORA. Gabung dulu lewat link di bio atau discord.gg/rSepJu7Wb, biar nggak ketinggalan.
-
-Simpan postingan ini buat dibaca ulang.
-
-#FORA #KomunitasTech #ForumRangkai #KarierTech #Karier
+#FORA #Karier #KarierTech #KomunitasTech
 
 ## X 1/3
 
-Rangkuman "Ngobrol Karier di Tech". 9 orang ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh!
+9 orang ngobrol di voice channel buat "Ngobrol Karier di Tech". Makasih Dika (contoh) @dika_contoh, ini catatannya.
 
 ## X 2/3
 
-Poin-poin utamanya:
-1. Proyek kecil yang selesai lebih berguna daripada banyak kursus
-2. Belajar dengan target yang jelas
-3. Pindah peran bisa dimulai dari tugas di sekitar peran tujuan
+- Proyek kecil yang selesai lebih berguna daripada banyak kursus
+- Belajar dengan target yang jelas
+- Pindah peran bisa dimulai dari tugas di sekitar peran tujuan
 
 ## X 3/3
 
-Sesi berikutnya diumumkan di Discord FORA. Gabung dulu, siapa pun boleh ikut ngobrol dan bertanya:
+Sesi berikutnya kita umumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
-#FORA #Karier
+#Karier
 
 ## LinkedIn
 
-Rangkuman sesi FORA
-Ngobrol Karier di Tech
+Rekap "Ngobrol Karier di Tech" (Sab, 23 Jan).
 
 Terima kasih Dika (contoh) @dika_contoh. 9 orang ikut ngobrol di voice channel.
 
-Beberapa poin yang kami bawa pulang:
-1. Proyek kecil yang selesai lebih berguna daripada banyak kursus: Satu proyek yang bisa dijelaskan dari awal sampai akhir lebih mudah dinilai daripada daftar sertifikat.
-2. Belajar dengan target yang jelas: Pilih satu masalah nyata di pekerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
-3. Pindah peran bisa dimulai dari tugas di sekitar peran tujuan: Ambil pekerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.
+1. Proyek kecil yang selesai lebih berguna daripada banyak kursus. Satu proyek yang bisa dijelaskan tuntas lebih gampang dinilai daripada daftar sertifikat.
+2. Belajar dengan target yang jelas. Pilih satu masalah nyata di kerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
+3. Pindah peran bisa dimulai dari tugas di sekitar peran tujuan. Ambil kerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.
 
-Sesi berikutnya akan diumumkan di Discord FORA. Format tetap sama: talk santai di voice channel, terbuka untuk siapa pun. https://discord.gg/rSepJu7Wb
+Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel fora-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh. https://discord.gg/rSepJu7Wb
 
-#FORA #ForumRangkai #KomunitasTech #Karier #KarierTech
+#Karier #KomunitasTech #FORA

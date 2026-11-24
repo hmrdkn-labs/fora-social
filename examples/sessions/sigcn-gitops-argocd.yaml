@@ -1,8 +1,8 @@
 sig: sig-cn
 series: Cloud Native 101
 theme: GitOps
-title: "GitOps dengan Argo CD: dari commit di Git sampai deploy"
-subtitle: Git sebagai satu-satunya sumber kebenaran untuk cluster
+title: GitOps dengan Argo CD
+subtitle: Deploy lewat merge pull request, rollback lewat git revert
 date: "2026-12-19"
 time: "19:30"
 durationMinutes: 90
@@ -13,26 +13,27 @@ host:
 speakers:
   - name: Dani (contoh)
     role: SRE
-description: Bagaimana kalau deploy cukup dengan merge pull request? Kita bahas prinsip GitOps dan cara Argo CD menjaga cluster tetap sama dengan isi repo Git.
+note: Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
+description: Kita coba alur GitOps pakai Argo CD. Merge pull request, cluster ikut isi repo, lalu rollback pakai git revert beneran.
 topics:
   - Prinsip GitOps
   - Argo CD Application dan sync
   - Struktur repo manifest
-  - Rollback lewat git revert
+  - Rollback pakai git revert
 hashtags:
   - ArgoCD
   - DevOps
 recap:
   attendees: 11
   points:
-    - title: Git adalah sumber kebenaran
-      body: Kondisi yang diinginkan ditulis di repo; controller yang menyamakan cluster dengan repo, bukan orang yang menjalankan kubectl apply.
+    - title: Git jadi source of truth
+      body: Kondisi yang diinginkan ditulis di repo, dan controller yang menyamakan cluster dengan repo. Tidak ada kubectl apply manual.
     - title: Argo CD membandingkan live state dengan Git
-      body: Kalau berbeda, aplikasi berstatus OutOfSync, dan sync akan menerapkan perubahan.
+      body: Kalau beda, aplikasi berstatus OutOfSync, dan sync menerapkan perubahannya.
     - title: Pisahkan repo manifest dari repo kode aplikasi
-      body: Dengan begitu perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih bersih.
-    - title: Rollback adalah git revert
-      body: Commit baru yang membatalkan perubahan lalu disinkronkan, jadi riwayatnya tetap tercatat.
+      body: Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
+    - title: Rollback cukup dengan git revert
+      body: Commit baru yang membatalkan perubahan, lalu disync. Riwayatnya tetap tercatat.
   links:
     - label: Dokumentasi Argo CD
       url: https://argo-cd.readthedocs.io/
