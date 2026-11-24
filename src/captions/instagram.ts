@@ -1,92 +1,100 @@
 import type { PostType } from "../types.ts";
-import { type Ctx, hashLine, themeTag, uniqueTags } from "./context.ts";
-
-const MAX_TAGS = 8;
+import { cap, type Ctx, hashLine, shape, themeTag, uniqueTags } from "./context.ts";
 
 function tags(c: Ctx): string {
   return hashLine(
-    uniqueTags(c.community.hashtags, c.sig.hashtags, c.s.hashtags, themeTag(c.s)).slice(0, MAX_TAGS),
+    uniqueTags(c.community.hashtags.slice(0, 1), c.sig.hashtags.slice(0, 1), themeTag(c.s), c.s.hashtags, c.sig.hashtags, c.community.hashtags).slice(0, 4),
   );
 }
 
-function join(c: Ctx): string {
-  return [
-    "Cara ikut:",
-    `1. Buka Discord FORA lewat link di bio, atau langsung ke ${c.shortUrl}`,
-    `2. Masuk ke ${c.voice}`,
-    "3. Siapa pun boleh ikut ngobrol dan bertanya, tinggal masuk.",
-  ].join("\n");
+/** How to join and that anyone can listen or talk: said once per caption, worded three ways. */
+function join(c: Ctx, variant: number): string {
+  switch (variant % 3) {
+    case 0:
+      return `Link Discord ada di bio (${c.shortUrl}). Masuk ke ${c.voice}, dengerin aja boleh, nyalain mic juga boleh.`;
+    case 1:
+      return `Mampir ke ${c.voice} di Discord FORA, link di bio atau ${c.shortUrl}. Mau dengerin aja boleh, mau ikut ngomong juga boleh.`;
+    default:
+      return `Langsung masuk ${c.voice} lewat ${c.shortUrl} (ada juga di bio). Dengerin aja boleh, mic juga boleh.`;
+  }
 }
 
-function where(c: Ctx): string {
-  return `Di ${c.voice} Discord FORA. Ngobrol langsung lewat suara, bukan webinar.`;
-}
+const bullets = (items: string[]): string => items.map((t) => `- ${t}`).join("\n");
 
-function topics(c: Ctx, heading: string): string {
-  return c.s.topics.length === 0 ? "" : `${heading}\n${c.s.topics.map((t) => `• ${t}`).join("\n")}`;
-}
-
-function recapBody(c: Ctx): string[] {
+function recapPoints(c: Ctx, style: "numbered" | "dash"): string {
   const r = c.s.recap!;
-  const points = r.points.map((p, i) => `${i + 1}. ${p.title}${p.body ? `: ${p.body}` : ""}`).join("\n");
-  const links = r.links?.length ? `Bacaan lanjutan:\n${r.links.map((l) => `• ${l.label}: ${l.url}`).join("\n")}` : "";
-  const crowd = r.attendees ? `Makasih ${c.thanks}! Ada ${r.attendees} orang yang ikut ngobrol di voice channel.` : `Makasih ${c.thanks} dan semua yang ikut ngobrol di voice channel!`;
+  return r.points
+    .map((p, i) => `${style === "numbered" ? `${i + 1}.` : "-"} ${p.title}${p.body ? `. ${p.body}` : ""}`)
+    .join("\n");
+}
+
+function recapLinks(c: Ctx): string {
+  const links = c.s.recap!.links ?? [];
+  return links.map((l) => `${l.label}: ${l.url}`).join("\n");
+}
+
+function recap(c: Ctx, variant: number): string[] {
+  const r = c.s.recap!;
+  const crowd = r.attendees ? `${r.attendees} orang ikut ngobrol di voice channel.` : "Makasih yang sudah mampir ke voice channel.";
+  const next = `Sesi berikutnya kita umumkan di Discord FORA (link di bio atau ${c.shortUrl}). Dengerin aja boleh, nyalain mic juga boleh.`;
+  if (variant === 0) {
+    return [
+      c.s.note ?? `Rekap "${c.s.title}", ${c.dateShort}.`,
+      `${crowd} Makasih ${c.thanks}.`,
+      recapPoints(c, "numbered"),
+      recapLinks(c),
+      next,
+    ];
+  }
   return [
-    `✅ Rangkuman sesi\n${c.s.title}`,
-    crowd,
-    `Poin-poin yang kita bawa pulang:\n${points}`,
-    links,
-    `Sesi berikutnya diumumkan di Discord FORA. Gabung dulu lewat link di bio atau ${c.shortUrl}, biar nggak ketinggalan.`,
-    "Simpan postingan ini buat dibaca ulang.",
+    c.s.note ?? `${c.s.title}: ini yang tercatat dari obrolan ${c.dateShort}.`,
+    recapPoints(c, "dash"),
+    recapLinks(c),
+    `${crowd} Makasih ${c.thanks}, sampai ketemu lagi. ${next}`,
   ];
 }
 
 export function instagram(c: Ctx, type: PostType): string {
   const { s, sig } = c;
+  const v = shape(c, `instagram|${type}`, 3);
+  const when = `${c.date}, ${c.range}`;
   let blocks: string[];
   switch (type) {
     case "announce":
-      blocks = [
-        `🎙 ${s.title}\nSesi ${c.brand}`,
-        s.description,
-        `📅 ${c.date}, ${c.range}\n${where(c)}\n${c.who.charAt(0).toUpperCase()}${c.who.slice(1)}.`,
-        topics(c, "Yang kita bahas:"),
-        join(c),
-        `💬 Simpan postingan ini dan ajak teman yang mungkin tertarik.`,
-      ];
+      blocks =
+        v === 0
+          ? [c.lead, `${s.title}\n${when}. ${c.Who}.`, join(c, 0)]
+          : v === 1
+            ? [s.title, c.lead, `${c.dateShort}, ${c.range}. ${c.Who}.`, s.topics.length ? bullets(s.topics) : "", join(c, 1)]
+            : [
+                `${s.title}, ${c.dateShort} jam ${c.time}.`,
+                c.lead,
+                `${c.Who}. ${join(c, 2)}`,
+              ];
       break;
     case "reminder":
-      blocks = [
-        `🔴 Hari ini, ${c.time}\n${s.title}`,
-        `Sesi ${c.brand} mulai ${c.time}. Kalau sudah mulai, langsung join aja, boleh masuk kapan pun.`,
-        `${where(c)}\n${c.who.charAt(0).toUpperCase()}${c.who.slice(1)}.`,
-        topics(c, "Hari ini kita bahas:"),
-        join(c),
-        "Kirim ke teman yang mau ikut, lalu ketemu di voice channel.",
-      ];
+      blocks =
+        v === 0
+          ? [`Hari ini, ${c.time}. ${s.title}`, c.lead, `${c.Who}. Kalau sudah mulai, nyusul aja kapan pun. ${join(c, 0)}`]
+          : v === 1
+            ? [`${s.title} mulai ${c.time} hari ini.`, s.note ?? (s.topics.length ? bullets(s.topics) : c.lead), join(c, 1)]
+            : [s.note ?? "", `Hari ini jam ${c.time}, ${c.voice}. ${s.title}.`, join(c, 2)];
       break;
     case "recap":
-      blocks = recapBody(c);
+      blocks = recap(c, v % 2);
       break;
     case "cover":
-      blocks = [
-        `🎙 ${c.series} bareng ${c.brand}`,
-        s.description,
-        `Sesi: ${s.title}\n📅 ${c.date}, ${c.range}\n${where(c)}`,
-        join(c),
-        `💬 Ikuti akun ini supaya nggak ketinggalan sesi ${c.series} berikutnya.`,
-      ];
+      blocks =
+        v === 0
+          ? [`${c.series} bareng ${c.brand}.`, c.lead, `Sesinya "${s.title}", ${when}.`, join(c, 0)]
+          : [s.title, `${cap(c.series)} di ${c.brand}.`, c.lead, `${when}. ${join(c, 1)}`];
       break;
     case "sig-intro":
-      blocks = [
-        `🎙 Kenalan sama ${c.introName}: ${sig.tagline}`,
-        sig.description,
-        `Untuk siapa? ${c.forWho} Pemula sangat boleh, nggak ada pertanyaan yang terlalu dasar.`,
-        `Sesi terdekat: ${s.title}\n📅 ${c.date}, ${c.range}\n${where(c)}`,
-        join(c),
-        `💬 Ajak teman yang tertarik ikut ngobrol di ${c.introName}.`,
-      ];
+      blocks =
+        v === 0
+          ? [`${c.introName}. ${sig.tagline}`, sig.description, `Sesi terdekat soal "${s.title}", ${c.dateShort} jam ${c.time}.`, join(c, 0)]
+          : [sig.description, `Kalau mau lihat dulu seperti apa, "${s.title}" ada ${c.dateShort} jam ${c.time}. ${join(c, 2)}`];
       break;
   }
-  return [...blocks.filter(Boolean), tags(c)].join("\n\n");
+  return [...blocks.filter(Boolean).map((b) => (b.endsWith("\n") ? b.trimEnd() : b)), tags(c)].join("\n\n");
 }

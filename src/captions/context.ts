@@ -33,9 +33,13 @@ export interface Ctx {
   thanks: string;
   /** "SIG CN di FORA", or "FORA" for the general community. */
   introName: string;
-  /** Who the SIG (or FORA) is for, a sentence. */
-  forWho: string;
+  /** The host's own words if the session has a note, else the description. */
+  lead: string;
+  /** `who`, capitalised, as a sentence without the full stop. */
+  Who: string;
 }
+
+export const cap = (text: string): string => text.charAt(0).toUpperCase() + text.slice(1);
 
 export function makeCtx(s: Session, sig: Sig, community: Community): Ctx {
   const url = discordUrl(s, community);
@@ -55,10 +59,8 @@ export function makeCtx(s: Session, sig: Sig, community: Community): Ctx {
     series: s.series ?? s.theme,
     brand: sig.id === "fora" ? community.name : `${sig.short} × ${community.name}`,
     introName: sig.id === "fora" ? community.name : `${sig.short} di ${community.name}`,
-    forWho:
-      sig.id === "fora"
-        ? "Siapa pun yang suka ngobrol soal tech, dari mahasiswa sampai yang sudah bertahun-tahun bekerja."
-        : `Yang baru mulai, yang lagi belajar, dan yang sudah bekerja di bidang ${sig.name}.`,
+    lead: s.note ?? s.description,
+    Who: cap(speakerLine(s, true)),
     thanks: joinNames(people.map((p) => (p.handle ? `${p.name} @${p.handle}` : p.name))),
   };
 }
@@ -88,3 +90,18 @@ export function themeTag(s: Session): string[] {
 }
 
 export const hashLine = (tags: string[]): string => tags.map((t) => `#${t}`).join(" ");
+
+/** FNV-1a, so the choice below never changes between runs or machines. */
+function hash(text: string): number {
+  let h = 0x811c9dc5;
+  for (const ch of text) h = Math.imul(h ^ ch.codePointAt(0)!, 0x01000193);
+  return h >>> 0;
+}
+
+/**
+ * Which of `count` shapes a caption takes: stable for a session, platform and post type, so a
+ * re-render never churns, and different between sessions so a feed does not read as one template.
+ */
+export function shape(c: Ctx, scope: string, count: number): number {
+  return hash(`${c.s.id}|${scope}`) % count;
+}
