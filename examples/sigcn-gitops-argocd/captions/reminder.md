@@ -1,53 +1,35 @@
-# GitOps dengan Argo CD: dari commit di Git sampai deploy · reminder
+# GitOps dengan Argo CD · reminder
 
 ## Instagram
 
-🔴 Hari ini, 19.30 WIB
-GitOps dengan Argo CD: dari commit di Git sampai deploy
+GitOps dengan Argo CD mulai 19.30 WIB hari ini.
 
-Sesi SIG CN × FORA mulai 19.30 WIB. Kalau sudah mulai, langsung join aja, boleh masuk kapan pun.
+Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
 
-Di voice channel sig-cn-voice Discord FORA. Ngobrol langsung lewat suara, bukan webinar.
-Bersama Dani (contoh), dipandu Rina (contoh).
+Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Mau dengerin aja boleh, mau ikut ngomong juga boleh.
 
-Hari ini kita bahas:
-• Prinsip GitOps
-• Argo CD Application dan sync
-• Struktur repo manifest
-• Rollback lewat git revert
+#FORA #SIGCN #GitOps #ArgoCD
 
-Cara ikut:
-1. Buka Discord FORA lewat link di bio, atau langsung ke discord.gg/rSepJu7Wb
-2. Masuk ke voice channel sig-cn-voice
-3. Siapa pun boleh ikut ngobrol dan bertanya, tinggal masuk.
+## X 1/2
 
-Kirim ke teman yang mau ikut, lalu ketemu di voice channel.
+Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
 
-#FORA #KomunitasTech #SIGCN #CloudNative #Kubernetes #DevOps #ArgoCD #GitOps
+## X 2/2
 
-## X
-
-🔴 Hari ini 19.30 WIB
-GitOps dengan Argo CD: dari commit di Git sampai deploy
-Sudah mulai? Langsung join ke voice channel sig-cn-voice Discord FORA. Siapa pun boleh ngobrol dan bertanya.
+GitOps dengan Argo CD mulai 19.30 WIB.
+Kalau sudah jalan, nyusul aja.
+Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin atau ngomong, dua-duanya boleh.
 https://discord.gg/rSepJu7Wb
-#SIGCN #FORA
+#GitOps
 
 ## LinkedIn
 
-Hari ini, 19.30 WIB
-GitOps dengan Argo CD: dari commit di Git sampai deploy
+Hari ini, 19.30–21.00 WIB: GitOps dengan Argo CD
 
-SIG CN × FORA berkumpul hari ini pukul 19.30–21.00 WIB, bersama Dani (contoh), dipandu Rina (contoh). Kalau sudah mulai, langsung join saja.
+Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
 
-Yang akan kita bahas:
-• Prinsip GitOps
-• Argo CD Application dan sync
-• Struktur repo manifest
-• Rollback lewat git revert
+Bersama Dani (contoh), dipandu Rina (contoh). Kalau sudah mulai, silakan langsung masuk.
 
-Formatnya talk santai di voice channel sig-cn-voice Discord FORA, bukan webinar. Tidak perlu daftar: cukup masuk, dan siapa pun boleh bicara serta bertanya langsung.
+Kami ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
-Gabung lewat undangan Discord: https://discord.gg/rSepJu7Wb
-
-#SIGCN #CloudNative #Kubernetes #DevOps #GitOps
+#GitOps #CloudNative #Kubernetes

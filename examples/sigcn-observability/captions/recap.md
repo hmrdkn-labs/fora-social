@@ -2,35 +2,30 @@
 
 ## Instagram
 
-✅ Rangkuman sesi
-Observability: Logs, Metrics, Traces
+Rekap "Observability: Logs, Metrics, Traces", Kam, 14 Jan.
 
-Makasih Eko (contoh)! Ada 16 orang yang ikut ngobrol di voice channel.
+16 orang ikut ngobrol di voice channel. Makasih Eko (contoh).
 
-Poin-poin yang kita bawa pulang:
-1. Logs menjawab apa yang terjadi: Pakai format terstruktur seperti JSON supaya mudah dicari dan difilter.
-2. Metrics menjawab seberapa sering dan seberapa lama: Angka agregat yang murah disimpan dan cocok untuk dashboard dan alert.
-3. Traces menjawab di mana waktunya habis: Satu request diikuti lintas service, sehingga bagian yang lambat terlihat jelas.
-4. OpenTelemetry memisahkan instrumentasi dari backend: Kode diinstrumentasi sekali, lalu data bisa dikirim ke backend mana pun yang mendukung OTLP.
-5. Alert pada gejala yang dirasakan pengguna: Contohnya error rate dan latency, bukan CPU yang kebetulan tinggi sebentar.
+1. Logs menjawab apa yang terjadi. Pakai format terstruktur seperti JSON supaya gampang dicari dan difilter.
+2. Metrics menjawab seberapa sering dan seberapa lama. Angka agregat itu murah disimpan, dan cocok untuk dashboard dan alert.
+3. Traces menjawab di mana waktunya habis. Satu request diikuti lintas service, jadi bagian yang lambat kelihatan.
+4. OpenTelemetry memisahkan instrumentasi dari backend. Kode diinstrumentasi sekali, datanya bisa dikirim ke backend apa saja yang mendukung OTLP.
+5. Alert pada gejala yang dirasakan pengguna. Contohnya error rate dan latency. CPU tinggi sebentar belum tentu masalah.
 
-Bacaan lanjutan:
-• Dokumentasi OpenTelemetry: https://opentelemetry.io/docs/
-• Dokumentasi Prometheus: https://prometheus.io/docs/introduction/overview/
+Dokumentasi OpenTelemetry: https://opentelemetry.io/docs/
+Dokumentasi Prometheus: https://prometheus.io/docs/introduction/overview/
 
-Sesi berikutnya diumumkan di Discord FORA. Gabung dulu lewat link di bio atau discord.gg/rSepJu7Wb, biar nggak ketinggalan.
+Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, nyalain mic juga boleh.
 
-Simpan postingan ini buat dibaca ulang.
-
-#FORA #KomunitasTech #SIGCN #CloudNative #Kubernetes #DevOps #OpenTelemetry #Prometheus
+#FORA #SIGCN #Observability #OpenTelemetry
 
 ## X 1/3
 
-Rangkuman "Observability: Logs, Metrics, Traces". 16 orang ngobrol di voice channel. Makasih Eko (contoh)!
+Rekap "Observability: Logs, Metrics, Traces". 16 orang ngobrol di voice channel. Makasih Eko (contoh).
 
 ## X 2/3
 
-Poin-poin utamanya:
+Intinya:
 1. Logs menjawab apa yang terjadi
 2. Metrics menjawab seberapa sering dan seberapa lama
 3. Traces menjawab di mana waktunya habis
@@ -39,29 +34,26 @@ Poin-poin utamanya:
 
 ## X 3/3
 
-Bacaan: Dokumentasi OpenTelemetry https://opentelemetry.io/docs/
-Sesi berikutnya diumumkan di Discord FORA. Gabung dulu, siapa pun boleh ikut ngobrol dan bertanya:
+Dokumentasi OpenTelemetry https://opentelemetry.io/docs/
+Sesi berikutnya diumumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
-#SIGCN #FORA
+#Observability
 
 ## LinkedIn
 
-Rangkuman sesi SIG CN × FORA
-Observability: Logs, Metrics, Traces
+16 orang ikut ngobrol di voice channel. Terima kasih Eko (contoh).
 
-Terima kasih Eko (contoh). 16 orang ikut ngobrol di voice channel.
+Catatan dari "Observability: Logs, Metrics, Traces":
 
-Beberapa poin yang kami bawa pulang:
-1. Logs menjawab apa yang terjadi: Pakai format terstruktur seperti JSON supaya mudah dicari dan difilter.
-2. Metrics menjawab seberapa sering dan seberapa lama: Angka agregat yang murah disimpan dan cocok untuk dashboard dan alert.
-3. Traces menjawab di mana waktunya habis: Satu request diikuti lintas service, sehingga bagian yang lambat terlihat jelas.
-4. OpenTelemetry memisahkan instrumentasi dari backend: Kode diinstrumentasi sekali, lalu data bisa dikirim ke backend mana pun yang mendukung OTLP.
-5. Alert pada gejala yang dirasakan pengguna: Contohnya error rate dan latency, bukan CPU yang kebetulan tinggi sebentar.
+1. Logs menjawab apa yang terjadi. Pakai format terstruktur seperti JSON supaya gampang dicari dan difilter.
+2. Metrics menjawab seberapa sering dan seberapa lama. Angka agregat itu murah disimpan, dan cocok untuk dashboard dan alert.
+3. Traces menjawab di mana waktunya habis. Satu request diikuti lintas service, jadi bagian yang lambat kelihatan.
+4. OpenTelemetry memisahkan instrumentasi dari backend. Kode diinstrumentasi sekali, datanya bisa dikirim ke backend apa saja yang mendukung OTLP.
+5. Alert pada gejala yang dirasakan pengguna. Contohnya error rate dan latency. CPU tinggi sebentar belum tentu masalah.
 
-Bacaan lanjutan:
-• Dokumentasi OpenTelemetry: https://opentelemetry.io/docs/
-• Dokumentasi Prometheus: https://prometheus.io/docs/introduction/overview/
+Dokumentasi OpenTelemetry: https://opentelemetry.io/docs/
+Dokumentasi Prometheus: https://prometheus.io/docs/introduction/overview/
 
-Sesi berikutnya akan diumumkan di Discord FORA. Format tetap sama: talk santai di voice channel, terbuka untuk siapa pun. https://discord.gg/rSepJu7Wb
+Sesi berikutnya akan kami umumkan di Discord FORA. Boleh dengarkan saja di voice channel sig-cn-voice, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
 
-#SIGCN #CloudNative #Kubernetes #DevOps #Observability
+#Observability #CloudNative #Kubernetes

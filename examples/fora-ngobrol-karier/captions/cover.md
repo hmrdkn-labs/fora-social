@@ -2,44 +2,31 @@
 
 ## Instagram
 
-🎙 Karier bareng FORA
+Karier bareng FORA.
 
-Diskusi terbuka tanpa pembicara tamu. Bawa cerita dan pertanyaan soal kerja di tech, mulai dari cari kerja pertama, pindah peran, sampai belajar sambil kerja.
+Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech: cari kerja pertama, pindah peran, atau belajar sambil kerja.
 
-Sesi: Ngobrol Karier di Tech
-📅 Sabtu, 23 Januari 2027, 19.30–21.00 WIB
-Di voice channel fora-voice Discord FORA. Ngobrol langsung lewat suara, bukan webinar.
+Sesinya "Ngobrol Karier di Tech", Sabtu, 23 Januari 2027, 19.30–21.00 WIB.
 
-Cara ikut:
-1. Buka Discord FORA lewat link di bio, atau langsung ke discord.gg/rSepJu7Wb
-2. Masuk ke voice channel fora-voice
-3. Siapa pun boleh ikut ngobrol dan bertanya, tinggal masuk.
+Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel fora-voice, dengerin aja boleh, nyalain mic juga boleh.
 
-💬 Ikuti akun ini supaya nggak ketinggalan sesi Karier berikutnya.
-
-#FORA #KomunitasTech #ForumRangkai #KarierTech #Karier
+#FORA #Karier #KarierTech #KomunitasTech
 
 ## X
 
-Karier bareng FORA
-Sesi: Ngobrol Karier di Tech
+Karier bareng FORA.
+Ngobrol Karier di Tech
 Sab, 23 Jan, 19.30–21.00 WIB
-Ngobrol santai di voice channel fora-voice Discord FORA, siapa pun boleh ikut bicara dan bertanya.
+Di voice channel fora-voice Discord FORA, dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
-#FORA #Karier
+#Karier
 
 ## LinkedIn
 
-Karier bareng FORA
+Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech: cari kerja pertama, pindah peran, atau belajar sambil kerja.
 
-Diskusi terbuka tanpa pembicara tamu. Bawa cerita dan pertanyaan soal kerja di tech, mulai dari cari kerja pertama, pindah peran, sampai belajar sambil kerja.
+Karier di FORA. Sesinya "Ngobrol Karier di Tech", Sab, 23 Jan, 19.30–21.00 WIB.
 
-Sesi: Ngobrol Karier di Tech, Sabtu, 23 Januari 2027, 19.30–21.00 WIB.
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
 
-Cocok untuk siapa pun yang tertarik pada topik ini, dari yang baru mulai sampai yang sudah berpengalaman.
-
-Formatnya talk santai di voice channel fora-voice Discord FORA, bukan webinar. Tidak perlu daftar: cukup masuk, dan siapa pun boleh bicara serta bertanya langsung.
-
-Gabung lewat undangan Discord: https://discord.gg/rSepJu7Wb
-
-#FORA #ForumRangkai #KomunitasTech #Karier #KarierTech
+#Karier #KomunitasTech #FORA

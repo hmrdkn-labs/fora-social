@@ -2,52 +2,33 @@
 
 ## Instagram
 
-🔴 Hari ini, 19.30 WIB
-Kubernetes untuk Pemula
+Kubernetes untuk Pemula mulai 19.30 WIB hari ini.
 
-Sesi SIG CN × FORA mulai 19.30 WIB. Kalau sudah mulai, langsung join aja, boleh masuk kapan pun.
+Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
 
-Di voice channel sig-cn-voice Discord FORA. Ngobrol langsung lewat suara, bukan webinar.
-Bersama Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh.
+Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Mau dengerin aja boleh, mau ikut ngomong juga boleh.
 
-Hari ini kita bahas:
-• Container vs Kubernetes, kenapa butuh orkestrasi
-• Pod, Deployment, dan Service
-• Deploy aplikasi pertama di cluster lokal
-• Debug dasar dengan kubectl
+#FORA #SIGCN #Kubernetes #Container
 
-Cara ikut:
-1. Buka Discord FORA lewat link di bio, atau langsung ke discord.gg/rSepJu7Wb
-2. Masuk ke voice channel sig-cn-voice
-3. Siapa pun boleh ikut ngobrol dan bertanya, tinggal masuk.
+## X 1/2
 
-Kirim ke teman yang mau ikut, lalu ketemu di voice channel.
+Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
 
-#FORA #KomunitasTech #SIGCN #CloudNative #Kubernetes #DevOps #Container
+## X 2/2
 
-## X
-
-🔴 Hari ini 19.30 WIB
-Kubernetes untuk Pemula
-Sudah mulai? Langsung join ke voice channel sig-cn-voice Discord FORA. Siapa pun boleh ngobrol dan bertanya.
+Hari ini jam 19.30 WIB, Kubernetes untuk Pemula.
+Di voice channel sig-cn-voice Discord FORA, dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
-#SIGCN #FORA
+#Kubernetes
 
 ## LinkedIn
 
-Hari ini, 19.30 WIB
-Kubernetes untuk Pemula
+Hari ini, 19.30–21.00 WIB: Kubernetes untuk Pemula
 
-SIG CN × FORA berkumpul hari ini pukul 19.30–21.00 WIB, bersama Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh. Kalau sudah mulai, langsung join saja.
+Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
 
-Yang akan kita bahas:
-• Container vs Kubernetes, kenapa butuh orkestrasi
-• Pod, Deployment, dan Service
-• Deploy aplikasi pertama di cluster lokal
-• Debug dasar dengan kubectl
+Bersama Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh. Kalau sudah mulai, silakan langsung masuk.
 
-Formatnya talk santai di voice channel sig-cn-voice Discord FORA, bukan webinar. Tidak perlu daftar: cukup masuk, dan siapa pun boleh bicara serta bertanya langsung.
+Kami ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
-Gabung lewat undangan Discord: https://discord.gg/rSepJu7Wb
-
-#SIGCN #CloudNative #Kubernetes #DevOps #Container
+#Kubernetes #CloudNative #DevOpsIndonesia
