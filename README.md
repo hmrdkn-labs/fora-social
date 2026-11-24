@@ -125,7 +125,7 @@ A SIG needs its own colour, a wordmark and a `sigs/<id>.yaml` file. [brand/READM
 
 - **Montserrat** (sans, body and UI; weights 400 to 800): SIL Open Font License 1.1. Licence: [`brand/fonts/montserrat/OFL.txt`](brand/fonts/montserrat/OFL.txt).
 - **Libertinus Serif** (the FORA mark and short editorial accents; 400, italic and 700): SIL Open Font License 1.1. Licence: [`brand/fonts/libertinus/OFL.txt`](brand/fonts/libertinus/OFL.txt).
-- **The ∫ in the FORA mark** is the outline of glyph `integral.v1` from Latin Modern Math, under the GUST Font License. Only the outline is in the repo, as path data in `brand/tools/build_logos.py` and the logo SVGs. The font itself is not shipped, so there is no licence file in this repo. The licence text is at <https://www.gust.org.pl/projects/e-foundry/licenses/GUST-FONT-LICENSE.txt>.
+- **The ∫ in the FORA mark** is the outline of glyph `integral.v1` from Latin Modern Math, under the GUST Font License. Only the outline is in the repo, as path data in `brand/tools/build_logos.py` and the logo SVGs; the font itself is not shipped. The licence text is in [`brand/licenses/GUST-FONT-LICENSE.txt`](brand/licenses/GUST-FONT-LICENSE.txt), downloaded from <https://www.gust.org.pl/projects/e-foundry/licenses/GUST-FONT-LICENSE.txt>.
 - **Code** is MIT. See [`LICENSE`](LICENSE).
 
 ## CI
