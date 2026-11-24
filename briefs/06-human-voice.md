@@ -144,12 +144,12 @@ the orchestrator in at most 20 lines.
 
 ### Report (Sonnet 5.5, medium)
 
-- **Commits:** see `git log 06-human-voice`: lint and fixtures, captions, templates and copy, docs, re-rendered examples.
-- **Checks:** `pnpm check` passes (143 tests); `pnpm examples` renders all 4 sessions without overflow failures. The style tests fail if "menyelami" or "bukan webinar" is put back into a caption, a template or a sample (the linter's own test pins both).
-- **Images:** looked at announce, reminder, sig-intro, cover and recap in feed, story, X, link and carousel formats for the GitOps sample. Nothing overflows. The join strip is two lines of text in places where it was one before; room is computed, so layout holds.
-- **Shapes:** IG 3 for announce/reminder/cover, 2 for recap/sig-intro; X 3 for announce/reminder/cover, 2 for recap; LinkedIn 3 for announce, 2 for others. Chosen by FNV-1a of `session.id|platform|type` (`shape()` in `context.ts`).
-- **Choices to check:** hashtags are IG `#FORA #SIGCN #<theme> ...` (4), X one tag (the theme), LinkedIn three. `ForumRangkai` dropped from `sigs/fora.yaml`; `DevOps` became `DevOpsIndonesia` in `sigs/sig-cn.yaml`. Samples with a `note` (Kubernetes, GitOps) are invented host words; replace them with the host's real words. The recap leads with the same note, which is written before the talk.
-- **Open questions:** (1) Is "Dengerin aja boleh, mic juga boleh" OK as the single join phrase? (2) X announce with a note becomes a two-post thread; want the note shortened instead? (3) LinkedIn still says "kami" in a few places and "kita" in others; pick one.
+- **Checks:** `pnpm check` passes (144 tests); `pnpm examples` renders all 4 sessions with no overflow failures. The style tests fail if "menyelami" or "bukan webinar" returns to a caption, template or sample.
+- **Shapes:** IG 3 for announce, reminder and cover, 2 for recap and sig-intro; X 3 for announce, reminder and cover, 2 for recap; LinkedIn 3 for announce, 2 for the rest. Chosen by FNV-1a of `session.id|platform|type` (`shape()` in `context.ts`).
+- **Decisions from t8x applied:** (1) the join phrase has 3 wordings per register (casual for IG and X, tidy for LinkedIn), picked by `openDoor()` in `context.ts`; the text on the images stays one fixed phrase. (2) An X post leads with the host's note only when everything fits in one post; otherwise the note is left out and no thread is made (announce, reminder, cover). (3) "kita" everywhere, LinkedIn and `sigs/fora.yaml` included.
+- **Acceptance read-through:** all captions of the four samples read. Fixed: recaps no longer lead with the pre-talk note (it promised a future session); SIG intro no longer says the tagline and the description twice; titles that contain commas or colons no longer sit inside comma lists; a redundant "Judulnya ..." line and a duplicated topic sentence in the Karier description are gone.
+- **Images:** looked at announce, reminder, sig-intro, cover and recap in feed, story, X, link and carousel for all four sessions (contact sheets; X and link sheets are small, the overflow check also passes). Nothing overflows or looks emptier.
+- **Still yours to change:** the two `note` texts (Kubernetes, GitOps) are invented; hashtags (`ForumRangkai` dropped from `sigs/fora.yaml`, `DevOps` became `DevOpsIndonesia` in `sigs/sig-cn.yaml`).
 
 #### Before: GitOps announce, all platforms
 
@@ -226,18 +226,15 @@ Sab, 19 Des, 19.30–21.00 WIB. Bersama Dani (contoh), dipandu Rina (contoh).
 - Struktur repo manifest
 - Rollback pakai git revert
 
-Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Mau dengerin aja boleh, mau ikut ngomong juga boleh.
+Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja boleh, mic juga boleh.
 
 #FORA #SIGCN #GitOps #ArgoCD
 
-#### X 1/2
+#### X
 
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
-
-#### X 2/2
-
-GitOps dengan Argo CD, Sab, 19 Des jam 19.30 WIB.
-Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin atau ngomong, dua-duanya boleh.
+GitOps dengan Argo CD
+Sab, 19 Des jam 19.30 WIB.
+Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #GitOps
 
@@ -247,22 +244,18 @@ Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah,
 
 GitOps dengan Argo CD. Sabtu, 19 Desember 2026, 19.30–21.00 WIB. Bersama Dani (contoh), dipandu Rina (contoh).
 
-Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 
 #GitOps #CloudNative #Kubernetes
 
 
 #### After: GitOps recap, X thread
 
-#### X 1/4
-
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
-
-#### X 2/4
+#### X 1/3
 
 Rekap "GitOps dengan Argo CD". 11 orang ngobrol di voice channel. Makasih Dani (contoh).
 
-#### X 3/4
+#### X 2/3
 
 Intinya:
 1. Git jadi source of truth
@@ -270,10 +263,10 @@ Intinya:
 3. Pisahkan repo manifest dari repo kode aplikasi
 4. Rollback cukup dengan git revert
 
-#### X 4/4
+#### X 3/3
 
 Dokumentasi Argo CD https://argo-cd.readthedocs.io/
-Sesi berikutnya diumumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
+Sesi berikutnya diumumkan di Discord FORA. Dengerin aja nggak apa-apa, ngomong juga silakan.
 https://discord.gg/rSepJu7Wb
 #GitOps
 

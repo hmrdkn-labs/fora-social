@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { type Ctx, hashLine, shape, themeTag, uniqueTags } from "./context.ts";
+import { type Ctx, hashLine, openDoor, shape, themeTag, uniqueTags } from "./context.ts";
 import { xLength } from "./xlength.ts";
 
 const LIMIT = 280;
@@ -39,15 +39,21 @@ function tags(c: Ctx): string {
 
 const plain = (...texts: string[]): Line[] => texts.map((text) => ({ text }));
 
-/** The host's note leads the post unchanged; it is a part of its own so a long one becomes the first post of a thread. */
-const noteParts = (c: Ctx): Line[][] => (c.s.note ? [plain(c.s.note)] : []);
+/** The host's note leads the single post, unchanged, when everything still fits in it; otherwise it is left out. */
+function noted(c: Ctx, body: Line[]): string[] {
+  if (c.s.note) {
+    const text = [c.s.note, ...body.map((l) => l.text)].join("\n");
+    if (xLength(text) <= LIMIT) return [text];
+  }
+  return build([body]);
+}
 
 /** How to join and that anyone can listen or talk: said once, worded two ways. */
 function joinPart(c: Ctx, variant: number): Line[] {
   const open =
     variant % 2 === 0
-      ? `Di ${c.voice} Discord FORA, dengerin aja boleh, mic juga boleh.`
-      : `Masuk aja ke ${c.voice} di Discord FORA. Dengerin atau ngomong, dua-duanya boleh.`;
+      ? `Di ${c.voice} Discord FORA. ${openDoor(c, "x|join")}`
+      : `Masuk aja ke ${c.voice} di Discord FORA. ${openDoor(c, "x|join")}`;
   return [...plain(open, c.url), { text: tags(c) }];
 }
 
@@ -62,22 +68,20 @@ function recapThread(c: Ctx): string[] {
       : `${crowd} buat "${c.s.title}". Makasih ${c.thanks}, ini catatannya.`;
   const mark = (i: number) => (v === 0 ? `${i + 1}.` : "-");
   const numbered = r.points.map((p, i): Line => ({ text: `${mark(i)} ${p.title}`, optional: i > 0 }));
-  // Split the points over at most two posts, filling the first as far as it goes. A host's note
-  // takes a post of its own, so then all the points share one post and the last ones give way.
+  // Split the points over at most two posts, filling the first as far as it goes.
   const first: Line[] = v === 0 ? [{ text: "Intinya:" }] : [];
   const rest: Line[] = [];
   for (const line of numbered) {
     const fits = first.length === 0 || xLength([...first, line].map((l) => l.text).join("\n")) <= LIMIT;
-    if (c.s.note || (rest.length === 0 && fits)) first.push(line);
+    if (rest.length === 0 && fits) first.push(line);
     else rest.push(line);
   }
   const closing =
     v === 0
-      ? plain("Sesi berikutnya diumumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.", c.url, tags(c))
-      : plain(`Sesi berikutnya kita umumkan di Discord FORA. Dengerin atau ngomong di ${c.voice}, dua-duanya boleh.`, c.url, tags(c));
+      ? plain(`Sesi berikutnya diumumkan di Discord FORA. ${openDoor(c, "x|recap")}`, c.url, tags(c))
+      : plain(`Sesi berikutnya kita umumkan di Discord FORA. ${openDoor(c, "x|recap")}`, c.url, tags(c));
   const links = r.links?.length ? [{ text: `${r.links[0].label} ${r.links[0].url}`, optional: true }] : [];
-  const posts = [compose(plain(c.s.note ?? head)), compose(first)];
-  if (c.s.note) posts.splice(1, 0, compose(plain(head)));
+  const posts = [compose(plain(head)), compose(first)];
   if (rest.length) posts.push(compose(rest));
   posts.push(compose([...links, ...closing]));
   if (posts.length > MAX_POSTS) throw new Error(`X thread has ${posts.length} posts, at most ${MAX_POSTS}`);
@@ -89,40 +93,31 @@ export function x(c: Ctx, type: PostType): string[] {
   const v = shape(c, `x|${type}`, 3);
   switch (type) {
     case "announce":
-      return build([
-        ...noteParts(c),
-        [
+      return noted(c, [
           ...(v === 0
-            ? plain(s.title, `${c.dateShort}, ${c.range}`)
-            : v === 1
-              ? plain(`${s.title}, ${c.dateShort} jam ${c.time}.`)
-              : plain(`Kita ngobrol soal ${s.theme} ${c.dateShort} jam ${c.time}.`, `Judulnya "${s.title}".`)),
-          ...joinPart(c, v),
-        ],
+          ? plain(s.title, `${c.dateShort}, ${c.range}`)
+          : v === 1
+            ? plain(s.title, `${c.dateShort} jam ${c.time}.`)
+            : plain(`${c.dateShort} jam ${c.time}, kita kumpul di voice.`, s.title)),
+        ...joinPart(c, v),
       ]);
     case "reminder":
-      return build([
-        ...noteParts(c),
-        [
+      return noted(c, [
           ...(v === 0
-            ? plain(`Hari ini jam ${c.time}, ${s.title}.`)
-            : v === 1
-              ? plain(`${s.title} mulai ${c.time}.`, "Kalau sudah jalan, nyusul aja.")
-              : plain(`Jam ${c.time} nanti, ${s.title}.`)),
-          ...joinPart(c, v),
-        ],
+          ? plain(`Hari ini jam ${c.time}, ${s.title}.`)
+          : v === 1
+            ? plain(`${s.title} mulai ${c.time}.`, "Kalau sudah jalan, nyusul aja.")
+            : plain(`Jam ${c.time} nanti, ${s.title}.`)),
+        ...joinPart(c, v),
       ]);
     case "recap":
       return recapThread(c);
     case "cover":
-      return build([
-        ...noteParts(c),
-        [
+      return noted(c, [
           ...(v === 1
-            ? plain(s.title, `${c.series}, ${c.dateShort}, ${c.range}`)
-            : plain(`${c.series} bareng ${c.brand}.`, s.title, `${c.dateShort}, ${c.range}`)),
-          ...joinPart(c, v),
-        ],
+          ? plain(s.title, `${c.series}, ${c.dateShort}, ${c.range}`)
+          : plain(`${c.series} bareng ${c.brand}.`, s.title, `${c.dateShort}, ${c.range}`)),
+        ...joinPart(c, v),
       ]);
     case "sig-intro":
       return build([

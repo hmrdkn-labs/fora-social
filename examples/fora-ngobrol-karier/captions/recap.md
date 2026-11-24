@@ -2,13 +2,13 @@
 
 ## Instagram
 
-Ngobrol Karier di Tech: ini yang tercatat dari obrolan Sab, 23 Jan.
+Ini yang tercatat dari "Ngobrol Karier di Tech" (Sab, 23 Jan).
 
 - Proyek kecil yang selesai lebih berguna daripada banyak kursus. Satu proyek yang bisa dijelaskan tuntas lebih gampang dinilai daripada daftar sertifikat.
 - Belajar dengan target yang jelas. Pilih satu masalah nyata di kerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
 - Pindah peran bisa dimulai dari tugas di sekitar peran tujuan. Ambil kerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.
 
-9 orang ikut ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh, sampai ketemu lagi. Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, nyalain mic juga boleh.
+9 orang ikut ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh, sampai ketemu lagi. Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, mic juga boleh.
 
 #FORA #Karier #KarierTech #KomunitasTech
 
@@ -24,7 +24,7 @@ Ngobrol Karier di Tech: ini yang tercatat dari obrolan Sab, 23 Jan.
 
 ## X 3/3
 
-Sesi berikutnya kita umumkan di Discord FORA. Dengerin atau ngomong di voice channel fora-voice, dua-duanya boleh.
+Sesi berikutnya kita umumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Karier
 
@@ -38,6 +38,6 @@ Terima kasih Dika (contoh) @dika_contoh. 9 orang ikut ngobrol di voice channel.
 2. Belajar dengan target yang jelas. Pilih satu masalah nyata di kerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
 3. Pindah peran bisa dimulai dari tugas di sekitar peran tujuan. Ambil kerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.
 
-Sesi berikutnya akan kami umumkan di Discord FORA. Boleh dengarkan saja di voice channel fora-voice, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
+Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel fora-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh. https://discord.gg/rSepJu7Wb
 
 #Karier #KomunitasTech #FORA

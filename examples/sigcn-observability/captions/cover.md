@@ -8,7 +8,7 @@ Cloud Native 101 di SIG CN × FORA.
 
 Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dijawab logs, metrics, dan traces, dan cara mulai tanpa pasang semuanya sekaligus.
 
-Kamis, 14 Januari 2027, 20.00–21.30 WIB. Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Mau dengerin aja boleh, mau ikut ngomong juga boleh.
+Kamis, 14 Januari 2027, 20.00–21.30 WIB. Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #SIGCN #Observability #OpenTelemetry
 
@@ -17,7 +17,7 @@ Kamis, 14 Januari 2027, 20.00–21.30 WIB. Mampir ke voice channel sig-cn-voice 
 Cloud Native 101 bareng SIG CN × FORA.
 Observability: Logs, Metrics, Traces
 Kam, 14 Jan, 20.00–21.30 WIB
-Di voice channel sig-cn-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Observability
 
@@ -27,6 +27,6 @@ Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dija
 
 Cloud Native 101 di SIG CN × FORA. Sesinya "Observability: Logs, Metrics, Traces", Kam, 14 Jan, 20.00–21.30 WIB.
 
-Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Dengarkan saja boleh, ikut bicara juga boleh.
 
 #Observability #CloudNative #Kubernetes

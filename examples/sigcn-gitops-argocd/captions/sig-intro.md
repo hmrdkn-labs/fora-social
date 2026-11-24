@@ -4,7 +4,7 @@
 
 SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain nyela dan nanya.
 
-Kalau mau lihat dulu seperti apa, "GitOps dengan Argo CD" ada Sab, 19 Des jam 19.30 WIB. Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
+Yang terdekat "GitOps dengan Argo CD", Sab, 19 Des jam 19.30 WIB. Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
 
 #FORA #SIGCN #GitOps #ArgoCD
 
@@ -12,7 +12,7 @@ Kalau mau lihat dulu seperti apa, "GitOps dengan Argo CD" ada Sab, 19 Des jam 19
 
 SIG CN di FORA. Ngobrol soal Kubernetes dan cloud native di voice channel.
 Sesi terdekat soal "GitOps dengan Argo CD", Sab, 19 Des.
-Di voice channel sig-cn-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #GitOps
 
@@ -20,10 +20,8 @@ https://discord.gg/rSepJu7Wb
 
 SIG CN di FORA. Ngobrol soal Kubernetes dan cloud native di voice channel.
 
-SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain nyela dan nanya.
-
 Sesi terdekat soal "GitOps dengan Argo CD", Sab, 19 Des, 19.30–21.00 WIB.
 
-Kami ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
 #GitOps #CloudNative #Kubernetes

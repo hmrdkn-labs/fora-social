@@ -15,7 +15,7 @@ Rekap "Observability: Logs, Metrics, Traces", Kam, 14 Jan.
 Dokumentasi OpenTelemetry: https://opentelemetry.io/docs/
 Dokumentasi Prometheus: https://prometheus.io/docs/introduction/overview/
 
-Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, nyalain mic juga boleh.
+Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #SIGCN #Observability #OpenTelemetry
 
@@ -35,7 +35,7 @@ Intinya:
 ## X 3/3
 
 Dokumentasi OpenTelemetry https://opentelemetry.io/docs/
-Sesi berikutnya diumumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
+Sesi berikutnya diumumkan di Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Observability
 
@@ -54,6 +54,6 @@ Catatan dari "Observability: Logs, Metrics, Traces":
 Dokumentasi OpenTelemetry: https://opentelemetry.io/docs/
 Dokumentasi Prometheus: https://prometheus.io/docs/introduction/overview/
 
-Sesi berikutnya akan kami umumkan di Discord FORA. Boleh dengarkan saja di voice channel sig-cn-voice, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
+Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel sig-cn-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh. https://discord.gg/rSepJu7Wb
 
 #Observability #CloudNative #Kubernetes

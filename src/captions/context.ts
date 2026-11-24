@@ -98,6 +98,16 @@ function hash(text: string): number {
   return h >>> 0;
 }
 
+const OPEN = [
+  ["Dengerin aja boleh, mic juga boleh.", "Mau dengerin aja boleh, mau nyalain mic juga boleh.", "Dengerin aja nggak apa-apa, ngomong juga silakan."],
+  ["Boleh dengarkan saja, boleh juga ikut bicara.", "Dengarkan saja boleh, ikut bicara juga boleh.", "Mau dengarkan saja atau ikut bicara, dua-duanya boleh."],
+] as const;
+
+/** That anyone can listen or talk, in one of three wordings picked like `shape`. `formal` is the LinkedIn register. */
+export function openDoor(c: Ctx, scope: string, formal = false): string {
+  return OPEN[formal ? 1 : 0][shape(c, `open|${scope}`, 3)];
+}
+
 /**
  * Which of `count` shapes a caption takes: stable for a session, platform and post type, so a
  * re-render never churns, and different between sessions so a feed does not read as one template.

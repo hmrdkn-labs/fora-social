@@ -30,7 +30,7 @@ FORA · Sabtu, 23 Januari 2027 · 19.30 WIB · `fora-ngobrol-karier`
 ```text
 Ngobrol Karier di Tech
 
-Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech: cari kerja pertama, pindah peran, atau belajar sambil kerja.
+Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech.
 
 Sab, 23 Jan, 19.30–21.00 WIB. Dipandu Dika (contoh) @dika_contoh.
 
@@ -38,7 +38,7 @@ Sab, 23 Jan, 19.30–21.00 WIB. Dipandu Dika (contoh) @dika_contoh.
 - Belajar sambil kerja
 - Pindah dari developer ke SRE
 
-Mampir ke voice channel fora-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Mau dengerin aja boleh, mau ikut ngomong juga boleh.
+Mampir ke voice channel fora-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #Karier #KarierTech #KomunitasTech
 ```
@@ -48,7 +48,7 @@ Mampir ke voice channel fora-voice di Discord FORA, link di bio atau discord.gg/
 ```text
 Ngobrol Karier di Tech
 Sab, 23 Jan, 19.30–21.00 WIB
-Di voice channel fora-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel fora-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Karier
 ```
@@ -58,7 +58,7 @@ https://discord.gg/rSepJu7Wb
 ```text
 Ngobrol Karier di Tech, bareng FORA
 
-Sab, 23 Jan, 19.30–21.00 WIB. Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech: cari kerja pertama, pindah peran, atau belajar sambil kerja.
+Sab, 23 Jan, 19.30–21.00 WIB. Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech.
 
 • Cari kerja pertama di tech
 • Belajar sambil kerja
@@ -66,7 +66,7 @@ Sab, 23 Jan, 19.30–21.00 WIB. Diskusi terbuka tanpa tamu. Bawa cerita dan pert
 
 Dipandu Dika (contoh) @dika_contoh.
 
-Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 
 #Karier #KomunitasTech #FORA
 ```
@@ -93,9 +93,9 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voic
 **Instagram**
 
 ```text
-Hari ini jam 19.30 WIB, voice channel fora-voice. Ngobrol Karier di Tech.
+Ngobrol Karier di Tech, hari ini jam 19.30 WIB.
 
-Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
+Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #Karier #KarierTech #KomunitasTech
 ```
@@ -104,7 +104,7 @@ Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di 
 
 ```text
 Hari ini jam 19.30 WIB, Ngobrol Karier di Tech.
-Di voice channel fora-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel fora-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Karier
 ```
@@ -112,11 +112,11 @@ https://discord.gg/rSepJu7Wb
 **LinkedIn**
 
 ```text
-Hari ini jam 19.30 WIB kami ngobrol soal Karier.
+Hari ini jam 19.30 WIB kita ngobrol soal Karier.
 
 Ngobrol Karier di Tech, 19.30–21.00 WIB. Dipandu Dika (contoh) @dika_contoh.
 
-Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 
 #Karier #KomunitasTech #FORA
 ```
@@ -143,13 +143,13 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voic
 **Instagram**
 
 ```text
-Ngobrol Karier di Tech: ini yang tercatat dari obrolan Sab, 23 Jan.
+Ini yang tercatat dari "Ngobrol Karier di Tech" (Sab, 23 Jan).
 
 - Proyek kecil yang selesai lebih berguna daripada banyak kursus. Satu proyek yang bisa dijelaskan tuntas lebih gampang dinilai daripada daftar sertifikat.
 - Belajar dengan target yang jelas. Pilih satu masalah nyata di kerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
 - Pindah peran bisa dimulai dari tugas di sekitar peran tujuan. Ambil kerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.
 
-9 orang ikut ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh, sampai ketemu lagi. Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, nyalain mic juga boleh.
+9 orang ikut ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh, sampai ketemu lagi. Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, mic juga boleh.
 
 #FORA #Karier #KarierTech #KomunitasTech
 ```
@@ -171,7 +171,7 @@ Ngobrol Karier di Tech: ini yang tercatat dari obrolan Sab, 23 Jan.
 **X 3/3**
 
 ```text
-Sesi berikutnya kita umumkan di Discord FORA. Dengerin atau ngomong di voice channel fora-voice, dua-duanya boleh.
+Sesi berikutnya kita umumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Karier
 ```
@@ -187,7 +187,7 @@ Terima kasih Dika (contoh) @dika_contoh. 9 orang ikut ngobrol di voice channel.
 2. Belajar dengan target yang jelas. Pilih satu masalah nyata di kerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
 3. Pindah peran bisa dimulai dari tugas di sekitar peran tujuan. Ambil kerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.
 
-Sesi berikutnya akan kami umumkan di Discord FORA. Boleh dengarkan saja di voice channel fora-voice, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
+Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel fora-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh. https://discord.gg/rSepJu7Wb
 
 #Karier #KomunitasTech #FORA
 ```
@@ -216,11 +216,11 @@ Sesi berikutnya akan kami umumkan di Discord FORA. Boleh dengarkan saja di voice
 ```text
 Karier bareng FORA.
 
-Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech: cari kerja pertama, pindah peran, atau belajar sambil kerja.
+Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech.
 
 Sesinya "Ngobrol Karier di Tech", Sabtu, 23 Januari 2027, 19.30–21.00 WIB.
 
-Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel fora-voice, dengerin aja boleh, nyalain mic juga boleh.
+Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel fora-voice. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #Karier #KarierTech #KomunitasTech
 ```
@@ -231,7 +231,7 @@ Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel fora-voic
 Karier bareng FORA.
 Ngobrol Karier di Tech
 Sab, 23 Jan, 19.30–21.00 WIB
-Di voice channel fora-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel fora-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Karier
 ```
@@ -239,11 +239,11 @@ https://discord.gg/rSepJu7Wb
 **LinkedIn**
 
 ```text
-Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech: cari kerja pertama, pindah peran, atau belajar sambil kerja.
+Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech.
 
 Karier di FORA. Sesinya "Ngobrol Karier di Tech", Sab, 23 Jan, 19.30–21.00 WIB.
 
-Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 
 #Karier #KomunitasTech #FORA
 ```
@@ -270,9 +270,9 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voic
 **Instagram**
 
 ```text
-FORA (Forum Rangkai) itu komunitas tech kecil berbahasa Indonesia di Discord. Kami ngobrol di voice channel. Topiknya dibagi ke beberapa SIG (special interest group), dan tiap SIG pegang satu bidang.
+FORA (Forum Rangkai) itu komunitas tech kecil berbahasa Indonesia di Discord. Kita ngobrol di voice channel. Topiknya dibagi ke beberapa SIG (special interest group), dan tiap SIG pegang satu bidang.
 
-Kalau mau lihat dulu seperti apa, "Ngobrol Karier di Tech" ada Sab, 23 Jan jam 19.30 WIB. Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
+Yang terdekat "Ngobrol Karier di Tech", Sab, 23 Jan jam 19.30 WIB. Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #Karier #KarierTech #KomunitasTech
 ```
@@ -282,7 +282,7 @@ Kalau mau lihat dulu seperti apa, "Ngobrol Karier di Tech" ada Sab, 23 Jan jam 1
 ```text
 FORA. Komunitas tech kecil yang ngobrol lewat suara di Discord.
 Sesi terdekat soal "Ngobrol Karier di Tech", Sab, 23 Jan.
-Di voice channel fora-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel fora-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Karier
 ```
@@ -292,11 +292,9 @@ https://discord.gg/rSepJu7Wb
 ```text
 FORA. Komunitas tech kecil yang ngobrol lewat suara di Discord.
 
-FORA (Forum Rangkai) itu komunitas tech kecil berbahasa Indonesia di Discord. Kami ngobrol di voice channel. Topiknya dibagi ke beberapa SIG (special interest group), dan tiap SIG pegang satu bidang.
-
 Sesi terdekat soal "Ngobrol Karier di Tech", Sab, 23 Jan, 19.30–21.00 WIB.
 
-Kami ngobrol di voice channel fora-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel fora-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
 #Karier #KomunitasTech #FORA
 ```
@@ -337,18 +335,12 @@ Bersama Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina 
 #FORA #SIGCN #Kubernetes #Container
 ```
 
-**X 1/2**
+**X**
 
 ```text
-Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
-```
-
-**X 2/2**
-
-```text
-Kita ngobrol soal Kubernetes Sab, 12 Des jam 19.30 WIB.
-Judulnya "Kubernetes untuk Pemula".
-Di voice channel sig-cn-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Sab, 12 Des jam 19.30 WIB, kita kumpul di voice.
+Kubernetes untuk Pemula
+Di voice channel sig-cn-voice Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Kubernetes
 ```
@@ -367,7 +359,7 @@ Sabtu, 12 Desember 2026, 19.30–21.00 WIB, bersama Bima (contoh) @bima_contoh d
 • Deploy aplikasi pertama di minikube
 • Debug dasar pakai kubectl describe dan logs
 
-Kami ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
 #Kubernetes #CloudNative #DevOpsIndonesia
 ```
@@ -398,22 +390,16 @@ Kubernetes untuk Pemula mulai 19.30 WIB hari ini.
 
 Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
 
-Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Mau dengerin aja boleh, mau ikut ngomong juga boleh.
+Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja boleh, mic juga boleh.
 
 #FORA #SIGCN #Kubernetes #Container
 ```
 
-**X 1/2**
-
-```text
-Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
-```
-
-**X 2/2**
+**X**
 
 ```text
 Hari ini jam 19.30 WIB, Kubernetes untuk Pemula.
-Di voice channel sig-cn-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel sig-cn-voice Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Kubernetes
 ```
@@ -421,13 +407,14 @@ https://discord.gg/rSepJu7Wb
 **LinkedIn**
 
 ```text
-Hari ini, 19.30–21.00 WIB: Kubernetes untuk Pemula
+Hari ini, 19.30–21.00 WIB
+Kubernetes untuk Pemula
 
 Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
 
 Bersama Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh. Kalau sudah mulai, silakan langsung masuk.
 
-Kami ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
 #Kubernetes #CloudNative #DevOpsIndonesia
 ```
@@ -454,7 +441,7 @@ Kami ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, b
 **Instagram**
 
 ```text
-Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
+Ini yang tercatat dari "Kubernetes untuk Pemula" (Sab, 12 Des).
 
 - Pod adalah unit terkecil yang dijadwalkan. Satu Pod bisa berisi beberapa container yang berbagi network dan storage.
 - Deployment menjaga jumlah replika. Kalau satu Pod mati, Deployment langsung membuat gantinya sampai jumlah replika sesuai.
@@ -464,24 +451,18 @@ Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment mem
 Dokumentasi Kubernetes: https://kubernetes.io/docs/home/
 Tutorial minikube: https://minikube.sigs.k8s.io/docs/start/
 
-14 orang ikut ngobrol di voice channel. Makasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, sampai ketemu lagi. Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, nyalain mic juga boleh.
+14 orang ikut ngobrol di voice channel. Makasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, sampai ketemu lagi. Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Mau dengerin aja boleh, mau nyalain mic juga boleh.
 
 #FORA #SIGCN #Kubernetes #Container
 ```
 
-**X 1/4**
-
-```text
-Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
-```
-
-**X 2/4**
+**X 1/3**
 
 ```text
 Rekap "Kubernetes untuk Pemula". 14 orang ngobrol di voice channel. Makasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh.
 ```
 
-**X 3/4**
+**X 2/3**
 
 ```text
 Intinya:
@@ -491,11 +472,11 @@ Intinya:
 4. Mulai debug dari kubectl describe dan logs
 ```
 
-**X 4/4**
+**X 3/3**
 
 ```text
 Dokumentasi Kubernetes https://kubernetes.io/docs/home/
-Sesi berikutnya diumumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
+Sesi berikutnya diumumkan di Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Kubernetes
 ```
@@ -503,7 +484,7 @@ https://discord.gg/rSepJu7Wb
 **LinkedIn**
 
 ```text
-Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
+Rekap "Kubernetes untuk Pemula" (Sab, 12 Des).
 
 Terima kasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh. 14 orang ikut ngobrol di voice channel.
 
@@ -515,7 +496,7 @@ Terima kasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh. 14 orang
 Dokumentasi Kubernetes: https://kubernetes.io/docs/home/
 Tutorial minikube: https://minikube.sigs.k8s.io/docs/start/
 
-Sesi berikutnya akan kami umumkan di Discord FORA. Boleh dengarkan saja di voice channel sig-cn-voice, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
+Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel sig-cn-voice. Boleh dengarkan saja, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
 
 #Kubernetes #CloudNative #DevOpsIndonesia
 ```
@@ -548,24 +529,18 @@ Cloud Native 101 di SIG CN × FORA.
 
 Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
 
-Sabtu, 12 Desember 2026, 19.30–21.00 WIB. Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Mau dengerin aja boleh, mau ikut ngomong juga boleh.
+Sabtu, 12 Desember 2026, 19.30–21.00 WIB. Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja boleh, mic juga boleh.
 
 #FORA #SIGCN #Kubernetes #Container
 ```
 
-**X 1/2**
-
-```text
-Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
-```
-
-**X 2/2**
+**X**
 
 ```text
 Cloud Native 101 bareng SIG CN × FORA.
 Kubernetes untuk Pemula
 Sab, 12 Des, 19.30–21.00 WIB
-Di voice channel sig-cn-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel sig-cn-voice Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Kubernetes
 ```
@@ -577,7 +552,7 @@ Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment mem
 
 Cloud Native 101 di SIG CN × FORA. Sesinya "Kubernetes untuk Pemula", Sab, 12 Des, 19.30–21.00 WIB.
 
-Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 
 #Kubernetes #CloudNative #DevOpsIndonesia
 ```
@@ -606,11 +581,9 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 ```text
 SIG CN di FORA. Ngobrol soal Kubernetes dan cloud native di voice channel.
 
-SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain nyela dan nanya.
-
 Sesi terdekat soal "Kubernetes untuk Pemula", Sab, 12 Des jam 19.30 WIB.
 
-Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-voice, dengerin aja boleh, nyalain mic juga boleh.
+Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-voice. Dengerin aja boleh, mic juga boleh.
 
 #FORA #SIGCN #Kubernetes #Container
 ```
@@ -620,7 +593,7 @@ Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-vo
 ```text
 SIG CN di FORA. Ngobrol soal Kubernetes dan cloud native di voice channel.
 Sesi terdekat soal "Kubernetes untuk Pemula", Sab, 12 Des.
-Di voice channel sig-cn-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel sig-cn-voice Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Kubernetes
 ```
@@ -630,11 +603,9 @@ https://discord.gg/rSepJu7Wb
 ```text
 SIG CN di FORA. Ngobrol soal Kubernetes dan cloud native di voice channel.
 
-SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain nyela dan nanya.
-
 Sesi terdekat soal "Kubernetes untuk Pemula", Sab, 12 Des, 19.30–21.00 WIB.
 
-Kami ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
 #Kubernetes #CloudNative #DevOpsIndonesia
 ```
@@ -677,22 +648,17 @@ Sab, 19 Des, 19.30–21.00 WIB. Bersama Dani (contoh), dipandu Rina (contoh).
 - Struktur repo manifest
 - Rollback pakai git revert
 
-Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Mau dengerin aja boleh, mau ikut ngomong juga boleh.
+Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja boleh, mic juga boleh.
 
 #FORA #SIGCN #GitOps #ArgoCD
 ```
 
-**X 1/2**
+**X**
 
 ```text
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
-```
-
-**X 2/2**
-
-```text
-GitOps dengan Argo CD, Sab, 19 Des jam 19.30 WIB.
-Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin atau ngomong, dua-duanya boleh.
+GitOps dengan Argo CD
+Sab, 19 Des jam 19.30 WIB.
+Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #GitOps
 ```
@@ -704,7 +670,7 @@ Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah,
 
 GitOps dengan Argo CD. Sabtu, 19 Desember 2026, 19.30–21.00 WIB. Bersama Dani (contoh), dipandu Rina (contoh).
 
-Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 
 #GitOps #CloudNative #Kubernetes
 ```
@@ -735,23 +701,17 @@ GitOps dengan Argo CD mulai 19.30 WIB hari ini.
 
 Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
 
-Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Mau dengerin aja boleh, mau ikut ngomong juga boleh.
+Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja boleh, mic juga boleh.
 
 #FORA #SIGCN #GitOps #ArgoCD
 ```
 
-**X 1/2**
-
-```text
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
-```
-
-**X 2/2**
+**X**
 
 ```text
 GitOps dengan Argo CD mulai 19.30 WIB.
 Kalau sudah jalan, nyusul aja.
-Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin atau ngomong, dua-duanya boleh.
+Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #GitOps
 ```
@@ -759,13 +719,14 @@ https://discord.gg/rSepJu7Wb
 **LinkedIn**
 
 ```text
-Hari ini, 19.30–21.00 WIB: GitOps dengan Argo CD
+Hari ini, 19.30–21.00 WIB
+GitOps dengan Argo CD
 
 Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
 
 Bersama Dani (contoh), dipandu Rina (contoh). Kalau sudah mulai, silakan langsung masuk.
 
-Kami ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
 #GitOps #CloudNative #Kubernetes
 ```
@@ -792,7 +753,7 @@ Kami ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, b
 **Instagram**
 
 ```text
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
+Rekap "GitOps dengan Argo CD", Sab, 19 Des.
 
 11 orang ikut ngobrol di voice channel. Makasih Dani (contoh).
 
@@ -803,24 +764,18 @@ Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah,
 
 Dokumentasi Argo CD: https://argo-cd.readthedocs.io/
 
-Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, nyalain mic juga boleh.
+Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Mau dengerin aja boleh, mau nyalain mic juga boleh.
 
 #FORA #SIGCN #GitOps #ArgoCD
 ```
 
-**X 1/4**
-
-```text
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
-```
-
-**X 2/4**
+**X 1/3**
 
 ```text
 Rekap "GitOps dengan Argo CD". 11 orang ngobrol di voice channel. Makasih Dani (contoh).
 ```
 
-**X 3/4**
+**X 2/3**
 
 ```text
 Intinya:
@@ -830,11 +785,11 @@ Intinya:
 4. Rollback cukup dengan git revert
 ```
 
-**X 4/4**
+**X 3/3**
 
 ```text
 Dokumentasi Argo CD https://argo-cd.readthedocs.io/
-Sesi berikutnya diumumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
+Sesi berikutnya diumumkan di Discord FORA. Dengerin aja nggak apa-apa, ngomong juga silakan.
 https://discord.gg/rSepJu7Wb
 #GitOps
 ```
@@ -842,7 +797,7 @@ https://discord.gg/rSepJu7Wb
 **LinkedIn**
 
 ```text
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
+Rekap "GitOps dengan Argo CD" (Sab, 19 Des).
 
 Terima kasih Dani (contoh). 11 orang ikut ngobrol di voice channel.
 
@@ -853,7 +808,7 @@ Terima kasih Dani (contoh). 11 orang ikut ngobrol di voice channel.
 
 Dokumentasi Argo CD: https://argo-cd.readthedocs.io/
 
-Sesi berikutnya akan kami umumkan di Discord FORA. Boleh dengarkan saja di voice channel sig-cn-voice, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
+Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel sig-cn-voice. Boleh dengarkan saja, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
 
 #GitOps #CloudNative #Kubernetes
 ```
@@ -886,24 +841,18 @@ Cloud Native 101 di SIG CN × FORA.
 
 Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
 
-Sabtu, 19 Desember 2026, 19.30–21.00 WIB. Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Mau dengerin aja boleh, mau ikut ngomong juga boleh.
+Sabtu, 19 Desember 2026, 19.30–21.00 WIB. Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja boleh, mic juga boleh.
 
 #FORA #SIGCN #GitOps #ArgoCD
 ```
 
-**X 1/2**
-
-```text
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
-```
-
-**X 2/2**
+**X**
 
 ```text
 Cloud Native 101 bareng SIG CN × FORA.
 GitOps dengan Argo CD
 Sab, 19 Des, 19.30–21.00 WIB
-Di voice channel sig-cn-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #GitOps
 ```
@@ -915,7 +864,7 @@ Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah,
 
 Cloud Native 101 di SIG CN × FORA. Sesinya "GitOps dengan Argo CD", Sab, 19 Des, 19.30–21.00 WIB.
 
-Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 
 #GitOps #CloudNative #Kubernetes
 ```
@@ -944,7 +893,7 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 ```text
 SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain nyela dan nanya.
 
-Kalau mau lihat dulu seperti apa, "GitOps dengan Argo CD" ada Sab, 19 Des jam 19.30 WIB. Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
+Yang terdekat "GitOps dengan Argo CD", Sab, 19 Des jam 19.30 WIB. Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
 
 #FORA #SIGCN #GitOps #ArgoCD
 ```
@@ -954,7 +903,7 @@ Kalau mau lihat dulu seperti apa, "GitOps dengan Argo CD" ada Sab, 19 Des jam 19
 ```text
 SIG CN di FORA. Ngobrol soal Kubernetes dan cloud native di voice channel.
 Sesi terdekat soal "GitOps dengan Argo CD", Sab, 19 Des.
-Di voice channel sig-cn-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #GitOps
 ```
@@ -964,11 +913,9 @@ https://discord.gg/rSepJu7Wb
 ```text
 SIG CN di FORA. Ngobrol soal Kubernetes dan cloud native di voice channel.
 
-SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain nyela dan nanya.
-
 Sesi terdekat soal "GitOps dengan Argo CD", Sab, 19 Des, 19.30–21.00 WIB.
 
-Kami ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
 #GitOps #CloudNative #Kubernetes
 ```
@@ -1013,7 +960,7 @@ Kam, 14 Jan, 20.00–21.30 WIB. Bersama Eko (contoh), dipandu Rina (contoh).
 - OpenTelemetry dan OTLP
 - Alert yang nggak bikin capek
 
-Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Mau dengerin aja boleh, mau ikut ngomong juga boleh.
+Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #SIGCN #Observability #OpenTelemetry
 ```
@@ -1021,8 +968,9 @@ Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.g
 **X**
 
 ```text
-Observability: Logs, Metrics, Traces, Kam, 14 Jan jam 20.00 WIB.
-Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin atau ngomong, dua-duanya boleh.
+Observability: Logs, Metrics, Traces
+Kam, 14 Jan jam 20.00 WIB.
+Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Observability
 ```
@@ -1043,7 +991,7 @@ Kamis, 14 Januari 2027, 20.00–21.30 WIB, bersama Eko (contoh), dipandu Rina (c
 • OpenTelemetry dan OTLP
 • Alert yang nggak bikin capek
 
-Kami ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Dengarkan saja boleh, ikut bicara juga boleh. Undangan: https://discord.gg/rSepJu7Wb
 
 #Observability #CloudNative #Kubernetes
 ```
@@ -1074,7 +1022,7 @@ Hari ini, 20.00 WIB. Observability: Logs, Metrics, Traces
 
 Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dijawab logs, metrics, dan traces, dan cara mulai tanpa pasang semuanya sekaligus.
 
-Bersama Eko (contoh), dipandu Rina (contoh). Kalau sudah mulai, nyusul aja kapan pun. Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-voice, dengerin aja boleh, nyalain mic juga boleh.
+Bersama Eko (contoh), dipandu Rina (contoh). Kalau sudah mulai, nyusul aja kapan pun. Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-voice. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #SIGCN #Observability #OpenTelemetry
 ```
@@ -1083,7 +1031,7 @@ Bersama Eko (contoh), dipandu Rina (contoh). Kalau sudah mulai, nyusul aja kapan
 
 ```text
 Jam 20.00 WIB nanti, Observability: Logs, Metrics, Traces.
-Di voice channel sig-cn-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Observability
 ```
@@ -1091,13 +1039,14 @@ https://discord.gg/rSepJu7Wb
 **LinkedIn**
 
 ```text
-Hari ini, 20.00–21.30 WIB: Observability: Logs, Metrics, Traces
+Hari ini, 20.00–21.30 WIB
+Observability: Logs, Metrics, Traces
 
 Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dijawab logs, metrics, dan traces, dan cara mulai tanpa pasang semuanya sekaligus.
 
 Bersama Eko (contoh), dipandu Rina (contoh). Kalau sudah mulai, silakan langsung masuk.
 
-Kami ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Dengarkan saja boleh, ikut bicara juga boleh. Undangan: https://discord.gg/rSepJu7Wb
 
 #Observability #CloudNative #Kubernetes
 ```
@@ -1137,7 +1086,7 @@ Rekap "Observability: Logs, Metrics, Traces", Kam, 14 Jan.
 Dokumentasi OpenTelemetry: https://opentelemetry.io/docs/
 Dokumentasi Prometheus: https://prometheus.io/docs/introduction/overview/
 
-Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, nyalain mic juga boleh.
+Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #SIGCN #Observability #OpenTelemetry
 ```
@@ -1163,7 +1112,7 @@ Intinya:
 
 ```text
 Dokumentasi OpenTelemetry https://opentelemetry.io/docs/
-Sesi berikutnya diumumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
+Sesi berikutnya diumumkan di Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Observability
 ```
@@ -1184,7 +1133,7 @@ Catatan dari "Observability: Logs, Metrics, Traces":
 Dokumentasi OpenTelemetry: https://opentelemetry.io/docs/
 Dokumentasi Prometheus: https://prometheus.io/docs/introduction/overview/
 
-Sesi berikutnya akan kami umumkan di Discord FORA. Boleh dengarkan saja di voice channel sig-cn-voice, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
+Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel sig-cn-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh. https://discord.gg/rSepJu7Wb
 
 #Observability #CloudNative #Kubernetes
 ```
@@ -1217,7 +1166,7 @@ Cloud Native 101 di SIG CN × FORA.
 
 Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dijawab logs, metrics, dan traces, dan cara mulai tanpa pasang semuanya sekaligus.
 
-Kamis, 14 Januari 2027, 20.00–21.30 WIB. Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Mau dengerin aja boleh, mau ikut ngomong juga boleh.
+Kamis, 14 Januari 2027, 20.00–21.30 WIB. Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #SIGCN #Observability #OpenTelemetry
 ```
@@ -1228,7 +1177,7 @@ Kamis, 14 Januari 2027, 20.00–21.30 WIB. Mampir ke voice channel sig-cn-voice 
 Cloud Native 101 bareng SIG CN × FORA.
 Observability: Logs, Metrics, Traces
 Kam, 14 Jan, 20.00–21.30 WIB
-Di voice channel sig-cn-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Observability
 ```
@@ -1240,7 +1189,7 @@ Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dija
 
 Cloud Native 101 di SIG CN × FORA. Sesinya "Observability: Logs, Metrics, Traces", Kam, 14 Jan, 20.00–21.30 WIB.
 
-Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Dengarkan saja boleh, ikut bicara juga boleh.
 
 #Observability #CloudNative #Kubernetes
 ```
@@ -1269,7 +1218,7 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 ```text
 SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema, misalnya Kubernetes atau GitOps, dan jalannya di voice channel Discord. Satu orang cerita, yang lain nyela dan nanya.
 
-Kalau mau lihat dulu seperti apa, "Observability: Logs, Metrics, Traces" ada Kam, 14 Jan jam 20.00 WIB. Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
+Yang terdekat "Observability: Logs, Metrics, Traces", Kam, 14 Jan jam 20.00 WIB. Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #SIGCN #Observability #OpenTelemetry
 ```
@@ -1279,7 +1228,7 @@ Kalau mau lihat dulu seperti apa, "Observability: Logs, Metrics, Traces" ada Kam
 ```text
 SIG CN di FORA. Ngobrol soal Kubernetes dan cloud native di voice channel.
 Sesi terdekat soal "Observability: Logs, Metrics, Traces", Kam, 14 Jan.
-Di voice channel sig-cn-voice Discord FORA, dengerin aja boleh, mic juga boleh.
+Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Observability
 ```
@@ -1291,7 +1240,7 @@ SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema,
 
 Sesi terdekat soal "Observability: Logs, Metrics, Traces", Kamis, 14 Januari 2027, 20.00–21.30 WIB.
 
-Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
+Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Dengarkan saja boleh, ikut bicara juga boleh.
 
 #Observability #CloudNative #Kubernetes
 ```

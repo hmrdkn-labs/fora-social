@@ -2,7 +2,7 @@
 
 ## Instagram
 
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
+Rekap "GitOps dengan Argo CD", Sab, 19 Des.
 
 11 orang ikut ngobrol di voice channel. Makasih Dani (contoh).
 
@@ -13,19 +13,15 @@ Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah,
 
 Dokumentasi Argo CD: https://argo-cd.readthedocs.io/
 
-Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, nyalain mic juga boleh.
+Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Mau dengerin aja boleh, mau nyalain mic juga boleh.
 
 #FORA #SIGCN #GitOps #ArgoCD
 
-## X 1/4
-
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
-
-## X 2/4
+## X 1/3
 
 Rekap "GitOps dengan Argo CD". 11 orang ngobrol di voice channel. Makasih Dani (contoh).
 
-## X 3/4
+## X 2/3
 
 Intinya:
 1. Git jadi source of truth
@@ -33,16 +29,16 @@ Intinya:
 3. Pisahkan repo manifest dari repo kode aplikasi
 4. Rollback cukup dengan git revert
 
-## X 4/4
+## X 3/3
 
 Dokumentasi Argo CD https://argo-cd.readthedocs.io/
-Sesi berikutnya diumumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
+Sesi berikutnya diumumkan di Discord FORA. Dengerin aja nggak apa-apa, ngomong juga silakan.
 https://discord.gg/rSepJu7Wb
 #GitOps
 
 ## LinkedIn
 
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
+Rekap "GitOps dengan Argo CD" (Sab, 19 Des).
 
 Terima kasih Dani (contoh). 11 orang ikut ngobrol di voice channel.
 
@@ -53,6 +49,6 @@ Terima kasih Dani (contoh). 11 orang ikut ngobrol di voice channel.
 
 Dokumentasi Argo CD: https://argo-cd.readthedocs.io/
 
-Sesi berikutnya akan kami umumkan di Discord FORA. Boleh dengarkan saja di voice channel sig-cn-voice, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
+Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel sig-cn-voice. Boleh dengarkan saja, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
 
 #GitOps #CloudNative #Kubernetes

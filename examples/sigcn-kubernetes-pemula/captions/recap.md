@@ -2,7 +2,7 @@
 
 ## Instagram
 
-Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
+Ini yang tercatat dari "Kubernetes untuk Pemula" (Sab, 12 Des).
 
 - Pod adalah unit terkecil yang dijadwalkan. Satu Pod bisa berisi beberapa container yang berbagi network dan storage.
 - Deployment menjaga jumlah replika. Kalau satu Pod mati, Deployment langsung membuat gantinya sampai jumlah replika sesuai.
@@ -12,19 +12,15 @@ Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment mem
 Dokumentasi Kubernetes: https://kubernetes.io/docs/home/
 Tutorial minikube: https://minikube.sigs.k8s.io/docs/start/
 
-14 orang ikut ngobrol di voice channel. Makasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, sampai ketemu lagi. Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, nyalain mic juga boleh.
+14 orang ikut ngobrol di voice channel. Makasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, sampai ketemu lagi. Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Mau dengerin aja boleh, mau nyalain mic juga boleh.
 
 #FORA #SIGCN #Kubernetes #Container
 
-## X 1/4
-
-Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
-
-## X 2/4
+## X 1/3
 
 Rekap "Kubernetes untuk Pemula". 14 orang ngobrol di voice channel. Makasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh.
 
-## X 3/4
+## X 2/3
 
 Intinya:
 1. Pod adalah unit terkecil yang dijadwalkan
@@ -32,16 +28,16 @@ Intinya:
 3. Service memberi alamat yang stabil
 4. Mulai debug dari kubectl describe dan logs
 
-## X 4/4
+## X 3/3
 
 Dokumentasi Kubernetes https://kubernetes.io/docs/home/
-Sesi berikutnya diumumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
+Sesi berikutnya diumumkan di Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Kubernetes
 
 ## LinkedIn
 
-Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
+Rekap "Kubernetes untuk Pemula" (Sab, 12 Des).
 
 Terima kasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh. 14 orang ikut ngobrol di voice channel.
 
@@ -53,6 +49,6 @@ Terima kasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh. 14 orang
 Dokumentasi Kubernetes: https://kubernetes.io/docs/home/
 Tutorial minikube: https://minikube.sigs.k8s.io/docs/start/
 
-Sesi berikutnya akan kami umumkan di Discord FORA. Boleh dengarkan saja di voice channel sig-cn-voice, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
+Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel sig-cn-voice. Boleh dengarkan saja, boleh juga ikut bicara. https://discord.gg/rSepJu7Wb
 
 #Kubernetes #CloudNative #DevOpsIndonesia

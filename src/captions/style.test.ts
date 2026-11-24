@@ -8,7 +8,7 @@ import { postTypesFor } from "../pipeline.ts";
 import { FORMATS, POST_TYPES, type Session, type Sig, type TemplateContext } from "../types.ts";
 import { parse } from "yaml";
 import { variants } from "./fixtures.ts";
-import { buildCaptions } from "./index.ts";
+import { buildCaptions, xLength } from "./index.ts";
 import { format, lint, type Surface } from "./style.ts";
 
 const community = loadCommunity("community.yaml");
@@ -95,9 +95,21 @@ describe("captions", () => {
       for (const type of ["announce", "reminder", "cover"] as const) {
         const c = buildCaptions(s, sigOf(s), community, type);
         assert.ok(c.instagram.startsWith(s.note!) || c.instagram.includes(`\n\n${s.note}`), `IG ${type}`);
-        assert.ok(c.x.join("\n").includes(s.note!), `X ${type}`);
+        const x = c.x.join("\n");
+        assert.ok(!x.includes(s.note!) || (c.x.length === 1 && x.startsWith(s.note!)), `X ${type}: the note leads a single post or is left out`);
         assert.ok(c.linkedin.includes(s.note!), `LinkedIn ${type}`);
       }
+    }
+  });
+
+  test("a note too long for X is left out, not threaded", () => {
+    const { session, sig } = variants["host note, no attendee count"];
+    const long = { ...session, note: "Cerita panjang soal Pod yang mati jam dua pagi dan Deployment yang diam-diam membuat gantinya. ".repeat(3).trim() };
+    for (const type of ["announce", "reminder", "cover"] as const) {
+      const c = buildCaptions(long, sig, community, type);
+      assert.equal(c.x.length, 1);
+      assert.ok(!c.x[0].includes("Cerita panjang"));
+      assert.ok(xLength(c.x[0]) <= 280);
     }
   });
 

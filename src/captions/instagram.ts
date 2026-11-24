@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { cap, type Ctx, hashLine, shape, themeTag, uniqueTags } from "./context.ts";
+import { cap, type Ctx, hashLine, openDoor, shape, themeTag, uniqueTags } from "./context.ts";
 
 function tags(c: Ctx): string {
   return hashLine(
@@ -8,14 +8,15 @@ function tags(c: Ctx): string {
 }
 
 /** How to join and that anyone can listen or talk: said once per caption, worded three ways. */
-function join(c: Ctx, variant: number): string {
+function join(c: Ctx, variant: number, scope = "join"): string {
+  const open = openDoor(c, `instagram|${scope}`);
   switch (variant % 3) {
     case 0:
-      return `Link Discord ada di bio (${c.shortUrl}). Masuk ke ${c.voice}, dengerin aja boleh, nyalain mic juga boleh.`;
+      return `Link Discord ada di bio (${c.shortUrl}). Masuk ke ${c.voice}. ${open}`;
     case 1:
-      return `Mampir ke ${c.voice} di Discord FORA, link di bio atau ${c.shortUrl}. Mau dengerin aja boleh, mau ikut ngomong juga boleh.`;
+      return `Mampir ke ${c.voice} di Discord FORA, link di bio atau ${c.shortUrl}. ${open}`;
     default:
-      return `Langsung masuk ${c.voice} lewat ${c.shortUrl} (ada juga di bio). Dengerin aja boleh, mic juga boleh.`;
+      return `Langsung masuk ${c.voice} lewat ${c.shortUrl} (ada juga di bio). ${open}`;
   }
 }
 
@@ -36,10 +37,10 @@ function recapLinks(c: Ctx): string {
 function recap(c: Ctx, variant: number): string[] {
   const r = c.s.recap!;
   const crowd = r.attendees ? `${r.attendees} orang ikut ngobrol di voice channel.` : "Makasih yang sudah mampir ke voice channel.";
-  const next = `Sesi berikutnya kita umumkan di Discord FORA (link di bio atau ${c.shortUrl}). Dengerin aja boleh, nyalain mic juga boleh.`;
+  const next = `Sesi berikutnya kita umumkan di Discord FORA (link di bio atau ${c.shortUrl}). ${openDoor(c, "instagram|recap")}`;
   if (variant === 0) {
     return [
-      c.s.note ?? `Rekap "${c.s.title}", ${c.dateShort}.`,
+      `Rekap "${c.s.title}", ${c.dateShort}.`,
       `${crowd} Makasih ${c.thanks}.`,
       recapPoints(c, "numbered"),
       recapLinks(c),
@@ -47,7 +48,7 @@ function recap(c: Ctx, variant: number): string[] {
     ];
   }
   return [
-    c.s.note ?? `${c.s.title}: ini yang tercatat dari obrolan ${c.dateShort}.`,
+    `Ini yang tercatat dari "${c.s.title}" (${c.dateShort}).`,
     recapPoints(c, "dash"),
     recapLinks(c),
     `${crowd} Makasih ${c.thanks}, sampai ketemu lagi. ${next}`,
@@ -78,7 +79,7 @@ export function instagram(c: Ctx, type: PostType): string {
           ? [`Hari ini, ${c.time}. ${s.title}`, c.lead, `${c.Who}. Kalau sudah mulai, nyusul aja kapan pun. ${join(c, 0)}`]
           : v === 1
             ? [`${s.title} mulai ${c.time} hari ini.`, s.note ?? (s.topics.length ? bullets(s.topics) : c.lead), join(c, 1)]
-            : [s.note ?? "", `Hari ini jam ${c.time}, ${c.voice}. ${s.title}.`, join(c, 2)];
+            : [s.note ?? "", `${s.title}, hari ini jam ${c.time}.`, join(c, 2)];
       break;
     case "recap":
       blocks = recap(c, v % 2);
@@ -92,8 +93,8 @@ export function instagram(c: Ctx, type: PostType): string {
     case "sig-intro":
       blocks =
         v === 0
-          ? [`${c.introName}. ${sig.tagline}`, sig.description, `Sesi terdekat soal "${s.title}", ${c.dateShort} jam ${c.time}.`, join(c, 0)]
-          : [sig.description, `Kalau mau lihat dulu seperti apa, "${s.title}" ada ${c.dateShort} jam ${c.time}. ${join(c, 2)}`];
+          ? [`${c.introName}. ${sig.tagline}`, `Sesi terdekat soal "${s.title}", ${c.dateShort} jam ${c.time}.`, join(c, 0)]
+          : [sig.description, `Yang terdekat "${s.title}", ${c.dateShort} jam ${c.time}. ${join(c, 2)}`];
       break;
   }
   return [...blocks.filter(Boolean).map((b) => (b.endsWith("\n") ? b.trimEnd() : b)), tags(c)].join("\n\n");
