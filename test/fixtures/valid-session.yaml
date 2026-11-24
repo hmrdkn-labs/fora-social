@@ -1,0 +1,33 @@
+sig: sig-cn
+series: Cloud Native 101
+theme: Kubernetes
+title: Kubernetes untuk Pemula
+subtitle: Dari container pertama sampai deployment pertama
+date: 2026-12-05
+time: "19:30"
+durationMinutes: 120
+voiceChannel: sig-cn-voice
+host:
+  name: Rina (contoh)
+  role: Platform engineer
+  handle: rina_contoh
+speakers:
+  - name: Budi (contoh)
+    handle: budi_contoh
+description: Sesi santai untuk yang baru kenal Kubernetes. Kita bahas Pod, Deployment, dan Service lewat contoh sederhana.
+topics:
+  - Kenapa Pod tidak dipakai langsung
+  - Deployment dan rolling update
+  - Service sebagai pintu masuk aplikasi
+discord: https://discord.gg/rSepJu7Wb
+recap:
+  points:
+    - title: Pod adalah unit terkecil
+      body: Satu atau beberapa container yang berbagi network dan storage.
+    - title: Deployment mengatur ReplicaSet
+  links:
+    - label: Slide
+      url: https://example.com/slides/k8s-pemula
+  attendees: 14
+hashtags:
+  - kubernetes
