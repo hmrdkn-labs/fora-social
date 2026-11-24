@@ -1,0 +1,44 @@
+sig: sigcn
+series: Cloud Native 101
+theme: Observability
+title: "Observability: Logs, Metrics, Traces"
+subtitle: Tiga sinyal untuk memahami sistem yang sedang jalan
+date: "2027-01-14"
+time: "20:00"
+durationMinutes: 90
+voiceChannel: sig-cn-voice
+host:
+  name: Rina (contoh)
+  role: Platform Engineer
+speakers:
+  - name: Eko (contoh)
+    role: SRE
+description: Aplikasi jalan, tapi kenapa lambat? Kita kenalan dengan tiga sinyal observability, kapan memakai masing-masing, dan cara mulai tanpa harus memasang semuanya sekaligus.
+topics:
+  - Monitoring vs observability
+  - Logs terstruktur
+  - Metrics dan Prometheus
+  - Distributed tracing
+  - OpenTelemetry sebagai standar
+  - Alert yang tidak bikin lelah
+hashtags:
+  - OpenTelemetry
+  - Prometheus
+recap:
+  attendees: 16
+  points:
+    - title: Logs menjawab apa yang terjadi
+      body: Pakai format terstruktur seperti JSON supaya mudah dicari dan difilter.
+    - title: Metrics menjawab seberapa sering dan seberapa lama
+      body: Angka agregat yang murah disimpan dan cocok untuk dashboard dan alert.
+    - title: Traces menjawab di mana waktunya habis
+      body: Satu request diikuti lintas service, sehingga bagian yang lambat terlihat jelas.
+    - title: OpenTelemetry memisahkan instrumentasi dari backend
+      body: Kode diinstrumentasi sekali, lalu data bisa dikirim ke backend mana pun yang mendukung OTLP.
+    - title: Alert pada gejala yang dirasakan pengguna
+      body: Contohnya error rate dan latency, bukan CPU yang kebetulan tinggi sebentar.
+  links:
+    - label: Dokumentasi OpenTelemetry
+      url: https://opentelemetry.io/docs/
+    - label: Dokumentasi Prometheus
+      url: https://prometheus.io/docs/introduction/overview/

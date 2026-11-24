@@ -1,0 +1,38 @@
+sig: sigcn
+series: Cloud Native 101
+theme: GitOps
+title: "GitOps dengan Argo CD: dari commit di Git sampai deploy"
+subtitle: Git sebagai satu-satunya sumber kebenaran untuk cluster
+date: "2026-12-19"
+time: "19:30"
+durationMinutes: 90
+voiceChannel: sig-cn-voice
+host:
+  name: Rina (contoh)
+  role: Platform Engineer
+speakers:
+  - name: Dani (contoh)
+    role: SRE
+description: Bagaimana kalau deploy cukup dengan merge pull request? Kita bahas prinsip GitOps dan cara Argo CD menjaga cluster tetap sama dengan isi repo Git.
+topics:
+  - Prinsip GitOps
+  - Argo CD Application dan sync
+  - Struktur repo manifest
+  - Rollback lewat git revert
+hashtags:
+  - ArgoCD
+  - DevOps
+recap:
+  attendees: 11
+  points:
+    - title: Git adalah sumber kebenaran
+      body: Kondisi yang diinginkan ditulis di repo; controller yang menyamakan cluster dengan repo, bukan orang yang menjalankan kubectl apply.
+    - title: Argo CD membandingkan live state dengan Git
+      body: Kalau berbeda, aplikasi berstatus OutOfSync, dan sync akan menerapkan perubahan.
+    - title: Pisahkan repo manifest dari repo kode aplikasi
+      body: Dengan begitu perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih bersih.
+    - title: Rollback adalah git revert
+      body: Commit baru yang membatalkan perubahan lalu disinkronkan, jadi riwayatnya tetap tercatat.
+  links:
+    - label: Dokumentasi Argo CD
+      url: https://argo-cd.readthedocs.io/
