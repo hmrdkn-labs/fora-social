@@ -77,5 +77,38 @@ push the branch. Do not merge to `main`. Do not commit rendered images.
 
 ## Report
 
-Fill in below: model, commits, check results, anything the template author (04) must know.
+**Model:** anthropic/claude-haiku-5-5, thinking xhigh.
+
+**Commits** (pushed to `02-pipeline`; not merged):
+- 4fea3b6 chore(pipeline): scaffold Node 26 project with pnpm
+- 4563d72 feat(load): validate session, sig and community YAML with zod
+- 6db751e Merge main into 02-pipeline (briefs 01 and 03)
+- 3535d8b fix(captions): type recapBody as returning string[] (brief 03's file, see below)
+- d41c3ee feat(render): one-browser renderer with the four overflow checks
+- d722133 feat(cli): render and examples commands with captions and gallery
+- 818abff ci(render): render examples on push and pull request
+
+**Checks**
+- `pnpm check`: tsc clean; 57/57 tests pass (loader, overflow, renderer, plus 03's captions tests).
+- `pnpm render test/fixtures/valid-session.yaml`: 55 outputs, 0 failures, 7 s. Every PNG checked with `sips` for pixel size. li-doc PDF: 3 pages at 810×1013 pt (1080×1350 px).
+- Overflow proof: announce placeholder made to overflow gave 6 FAILED lines naming session, post type, format, slide and element; exit 1; stale images removed. Probe reverted.
+- `pnpm examples` with the four samples from main: 220 writes (200 PNG, 20 PDF), 0 failed, 24 s. Zero-sample run exits 0 and writes "No sample sessions yet."
+- Looked at: ig-feed/announce, x/announce, ig-story/recap (observability), li-doc/announce-02 (fora). Placeholders only; 04 owns the look.
+- Not run yet: the GitHub Actions workflow (Linux Chromium install and `pnpm examples` in CI).
+
+**For the template author (04)**
+- A `Template` returns `string[]`: exactly one body for single formats, at least one for `multi` formats (placeholders return 3). A wrong count fails that image.
+- Escape every data field with `escapeHtml` from `templates/html.ts`.
+- Overflow rules apply: put `data-fit` on text boxes; anything outside the canvas fails unless `data-bleed`.
+- `templates/base.css` declares Montserrat (400 to 800) and Libertinus Serif (400, 700, italic) from `brand/fonts`; the font check fails if they do not load. Keep those faces or equivalent.
+- `brand/tokens.css` is linked into every page; base.css uses `--color-ink`, `--color-paper`, `--color-sigcn-text`.
+- `templates/placeholder.ts` uses `src/format.ts` (`formatDate`, `formatTime`, `discordUrl`, `displayUrl`).
+- `examples/README.md` is not committed by 02, because its images are not. Run `pnpm examples` and commit it with the images. Only the block between `<!-- gallery:start -->` and `<!-- gallery:end -->` is generated; the intro above it is kept.
+
+**Open questions for the orchestrator**
+- `src/captions/instagram.ts` on main did not type-check: `recapBody` was annotated `string` but returns `string[]`. This branch changes that one annotation. Brief 03 should take the same line; identical edits merge cleanly. Node strips types without checking, so `node --test` never caught it.
+- 03's `community.yaml` has no `handles`, but `Community.handles` is required in `src/types.ts`. The loader defaults it to `{}`. `src/types.ts` is unchanged; decide whether `handles` should be optional.
+- Session and sig YAML may carry an `id`, which must equal the file name. Unknown keys are errors.
+- Per your message, `src/captions/index.ts` stub was not created; the real `buildCaptions` is used.
+- `pnpm render` stops before rendering if `brand/tokens.css` is missing.
 Reply to the orchestrator in at most 20 lines.
