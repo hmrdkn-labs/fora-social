@@ -10,11 +10,9 @@ voiceChannel: sig-cn-voice
 host:
   name: Rina (contoh)
   role: Platform Engineer
-  photo: examples/people/rina.jpg
 speakers:
   - name: Eko (contoh)
     role: SRE
-    photo: examples/people/eko.jpg
 description: Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dijawab logs, metrics, dan traces, dan cara mulai tanpa pasang semuanya sekaligus.
 topics:
   - Monitoring vs observability

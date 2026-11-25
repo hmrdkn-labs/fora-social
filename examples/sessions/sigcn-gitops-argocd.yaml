@@ -10,11 +10,9 @@ voiceChannel: sig-cn-voice
 host:
   name: Rina (contoh)
   role: Platform Engineer
-  photo: examples/people/rina.jpg
 speakers:
   - name: Dani (contoh)
     role: SRE
-    photo: examples/people/dani.jpg
 note: Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
 description: Kita coba alur GitOps pakai Argo CD. Merge pull request, cluster ikut isi repo, lalu rollback pakai git revert beneran.
 topics:
