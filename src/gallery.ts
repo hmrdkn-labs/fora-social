@@ -22,6 +22,7 @@ const POST_LABELS: Record<PostType, string> = {
   recap: "Recap",
   cover: "Cover",
   "sig-intro": "SIG intro",
+  speakers: "Speakers",
 };
 
 const PLATFORMS: { label: string; formats: FormatId[] }[] = [

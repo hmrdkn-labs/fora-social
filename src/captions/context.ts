@@ -8,7 +8,7 @@ import {
   joinNames,
   speakerLine,
 } from "../format.ts";
-import type { Community, Session, Sig } from "../types.ts";
+import type { Community, Person, Session, Sig } from "../types.ts";
 
 /** Everything the platform writers need, computed once. */
 export interface Ctx {
@@ -114,4 +114,22 @@ export function openDoor(c: Ctx, scope: string, formal = false): string {
  */
 export function shape(c: Ctx, scope: string, count: number): number {
   return hash(`${c.s.id}|${scope}`) % count;
+}
+
+/**
+ * Who talks, as one sentence: "Sabtu 12 Desember yang cerita A dan B, dipandu C." A session
+ * without speakers says who hosts and that there is no guest.
+ */
+export function castLine(c: Ctx, withHandles: boolean): string {
+  const name = (p: Person) => (withHandles && p.handle ? `${p.name} @${p.handle}` : p.name);
+  const day = c.date.replace(",", "").replace(/ \d{4}$/, "");
+  if (c.s.speakers.length === 0) return `${day} yang mandu ${name(c.s.host)}. Tanpa pembicara tamu, jadi yang cerita kita semua.`;
+  return `${day} yang cerita ${joinNames(c.s.speakers.map(name))}, dipandu ${name(c.s.host)}.`;
+}
+
+/** One entry per person, speakers first: name, role, "host" for the host, and the handle when `withHandles`. */
+export function roster(c: Ctx, withHandles: boolean): string[] {
+  return [...c.s.speakers, c.s.host].map((p) =>
+    [p.name, p.role, p === c.s.host ? "host" : "", withHandles && p.handle ? `@${p.handle}` : ""].filter(Boolean).join(", "),
+  );
 }

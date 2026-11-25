@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { type Ctx, hashLine, openDoor, shape, themeTag, uniqueTags } from "./context.ts";
+import { castLine, type Ctx, hashLine, openDoor, shape, themeTag, uniqueTags } from "./context.ts";
 import { xLength } from "./xlength.ts";
 
 const LIMIT = 280;
@@ -125,5 +125,12 @@ export function x(c: Ctx, type: PostType): string[] {
         plain(`Sesi terdekat soal "${s.title}", ${c.dateShort}.`),
         joinPart(c, v),
       ]);
+    case "speakers": {
+      // Handles go first when the sentence still fits one post; a long cast is counted instead of named.
+      const intro =
+        [castLine(c, true), castLine(c, false)].find((line) => xLength(line) <= LIMIT) ??
+        `Ada ${s.speakers.length} pembicara, dipandu ${s.host.name}.`;
+      return build([plain(intro), [...plain(`"${s.title}", mulai ${c.time}.`), ...joinPart(c, v)]]);
+    }
   }
 }
