@@ -8,7 +8,10 @@
 // Nothing overflows because every layout budgets its height here, from string lengths: a piece
 // reports the height it will take, and the title, lists and optional pieces are sized or dropped
 // to fit what is left. The numbers mirror templates/base.css; change them together.
+import { readFileSync } from "node:fs";
+import { join as joinPath } from "node:path";
 import { discordUrl, displayUrl, formatDateShort, formatTime, formatTimeRange, speakerLine } from "../src/format.ts";
+import { REPO_ROOT } from "../src/paths.ts";
 import type { Format, Person, TemplateContext } from "../src/types.ts";
 import { emWidth, fitBlock, fitLine, fitList, REGULAR, SERIF, textHeight } from "./fit.ts";
 import { escapeHtml as e } from "./html.ts";
@@ -253,7 +256,14 @@ export function joinBar(ctx: TemplateContext, mode: JoinMode = "soon"): Block {
  * panel with `top` blocks above the join block. Optional blocks go, last first, when the
  * panel is too short for them.
  */
-export function wide(ctx: TemplateContext, theme: Theme, main: string, top: readonly Block[], mode: JoinMode = "soon"): string {
+export function wide(
+  ctx: TemplateContext,
+  theme: Theme,
+  main: string,
+  top: readonly Block[],
+  mode: JoinMode = "soon",
+  modifier = "",
+): string {
   const stack = join(ctx, "stack", mode);
   const room = ctx.format.height / (ctx.format.width / DESIGN_WIDTH) - 120 - stack.height - 20;
   const blocks = [...top];
@@ -266,17 +276,51 @@ export function wide(ctx: TemplateContext, theme: Theme, main: string, top: read
     else blocks.splice(at, 1);
   }
   const side = `<div class="side__top">${blocks.map((block) => block.html).join("")}</div>${stack.html}`;
-  return post(ctx, theme, `<div class="wide__main" data-fit>${main}</div><div class="side" data-fit>${side}</div>`);
+  return post(ctx, theme, `<div class="wide__main" data-fit>${main}</div><div class="side" data-fit>${side}</div>`, modifier);
 }
 
-/** A person: a ring with their initial (an echo of the FORA seal), name, role and handle. */
-export function person(p: Person, modifier = ""): string {
-  const initial = Array.from(p.name.trim())[0]?.toUpperCase() ?? "";
+/**
+ * The silhouette as a CSS mask. It is embedded as a data URL: Chromium fetches mask images with
+ * CORS, which a file:// URL from `ctx.asset` fails, and the mask would silently not apply.
+ */
+const SILHOUETTE = `url(data:image/svg+xml;base64,${readFileSync(joinPath(REPO_ROOT, "brand/people/silhouette.svg")).toString("base64")})`;
+/** At most this many faces in one overlapping row. */
+const MAX_FACES = 4;
+const FACES_GAP = 16;
+/** Each face after the first covers this much of the one before it. */
+const OVERLAP = 0.26;
+
+/**
+ * A round portrait `size` units across with a ring in the SIG's colour: the person's photo, or
+ * the silhouette from brand/people tinted by the theme when they have none.
+ */
+export function avatar(ctx: TemplateContext, p: Person, size: number): string {
+  // The ring grows with the portrait: 3 units on a 60-unit face, 8 on a 440-unit one.
+  const style = `--s:${size}px;--ring-w:${Math.max(3, Math.round(size / 56))}px`;
+  if (p.photo) return `<span class="avatar" style="${style}"><img src="${e(ctx.asset(p.photo))}" alt=""></span>`;
+  return `<span class="avatar avatar--empty" style="${style}" aria-hidden="true"><i style="mask-image:${SILHOUETTE}"></i></span>`;
+}
+
+/** Width of `count` overlapping faces of `size`. */
+export function facesWidth(count: number, size: number): number {
+  return count === 0 ? 0 : size + (count - 1) * size * (1 - OVERLAP);
+}
+
+/** The portraits of `people` in one overlapping row. */
+export function faces(ctx: TemplateContext, people: readonly Person[], size: number): string {
+  return `<span class="faces" style="--s:${size}px">${people.map((p) => avatar(ctx, p, size)).join("")}</span>`;
+}
+
+/** Portrait sizes of `person`: a plain line, and the two card sizes of the people slide. */
+const PERSON_SIZES: Record<string, number> = { "": 60, "person--mid": 88, "person--card": 128 };
+
+/** A person: their portrait, name, role and handle. */
+export function person(ctx: TemplateContext, p: Person, modifier = ""): string {
   const meta = [p.role ?? "", p.handle ? `@${p.handle}` : ""].filter((part) => part !== "");
   const metaHtml =
     meta.length > 0 ? `<span class="person__meta">${meta.map((part) => `<span>${e(part)}</span>`).join("")}</span>` : "";
   return `<div class="${["person", modifier].filter(Boolean).join(" ")}">
-  <span class="person__seal" aria-hidden="true">${e(initial)}</span>
+  ${avatar(ctx, p, PERSON_SIZES[modifier] ?? 60)}
   <span class="person__text"><span class="person__name">${e(p.name)}</span>${metaHtml}</span>
 </div>`;
 }
@@ -355,8 +399,32 @@ export function deck(ctx: TemplateContext, theme: Theme, tag: string, mains: rea
 /** "Bersama A dan B, dipandu C", as one line; `size` and `width` give its height. */
 export function byline(ctx: TemplateContext, width: number, size = 28): Block {
   const line = speakerLine(ctx.session);
-  const text = line.charAt(0).toUpperCase() + line.slice(1);
-  return { html: `<p class="byline">${e(text)}</p>`, height: textHeight(text, size, width, 1.35), optional: true };
+  return withFaces(ctx, everyone(ctx), line.charAt(0).toUpperCase() + line.slice(1), width, size);
+}
+
+/** Speakers first, then the host: the order every post names them in. */
+export function everyone(ctx: TemplateContext): Person[] {
+  return [...ctx.session.speakers, ctx.session.host];
+}
+
+/**
+ * A line about `people` with their faces, as `.byline` text at `size`. The faces are twice the
+ * text size and sit before the line, or above it where they would leave it less than 70% of
+ * the column. When a side panel is too short, the fallback is the line alone.
+ */
+export function withFaces(ctx: TemplateContext, people: readonly Person[], text: string, width: number, size = 28): Block {
+  const plain: Block = { html: `<p class="byline">${e(text)}</p>`, height: textHeight(text, size, width, 1.35), optional: true };
+  const shown = people.slice(0, MAX_FACES);
+  if (shown.length === 0) return plain;
+  const face = size * 2;
+  const textWidth = width - facesWidth(shown.length, face) - FACES_GAP;
+  const above = textWidth < width * 0.7;
+  return {
+    html: `<div class="who${above ? " who--above" : ""}">${faces(ctx, shown, face)}<p class="byline">${e(text)}</p></div>`,
+    height: above ? face + 10 + plain.height : Math.max(face, textHeight(text, size, textWidth, 1.35)),
+    optional: true,
+    fallback: plain,
+  };
 }
 
 /** A numbered row: the chip takes 2.1 em of the width and makes the row at least 1.5 em high. */

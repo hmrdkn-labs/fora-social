@@ -62,20 +62,20 @@ function people(ctx: TemplateContext): Block {
   if (speakers.length === 0) {
     const format = "Diskusi terbuka, tanpa tamu";
     return {
-      html: fact("Host", person(host)) + fact("Format", format),
+      html: fact("Host", person(ctx, host)) + fact("Format", format),
       height: factHeight(Math.max(personHeight(host, LEFT), textHeight(format, 34, RIGHT, 1.18))),
     };
   }
   if (speakers.length > 2) {
     const names = joinNames(speakers.map((p) => p.name));
     return {
-      html: fact("Pembicara", e(names)) + fact("Host", person(host)),
+      html: fact("Pembicara", e(names)) + fact("Host", person(ctx, host)),
       height: factHeight(Math.max(textHeight(names, 34, LEFT, 1.18), hostHeight)),
     };
   }
   const stacked = speakers.reduce((sum, p) => sum + personHeight(p, LEFT), 16 * (speakers.length - 1));
   return {
-    html: fact("Pembicara", speakers.map((p) => person(p)).join("")) + fact("Host", person(host)),
+    html: fact("Pembicara", speakers.map((p) => person(ctx, p)).join("")) + fact("Host", person(ctx, host)),
     height: factHeight(Math.max(stacked, hostHeight)),
   };
 }
@@ -132,8 +132,8 @@ function cast(ctx: TemplateContext): string {
   const size = count <= 3 ? "person--card" : "person--mid";
   const cards =
     count <= 6
-      ? [...speakers, hostCard].map((p) => person(p, size)).join("")
-      : `<p class="lead">${e(joinNames(speakers.map((p) => p.name)))}</p>${person(hostCard, size)}`;
+      ? [...speakers, hostCard].map((p) => person(ctx, p, size)).join("")
+      : `<p class="lead">${e(joinNames(speakers.map((p) => p.name)))}</p>${person(ctx, hostCard, size)}`;
   return `<main class="main" data-fit>
   <div class="lede">
     <p class="kicker">${speakers.length > 0 ? "Bersama" : "Dipandu"}</p>
