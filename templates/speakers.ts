@@ -226,9 +226,17 @@ function landscape(ctx: TemplateContext): string {
   <p class="when__time">${e(formatTimeRange(session))}</p>
 </div>`,
         height: 110,
+        // A short panel drops the large date: weekday and date on one line, the start time on the next.
         fallback: {
-          html: `<p class="when__day">${e(`${formatDateShort(session)} · ${formatTime(session)}`)}</p>`,
-          height: 26,
+          html: `<div class="when">
+  <p class="when__day">${e(formatDateShort(session))}</p>
+  <p class="when__time">${e(formatTime(session))}</p>
+</div>`,
+          height: 66,
+          fallback: {
+            html: `<p class="when__day">${e(`${formatDateShort(session)} · ${formatTime(session)}`)}</p>`,
+            height: 52,
+          },
         },
       },
     ],
