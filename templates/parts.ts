@@ -292,7 +292,7 @@ const OVERLAP = 0.26;
 
 /**
  * A round portrait `size` units across with a ring in the SIG's colour: the person's photo, or
- * the silhouette from brand/people tinted by the theme when they have none.
+ * the silhouette from brand/people, in the theme's neutral grey, when they have none.
  */
 export function avatar(ctx: TemplateContext, p: Person, size: number): string {
   // The ring grows with the portrait: 3 units on a 60-unit face, 8 on a 440-unit one.
