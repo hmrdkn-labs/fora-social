@@ -11,16 +11,13 @@ host:
   name: Rina (contoh)
   role: Platform Engineer
   handle: rina_contoh
-  photo: examples/people/rina.jpg
 speakers:
   - name: Bima (contoh)
     role: DevOps Engineer
     handle: bima_contoh
-    photo: examples/people/bima.jpg
   - name: Sari (contoh)
     role: Backend Developer
     handle: sari_contoh
-    photo: examples/people/sari.jpg
 note: Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
 description: Sesi pertama Cloud Native 101. Kita mulai dari kenapa container butuh orkestrasi, lalu deploy aplikasi pertama ke cluster lokal pakai minikube.
 topics:

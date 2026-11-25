@@ -177,3 +177,5 @@ glasses straight, no text. Sari's hair does not sit behind her ear as prompted, 
 4. `examples/` is now 48 MB with 288 PNG; the question from brief 04 about committing a subset stands.
 5. Real photos: where should they live (`people/` at the root is what the README suggests), and who records
    consent?
+
+2026-11-25: generated portraits removed by brief 08 at the person's request.

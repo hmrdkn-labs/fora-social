@@ -196,8 +196,8 @@ body {
   --join-chip-bg: var(--accent);
   --join-chip-fg: var(--accent-ink);
   --ring: var(--accent);
-  --avatar-bg: color-mix(in srgb, var(--accent) 16%, var(--color-paper));
-  --avatar-fg: color-mix(in srgb, var(--accent) 75%, var(--color-paper));
+  --avatar-bg: var(--color-grey-100);
+  --avatar-fg: var(--color-grey-500);
 }
 
 .t-mist {
@@ -221,8 +221,8 @@ body {
   --join-chip-bg: var(--color-ink);
   --join-chip-fg: var(--color-paper);
   --ring: var(--accent);
-  --avatar-bg: color-mix(in srgb, var(--accent) 24%, var(--color-ink));
-  --avatar-fg: color-mix(in srgb, var(--accent) 85%, var(--color-ink));
+  --avatar-bg: var(--color-grey-700);
+  --avatar-fg: var(--color-grey-300);
 }
 
 .t-accent {
@@ -504,8 +504,9 @@ body {
 }
 
 /* A round portrait (templates/parts.ts sets --s and --ring-w): the photo, or the silhouette of
-   brand/people as a mask filled with the theme's tint. The ring is the SIG's colour, or the
-   colour of text on it where the surface itself is the SIG's colour. */
+   brand/people as a mask filled with a neutral grey from the theme. Photos are drawn in greyscale.
+   The ring is the SIG's colour, or the colour of text on it where the surface itself is the SIG's
+   colour. */
 .avatar {
   flex: none;
   display: block;
@@ -526,6 +527,7 @@ body {
 
 .avatar img {
   object-fit: cover;
+  filter: grayscale(1);
 }
 
 .avatar i {

@@ -96,15 +96,17 @@ text is 24 px (`label`); on 1600 and 1200 wide canvases scale by `width / 1080`.
 
 Portraits are round, with a thin ring in the SIG's colour (on a surface that is itself the SIG's colour, the ring takes the text colour). The ring is 3 units on a 60-unit portrait and grows with it, about 1/56 of the diameter.
 
-`people/silhouette.svg` stands in for a person without a photo: a head and shoulders in two plain paths on a 100 × 100 box, with no face and nothing that suggests a gender. It has no colour of its own. Templates use it as a mask (`avatar` in `templates/parts.ts`) and fill it per surface:
+`people/silhouette.svg` stands in for a person without a photo: a head and shoulders in two plain paths on a 100 × 100 box, with no face and nothing that suggests a gender. It has no colour of its own. Templates use it as a mask (`avatar` in `templates/parts.ts`) and fill it with a grey from the table below, never with the SIG's colour, so it looks the same on every SIG:
 
 | Surface | Disc | Figure |
 | --- | --- | --- |
-| paper, light grey | SIG colour 16% on paper | SIG colour 75% on paper |
-| ink, side panel | SIG colour 24% on ink | SIG colour 85% on ink |
+| paper, light grey | `grey-100` | `grey-500` |
+| ink, side panel | `grey-700` | `grey-300` |
 | SIG colour | `grey-100` | `grey-500` |
 
 Keep the shape as it is: the shoulders run off the bottom edge so the circle crops them, as it crops a photo.
+
+Photos are drawn in greyscale: `.avatar img` in `templates/base.css` sets `filter: grayscale(1)` for every photo, so a real photo matches the silhouettes. The samples ship no photos; add one only with the person's consent.
 
 ## Do / don't
 

@@ -53,3 +53,20 @@ Commit in small logical commits on `08-no-human-photos`, push the branch. Do not
 
 Fill in below: model, commits, checks, images you looked at. Reply to the orchestrator in at
 most 10 lines.
+
+### Result (2026-11-25)
+
+- **Model:** anthropic/claude-haiku-5-5, thinking xhigh.
+- **Commits** on `08-no-human-photos` (pushed, not merged):
+  - 1900c3c chore(examples): remove the sample portraits (`examples/people/README.md`, the photo lines in the three sample sessions)
+  - de40a38 chore(examples): remove the five sample JPEGs (binary, so the delete was not recorded with 1900c3c)
+  - 4f65389 feat(templates): silhouette in grey, photos in greyscale
+  - b56bb01 docs: photos in greyscale, samples ship no photos (README, brand/README, note in brief 07)
+  - 17ccfaf docs(examples): re-render with grey silhouettes and no portraits
+  - this commit: docs(brief): record 08-no-human-photos result
+- **Greys:** paper and mist: `grey-100` disc, `grey-500` figure. Ink and the wide side panel: `grey-700` disc, `grey-300` figure. Accent (FORA amber and the SIG colours): already `grey-100` and `grey-500`, unchanged. The ring keeps the SIG colour.
+- **Greyscale:** one rule, `.avatar img { filter: grayscale(1) }` in `templates/base.css`.
+- **Checks:** `pnpm check` passes (tsc clean, 167/167). `find` for `*.jpg` and `*.jpeg` prints nothing; `grep -rn 'photo:' examples/sessions` prints nothing. `pnpm examples` exits 0 with no failures: 104 PNG and 24 PDF changed.
+- **Greyscale proof (not committed):** a 640×640 red-to-blue gradient in `.scratch/`, set as the host photo in a temporary copy of the GitOps session, rendered with `pnpm render`. `ig-feed/speakers.png` shows the host as a grey gradient and the speaker without a photo as the silhouette. Scratch files deleted.
+- **Looked at:** `speakers` ig-feed, ig-story, x and li-link, plus one carousel person slide, for all four sessions (FORA has no speakers, so its slide is the cover, `speakers-01`). Also GitOps `announce` ig-feed, FORA `reminder` (amber) and GitOps `recap` (mist). Silhouettes are grey and readable on each theme; nothing overflows.
+- **Not changed:** `test/load.test.ts` still uses `examples/people/nobody.jpg` as a missing path. It is a literal string outside my files and the test passes; it can point at any missing path later.
