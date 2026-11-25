@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { cap, castLine, type Ctx, hashLine, openDoor, roster, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPeople, cap, type Ctx, firstSentence, hashLine, openDoor, recapPrompt, sentence, shape, themeTag, uniqueTags } from "./context.ts";
 
 function tags(c: Ctx): string {
   return hashLine(
@@ -20,6 +20,29 @@ function join(c: Ctx, variant: number, scope = "join"): string {
   }
 }
 
+/** The same, for a talk that is running now. */
+function joinLive(c: Ctx, variant: number): string {
+  const open = openDoor(c, "instagram|live");
+  switch (variant % 3) {
+    case 0:
+      return `Langsung masuk ${c.voice}, link Discord di bio (${c.shortUrl}). ${open}`;
+    case 1:
+      return `Buka ${c.shortUrl} (juga ada di bio), lalu ke ${c.voice}. ${open}`;
+    default:
+      return `Link di bio, atau ${c.shortUrl}. Masuknya ke ${c.voice}. ${open}`;
+  }
+}
+
+/** One practical detail for the reminder, the same wording for a session every time. */
+function practical(c: Ctx): string {
+  return [
+    "Buka Discord sepuluh menit lebih awal buat cek suara.",
+    "Pakai headset kalau ada. Dari HP juga bisa.",
+    `Kalau ada pertanyaan soal ${c.s.theme}, tulis dulu biar nggak lupa.`,
+    "Mic boleh mati dulu sampai kamu siap ngomong.",
+  ][shape(c, "reminder|practical", 4)]!;
+}
+
 const bullets = (items: string[]): string => items.map((t) => `- ${t}`).join("\n");
 
 function recapPoints(c: Ctx, style: "numbered" | "dash"): string {
@@ -38,11 +61,13 @@ function recap(c: Ctx, variant: number): string[] {
   const r = c.s.recap!;
   const crowd = r.attendees ? `${r.attendees} orang ikut ngobrol di voice channel.` : "Makasih yang sudah mampir ke voice channel.";
   const next = `Sesi berikutnya kita umumkan di Discord FORA (link di bio atau ${c.shortUrl}). ${openDoor(c, "instagram|recap")}`;
+  const prompt = recapPrompt(c, "instagram|recap");
   if (variant === 0) {
     return [
       `Rekap "${c.s.title}", ${c.dateShort}.`,
       `${crowd} Makasih ${c.thanks}.`,
       recapPoints(c, "numbered"),
+      prompt,
       recapLinks(c),
       next,
     ];
@@ -51,7 +76,8 @@ function recap(c: Ctx, variant: number): string[] {
     `Ini yang tercatat dari "${c.s.title}" (${c.dateShort}).`,
     recapPoints(c, "dash"),
     recapLinks(c),
-    `${crowd} Makasih ${c.thanks}, sampai ketemu lagi. ${next}`,
+    `${crowd} Makasih ${c.thanks}, sampai ketemu lagi. ${prompt}`,
+    next,
   ];
 }
 
@@ -76,20 +102,30 @@ export function instagram(c: Ctx, type: PostType): string {
     case "reminder":
       blocks =
         v === 0
-          ? [`Hari ini, ${c.time}. ${s.title}`, c.lead, `${c.Who}. Kalau sudah mulai, nyusul aja kapan pun. ${join(c, 0)}`]
+          ? [`Nanti jam ${c.time}, ${s.title}.`, `${c.Who}. ${practical(c)}`, join(c, 0)]
           : v === 1
-            ? [`${s.title} mulai ${c.time} hari ini.`, s.note ?? (s.topics.length ? bullets(s.topics) : c.lead), join(c, 1)]
-            : [s.note ?? "", `${s.title}, hari ini jam ${c.time}.`, join(c, 2)];
+            ? [s.title, `${c.dateShort}, nanti jam ${c.time}. ${practical(c)}`, `${c.Who}.`, join(c, 1)]
+            : [`Jam ${c.time} nanti kita ngobrol soal ${s.theme}.`, `${s.title}, ${c.who}.`, `${practical(c)} ${join(c, 2)}`];
+      break;
+    case "live":
+      blocks =
+        v === 0
+          ? [`${s.title} lagi jalan sekarang.`, what, joinLive(c, 0)]
+          : v === 1
+            ? [`Live sekarang, ${c.who}.`, s.title, joinLive(c, 1)]
+            : [`Sudah mulai jam ${c.time}. ${s.title}`, what, joinLive(c, 2)];
       break;
     case "recap":
       blocks = recap(c, v % 2);
       break;
-    case "cover":
+    case "cover": {
+      const series = s.series ? `${cap(c.series)} bareng ${c.brand}, kali ini soal ${s.theme}.` : `Tema ${s.theme} bareng ${c.brand}.`;
       blocks =
         v === 0
-          ? [`${c.series} bareng ${c.brand}.`, c.lead, `Sesinya "${s.title}", ${when}.`, join(c, 0)]
-          : [s.title, `${cap(c.series)} di ${c.brand}.`, c.lead, `${when}. ${join(c, 1)}`];
+          ? [series, sub, `Sesinya "${s.title}", ${when}.`, join(c, 0)]
+          : [s.title, `${series} ${sub}`, `${when}. ${join(c, 1)}`];
       break;
+    }
     case "sig-intro":
       blocks =
         v === 0
@@ -99,10 +135,10 @@ export function instagram(c: Ctx, type: PostType): string {
     case "speakers":
       blocks =
         v === 0
-          ? [castLine(c, true), s.speakers.length ? bullets(roster(c, false)) : "", `Temanya "${s.title}", mulai ${c.time}. ${join(c, 0)}`]
+          ? [`Yang ngisi "${s.title}" (${c.dateShort}, ${c.time}).`, ...aboutPeople(c, true), join(c, 0)]
           : v === 1
-            ? [`Kenalan dulu sama yang ngisi "${s.title}".`, bullets(roster(c, true)), `${c.dateShort}, ${c.range}. ${join(c, 1)}`]
-            : [`${s.title}, jam ${c.time}.`, castLine(c, true), join(c, 2)];
+            ? [`${s.title}, ${c.dateShort} jam ${c.time}.`, ...aboutPeople(c, false), join(c, 1)]
+            : [...aboutPeople(c, true), `Sesinya "${s.title}", ${when}.`, join(c, 2)];
       break;
   }
   return [...blocks.filter(Boolean).map((b) => (b.endsWith("\n") ? b.trimEnd() : b)), tags(c)].join("\n\n");

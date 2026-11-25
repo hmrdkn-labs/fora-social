@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { cap, castLine, type Ctx, hashLine, openDoor, roster, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPeople, cap, type Ctx, firstSentence, hashLine, openDoor, recapPrompt, sentence, shape, themeTag, uniqueTags } from "./context.ts";
 
 function tags(c: Ctx): string {
   return hashLine(uniqueTags(themeTag(c.s), c.sig.hashtags.slice(1), c.sig.hashtags.slice(0, 1), c.s.hashtags, c.community.hashtags).slice(0, 3));
@@ -13,6 +13,24 @@ function join(c: Ctx, variant: number): string {
   return `Gabung lewat ${c.url}, lalu masuk ke ${c.voice}. ${openDoor(c, "linkedin|join", true)}`;
 }
 
+/** The same, for a talk that is running now. */
+function joinLive(c: Ctx, variant: number): string {
+  if (variant % 2 === 0) {
+    return `Langsung masuk ke ${c.voice} lewat ${c.url}. ${openDoor(c, "linkedin|live", true)}`;
+  }
+  return `Undangan Discord: ${c.url}. Kita ada di ${c.voice}. ${openDoor(c, "linkedin|live", true)}`;
+}
+
+/** One practical detail for the reminder. */
+function practical(c: Ctx): string {
+  return [
+    "Buka Discord sepuluh menit lebih awal untuk cek suara.",
+    "Headset membantu, dan dari ponsel juga bisa.",
+    `Kalau ada pertanyaan soal ${c.s.theme}, catat dulu supaya tidak lupa.`,
+    "Mikrofon boleh dimatikan sampai kamu siap bicara.",
+  ][shape(c, "reminder|practical", 4)]!;
+}
+
 const bullets = (items: string[]): string => items.map((t) => `• ${t}`).join("\n");
 
 function recap(c: Ctx, variant: number): string[] {
@@ -21,10 +39,11 @@ function recap(c: Ctx, variant: number): string[] {
   const links = (r.links ?? []).map((l) => `${l.label}: ${l.url}`).join("\n");
   const crowd = r.attendees ? `${r.attendees} orang ikut ngobrol di voice channel.` : "Terima kasih untuk semua yang sudah ikut ngobrol.";
   const next = `Sesi berikutnya akan kita umumkan di Discord FORA, di ${c.voice}. ${openDoor(c, "linkedin|recap", true)} ${c.url}`;
+  const prompt = recapPrompt(c, "linkedin|recap");
   if (variant === 0) {
-    return [`Rekap "${c.s.title}" (${c.dateShort}).`, `Terima kasih ${c.thanks}. ${crowd}`, points, links, next];
+    return [`Rekap "${c.s.title}" (${c.dateShort}).`, `Terima kasih ${c.thanks}. ${crowd}`, points, prompt, links, next];
   }
-  return [`${crowd} Terima kasih ${c.thanks}.`, `Catatan dari "${c.s.title}":`, points, links, next];
+  return [`${crowd} Terima kasih ${c.thanks}.`, `Catatan dari "${c.s.title}":`, points, links, prompt, next];
 }
 
 export function linkedin(c: Ctx, type: PostType): string {
@@ -44,18 +63,30 @@ export function linkedin(c: Ctx, type: PostType): string {
     case "reminder":
       blocks =
         v === 0
-          ? [`Hari ini, ${c.range}\n${s.title}`, c.lead, `${cap(c.who)}. Kalau sudah mulai, silakan langsung masuk.`, join(c, 0)]
-          : [c.s.note ?? `Hari ini jam ${c.time} kita ngobrol soal ${s.theme}.`, `${s.title}, ${c.range}. ${cap(c.who)}.`, join(c, 1)];
+          ? [`Nanti jam ${c.time}\n${s.title}`, `${cap(c.who)}. ${practical(c)}`, join(c, 0)]
+          : v === 1
+            ? [`Hari ini jam ${c.time} kita ngobrol soal ${s.theme}.`, `${s.title}, ${c.date}. ${cap(c.who)}.`, `${practical(c)} ${join(c, 1)}`]
+            : [`${s.title}, nanti jam ${c.time}`, practical(c), `${cap(c.who)}.`, join(c, 0)];
+      break;
+    case "live":
+      blocks =
+        v === 0
+          ? [`${s.title} sedang berjalan.`, `${what} ${cap(c.who)}.`, joinLive(c, 0)]
+          : v === 1
+            ? [`Kita sudah mulai (${c.time}).`, `${s.title}. ${what}`, joinLive(c, 1)]
+            : [`Live sekarang di ${c.voice}.`, `${s.title}, ${c.who}.`, joinLive(c, 1)];
       break;
     case "recap":
       blocks = recap(c, v % 2);
       break;
-    case "cover":
+    case "cover": {
+      const series = s.series ? `${cap(c.series)} bareng ${c.brand}, kali ini soal ${s.theme}.` : `Tema ${s.theme} bareng ${c.brand}.`;
       blocks =
         v === 0
-          ? [`${c.series} bareng ${c.brand}`, c.lead, `Sesinya "${s.title}", ${when}.`, join(c, 0)]
-          : [c.lead, `${cap(c.series)} di ${c.brand}. Sesinya "${s.title}", ${c.dateShort}, ${c.range}.`, join(c, 1)];
+          ? [series, sub, `Sesinya "${s.title}", ${when}.`, join(c, 0)]
+          : [sub, `${series} Sesinya "${s.title}", ${c.dateShort}, ${c.range}.`, join(c, 1)];
       break;
+    }
     case "sig-intro":
       blocks =
         v === 0
@@ -65,8 +96,8 @@ export function linkedin(c: Ctx, type: PostType): string {
     case "speakers":
       blocks =
         v % 2 === 0
-          ? [`${s.title} (${c.brand})`, castLine(c, false), bullets(roster(c, true)), `${when}.`, join(c, 0)]
-          : [castLine(c, true), `Sesinya "${s.title}", ${when}.`, join(c, 1)];
+          ? [`${s.title} (${c.brand})`, ...aboutPeople(c, true), `${when}.`, join(c, 0)]
+          : [`Sesinya "${s.title}", ${when}.`, ...aboutPeople(c, true), join(c, 1)];
       break;
   }
   return [...blocks.filter(Boolean), tags(c)].join("\n\n");

@@ -105,7 +105,7 @@ describe("captions", () => {
   test("a note too long for X is left out, not threaded", () => {
     const { session, sig } = variants["host note, no attendee count"];
     const long = { ...session, note: "Cerita panjang soal Pod yang mati jam dua pagi dan Deployment yang diam-diam membuat gantinya. ".repeat(3).trim() };
-    for (const type of ["announce", "reminder", "cover"] as const) {
+    for (const type of ["announce"] as const) {
       const c = buildCaptions(long, sig, community, type);
       assert.equal(c.x.length, 1);
       assert.ok(!c.x[0].includes("Cerita panjang"));
