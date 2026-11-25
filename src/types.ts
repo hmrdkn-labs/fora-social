@@ -1,9 +1,9 @@
 // Shared contract between the loader, templates and captions.
 // Change it only through the orchestrator (briefs/00-orchestrator.md).
 
-export type PostType = "announce" | "reminder" | "recap" | "cover" | "sig-intro" | "speakers";
+export type PostType = "announce" | "reminder" | "live" | "recap" | "cover" | "sig-intro" | "speakers";
 
-export const POST_TYPES: readonly PostType[] = ["announce", "reminder", "recap", "cover", "sig-intro", "speakers"];
+export const POST_TYPES: readonly PostType[] = ["announce", "reminder", "live", "recap", "cover", "sig-intro", "speakers"];
 
 export type FormatId = "ig-feed" | "ig-carousel" | "ig-story" | "x" | "li-link" | "li-doc";
 
@@ -37,6 +37,8 @@ export interface Person {
    * templates show the neutral silhouette from brand/people/.
    */
   photo?: string;
+  /** One plain line on what they will share or ask in this session. Speakers posts lead with it. */
+  about?: string;
 }
 
 export interface RecapPoint {

@@ -18,7 +18,6 @@ import {
   joinMain,
   layoutOf,
   MAIN_WIDTH,
-  numbered,
   post,
   TALL_WIDTH,
   tallRoom,
@@ -143,7 +142,6 @@ function slides(ctx: TemplateContext): string[] {
     ${nextTitle.html}
     ${by.html}
   </div>
-  ${numbered(session.topics, TALL_WIDTH, nextRoom - nextTitle.height, [40, 36, 32, 28])}
   ${where.html}
 </main>`,
     ],

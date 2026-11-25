@@ -19,6 +19,7 @@ Sample renders of every post type and format, made by \`pnpm examples\` from \`e
 const POST_LABELS: Record<PostType, string> = {
   announce: "Announce",
   reminder: "Reminder",
+  live: "Live",
   recap: "Recap",
   cover: "Cover",
   "sig-intro": "SIG intro",

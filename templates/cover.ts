@@ -1,11 +1,12 @@
-// Cover: the theme in the biggest type the canvas allows, on ink. The join information is one
-// quiet line here; decks add an "about" slide and the join slide.
-import { discordUrl, displayUrl } from "../src/format.ts";
+// Cover: the theme in the biggest type the canvas allows, on ink. When and where is one quiet
+// line here and on the first slide; decks add a slide about the series and the join slide.
+import { discordUrl, displayUrl, formatDateShort, formatTimeRange } from "../src/format.ts";
 import type { Template, TemplateContext } from "../src/types.ts";
 import { fitBlock, SERIF, textHeight } from "./fit.ts";
 import { escapeHtml as e } from "./html.ts";
 import {
   aboutMain,
+  channel,
   deck,
   FOOT,
   GAP,
@@ -17,6 +18,7 @@ import {
   TALL_WIDTH,
   tallRoom,
   tidy,
+  whenWhere,
   WAVE_MIN,
   WIDE_GAP,
   WIDE_WAVE_MIN,
@@ -60,7 +62,7 @@ function single(ctx: TemplateContext): string {
   // The wide cover has no side panel: header, block, wave and the join line share one column.
   const room = isWide
     ? wideRoom(ctx, "ink") - 2 * WIDE_GAP - WIDE_WAVE_MIN - 26
-    : tallRoom(ctx, "ink", 68) - GAP - WAVE_MIN;
+    : tallRoom(ctx, "ink", 76) - GAP - WAVE_MIN;
   return post(
     ctx,
     "ink",
@@ -69,13 +71,14 @@ function single(ctx: TemplateContext): string {
   ${block(ctx, isWide ? SOLO_WIDTH : TALL_WIDTH, isWide ? WIDE_SIZES : TALL_SIZES, room)}
   ${wave(ctx.session.id, isWide ? 72 : 52)}
 </main>
-<p class="whisper" data-fit><span>Voice channel · Discord · dengerin aja boleh</span><b>${e(url)}</b></p>`,
+<p class="whisper" data-fit><span>${e(`${formatDateShort(ctx.session)} · ${formatTimeRange(ctx.session)} · voice channel`)} ${channel(ctx.session.voiceChannel)}</span><b>${e(url)}</b></p>`,
     "post--cover",
   );
 }
 
 function slides(ctx: TemplateContext): string[] {
-  const room = tallRoom(ctx, "ink", FOOT) - GAP - WAVE_MIN;
+  const where = whenWhere(ctx);
+  const room = tallRoom(ctx, "ink", FOOT) - GAP - WAVE_MIN - where.height - GAP;
   return deck(
     ctx,
     "ink",
@@ -84,8 +87,9 @@ function slides(ctx: TemplateContext): string[] {
       `${INTEGRAL}<main class="main" data-fit>
   ${block(ctx, TALL_WIDTH, TALL_SIZES, room)}
   ${wave(ctx.session.id, 52)}
+  ${where.html}
 </main>`,
-      aboutMain(ctx, "ink", "Tentang sesi ini"),
+      aboutMain(ctx, "ink", "Soal seri ini", false),
     ],
     joinMain(ctx, "ink"),
   );

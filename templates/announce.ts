@@ -148,8 +148,8 @@ function slides(ctx: TemplateContext): string[] {
   const { session } = ctx;
   const date = when(ctx);
   const place = `Voice channel ${session.voiceChannel} · Discord`;
-  const open = "Dengerin aja boleh";
-  const placeHeight = factHeight(Math.max(textHeight(place, 34, LEFT, 1.18), textHeight(open, 34, RIGHT, 1.18)));
+  const length = `${session.durationMinutes} menit`;
+  const placeHeight = factHeight(Math.max(textHeight(place, 34, LEFT, 1.18), textHeight(length, 34, RIGHT, 1.18)));
   const room = tallRoom(ctx, "paper", FOOT) - date.height - 28 - placeHeight - 2 * GAP - WAVE_MIN;
   return deck(
     ctx,
@@ -159,7 +159,7 @@ function slides(ctx: TemplateContext): string[] {
       `<main class="main" data-fit>
   ${lede(ctx, TALL_WIDTH, TALL_SIZES, Math.min(room, LEDE_CAP), true).html}
   ${wave(session.id, 52)}
-  <div class="facts">${date.html}${fact("Tempat", `Voice channel ${channel(session.voiceChannel)} · Discord`)}${fact("Terbuka", open)}</div>
+  <div class="facts">${date.html}${fact("Tempat", `Voice channel ${channel(session.voiceChannel)} · Discord`)}${fact("Durasi", e(length))}</div>
 </main>`,
       aboutMain(ctx, "paper", session.topics.length > 0 ? "Yang kita bahas" : "Tentang sesi ini"),
       cast(ctx),

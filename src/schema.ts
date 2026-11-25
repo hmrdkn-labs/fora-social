@@ -29,6 +29,7 @@ const PersonSchema = z.strictObject({
   role: z.string().optional(),
   handle: handle.optional(),
   photo: nonEmpty.optional(),
+  about: nonEmpty.optional(),
 });
 
 const RecapSchema = z.strictObject({
