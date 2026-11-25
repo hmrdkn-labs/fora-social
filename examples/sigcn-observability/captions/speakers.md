@@ -2,18 +2,23 @@
 
 ## Instagram
 
-Kamis 14 Januari yang cerita Eko (contoh), dipandu Rina (contoh).
+Yang ngisi "Observability: Logs, Metrics, Traces" (Kam, 14 Jan, 20.00 WIB).
 
-- Eko (contoh), SRE
-- Rina (contoh), Platform Engineer, host
+Eko (contoh), SRE. Membedah satu kasus aplikasi lambat dan menunjukkan dari mana dia mulai mencari.
 
-Temanya "Observability: Logs, Metrics, Traces", mulai 20.00 WIB. Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-voice. Dengerin aja nggak apa-apa, ngomong juga silakan.
+Rina (contoh), Platform Engineer, host. Memandu, dan nanya duluan, terakhir kali aplikasimu lambat, kamu mulai cari dari mana?
+
+Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-voice. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #SIGCN #Observability #OpenTelemetry
 
-## X
+## X 1/2
 
-Kamis 14 Januari yang cerita Eko (contoh), dipandu Rina (contoh).
+Eko (contoh), SRE. Membedah satu kasus aplikasi lambat dan menunjukkan dari mana dia mulai mencari.
+Rina (contoh), Platform Engineer, host. Memandu, dan nanya duluan, terakhir kali aplikasimu lambat, kamu mulai cari dari mana?
+
+## X 2/2
+
 "Observability: Logs, Metrics, Traces", mulai 20.00 WIB.
 Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
@@ -23,10 +28,9 @@ https://discord.gg/rSepJu7Wb
 
 Observability: Logs, Metrics, Traces (SIG CN × FORA)
 
-Kamis 14 Januari yang cerita Eko (contoh), dipandu Rina (contoh).
+Eko (contoh), SRE. Membedah satu kasus aplikasi lambat dan menunjukkan dari mana dia mulai mencari.
 
-• Eko (contoh), SRE
-• Rina (contoh), Platform Engineer, host
+Rina (contoh), Platform Engineer, host. Memandu, dan nanya duluan, terakhir kali aplikasimu lambat, kamu mulai cari dari mana?
 
 Kamis, 14 Januari 2027, 20.00–21.30 WIB.
 

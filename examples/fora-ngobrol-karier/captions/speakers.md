@@ -2,17 +2,22 @@
 
 ## Instagram
 
-Ngobrol Karier di Tech, jam 19.30 WIB.
+Dika (contoh) @dika_contoh, Software Engineer. Mandu obrolan, cerita soal pindah dari developer ke SRE, lalu tanya balik, kerjaan pertama kalian dapat dari mana?
 
-Sabtu 23 Januari yang mandu Dika (contoh) @dika_contoh. Tanpa pembicara tamu, jadi yang cerita kita semua.
+Tanpa pembicara tamu, jadi yang cerita kita semua.
+
+Sesinya "Ngobrol Karier di Tech", Sabtu, 23 Januari 2027, 19.30–21.00 WIB.
 
 Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #Karier #KarierTech #KomunitasTech
 
-## X
+## X 1/2
 
-Sabtu 23 Januari yang mandu Dika (contoh) @dika_contoh. Tanpa pembicara tamu, jadi yang cerita kita semua.
+Dika (contoh) @dika_contoh, Software Engineer. Mandu obrolan, cerita soal pindah dari developer ke SRE, lalu tanya balik, kerjaan pertama kalian dapat dari mana?
+
+## X 2/2
+
 "Ngobrol Karier di Tech", mulai 19.30 WIB.
 Masuk aja ke voice channel fora-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
@@ -22,9 +27,9 @@ https://discord.gg/rSepJu7Wb
 
 Ngobrol Karier di Tech (FORA)
 
-Sabtu 23 Januari yang mandu Dika (contoh). Tanpa pembicara tamu, jadi yang cerita kita semua.
+Dika (contoh) @dika_contoh, Software Engineer. Mandu obrolan, cerita soal pindah dari developer ke SRE, lalu tanya balik, kerjaan pertama kalian dapat dari mana?
 
-• Dika (contoh), Software Engineer, host, @dika_contoh
+Tanpa pembicara tamu, jadi yang cerita kita semua.
 
 Sabtu, 23 Januari 2027, 19.30–21.00 WIB.
 

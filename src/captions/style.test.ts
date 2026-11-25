@@ -8,6 +8,7 @@ import { postTypesFor } from "../pipeline.ts";
 import { FORMATS, POST_TYPES, type Session, type Sig, type TemplateContext } from "../types.ts";
 import { parse } from "yaml";
 import { variants } from "./fixtures.ts";
+import { firstSentence } from "./context.ts";
 import { buildCaptions, xLength } from "./index.ts";
 import { format, lint, type Surface } from "./style.ts";
 
@@ -39,7 +40,8 @@ function visibleText(html: string): string {
 /** The words a person wrote in a session file. */
 function copyOf(s: Session): string {
   const r = s.recap;
-  return [s.title, s.subtitle, s.note, s.description, ...s.topics, ...(r?.points.flatMap((p) => [p.title, p.body]) ?? [])]
+  const about = [...s.speakers, s.host].map((p) => p.about);
+  return [s.title, s.subtitle, s.note, s.description, ...about, ...s.topics, ...(r?.points.flatMap((p) => [p.title, p.body]) ?? [])]
     .filter(Boolean)
     .join("\n");
 }
@@ -88,17 +90,45 @@ describe("captions", () => {
     }
   }
 
-  test("the host's note leads every caption unchanged", () => {
+  test("the host's note leads the announcement unchanged and is not replayed in other posts", () => {
     const withNote = samples.filter((s) => s.note);
     assert.ok(withNote.length >= 2);
     for (const s of withNote) {
-      for (const type of ["announce", "reminder", "cover"] as const) {
-        const c = buildCaptions(s, sigOf(s), community, type);
-        assert.ok(c.instagram.startsWith(s.note!) || c.instagram.includes(`\n\n${s.note}`), `IG ${type}`);
-        const x = c.x.join("\n");
-        assert.ok(!x.includes(s.note!) || (c.x.length === 1 && x.startsWith(s.note!)), `X ${type}: the note leads a single post or is left out`);
-        assert.ok(c.linkedin.includes(s.note!), `LinkedIn ${type}`);
+      const c = buildCaptions(s, sigOf(s), community, "announce");
+      assert.ok(c.instagram.startsWith(s.note!) || c.instagram.includes(`\n\n${s.note}`), "IG announce");
+      const x = c.x.join("\n");
+      assert.ok(!x.includes(s.note!) || (c.x.length === 1 && x.startsWith(s.note!)), "X announce: the note leads a single post or is left out");
+      assert.ok(c.linkedin.includes(s.note!), "LinkedIn announce");
+      for (const type of POST_TYPES.filter((type) => type !== "announce" && (type !== "recap" || s.recap))) {
+        const other = buildCaptions(s, sigOf(s), community, type);
+        const all = [other.instagram, ...other.x, other.linkedin].join("\n");
+        assert.ok(!all.includes(s.note!) && !all.includes(firstSentence(s.note!)), `${s.id} / ${type} repeats the host's note`);
       }
+    }
+  });
+
+  test("speakers captions lead with what each person will share", () => {
+    for (const s of samples) {
+      const people = [...s.speakers, s.host].filter((p) => p.about);
+      assert.equal(people.length, s.speakers.length + 1, `${s.id}: every sample person has an about line`);
+      const c = buildCaptions(s, sigOf(s), community, "speakers");
+      for (const p of people) {
+        assert.ok(c.instagram.includes(p.about!), `${s.id} IG ${p.name}`);
+        assert.ok(c.linkedin.includes(p.about!), `${s.id} LinkedIn ${p.name}`);
+      }
+    }
+  });
+
+  test("a reminder says later and a live post says now, never both", () => {
+    for (const s of samples) {
+      const reminder = buildCaptions(s, sigOf(s), community, "reminder");
+      const live = buildCaptions(s, sigOf(s), community, "live");
+      const r = [reminder.instagram, ...reminder.x, reminder.linkedin].join("\n");
+      const l = [live.instagram, ...live.x, live.linkedin].join("\n");
+      assert.match(r, /nanti|hari ini/i, `${s.id} reminder`);
+      assert.doesNotMatch(r, /live|lagi jalan|sekarang|sudah mulai/i, `${s.id} reminder sounds live`);
+      assert.match(l, /live|lagi jalan|sudah mulai|sedang berjalan/i, `${s.id} live`);
+      assert.doesNotMatch(l, /nanti|hari ini/i, `${s.id} live sounds later`);
     }
   });
 

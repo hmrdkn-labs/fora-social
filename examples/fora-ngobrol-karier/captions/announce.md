@@ -4,7 +4,7 @@
 
 Ngobrol Karier di Tech
 
-Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech.
+Waktu cari kerja pertama saya kirim 40 lamaran dan cuma dua yang dibalas. Saya mau dengar cara kalian.
 
 Sab, 23 Jan, 19.30–21.00 WIB. Dipandu Dika (contoh) @dika_contoh.
 
@@ -18,6 +18,7 @@ Mampir ke voice channel fora-voice di Discord FORA, link di bio atau discord.gg/
 
 ## X
 
+Waktu cari kerja pertama saya kirim 40 lamaran dan cuma dua yang dibalas. Saya mau dengar cara kalian.
 Ngobrol Karier di Tech
 Sab, 23 Jan, 19.30–21.00 WIB
 Di voice channel fora-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
@@ -28,7 +29,7 @@ https://discord.gg/rSepJu7Wb
 
 Ngobrol Karier di Tech, bareng FORA
 
-Sab, 23 Jan, 19.30–21.00 WIB. Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech.
+Sab, 23 Jan, 19.30–21.00 WIB. Waktu cari kerja pertama saya kirim 40 lamaran dan cuma dua yang dibalas. Saya mau dengar cara kalian.
 
 • Cari kerja pertama di tech
 • Belajar sambil kerja

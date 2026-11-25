@@ -2,7 +2,7 @@ sig: sig-cn
 series: Cloud Native 101
 theme: GitOps
 title: GitOps dengan Argo CD
-subtitle: Deploy lewat merge pull request, rollback lewat git revert
+subtitle: Deploy lewat merge pull request, rollback config lewat git revert
 date: "2026-12-19"
 time: "19:30"
 durationMinutes: 90
@@ -10,11 +10,13 @@ voiceChannel: sig-cn-voice
 host:
   name: Rina (contoh)
   role: Platform Engineer
+  about: Menyiapkan repo kosong dan Argo CD, jadi alurnya bisa diikuti dari nol.
 speakers:
   - name: Dani (contoh)
     role: SRE
+    about: Cerita kenapa timnya pindah ke GitOps, lalu tanya balik, "siapa di sini yang masih kubectl apply ke prod?"
 note: Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
-description: Kita coba alur GitOps pakai Argo CD. Merge pull request, cluster ikut isi repo, lalu rollback pakai git revert beneran.
+description: Bayangkan deploy cukup dengan merge pull request, dan cluster otomatis ikut isi repo Git. Kita bangun alurnya dari nol pakai Argo CD, jadi yang belum pernah pakai GitOps juga bisa ikut. Cukup tahu Git dasar.
 topics:
   - Prinsip GitOps
   - Argo CD Application dan sync
@@ -32,8 +34,8 @@ recap:
       body: Kalau beda, aplikasi berstatus OutOfSync, dan sync menerapkan perubahannya.
     - title: Pisahkan repo manifest dari repo kode aplikasi
       body: Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
-    - title: Rollback cukup dengan git revert
-      body: Commit baru yang membatalkan perubahan, lalu disync. Riwayatnya tetap tercatat.
+    - title: Rollback config cukup dengan git revert
+      body: Revert commit yang mengubah manifest, lalu sync, dan riwayatnya tetap tercatat. Batasnya, migrasi database tidak ikut mundur, jadi itu dipikirkan terpisah.
   links:
     - label: Dokumentasi Argo CD
       url: https://argo-cd.readthedocs.io/

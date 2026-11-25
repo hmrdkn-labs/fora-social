@@ -2,9 +2,13 @@
 
 ## Instagram
 
-Kubernetes untuk Pemula, jam 19.30 WIB.
+Bima (contoh) @bima_contoh, DevOps Engineer. Menunjukkan cara membaca kubectl describe waktu sebuah Pod gagal jalan.
 
-Sabtu 12 Desember yang cerita Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh.
+Sari (contoh) @sari_contoh, Backend Developer. Cerita dari sisi developer, bagian mana yang bikin bingung waktu pertama deploy ke cluster. Kamu bingung di bagian yang sama?
+
+Rina (contoh) @rina_contoh, Platform Engineer, host. Memandu, dan mengulang percobaan mematikan satu Pod bareng-bareng.
+
+Sesinya "Kubernetes untuk Pemula", Sabtu, 12 Desember 2026, 19.30–21.00 WIB.
 
 Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
 
@@ -12,7 +16,7 @@ Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga d
 
 ## X 1/2
 
-Sabtu 12 Desember yang cerita Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh.
+Bima (contoh) @bima_contoh, DevOps Engineer. Menunjukkan cara membaca kubectl describe waktu sebuah Pod gagal jalan.
 
 ## X 2/2
 
@@ -25,11 +29,11 @@ https://discord.gg/rSepJu7Wb
 
 Kubernetes untuk Pemula (SIG CN × FORA)
 
-Sabtu 12 Desember yang cerita Bima (contoh) dan Sari (contoh), dipandu Rina (contoh).
+Bima (contoh) @bima_contoh, DevOps Engineer. Menunjukkan cara membaca kubectl describe waktu sebuah Pod gagal jalan.
 
-• Bima (contoh), DevOps Engineer, @bima_contoh
-• Sari (contoh), Backend Developer, @sari_contoh
-• Rina (contoh), Platform Engineer, host, @rina_contoh
+Sari (contoh) @sari_contoh, Backend Developer. Cerita dari sisi developer, bagian mana yang bikin bingung waktu pertama deploy ke cluster. Kamu bingung di bagian yang sama?
+
+Rina (contoh) @rina_contoh, Platform Engineer, host. Memandu, dan mengulang percobaan mematikan satu Pod bareng-bareng.
 
 Sabtu, 12 Desember 2026, 19.30–21.00 WIB.
 

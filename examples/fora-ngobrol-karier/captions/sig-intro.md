@@ -2,7 +2,7 @@
 
 ## Instagram
 
-FORA (Forum Rangkai) itu komunitas tech kecil berbahasa Indonesia di Discord. Kita ngobrol di voice channel. Topiknya dibagi ke beberapa SIG (special interest group), dan tiap SIG pegang satu bidang.
+FORA (Forum Rangkai) itu komunitas tech kecil berbahasa Indonesia di Discord. Obrolannya lewat suara, satu sesi satu topik. Ada sesi umum seperti karier, dan ada SIG (special interest group) yang pegang satu bidang, misalnya SIG CN untuk cloud native.
 
 Yang terdekat "Ngobrol Karier di Tech", Sab, 23 Jan jam 19.30 WIB. Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 

@@ -6,11 +6,13 @@ Rekap "Observability: Logs, Metrics, Traces", Kam, 14 Jan.
 
 16 orang ikut ngobrol di voice channel. Makasih Eko (contoh).
 
-1. Logs menjawab apa yang terjadi. Pakai format terstruktur seperti JSON supaya gampang dicari dan difilter.
-2. Metrics menjawab seberapa sering dan seberapa lama. Angka agregat itu murah disimpan, dan cocok untuk dashboard dan alert.
-3. Traces menjawab di mana waktunya habis. Satu request diikuti lintas service, jadi bagian yang lambat kelihatan.
-4. OpenTelemetry memisahkan instrumentasi dari backend. Kode diinstrumentasi sekali, datanya bisa dikirim ke backend apa saja yang mendukung OTLP.
-5. Alert pada gejala yang dirasakan pengguna. Contohnya error rate dan latency. CPU tinggi sebentar belum tentu masalah.
+1. Log yang terstruktur bisa dicari. Dengan format seperti JSON, satu field duration_ms cukup untuk menemukan request yang menggantung di aplikasi lambat tadi.
+2. Metrics itu angka murah yang tahan lama. Jumlah request dan lama respons ringan disimpan berbulan-bulan, jadi cocok untuk dashboard dan alert.
+3. Trace menunjuk service mana yang menghabiskan waktu. Satu request diikuti dari service ke service, lalu bagian yang lambat kelihatan.
+4. OpenTelemetry, pasang instrumentasi sekali. Datanya bisa dikirim ke backend apa pun yang bisa menerima OTLP.
+5. Alert dari yang dirasakan pengguna. Error rate dan latency yang jadi patokan. CPU tinggi sebentar belum tentu masalah.
+
+Soal "Log yang terstruktur bisa dicari", gimana di tempat kamu?
 
 Dokumentasi OpenTelemetry: https://opentelemetry.io/docs/
 Dokumentasi Prometheus: https://prometheus.io/docs/introduction/overview/
@@ -25,15 +27,11 @@ Rekap "Observability: Logs, Metrics, Traces". 16 orang ngobrol di voice channel.
 
 ## X 2/3
 
-Intinya:
-1. Logs menjawab apa yang terjadi
-2. Metrics menjawab seberapa sering dan seberapa lama
-3. Traces menjawab di mana waktunya habis
-4. OpenTelemetry memisahkan instrumentasi dari backend
-5. Alert pada gejala yang dirasakan pengguna
+OpenTelemetry, pasang instrumentasi sekali. Datanya bisa dikirim ke backend apa pun yang bisa menerima OTLP.
 
 ## X 3/3
 
+Kamu setuju sama "OpenTelemetry, pasang instrumentasi sekali"? Kalau di tempatmu beda, ceritain.
 Dokumentasi OpenTelemetry https://opentelemetry.io/docs/
 Sesi berikutnya diumumkan di Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
@@ -45,14 +43,16 @@ https://discord.gg/rSepJu7Wb
 
 Catatan dari "Observability: Logs, Metrics, Traces":
 
-1. Logs menjawab apa yang terjadi. Pakai format terstruktur seperti JSON supaya gampang dicari dan difilter.
-2. Metrics menjawab seberapa sering dan seberapa lama. Angka agregat itu murah disimpan, dan cocok untuk dashboard dan alert.
-3. Traces menjawab di mana waktunya habis. Satu request diikuti lintas service, jadi bagian yang lambat kelihatan.
-4. OpenTelemetry memisahkan instrumentasi dari backend. Kode diinstrumentasi sekali, datanya bisa dikirim ke backend apa saja yang mendukung OTLP.
-5. Alert pada gejala yang dirasakan pengguna. Contohnya error rate dan latency. CPU tinggi sebentar belum tentu masalah.
+1. Log yang terstruktur bisa dicari. Dengan format seperti JSON, satu field duration_ms cukup untuk menemukan request yang menggantung di aplikasi lambat tadi.
+2. Metrics itu angka murah yang tahan lama. Jumlah request dan lama respons ringan disimpan berbulan-bulan, jadi cocok untuk dashboard dan alert.
+3. Trace menunjuk service mana yang menghabiskan waktu. Satu request diikuti dari service ke service, lalu bagian yang lambat kelihatan.
+4. OpenTelemetry, pasang instrumentasi sekali. Datanya bisa dikirim ke backend apa pun yang bisa menerima OTLP.
+5. Alert dari yang dirasakan pengguna. Error rate dan latency yang jadi patokan. CPU tinggi sebentar belum tentu masalah.
 
 Dokumentasi OpenTelemetry: https://opentelemetry.io/docs/
 Dokumentasi Prometheus: https://prometheus.io/docs/introduction/overview/
+
+Soal "Metrics itu angka murah yang tahan lama", gimana di tempat kamu?
 
 Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel sig-cn-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh. https://discord.gg/rSepJu7Wb
 

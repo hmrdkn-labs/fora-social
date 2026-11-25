@@ -1,6 +1,6 @@
 # FORA social kit
 
-FORA (Forum Rangkai) is a small Indonesian tech community on [Discord](https://discord.gg/rSepJu7Wb). Its SIGs (special interest groups) run casual talks in a Discord voice channel, where anyone can join and speak. This kit turns one session file into posts for Instagram, X and LinkedIn: six post types in six image formats, plus captions in Indonesian for each platform. See the [gallery](examples/README.md) for samples.
+FORA (Forum Rangkai) is a small Indonesian tech community on [Discord](https://discord.gg/rSepJu7Wb). Its SIGs (special interest groups) run casual talks in a Discord voice channel, where anyone can join and speak. This kit turns one session file into posts for Instagram, X and LinkedIn: seven post types in six image formats, plus captions in Indonesian for each platform. See the [gallery](examples/README.md) for samples.
 
 ## Quick start
 
@@ -27,7 +27,8 @@ pnpm check    # type check and tests
 `<type>` is one of the post types:
 
 - `announce`: an upcoming session.
-- `reminder`: the day of the session, or live now.
+- `reminder`: posted earlier on the day, before the talk starts: "nanti jam 19.30 WIB".
+- `live`: posted at the start time, while the talk runs: "live sekarang", come in now.
 - `recap`: takeaways after the talk. Only made for sessions with a `recap` section.
 - `cover`: a series or theme cover.
 - `sig-intro`: what the SIG is and how to join.
@@ -58,6 +59,7 @@ host:                             # required
   role: Platform Engineer         # optional
   handle: rina_contoh             # optional. Without "@" and without spaces
   photo: people/rina.jpg          # optional. Square JPEG or PNG in the repo; see Speaker photos
+  about: Memandu, dan mengulang percobaan mematikan satu Pod.   # optional. One plain line on what they will share or ask; speakers posts lead with it
 speakers: []                      # optional, default []. Same fields as host
 note: Dulu saya baru paham Pod setelah sengaja mematikan satu. # optional. One or two sentences in your voice; captions lead with it
 description: Sesi pertama Cloud Native 101. Kita mulai dari kenapa container butuh orkestrasi.   # required. At most 280 characters

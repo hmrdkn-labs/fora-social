@@ -11,19 +11,23 @@ host:
   name: Rina (contoh)
   role: Platform Engineer
   handle: rina_contoh
+  about: Memandu, dan mengulang percobaan mematikan satu Pod bareng-bareng.
 speakers:
   - name: Bima (contoh)
     role: DevOps Engineer
     handle: bima_contoh
+    about: Menunjukkan cara membaca kubectl describe waktu sebuah Pod gagal jalan.
   - name: Sari (contoh)
     role: Backend Developer
     handle: sari_contoh
+    about: Cerita dari sisi developer, bagian mana yang bikin bingung waktu pertama deploy ke cluster. Kamu bingung di bagian yang sama?
 note: Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
-description: Sesi pertama Cloud Native 101. Kita mulai dari kenapa container butuh orkestrasi, lalu deploy aplikasi pertama ke cluster lokal pakai minikube.
+description: Sesi pertama Cloud Native 101. Di minikube, cluster Kubernetes di laptop, kita deploy satu aplikasi lalu matikan Pod-nya dan lihat Deployment membuat gantinya. Dari situ baru kita kenalan sama istilahnya. Cukup tahu apa itu container.
 topics:
   - Kenapa container butuh orkestrasi
-  - Pod, Deployment, dan Service
   - Deploy aplikasi pertama di minikube
+  - Matikan satu Pod, lihat Deployment membuat gantinya
+  - Service, alamat tetap untuk Pod yang berganti
   - Debug dasar pakai kubectl describe dan logs
 hashtags:
   - Container

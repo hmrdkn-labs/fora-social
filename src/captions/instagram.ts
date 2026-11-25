@@ -85,6 +85,8 @@ export function instagram(c: Ctx, type: PostType): string {
   const { s, sig } = c;
   const v = shape(c, `instagram|${type}`, 3);
   const when = `${c.date}, ${c.range}`;
+  const what = firstSentence(s.description);
+  const sub = sentence(s.subtitle ?? what);
   let blocks: string[];
   switch (type) {
     case "announce":

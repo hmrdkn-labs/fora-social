@@ -2,9 +2,11 @@
 
 ## Instagram
 
-GitOps dengan Argo CD mulai 19.30 WIB hari ini.
+GitOps dengan Argo CD
 
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
+Sab, 19 Des, nanti jam 19.30 WIB. Buka Discord sepuluh menit lebih awal buat cek suara.
+
+Bersama Dani (contoh), dipandu Rina (contoh).
 
 Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja boleh, mic juga boleh.
 
@@ -12,20 +14,17 @@ Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.g
 
 ## X
 
-GitOps dengan Argo CD mulai 19.30 WIB.
-Kalau sudah jalan, nyusul aja.
+GitOps dengan Argo CD, Sab, 19 Des, nanti jam 19.30 WIB.
 Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #GitOps
 
 ## LinkedIn
 
-Hari ini, 19.30–21.00 WIB
+Nanti jam 19.30 WIB
 GitOps dengan Argo CD
 
-Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
-
-Bersama Dani (contoh), dipandu Rina (contoh). Kalau sudah mulai, silakan langsung masuk.
+Bersama Dani (contoh), dipandu Rina (contoh). Buka Discord sepuluh menit lebih awal untuk cek suara.
 
 Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 

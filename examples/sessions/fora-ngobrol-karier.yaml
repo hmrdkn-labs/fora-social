@@ -12,7 +12,8 @@ host:
   handle: dika_contoh
   about: Mandu obrolan, cerita soal pindah dari developer ke SRE, lalu tanya balik, kerjaan pertama kalian dapat dari mana?
 speakers: []
-description: "Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech."
+note: Waktu cari kerja pertama saya kirim 40 lamaran dan cuma dua yang dibalas. Saya mau dengar cara kalian.
+description: "Diskusi terbuka tanpa tamu. Bawa satu cerita soal kerja di tech yang mau kamu ceritakan atau tanyakan."
 topics:
   - Cari kerja pertama di tech
   - Belajar sambil kerja

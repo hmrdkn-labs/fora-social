@@ -4,11 +4,13 @@
 
 Ini yang tercatat dari "Ngobrol Karier di Tech" (Sab, 23 Jan).
 
-- Proyek kecil yang selesai lebih berguna daripada banyak kursus. Satu proyek yang bisa dijelaskan tuntas lebih gampang dinilai daripada daftar sertifikat.
-- Belajar dengan target yang jelas. Pilih satu masalah nyata di kerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
-- Pindah peran bisa dimulai dari tugas di sekitar peran tujuan. Ambil kerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.
+- Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat. Salah satu peserta cerita, pewawancaranya menghabiskan lima belas menit di satu repo buatannya dan nggak membuka sertifikat sama sekali.
+- Pindah ke SRE bisa mulai dari on-call. Dika minta ikut rotasi on-call sebagai shadow dulu, dan dari situ dapat tugas pertama menulis runbook.
+- Belajar dari satu insiden nyata. Postmortem di kantor lama jadi bahan belajar Terraform yang paling nempel, karena tiap perintah ada alasannya.
 
-9 orang ikut ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh, sampai ketemu lagi. Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, mic juga boleh.
+9 orang ikut ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh, sampai ketemu lagi. Kamu setuju sama "Belajar dari satu insiden nyata"? Kalau di tempatmu beda, ceritain.
+
+Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, mic juga boleh.
 
 #FORA #Karier #KarierTech #KomunitasTech
 
@@ -18,13 +20,12 @@ Ini yang tercatat dari "Ngobrol Karier di Tech" (Sab, 23 Jan).
 
 ## X 2/3
 
-- Proyek kecil yang selesai lebih berguna daripada banyak kursus
-- Belajar dengan target yang jelas
-- Pindah peran bisa dimulai dari tugas di sekitar peran tujuan
+Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat. Salah satu peserta cerita, pewawancaranya menghabiskan lima belas menit di satu repo buatannya dan nggak membuka sertifikat sama sekali.
 
 ## X 3/3
 
-Sesi berikutnya kita umumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
+Kamu setuju sama "Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat"? Kalau di tempatmu beda, ceritain.
+Sesi berikutnya diumumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Karier
 
@@ -34,9 +35,11 @@ Rekap "Ngobrol Karier di Tech" (Sab, 23 Jan).
 
 Terima kasih Dika (contoh) @dika_contoh. 9 orang ikut ngobrol di voice channel.
 
-1. Proyek kecil yang selesai lebih berguna daripada banyak kursus. Satu proyek yang bisa dijelaskan tuntas lebih gampang dinilai daripada daftar sertifikat.
-2. Belajar dengan target yang jelas. Pilih satu masalah nyata di kerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
-3. Pindah peran bisa dimulai dari tugas di sekitar peran tujuan. Ambil kerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.
+1. Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat. Salah satu peserta cerita, pewawancaranya menghabiskan lima belas menit di satu repo buatannya dan nggak membuka sertifikat sama sekali.
+2. Pindah ke SRE bisa mulai dari on-call. Dika minta ikut rotasi on-call sebagai shadow dulu, dan dari situ dapat tugas pertama menulis runbook.
+3. Belajar dari satu insiden nyata. Postmortem di kantor lama jadi bahan belajar Terraform yang paling nempel, karena tiap perintah ada alasannya.
+
+Kamu setuju sama "Pindah ke SRE bisa mulai dari on-call"? Kalau di tempatmu beda, ceritain.
 
 Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel fora-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh. https://discord.gg/rSepJu7Wb
 

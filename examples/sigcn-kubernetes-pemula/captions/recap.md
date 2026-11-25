@@ -12,7 +12,9 @@ Ini yang tercatat dari "Kubernetes untuk Pemula" (Sab, 12 Des).
 Dokumentasi Kubernetes: https://kubernetes.io/docs/home/
 Tutorial minikube: https://minikube.sigs.k8s.io/docs/start/
 
-14 orang ikut ngobrol di voice channel. Makasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, sampai ketemu lagi. Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Mau dengerin aja boleh, mau nyalain mic juga boleh.
+14 orang ikut ngobrol di voice channel. Makasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, sampai ketemu lagi. Poin 3 ("Service memberi alamat yang stabil"), cocok nggak sama yang kamu temui di kerjaan?
+
+Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Mau dengerin aja boleh, mau nyalain mic juga boleh.
 
 #FORA #SIGCN #Kubernetes #Container
 
@@ -22,14 +24,11 @@ Rekap "Kubernetes untuk Pemula". 14 orang ngobrol di voice channel. Makasih Bima
 
 ## X 2/3
 
-Intinya:
-1. Pod adalah unit terkecil yang dijadwalkan
-2. Deployment menjaga jumlah replika
-3. Service memberi alamat yang stabil
-4. Mulai debug dari kubectl describe dan logs
+Service memberi alamat yang stabil. IP Pod berubah tiap kali dibuat ulang, jadi akses aplikasi lewat Service. Jangan pakai IP Pod langsung.
 
 ## X 3/3
 
+Poin 3 ("Service memberi alamat yang stabil"), cocok nggak sama yang kamu temui di kerjaan?
 Dokumentasi Kubernetes https://kubernetes.io/docs/home/
 Sesi berikutnya diumumkan di Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
@@ -45,6 +44,8 @@ Terima kasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh. 14 orang
 2. Deployment menjaga jumlah replika. Kalau satu Pod mati, Deployment langsung membuat gantinya sampai jumlah replika sesuai.
 3. Service memberi alamat yang stabil. IP Pod berubah tiap kali dibuat ulang, jadi akses aplikasi lewat Service. Jangan pakai IP Pod langsung.
 4. Mulai debug dari kubectl describe dan logs. Event di describe dan output logs biasanya sudah cukup untuk tahu kenapa Pod gagal jalan.
+
+Kamu setuju sama "Service memberi alamat yang stabil"? Kalau di tempatmu beda, ceritain.
 
 Dokumentasi Kubernetes: https://kubernetes.io/docs/home/
 Tutorial minikube: https://minikube.sigs.k8s.io/docs/start/

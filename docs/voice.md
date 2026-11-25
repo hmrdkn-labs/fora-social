@@ -14,12 +14,13 @@ Readers on IG spot generated text in two seconds, and after a few posts of the s
 2. **No triads, no false ranges.** "Masuk, dengarkan, ikut ngobrol" and "dari yang baru mulai sampai yang sudah di production" say nothing. Name one real thing.
 3. **Specifics beat adjectives.** A tool, a number, a failure, a question someone asked last time. "Pernah `kubectl apply` langsung ke prod jam 11 malam?" is a hook. "Sesi seru dan bermanfaat" is not.
 4. **Say how to join once.** Channel name, invite, "dengerin aja boleh, mic juga boleh". Then stop. No second reassurance ("tidak perlu daftar", "tidak ada pertanyaan yang terlalu dasar").
-5. **Vary the shape.** Some posts are two lines. Not every post needs a topic list, steps, an emoji or a closing call to action. The caption builders already pick between 2 or 3 shapes per post type from the session id.
-6. **Write like the organiser.** "Kita", "aja", "nggak", "bareng", "mampir". Not "Anda". LinkedIn is the same person, a bit tidier ("tidak" is fine), still "kita".
-7. **English tech terms as people say them.** deploy, cluster, rollback, source of truth, on-call. No forced Indonesian.
-8. **No labels and no self-answered questions.** "Formatnya:", "Sesi:", "Untuk siapa? Yang…". Write a sentence.
-9. **Punctuation.** No em dash, no curly quotes. Parentheses and the en dash in "19.30–21.00" are fine. At most one emoji per caption, never opening a line, never a bullet.
-10. **Hashtags are real ones.** IG 2 to 4, X 0 or 1, LinkedIn 2 or 3, and ones people search (#Kubernetes, #CloudNative, #DevOpsIndonesia).
+5. **Each post type has its own job.** The host `note` is used once, in the announcement. Cover is the series and theme, reminder is one practical detail, live is "come in now", speakers is why these people (their `about` line), recap is what was said plus one question to answer. Replaying the same hook in every post is the loudest tell in a feed.
+6. **Vary the shape.** Some posts are two lines. Not every post needs a topic list, steps, an emoji or a closing call to action. The caption builders already pick between 2 or 3 shapes per post type from the session id.
+7. **Write like the organiser.** "Kita", "aja", "nggak", "bareng", "mampir". Not "Anda". LinkedIn is the same person, a bit tidier ("tidak" is fine), still "kita".
+8. **English tech terms as people say them.** deploy, cluster, rollback, source of truth, on-call. No forced Indonesian.
+9. **No labels and no self-answered questions.** "Formatnya:", "Sesi:", "Untuk siapa? Yang…". Write a sentence.
+10. **Punctuation.** No em dash, no curly quotes. Parentheses and the en dash in "19.30–21.00" are fine. At most one emoji per caption, never opening a line, never a bullet.
+11. **Hashtags are real ones.** IG 2 to 4, X 0 or 1, LinkedIn 2 or 3, and ones people search (#Kubernetes, #CloudNative, #DevOpsIndonesia).
 
 ## Ban list
 

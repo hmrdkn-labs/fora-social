@@ -2,17 +2,23 @@
 
 ## Instagram
 
-GitOps dengan Argo CD, jam 19.30 WIB.
+Dani (contoh), SRE. Cerita kenapa timnya pindah ke GitOps, lalu tanya balik, "siapa di sini yang masih kubectl apply ke prod?"
 
-Sabtu 19 Desember yang cerita Dani (contoh), dipandu Rina (contoh).
+Rina (contoh), Platform Engineer, host. Menyiapkan repo kosong dan Argo CD, jadi alurnya bisa diikuti dari nol.
+
+Sesinya "GitOps dengan Argo CD", Sabtu, 19 Desember 2026, 19.30–21.00 WIB.
 
 Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
 
 #FORA #SIGCN #GitOps #ArgoCD
 
-## X
+## X 1/2
 
-Sabtu 19 Desember yang cerita Dani (contoh), dipandu Rina (contoh).
+Dani (contoh), SRE. Cerita kenapa timnya pindah ke GitOps, lalu tanya balik, "siapa di sini yang masih kubectl apply ke prod?"
+Rina (contoh), Platform Engineer, host. Menyiapkan repo kosong dan Argo CD, jadi alurnya bisa diikuti dari nol.
+
+## X 2/2
+
 "GitOps dengan Argo CD", mulai 19.30 WIB.
 Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
@@ -22,10 +28,9 @@ https://discord.gg/rSepJu7Wb
 
 GitOps dengan Argo CD (SIG CN × FORA)
 
-Sabtu 19 Desember yang cerita Dani (contoh), dipandu Rina (contoh).
+Dani (contoh), SRE. Cerita kenapa timnya pindah ke GitOps, lalu tanya balik, "siapa di sini yang masih kubectl apply ke prod?"
 
-• Dani (contoh), SRE
-• Rina (contoh), Platform Engineer, host
+Rina (contoh), Platform Engineer, host. Menyiapkan repo kosong dan Argo CD, jadi alurnya bisa diikuti dari nol.
 
 Sabtu, 19 Desember 2026, 19.30–21.00 WIB.
 
