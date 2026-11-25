@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { cap, type Ctx, hashLine, openDoor, shape, themeTag, uniqueTags } from "./context.ts";
+import { cap, castLine, type Ctx, hashLine, openDoor, roster, shape, themeTag, uniqueTags } from "./context.ts";
 
 function tags(c: Ctx): string {
   return hashLine(uniqueTags(themeTag(c.s), c.sig.hashtags.slice(1), c.sig.hashtags.slice(0, 1), c.s.hashtags, c.community.hashtags).slice(0, 3));
@@ -61,6 +61,12 @@ export function linkedin(c: Ctx, type: PostType): string {
         v === 0
           ? [`${c.introName}. ${sig.tagline}`, `Sesi terdekat soal "${s.title}", ${c.dateShort}, ${c.range}.`, join(c, 0)]
           : [sig.description, `Sesi terdekat soal "${s.title}", ${c.date}, ${c.range}.`, join(c, 1)];
+      break;
+    case "speakers":
+      blocks =
+        v % 2 === 0
+          ? [`${s.title} (${c.brand})`, castLine(c, false), bullets(roster(c, true)), `${when}.`, join(c, 0)]
+          : [castLine(c, true), `Sesinya "${s.title}", ${when}.`, join(c, 1)];
       break;
   }
   return [...blocks.filter(Boolean), tags(c)].join("\n\n");

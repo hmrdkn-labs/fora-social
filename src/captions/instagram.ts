@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { cap, type Ctx, hashLine, openDoor, shape, themeTag, uniqueTags } from "./context.ts";
+import { cap, castLine, type Ctx, hashLine, openDoor, roster, shape, themeTag, uniqueTags } from "./context.ts";
 
 function tags(c: Ctx): string {
   return hashLine(
@@ -95,6 +95,14 @@ export function instagram(c: Ctx, type: PostType): string {
         v === 0
           ? [`${c.introName}. ${sig.tagline}`, `Sesi terdekat soal "${s.title}", ${c.dateShort} jam ${c.time}.`, join(c, 0)]
           : [sig.description, `Yang terdekat "${s.title}", ${c.dateShort} jam ${c.time}. ${join(c, 2)}`];
+      break;
+    case "speakers":
+      blocks =
+        v === 0
+          ? [castLine(c, true), s.speakers.length ? bullets(roster(c, false)) : "", `Temanya "${s.title}", mulai ${c.time}. ${join(c, 0)}`]
+          : v === 1
+            ? [`Kenalan dulu sama yang ngisi "${s.title}".`, bullets(roster(c, true)), `${c.dateShort}, ${c.range}. ${join(c, 1)}`]
+            : [`${s.title}, jam ${c.time}.`, castLine(c, true), join(c, 2)];
       break;
   }
   return [...blocks.filter(Boolean).map((b) => (b.endsWith("\n") ? b.trimEnd() : b)), tags(c)].join("\n\n");

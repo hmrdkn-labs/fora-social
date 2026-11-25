@@ -162,6 +162,9 @@ body {
   --join-accent: var(--accent);
   --join-chip-bg: var(--accent);
   --join-chip-fg: var(--accent-ink);
+  --ring: var(--accent);
+  --avatar-bg: color-mix(in srgb, var(--accent) 24%, var(--color-ink));
+  --avatar-fg: color-mix(in srgb, var(--accent) 85%, var(--color-ink));
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -192,6 +195,9 @@ body {
   --join-accent: var(--accent);
   --join-chip-bg: var(--accent);
   --join-chip-fg: var(--accent-ink);
+  --ring: var(--accent);
+  --avatar-bg: color-mix(in srgb, var(--accent) 16%, var(--color-paper));
+  --avatar-fg: color-mix(in srgb, var(--accent) 75%, var(--color-paper));
 }
 
 .t-mist {
@@ -214,6 +220,9 @@ body {
   --join-accent: var(--accent-ink);
   --join-chip-bg: var(--color-ink);
   --join-chip-fg: var(--color-paper);
+  --ring: var(--accent);
+  --avatar-bg: color-mix(in srgb, var(--accent) 24%, var(--color-ink));
+  --avatar-fg: color-mix(in srgb, var(--accent) 85%, var(--color-ink));
 }
 
 .t-accent {
@@ -231,6 +240,9 @@ body {
   --join-accent: var(--accent);
   --join-chip-bg: var(--accent);
   --join-chip-fg: var(--accent-ink);
+  --ring: var(--accent-ink);
+  --avatar-bg: var(--color-grey-100);
+  --avatar-fg: var(--color-grey-500);
 }
 
 /* ── Header ─────────────────────────────────────────────────────────────────────────────── */
@@ -491,18 +503,67 @@ body {
   margin-top: 16px;
 }
 
-.person__seal {
+/* A round portrait (templates/parts.ts sets --s and --ring-w): the photo, or the silhouette of
+   brand/people as a mask filled with the theme's tint. The ring is the SIG's colour, or the
+   colour of text on it where the surface itself is the SIG's colour. */
+.avatar {
   flex: none;
-  display: grid;
-  place-items: center;
-  width: 60px;
-  height: 60px;
-  border: 2px solid currentColor;
+  display: block;
+  width: var(--s);
+  height: var(--s);
+  border: var(--ring-w) solid var(--ring);
   border-radius: 50%;
-  font-family: "Libertinus Serif", serif;
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 1;
+  overflow: hidden;
+  background: var(--avatar-bg);
+}
+
+.avatar img,
+.avatar i {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.avatar img {
+  object-fit: cover;
+}
+
+.avatar i {
+  background: var(--avatar-fg);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
+.faces {
+  flex: none;
+  display: flex;
+}
+
+.faces .avatar + .avatar {
+  margin-left: calc(var(--s) * -0.26);
+}
+
+/* A line about people, with their faces before it. */
+.who {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.who .byline {
+  flex: 1;
+  min-width: 0;
+}
+
+.who--above {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.who--above .byline {
+  flex: none;
 }
 
 .person__text {
@@ -535,12 +596,6 @@ body {
   margin-top: 28px;
 }
 
-.person--card .person__seal {
-  width: 104px;
-  height: 104px;
-  font-size: 56px;
-}
-
 .person--card .person__name {
   font-size: 42px;
 }
@@ -557,12 +612,6 @@ body {
   margin-top: 22px;
 }
 
-.person--mid .person__seal {
-  width: 80px;
-  height: 80px;
-  font-size: 42px;
-}
-
 .person--mid .person__name {
   font-size: 34px;
 }
@@ -571,6 +620,145 @@ body {
 .person__meta span {
   min-width: 0;
   overflow-wrap: anywhere;
+}
+
+.cast.cast--grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 28px 40px;
+}
+
+.cast.cast--grid .person + .person {
+  margin-top: 0;
+}
+
+/* ── Speakers ───────────────────────────────────────────────────────────────────────────
+   Large portraits with part, name, role and handle (templates/speakers.ts sets the sizes). */
+.spots {
+  display: grid;
+  min-width: 0;
+}
+
+.spot {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.spot--row {
+  flex-direction: row;
+  align-items: center;
+}
+
+.spot__text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.spot__part {
+  margin-bottom: 6px;
+  font-size: var(--part);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.spot__name {
+  font-size: var(--name);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.spot__meta {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  font-size: var(--meta);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--soft);
+  overflow-wrap: anywhere;
+}
+
+.spot__hero {
+  display: flex;
+  align-items: flex-end;
+  gap: 36px;
+}
+
+.spot__word {
+  font-family: "Libertinus Serif", serif;
+  font-style: italic;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--accent);
+}
+
+.spot__quote {
+  padding-left: 28px;
+  border-left: 4px solid var(--accent);
+  font-family: "Libertinus Serif", serif;
+  font-style: italic;
+  line-height: 1.25;
+  color: var(--soft);
+  text-wrap: pretty;
+}
+
+.lede--tight {
+  gap: 14px;
+}
+
+.crowd {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.crowd__names {
+  font-weight: 700;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+/* Wide: the portraits sit in the middle of the column; the side panel is a shade lighter than
+   the ink beside it and carries the title above the date. */
+.stage {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+}
+
+.post--speakers .side {
+  background: var(--color-grey-900);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.about__label {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-grey-300);
+}
+
+.about__title {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  text-wrap: balance;
 }
 
 .main--top {

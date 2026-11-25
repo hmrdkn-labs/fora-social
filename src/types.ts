@@ -1,9 +1,9 @@
 // Shared contract between the loader, templates and captions.
 // Change it only through the orchestrator (briefs/00-orchestrator.md).
 
-export type PostType = "announce" | "reminder" | "recap" | "cover" | "sig-intro";
+export type PostType = "announce" | "reminder" | "recap" | "cover" | "sig-intro" | "speakers";
 
-export const POST_TYPES: readonly PostType[] = ["announce", "reminder", "recap", "cover", "sig-intro"];
+export const POST_TYPES: readonly PostType[] = ["announce", "reminder", "recap", "cover", "sig-intro", "speakers"];
 
 export type FormatId = "ig-feed" | "ig-carousel" | "ig-story" | "x" | "li-link" | "li-doc";
 
@@ -32,6 +32,11 @@ export interface Person {
   role?: string;
   /** Social handle without "@", shown as "@handle". */
   handle?: string;
+  /**
+   * Repo-relative path of a portrait (JPEG or PNG, square, at least 512 px). Without it,
+   * templates show the neutral silhouette from brand/people/.
+   */
+  photo?: string;
 }
 
 export interface RecapPoint {

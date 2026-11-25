@@ -4,6 +4,7 @@ import cover from "./cover.ts";
 import recap from "./recap.ts";
 import reminder from "./reminder.ts";
 import sigIntro from "./sig-intro.ts";
+import speakers from "./speakers.ts";
 
 export const TEMPLATES: Record<PostType, Template> = {
   announce,
@@ -11,4 +12,5 @@ export const TEMPLATES: Record<PostType, Template> = {
   recap,
   cover,
   "sig-intro": sigIntro,
+  speakers,
 };

@@ -1,12 +1,13 @@
 // Loads and validates the YAML data files. Every message names the file and the field,
 // e.g. "examples/sessions/x.yaml: time must be HH:MM, got 7pm". All problems in one file
 // are reported together.
-import { existsSync, readFileSync } from "node:fs";
-import { basename, join } from "node:path";
+import { existsSync, readFileSync, statSync } from "node:fs";
+import { basename, isAbsolute, join, relative } from "node:path";
 import type { z } from "zod";
 import { parse } from "yaml";
+import { REPO_ROOT } from "./paths.ts";
 import { CommunitySchema, ID, SessionFileSchema, SigFileSchema } from "./schema.ts";
-import type { Community, Session, Sig } from "./types.ts";
+import type { Community, Person, Session, Sig } from "./types.ts";
 
 export function loadCommunity(file: string): Community {
   return parseCommunity(readFileSync(file, "utf8"), file);
@@ -45,8 +46,23 @@ export function parseSession(text: string, file: string, sigsDir: string): Sessi
   if (!existsSync(join(sigsDir, `${data.sig}.yaml`))) {
     problems.push(`${file}: sig must name an existing sigs/<id>.yaml, got "${data.sig}"`);
   }
+  const people: [string, Person][] = [["host", data.host], ...data.speakers.map((p, i): [string, Person] => [`speakers[${i}]`, p])];
+  for (const [field, person] of people) {
+    if (person.photo !== undefined && !isPortraitFile(person.photo)) {
+      problems.push(
+        `${file}: ${field}.photo (${person.name}) must name an existing .jpg, .jpeg or .png file in the repo, got "${person.photo}"`,
+      );
+    }
+  }
   if (problems.length > 0) throw new Error(problems.join("\n"));
   return { ...data, id };
+}
+
+/** True for a repo-relative path of an existing JPEG or PNG file inside the repo. */
+function isPortraitFile(path: string): boolean {
+  if (!/\.(?:jpe?g|png)$/i.test(path) || isAbsolute(path)) return false;
+  const full = join(REPO_ROOT, path);
+  return !relative(REPO_ROOT, full).startsWith("..") && statSync(full, { throwIfNoEntry: false })?.isFile() === true;
 }
 
 function idOf(file: string): string {

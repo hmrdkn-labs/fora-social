@@ -8,6 +8,8 @@ import { escapeHtml as e } from "./html.ts";
 import {
   type Block,
   deck,
+  everyone,
+  faces,
   FOOT,
   fact,
   factHeight,
@@ -29,6 +31,7 @@ import {
   wave,
   wide,
   wideRoom,
+  withFaces,
 } from "./parts.ts";
 
 const TAG = "Recap";
@@ -56,12 +59,12 @@ function single(ctx: TemplateContext, points: readonly RecapPoint[]): string {
   const { session } = ctx;
   const bar = joinBar(ctx, "next");
   const meta = [formatDateShort(session), attendance(ctx)].filter((part) => part !== "").join(" · ");
-  const credit = thanks(ctx);
+  const credit = withFaces(ctx, everyone(ctx), thanks(ctx), TALL_WIDTH);
   // Under the word "Recap", the kicker and the thanks, the title takes up to a third and the list the rest.
   const room =
     tallRoom(ctx, "mist", bar.height) -
     (88 + 20 + 20 + kickerHeight(meta, TALL_WIDTH)) -
-    textHeight(credit, 28, TALL_WIDTH, 1.35) -
+    credit.height -
     2 * GAP -
     8;
   const title = heading(session.title, TALL_WIDTH, TALL_SIZES, room / 3);
@@ -76,7 +79,7 @@ function single(ctx: TemplateContext, points: readonly RecapPoint[]): string {
     <p class="kicker">${e(meta)}</p>
   </div>
   ${numbered(points.map((point) => point.title), TALL_WIDTH, room - title.height, [38, 34, 30, 28, 26])}
-  <p class="byline">${e(credit)}</p>
+  ${credit.html}
 </main>
 ${bar.html}`,
   );
@@ -94,7 +97,7 @@ function landscape(ctx: TemplateContext, points: readonly RecapPoint[]): string 
           height: 90,
         }
       : { html: `<p class="when__day">${e(formatDateShort(session))}</p>`, height: 26 };
-  const credit = thanks(ctx);
+  const credit = withFaces(ctx, everyone(ctx), thanks(ctx), 304, 21);
   // The word "Recap" takes the tag's place in the header, which leaves the column to the list.
   return wide(
     ctx,
@@ -102,7 +105,7 @@ function landscape(ctx: TemplateContext, points: readonly RecapPoint[]): string 
     `${header(ctx, "mist", TAG, "head--word")}
 ${title.html}
 ${numbered(points.map((point) => point.title), MAIN_WIDTH, room - title.height, [24, 22, 20])}`,
-    [stat, { html: `<p class="byline">${e(credit)}</p>`, height: textHeight(credit, 21, 304, 1.35, REGULAR), optional: true }],
+    [stat, credit],
     "next",
   );
 }
@@ -166,13 +169,16 @@ function linkBlock(link: Link): Block {
   };
 }
 
+/** Portrait size in the row of faces on the closing slide. */
+const CLOSING_FACE = 96;
+
 /** Thanks, up to three links, and the join block; links and the wave give way when it gets tight. */
 function closingMain(ctx: TemplateContext): string {
   const { session } = ctx;
   const bar = joinBar(ctx, "next");
   const credit = thanks(ctx);
   const count = attendance(ctx);
-  const head = 50 + 150 + 20 + textHeight(credit, 36, TALL_WIDTH, 1.4, REGULAR);
+  const head = 50 + 150 + 20 + CLOSING_FACE + 20 + textHeight(credit, 36, TALL_WIDTH, 1.4, REGULAR);
   const room = tallRoom(ctx, "mist", FOOT) - head - bar.height - GAP - 8;
   const links = (session.recap?.links ?? []).slice(0, 3).map(linkBlock);
   const linksHeight = () => (links.length === 0 ? 0 : links.reduce((sum, link) => sum + link.height + 14, 25 - 14 + GAP));
@@ -185,6 +191,7 @@ function closingMain(ctx: TemplateContext): string {
   <div class="lede">
     <p class="kicker">${e(count === "" ? "Terima kasih" : `Terima kasih · ${count}`)}</p>
     <h2 class="h2">Sampai ketemu di sesi berikutnya.</h2>
+    ${faces(ctx, everyone(ctx).slice(0, 6), CLOSING_FACE)}
     <p class="lead">${e(credit)}</p>
   </div>
   ${withWave ? wave(session.id, 52) : ""}

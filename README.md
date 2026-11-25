@@ -1,6 +1,6 @@
 # FORA social kit
 
-FORA (Forum Rangkai) is a small Indonesian tech community on [Discord](https://discord.gg/rSepJu7Wb). Its SIGs (special interest groups) run casual talks in a Discord voice channel, where anyone can join and speak. This kit turns one session file into posts for Instagram, X and LinkedIn: five post types in six image formats, plus captions in Indonesian for each platform. See the [gallery](examples/README.md) for samples.
+FORA (Forum Rangkai) is a small Indonesian tech community on [Discord](https://discord.gg/rSepJu7Wb). Its SIGs (special interest groups) run casual talks in a Discord voice channel, where anyone can join and speak. This kit turns one session file into posts for Instagram, X and LinkedIn: six post types in six image formats, plus captions in Indonesian for each platform. See the [gallery](examples/README.md) for samples.
 
 ## Quick start
 
@@ -31,6 +31,7 @@ pnpm check    # type check and tests
 - `recap`: takeaways after the talk. Only made for sessions with a `recap` section.
 - `cover`: a series or theme cover.
 - `sig-intro`: what the SIG is and how to join.
+- `speakers`: who talks, with large portraits of the speakers and the host.
 
 Captions are in `out/<id>/captions/<type>.md`, with one section each for Instagram, X and LinkedIn.
 
@@ -56,6 +57,7 @@ host:                             # required
   name: Rina (contoh)             # required
   role: Platform Engineer         # optional
   handle: rina_contoh             # optional. Without "@" and without spaces
+  photo: people/rina.jpg          # optional. Square JPEG or PNG in the repo; see Speaker photos
 speakers: []                      # optional, default []. Same fields as host
 note: Dulu saya baru paham Pod setelah sengaja mematikan satu. # optional. One or two sentences in your voice; captions lead with it
 description: Sesi pertama Cloud Native 101. Kita mulai dari kenapa container butuh orkestrasi.   # required. At most 280 characters
@@ -82,6 +84,18 @@ Then:
    - **Instagram:** `ig-feed/<type>.png` as a single image, or upload `ig-carousel/<type>-01.png`, `-02`, … in order as a carousel. Use `ig-story/<type>.png` for stories. Paste the Instagram caption. Instagram captions cannot hold clickable links, so the caption says "link di bio" and gives the short Discord URL.
    - **X:** `x/<type>.png` with the X caption. If the caption is a thread, attach the image to the first post.
    - **LinkedIn:** either a link post with `li-link/<type>.png` and the LinkedIn caption, or a document post: upload `li-doc/<type>.pdf` as the document. The PNG pages are the same pages, for checking.
+
+## Speaker photos
+
+Posts show a round portrait wherever a person appears, and the `speakers` post is built around them.
+
+1. Ask the person first. Use only a photo they have agreed to have posted.
+2. Save it in the repo, for example `people/<name>.jpg`: square, at least 512 px, JPEG or PNG, the face in the middle with some room above the head. The templates crop it to a circle, so the corners are lost.
+3. Set `photo:` to that path (from the repo root) on the host or speaker in the session file.
+
+The loader fails with the session file and the person's name when the path does not exist or is not a `.jpg`, `.jpeg` or `.png` file. A person without `photo:` gets the neutral silhouette from `brand/people/silhouette.svg`, tinted with the SIG's colour.
+
+The portraits in `examples/people/` are AI-generated placeholders of people who do not exist. Do not use them for real sessions.
 
 ## Text must fit
 
@@ -112,11 +126,11 @@ A SIG needs its own colour, a wordmark and a `sigs/<id>.yaml` file. [brand/READM
 
 ```text
 .
-├── brand/            fonts, logos, colour tokens, and the scripts that build them
+├── brand/            fonts, logos, colour tokens, the silhouette for people without a photo, and the scripts that build them
 ├── community.yaml    FORA's Discord invite, hashtags and logo path
 ├── sigs/             one file per SIG; fora.yaml is the general FORA community
 ├── sessions/         your session files (create it; see Add a session)
-├── examples/         sample sessions (examples/sessions/) and the gallery (examples/README.md, from pnpm examples)
+├── examples/         sample sessions (examples/sessions/), placeholder portraits (examples/people/) and the gallery (examples/README.md, from pnpm examples)
 ├── templates/        one TypeScript template per post type, plus base.css
 ├── src/              CLI, YAML loader and schema, renderer, gallery, and caption builders (src/captions/)
 ├── test/             tests and fixtures for the loader, overflow checks and renderer

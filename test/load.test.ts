@@ -86,6 +86,26 @@ describe("session files", () => {
     });
   });
 
+  test("keeps a photo that is an image file in the repo", () => {
+    const s = parseSession(session({ host: { name: "Rina", photo: "brand/logos/fora-logo.png" } }), BAD, SIGS);
+    assert.equal(s.host.photo, "brand/logos/fora-logo.png");
+  });
+
+  test("rejects a missing photo, naming the file and the person", () => {
+    assert.throws(() => parseBad({ speakers: [{ name: "Budi", photo: "examples/people/nobody.jpg" }] }), {
+      message:
+        'sessions/bad.yaml: speakers[0].photo (Budi) must name an existing .jpg, .jpeg or .png file in the repo, got "examples/people/nobody.jpg"',
+    });
+  });
+
+  test("rejects a photo that is not a JPEG or PNG, or lies outside the repo", () => {
+    for (const photo of ["brand/logos/fora-mark.svg", "../fora-logo.png", "brand/logos"]) {
+      assert.throws(() => parseBad({ host: { name: "Rina", photo } }), {
+        message: `sessions/bad.yaml: host.photo (Rina) must name an existing .jpg, .jpeg or .png file in the repo, got "${photo}"`,
+      });
+    }
+  });
+
   test("rejects a file name that cannot be an output directory", () => {
     assert.throws(() => parseSession(session({}), "sessions/Bad Name.yaml", SIGS), {
       message:
