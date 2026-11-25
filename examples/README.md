@@ -301,6 +301,63 @@ Kita ngobrol di voice channel fora-voice Discord FORA. Boleh dengarkan saja, bol
 
 </details>
 
+### Speakers
+
+**Instagram**
+
+<img src="fora-ngobrol-karier/ig-feed/speakers.png" width="270" alt="Speakers, ig-feed"> <img src="fora-ngobrol-karier/ig-carousel/speakers-01.png" width="270" alt="Speakers, ig-carousel"> <img src="fora-ngobrol-karier/ig-carousel/speakers-02.png" width="270" alt="Speakers, ig-carousel"> <img src="fora-ngobrol-karier/ig-carousel/speakers-03.png" width="270" alt="Speakers, ig-carousel"> <img src="fora-ngobrol-karier/ig-story/speakers.png" width="270" alt="Speakers, ig-story">
+
+**X**
+
+<img src="fora-ngobrol-karier/x/speakers.png" width="400" alt="Speakers, x">
+
+**LinkedIn**
+
+<img src="fora-ngobrol-karier/li-link/speakers.png" width="400" alt="Speakers, li-link"> <img src="fora-ngobrol-karier/li-doc/speakers-01.png" width="270" alt="Speakers, li-doc"> <img src="fora-ngobrol-karier/li-doc/speakers-02.png" width="270" alt="Speakers, li-doc"> <img src="fora-ngobrol-karier/li-doc/speakers-03.png" width="270" alt="Speakers, li-doc"> [PDF](fora-ngobrol-karier/li-doc/speakers.pdf)
+
+<details>
+<summary>Captions</summary>
+
+**Instagram**
+
+```text
+Ngobrol Karier di Tech, jam 19.30 WIB.
+
+Sabtu 23 Januari yang mandu Dika (contoh) @dika_contoh. Tanpa pembicara tamu, jadi yang cerita kita semua.
+
+Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
+
+#FORA #Karier #KarierTech #KomunitasTech
+```
+
+**X**
+
+```text
+Sabtu 23 Januari yang mandu Dika (contoh) @dika_contoh. Tanpa pembicara tamu, jadi yang cerita kita semua.
+"Ngobrol Karier di Tech", mulai 19.30 WIB.
+Masuk aja ke voice channel fora-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
+https://discord.gg/rSepJu7Wb
+#Karier
+```
+
+**LinkedIn**
+
+```text
+Ngobrol Karier di Tech (FORA)
+
+Sabtu 23 Januari yang mandu Dika (contoh). Tanpa pembicara tamu, jadi yang cerita kita semua.
+
+• Dika (contoh), Software Engineer, host, @dika_contoh
+
+Sabtu, 23 Januari 2027, 19.30–21.00 WIB.
+
+Kita ngobrol di voice channel fora-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+
+#Karier #KomunitasTech #FORA
+```
+
+</details>
+
 
 ## Kubernetes untuk Pemula
 
@@ -612,6 +669,70 @@ Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, b
 
 </details>
 
+### Speakers
+
+**Instagram**
+
+<img src="sigcn-kubernetes-pemula/ig-feed/speakers.png" width="270" alt="Speakers, ig-feed"> <img src="sigcn-kubernetes-pemula/ig-carousel/speakers-01.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-carousel/speakers-02.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-carousel/speakers-03.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-carousel/speakers-04.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-carousel/speakers-05.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-story/speakers.png" width="270" alt="Speakers, ig-story">
+
+**X**
+
+<img src="sigcn-kubernetes-pemula/x/speakers.png" width="400" alt="Speakers, x">
+
+**LinkedIn**
+
+<img src="sigcn-kubernetes-pemula/li-link/speakers.png" width="400" alt="Speakers, li-link"> <img src="sigcn-kubernetes-pemula/li-doc/speakers-01.png" width="270" alt="Speakers, li-doc"> <img src="sigcn-kubernetes-pemula/li-doc/speakers-02.png" width="270" alt="Speakers, li-doc"> <img src="sigcn-kubernetes-pemula/li-doc/speakers-03.png" width="270" alt="Speakers, li-doc"> <img src="sigcn-kubernetes-pemula/li-doc/speakers-04.png" width="270" alt="Speakers, li-doc"> <img src="sigcn-kubernetes-pemula/li-doc/speakers-05.png" width="270" alt="Speakers, li-doc"> [PDF](sigcn-kubernetes-pemula/li-doc/speakers.pdf)
+
+<details>
+<summary>Captions</summary>
+
+**Instagram**
+
+```text
+Kubernetes untuk Pemula, jam 19.30 WIB.
+
+Sabtu 12 Desember yang cerita Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh.
+
+Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
+
+#FORA #SIGCN #Kubernetes #Container
+```
+
+**X 1/2**
+
+```text
+Sabtu 12 Desember yang cerita Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh.
+```
+
+**X 2/2**
+
+```text
+"Kubernetes untuk Pemula", mulai 19.30 WIB.
+Masuk aja ke voice channel sig-cn-voice di Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
+https://discord.gg/rSepJu7Wb
+#Kubernetes
+```
+
+**LinkedIn**
+
+```text
+Kubernetes untuk Pemula (SIG CN × FORA)
+
+Sabtu 12 Desember yang cerita Bima (contoh) dan Sari (contoh), dipandu Rina (contoh).
+
+• Bima (contoh), DevOps Engineer, @bima_contoh
+• Sari (contoh), Backend Developer, @sari_contoh
+• Rina (contoh), Platform Engineer, host, @rina_contoh
+
+Sabtu, 12 Desember 2026, 19.30–21.00 WIB.
+
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+
+#Kubernetes #CloudNative #DevOpsIndonesia
+```
+
+</details>
+
 
 ## GitOps dengan Argo CD
 
@@ -914,6 +1035,64 @@ https://discord.gg/rSepJu7Wb
 SIG CN di FORA. Ngobrol soal Kubernetes dan cloud native di voice channel.
 
 Sesi terdekat soal "GitOps dengan Argo CD", Sab, 19 Des, 19.30–21.00 WIB.
+
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+
+#GitOps #CloudNative #Kubernetes
+```
+
+</details>
+
+### Speakers
+
+**Instagram**
+
+<img src="sigcn-gitops-argocd/ig-feed/speakers.png" width="270" alt="Speakers, ig-feed"> <img src="sigcn-gitops-argocd/ig-carousel/speakers-01.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-gitops-argocd/ig-carousel/speakers-02.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-gitops-argocd/ig-carousel/speakers-03.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-gitops-argocd/ig-carousel/speakers-04.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-gitops-argocd/ig-story/speakers.png" width="270" alt="Speakers, ig-story">
+
+**X**
+
+<img src="sigcn-gitops-argocd/x/speakers.png" width="400" alt="Speakers, x">
+
+**LinkedIn**
+
+<img src="sigcn-gitops-argocd/li-link/speakers.png" width="400" alt="Speakers, li-link"> <img src="sigcn-gitops-argocd/li-doc/speakers-01.png" width="270" alt="Speakers, li-doc"> <img src="sigcn-gitops-argocd/li-doc/speakers-02.png" width="270" alt="Speakers, li-doc"> <img src="sigcn-gitops-argocd/li-doc/speakers-03.png" width="270" alt="Speakers, li-doc"> <img src="sigcn-gitops-argocd/li-doc/speakers-04.png" width="270" alt="Speakers, li-doc"> [PDF](sigcn-gitops-argocd/li-doc/speakers.pdf)
+
+<details>
+<summary>Captions</summary>
+
+**Instagram**
+
+```text
+GitOps dengan Argo CD, jam 19.30 WIB.
+
+Sabtu 19 Desember yang cerita Dani (contoh), dipandu Rina (contoh).
+
+Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
+
+#FORA #SIGCN #GitOps #ArgoCD
+```
+
+**X**
+
+```text
+Sabtu 19 Desember yang cerita Dani (contoh), dipandu Rina (contoh).
+"GitOps dengan Argo CD", mulai 19.30 WIB.
+Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
+https://discord.gg/rSepJu7Wb
+#GitOps
+```
+
+**LinkedIn**
+
+```text
+GitOps dengan Argo CD (SIG CN × FORA)
+
+Sabtu 19 Desember yang cerita Dani (contoh), dipandu Rina (contoh).
+
+• Dani (contoh), SRE
+• Rina (contoh), Platform Engineer, host
+
+Sabtu, 19 Desember 2026, 19.30–21.00 WIB.
 
 Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
@@ -1241,6 +1420,65 @@ SIG CN itu grup FORA untuk ngobrol soal cloud native. Tiap sesi punya satu tema,
 Sesi terdekat soal "Observability: Logs, Metrics, Traces", Kamis, 14 Januari 2027, 20.00–21.30 WIB.
 
 Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-voice. Dengarkan saja boleh, ikut bicara juga boleh.
+
+#Observability #CloudNative #Kubernetes
+```
+
+</details>
+
+### Speakers
+
+**Instagram**
+
+<img src="sigcn-observability/ig-feed/speakers.png" width="270" alt="Speakers, ig-feed"> <img src="sigcn-observability/ig-carousel/speakers-01.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-observability/ig-carousel/speakers-02.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-observability/ig-carousel/speakers-03.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-observability/ig-carousel/speakers-04.png" width="270" alt="Speakers, ig-carousel"> <img src="sigcn-observability/ig-story/speakers.png" width="270" alt="Speakers, ig-story">
+
+**X**
+
+<img src="sigcn-observability/x/speakers.png" width="400" alt="Speakers, x">
+
+**LinkedIn**
+
+<img src="sigcn-observability/li-link/speakers.png" width="400" alt="Speakers, li-link"> <img src="sigcn-observability/li-doc/speakers-01.png" width="270" alt="Speakers, li-doc"> <img src="sigcn-observability/li-doc/speakers-02.png" width="270" alt="Speakers, li-doc"> <img src="sigcn-observability/li-doc/speakers-03.png" width="270" alt="Speakers, li-doc"> <img src="sigcn-observability/li-doc/speakers-04.png" width="270" alt="Speakers, li-doc"> [PDF](sigcn-observability/li-doc/speakers.pdf)
+
+<details>
+<summary>Captions</summary>
+
+**Instagram**
+
+```text
+Kamis 14 Januari yang cerita Eko (contoh), dipandu Rina (contoh).
+
+- Eko (contoh), SRE
+- Rina (contoh), Platform Engineer, host
+
+Temanya "Observability: Logs, Metrics, Traces", mulai 20.00 WIB. Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-voice. Dengerin aja nggak apa-apa, ngomong juga silakan.
+
+#FORA #SIGCN #Observability #OpenTelemetry
+```
+
+**X**
+
+```text
+Kamis 14 Januari yang cerita Eko (contoh), dipandu Rina (contoh).
+"Observability: Logs, Metrics, Traces", mulai 20.00 WIB.
+Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
+https://discord.gg/rSepJu7Wb
+#Observability
+```
+
+**LinkedIn**
+
+```text
+Observability: Logs, Metrics, Traces (SIG CN × FORA)
+
+Kamis 14 Januari yang cerita Eko (contoh), dipandu Rina (contoh).
+
+• Eko (contoh), SRE
+• Rina (contoh), Platform Engineer, host
+
+Kamis, 14 Januari 2027, 20.00–21.30 WIB.
+
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Dengarkan saja boleh, ikut bicara juga boleh. Undangan: https://discord.gg/rSepJu7Wb
 
 #Observability #CloudNative #Kubernetes
 ```
