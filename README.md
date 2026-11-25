@@ -93,9 +93,9 @@ Posts show a round portrait wherever a person appears, and the `speakers` post i
 2. Save it in the repo, for example `people/<name>.jpg`: square, at least 512 px, JPEG or PNG, the face in the middle with some room above the head. The templates crop it to a circle, so the corners are lost.
 3. Set `photo:` to that path (from the repo root) on the host or speaker in the session file.
 
-The loader fails with the session file and the person's name when the path does not exist or is not a `.jpg`, `.jpeg` or `.png` file. A person without `photo:` gets the neutral silhouette from `brand/people/silhouette.svg`, tinted with the SIG's colour.
+The loader fails with the session file and the person's name when the path does not exist or is not a `.jpg`, `.jpeg` or `.png` file. A person without `photo:` gets the neutral silhouette from `brand/people/silhouette.svg`, in grey.
 
-The portraits in `examples/people/` are AI-generated placeholders of people who do not exist. Do not use them for real sessions.
+Photos are shown in greyscale, so posts stay consistent whichever photo a session uses. The sample sessions ship no photos: every sample person shows the silhouette. Do not add AI-generated or otherwise made-up photos of people to the repo. Add a photo only when the person has agreed to it.
 
 ## Text must fit
 
@@ -130,7 +130,7 @@ A SIG needs its own colour, a wordmark and a `sigs/<id>.yaml` file. [brand/READM
 ├── community.yaml    FORA's Discord invite, hashtags and logo path
 ├── sigs/             one file per SIG; fora.yaml is the general FORA community
 ├── sessions/         your session files (create it; see Add a session)
-├── examples/         sample sessions (examples/sessions/), placeholder portraits (examples/people/) and the gallery (examples/README.md, from pnpm examples)
+├── examples/         sample sessions (examples/sessions/) and the gallery (examples/README.md, from pnpm examples)
 ├── templates/        one TypeScript template per post type, plus base.css
 ├── src/              CLI, YAML loader and schema, renderer, gallery, and caption builders (src/captions/)
 ├── test/             tests and fixtures for the loader, overflow checks and renderer
