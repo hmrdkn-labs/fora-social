@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <title>Person without a photo</title>
+  <path d="M50 21a18.5 18.5 0 1 1 0 37a18.5 18.5 0 0 1 0-37z"/>
+  <path d="M11 100c0-21 16.5-34.5 39-34.5s39 13.5 39 34.5z"/>
+</svg>
