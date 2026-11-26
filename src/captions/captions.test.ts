@@ -109,7 +109,7 @@ test("speakerLine reads naturally", () => {
   assert.equal(speakerLine({ ...base, host: { name: "R", handle: "r" } }, true), "dipandu R @r");
 });
 
-test("each post type carries its own line: cover has the problem, reminder and live do not repeat it", () => {
+test("the plain problem leads the cover, and reminder and live use it once each without the subtitle", () => {
   const session = { ...base, subtitle: "Satu cluster lokal, dari nol", problem: "Aplikasinya lambat dan nggak ada yang tahu sebabnya." };
   const sig = variants[Object.keys(variants)[0]!]!.sig;
   const cover = buildCaptions(session, sig, community, "cover");
@@ -118,8 +118,17 @@ test("each post type carries its own line: cover has the problem, reminder and l
   assert.ok(cover.x.join("\n").includes(session.problem), "X cover");
   for (const type of ["reminder", "live"] as const) {
     const c = buildCaptions(session, sig, community, type);
+    for (const text of [c.instagram, c.linkedin]) assert.ok(text.includes(session.problem), `${type} carries the problem`);
     for (const text of [c.instagram, c.linkedin, c.x.join("\n")]) {
-      assert.ok(!text.includes(session.problem) && !text.includes(session.subtitle), `${type} repeats the cover line`);
+      assert.ok(text.split(session.problem).length - 1 <= 1, `${type} says the problem at most once`);
+      assert.ok(!text.includes(session.subtitle), `${type} repeats the subtitle`);
     }
   }
+});
+
+test("the X speakers thread gives every person their line", () => {
+  const { session, sig } = variants["two speakers, role and handle everywhere"];
+  const posts = buildCaptions(session, sig, community, "speakers").x;
+  const text = posts.join("\n");
+  for (const p of [...session.speakers, session.host]) assert.ok(text.includes(p.about!), `${p.name} is missing`);
 });

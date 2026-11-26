@@ -127,6 +127,14 @@ export function shape(c: Ctx, scope: string, count: number): number {
   return hash(`${c.s.id}|${scope}`) % count;
 }
 
+/** The reminder's one practical detail, two wordings; the poster and every caption of a session agree on which. */
+export const PRACTICAL = ["Buka Discord sepuluh menit lebih awal buat cek suara.", "Pakai headset kalau ada, dari HP juga bisa."] as const;
+
+export const practicalIndex = (sessionId: string): number => hash(`${sessionId}|practical`) % PRACTICAL.length;
+
+/** The everyday problem as a sentence; empty for a session without one. */
+export const problemLine = (c: Ctx): string => (c.s.problem ? sentence(c.s.problem) : "");
+
 /** Everyone who talks, speakers first, then the host. */
 export function everyone(c: Ctx): Person[] {
   return [...c.s.speakers, c.s.host];

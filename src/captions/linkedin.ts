@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { aboutPeople, cap, type Ctx, firstSentence, hashLine, openDoor, sentence, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPeople, cap, type Ctx, firstSentence, hashLine, openDoor, practicalIndex, problemLine, sentence, shape, themeTag, uniqueTags } from "./context.ts";
 
 function tags(c: Ctx): string {
   return hashLine(uniqueTags(themeTag(c.s), c.sig.hashtags.slice(1), c.sig.hashtags.slice(0, 1), c.s.hashtags, c.community.hashtags).slice(0, 3));
@@ -21,13 +21,8 @@ function joinLive(c: Ctx, variant: number): string {
   return `Kita ada di ${c.voice}, undangannya ${c.url}. ${openDoor(c, "linkedin|live", true)}`;
 }
 
-/** One practical detail for the reminder. */
-function practical(c: Ctx): string {
-  return [
-    "Buka Discord sepuluh menit lebih awal untuk cek suara.",
-    "Headset membantu, dan dari ponsel juga bisa.",
-  ][shape(c, "reminder|practical", 2)]!;
-}
+/** One practical detail for the reminder, the same detail as the poster's. */
+const practical = (c: Ctx): string => ["Buka Discord sepuluh menit lebih awal untuk cek suara.", "Headset membantu, dan dari ponsel juga bisa."][practicalIndex(c.s.id)]!;
 
 const bullets = (items: string[]): string => items.map((t) => `• ${t}`).join("\n");
 
@@ -64,18 +59,18 @@ export function linkedin(c: Ctx, type: PostType): string {
     case "reminder":
       blocks =
         v === 0
-          ? [`Nanti jam ${c.time}\n${s.title}`, `${cap(c.who)}. ${practical(c)}`, join(c, 0)]
+          ? [`Nanti jam ${c.time}\n${s.title}`, problemLine(c), `${cap(c.who)}. ${practical(c)}`, join(c, 0)]
           : v === 1
-            ? [`Hari ini jam ${c.time} kita ngobrol soal ${s.theme}.`, `${s.title}, ${c.date}. ${cap(c.who)}.`, `${practical(c)} ${join(c, 1)}`]
-            : [`${s.title}, nanti jam ${c.time}`, practical(c), `${cap(c.who)}.`, join(c, 0)];
+            ? [`Hari ini jam ${c.time} kita ngobrol soal ${s.theme}.`, problemLine(c), `${s.title}, ${c.date}. ${cap(c.who)}.`, `${practical(c)} ${join(c, 1)}`]
+            : [`${s.title}, nanti jam ${c.time}`, problemLine(c), practical(c), `${cap(c.who)}.`, join(c, 0)];
       break;
     case "live":
       blocks =
         v === 0
-          ? [`${s.title} sedang berjalan.`, `${cap(c.who)}.`, joinLive(c, 0)]
+          ? [`${s.title} sedang berjalan.`, problemLine(c), `${cap(c.who)}.`, joinLive(c, 0)]
           : v === 1
-            ? [`Kita sudah mulai (${c.time}).`, s.title, joinLive(c, 1)]
-            : [`Sedang live sekarang.`, `${s.title}, ${c.who}.`, joinLive(c, 1)];
+            ? [`Kita sudah mulai (${c.time}).`, s.title, problemLine(c), joinLive(c, 1)]
+            : [`Sedang live sekarang.`, `${s.title}, ${c.who}.`, problemLine(c), joinLive(c, 1)];
       break;
     case "recap":
       blocks = recap(c, v % 2);
