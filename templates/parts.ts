@@ -472,10 +472,10 @@ export function schedule(ctx: TemplateContext, wide: boolean, withWhere = true):
 }
 
 /** The "about" slide of a deck: the description, the topics (unless `withTopics` is false), and when and where. */
-export function aboutMain(ctx: TemplateContext, theme: Theme, label: string, withTopics = true): string {
+export function aboutMain(ctx: TemplateContext, theme: Theme, label: string, withTopics = true, lead?: string): string {
   const topics = withTopics ? ctx.session.topics : [];
-  // A session without a description still says what its SIG is about.
-  const description = ctx.session.description || ctx.sig.description;
+  // A session without a description still says what its SIG is about. A `lead` replaces it, but only above a topic list.
+  const description = lead !== undefined && topics.length > 0 ? lead : ctx.session.description || ctx.sig.description;
   const where = whenWhere(ctx);
   const room = tallRoom(ctx, theme, FOOT) - 50 - where.height - 2 * GAP - 8;
   // The description goes down a size at a time until every topic fits under it at a size that still reads as a list.
@@ -491,7 +491,7 @@ export function aboutMain(ctx: TemplateContext, theme: Theme, label: string, wit
   return `<main class="main" data-fit>
   <div class="lede">
     <p class="kicker">${e(label)}</p>
-    <p class="lead" style="font-size:${size}px">${e(description)}</p>
+    ${description === "" ? "" : `<p class="lead" style="font-size:${size}px">${e(description)}</p>`}
   </div>
   ${numbered(topics, TALL_WIDTH, room - used(size) - 24, listSizes)}
   ${where.html}

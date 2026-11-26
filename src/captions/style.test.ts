@@ -41,7 +41,7 @@ function visibleText(html: string): string {
 function copyOf(s: Session): string {
   const r = s.recap;
   const about = [...s.speakers, s.host].map((p) => p.about);
-  return [s.title, s.subtitle, s.note, s.description, ...about, ...s.topics, ...(r?.points.flatMap((p) => [p.title, p.body]) ?? [])]
+  return [s.title, s.subtitle, s.problem, s.note, s.description, ...about, ...s.topics, ...(r?.points.flatMap((p) => [p.title, p.body]) ?? [])]
     .filter(Boolean)
     .join("\n");
 }

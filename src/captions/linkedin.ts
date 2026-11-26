@@ -8,7 +8,7 @@ function tags(c: Ctx): string {
 /** Invite, channel, and that anyone can listen or talk: once per caption, tidy register. */
 function join(c: Ctx, variant: number): string {
   if (variant % 2 === 0) {
-    return `Kita ngobrol di ${c.voice} Discord FORA. ${openDoor(c, "linkedin|join", true)} Undangan: ${c.url}`;
+    return `Kita ngobrol di ${c.voice} Discord FORA. ${openDoor(c, "linkedin|join", true)} Undangannya di ${c.url}.`;
   }
   return `Gabung lewat ${c.url}, lalu masuk ke ${c.voice}. ${openDoor(c, "linkedin|join", true)}`;
 }
@@ -49,7 +49,8 @@ export function linkedin(c: Ctx, type: PostType): string {
   const v = shape(c, `linkedin|${type}`, 3);
   const when = `${c.date}, ${c.range}`;
   const what = firstSentence(s.description);
-  const sub = sentence(s.subtitle ?? what);
+  // Cover leads with the everyday problem; the title follows.
+  const problem = sentence(s.problem ?? s.subtitle ?? what);
   let blocks: string[];
   switch (type) {
     case "announce":
@@ -71,10 +72,10 @@ export function linkedin(c: Ctx, type: PostType): string {
     case "live":
       blocks =
         v === 0
-          ? [`${s.title} sedang berjalan.`, `${what} ${cap(c.who)}.`, joinLive(c, 0)]
+          ? [`${s.title} sedang berjalan.`, `${cap(c.who)}.`, joinLive(c, 0)]
           : v === 1
-            ? [`Kita sudah mulai (${c.time}).`, `${s.title}. ${what}`, joinLive(c, 1)]
-            : [`Sedang live sekarang.`, `${s.title}, ${c.who}. ${sub}`, joinLive(c, 1)];
+            ? [`Kita sudah mulai (${c.time}).`, s.title, joinLive(c, 1)]
+            : [`Sedang live sekarang.`, `${s.title}, ${c.who}.`, joinLive(c, 1)];
       break;
     case "recap":
       blocks = recap(c, v % 2);
@@ -83,8 +84,8 @@ export function linkedin(c: Ctx, type: PostType): string {
       const series = s.series ? `${cap(c.series)} bareng ${c.brand}, kali ini soal ${s.theme}.` : `Tema ${s.theme} bareng ${c.brand}.`;
       blocks =
         v === 0
-          ? [series, sub, `Sesinya "${s.title}", ${when}.`, join(c, 0)]
-          : [sub, `${series} Sesinya "${s.title}", ${c.dateShort}, ${c.range}.`, join(c, 1)];
+          ? [problem, `${series} Sesinya "${s.title}", ${when}.`, join(c, 0)]
+          : [problem, `${series} Sesinya "${s.title}", ${c.dateShort}, ${c.range}.`, join(c, 1)];
       break;
     }
     case "sig-intro":

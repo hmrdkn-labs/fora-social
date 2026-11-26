@@ -108,3 +108,18 @@ test("speakerLine reads naturally", () => {
   assert.equal(speakerLine(three), "bersama A, B dan C, dipandu Rina (contoh)");
   assert.equal(speakerLine({ ...base, host: { name: "R", handle: "r" } }, true), "dipandu R @r");
 });
+
+test("each post type carries its own line: cover has the problem, reminder and live do not repeat it", () => {
+  const session = { ...base, subtitle: "Satu cluster lokal, dari nol", problem: "Aplikasinya lambat dan nggak ada yang tahu sebabnya." };
+  const sig = variants[Object.keys(variants)[0]!]!.sig;
+  const cover = buildCaptions(session, sig, community, "cover");
+  assert.ok(cover.instagram.includes(session.problem), "IG cover");
+  assert.ok(cover.linkedin.includes(session.problem), "LinkedIn cover");
+  assert.ok(cover.x.join("\n").includes(session.problem), "X cover");
+  for (const type of ["reminder", "live"] as const) {
+    const c = buildCaptions(session, sig, community, type);
+    for (const text of [c.instagram, c.linkedin, c.x.join("\n")]) {
+      assert.ok(!text.includes(session.problem) && !text.includes(session.subtitle), `${type} repeats the cover line`);
+    }
+  }
+});

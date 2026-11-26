@@ -85,7 +85,8 @@ export function instagram(c: Ctx, type: PostType): string {
   const v = shape(c, `instagram|${type}`, 3);
   const when = `${c.date}, ${c.range}`;
   const what = firstSentence(s.description);
-  const sub = sentence(s.subtitle ?? what);
+  // Cover leads with the everyday problem; the title follows.
+  const problem = sentence(s.problem ?? s.subtitle ?? what);
   let blocks: string[];
   switch (type) {
     case "announce":
@@ -111,10 +112,10 @@ export function instagram(c: Ctx, type: PostType): string {
     case "live":
       blocks =
         v === 0
-          ? [`${s.title} lagi jalan sekarang.`, what, joinLive(c, 0)]
+          ? [`${s.title} lagi jalan sekarang.`, joinLive(c, 0)]
           : v === 1
             ? [`Live sekarang, ${c.who}.`, s.title, joinLive(c, 1)]
-            : [`Sudah mulai jam ${c.time}. ${s.title}`, what, joinLive(c, 2)];
+            : [`Sudah mulai jam ${c.time}. ${s.title}`, joinLive(c, 2)];
       break;
     case "recap":
       blocks = recap(c, v % 2);
@@ -123,8 +124,8 @@ export function instagram(c: Ctx, type: PostType): string {
       const series = s.series ? `${cap(c.series)} bareng ${c.brand}, kali ini soal ${s.theme}.` : `Tema ${s.theme} bareng ${c.brand}.`;
       blocks =
         v === 0
-          ? [series, sub, `Sesinya "${s.title}", ${when}.`, join(c, 0)]
-          : [s.title, `${series} ${sub}`, `${when}. ${join(c, 1)}`];
+          ? [problem, `${series} Sesinya "${s.title}", ${when}.`, join(c, 0)]
+          : [problem, s.title, `${series} ${when}.`, join(c, 1)];
       break;
     }
     case "sig-intro":

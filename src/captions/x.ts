@@ -39,8 +39,11 @@ function tags(c: Ctx): string {
 
 const plain = (...texts: string[]): Line[] => texts.map((text) => ({ text }));
 
-/** The subtitle as one short line, the everyday problem a title may not say; none without one. */
-const sub = (c: Ctx): string[] => (c.s.subtitle ? [sentence(c.s.subtitle)] : []);
+/** The everyday problem as one short line, which a title may not say; none without one. */
+const problem = (c: Ctx): string[] => (c.s.problem ? [sentence(c.s.problem)] : []);
+
+/** The reminder's one practical detail. */
+const practical = (c: Ctx): string => ["Buka Discord sepuluh menit lebih awal buat cek suara.", "Pakai headset kalau ada, dari HP juga bisa."][shape(c, "x|practical", 2)]!;
 
 /**
  * One concrete situation leads the single post: the host's note when it fits, else the first
@@ -49,7 +52,8 @@ const sub = (c: Ctx): string[] => (c.s.subtitle ? [sentence(c.s.subtitle)] : [])
  */
 function hooked(c: Ctx, body: Line[]): string[] {
   const rest = body.map((l) => l.text);
-  for (const lead of [c.s.note, firstSentence(c.s.description)]) {
+  // The description is the announcement's own text; it only leads when there is no note.
+  for (const lead of [c.s.note, c.s.note ? firstSentence(c.s.note) : firstSentence(c.s.description)]) {
     if (!lead) continue;
     const text = [lead, ...rest].join("\n");
     if (xLength(text) <= LIMIT) return [text];
@@ -122,19 +126,19 @@ export function x(c: Ctx, type: PostType): string[] {
     case "reminder":
       return build([
         v === 0
-          ? plain(`Nanti jam ${c.time}, ${s.title}.`, ...sub(c))
+          ? plain(`Nanti jam ${c.time}, ${s.title}.`, practical(c))
           : v === 1
-            ? plain(`${s.title}, ${c.dateShort}, nanti jam ${c.time}.`, ...sub(c))
-            : plain(`Jam ${c.time} nanti, ${s.title}.`, ...(s.subtitle ? sub(c) : [`${cap(c.who)}.`])),
+            ? plain(`${s.title}, ${c.dateShort}, nanti jam ${c.time}.`, practical(c))
+            : plain(`Jam ${c.time} nanti, ${s.title}.`, `${cap(c.who)}. ${practical(c)}`),
         joinPart(c, v),
       ]);
     case "live":
       return build([
         v === 0
-          ? plain(`${s.title} lagi jalan sekarang.`, ...sub(c))
+          ? plain(`${s.title} lagi jalan sekarang.`)
           : v === 1
-            ? plain(`Live sekarang, ${s.title}.`, ...sub(c))
-            : plain(`Sudah mulai jam ${c.time}, ${s.title}.`, ...sub(c)),
+            ? plain(`Live sekarang, ${s.title}.`)
+            : plain(`Sudah mulai jam ${c.time}, ${s.title}.`),
         joinPart(c, v, true),
       ]);
     case "recap":
@@ -142,9 +146,9 @@ export function x(c: Ctx, type: PostType): string[] {
     case "cover":
       return build([
         v === 1
-          ? plain(s.title, ...sub(c), `${c.dateShort}, ${c.range}`)
-          : s.subtitle
-            ? plain(...sub(c), s.title, `${c.dateShort}, ${c.range}`)
+          ? plain(s.title, ...problem(c), `${c.dateShort}, ${c.range}`)
+          : s.problem
+            ? plain(...problem(c), s.title, `${c.dateShort}, ${c.range}`)
             : plain(`${s.series ? `${c.series} bareng ${c.brand}.` : `Tema ${s.theme} bareng ${c.brand}.`}`, s.title, `${c.dateShort}, ${c.range}`),
         joinPart(c, v),
       ]);

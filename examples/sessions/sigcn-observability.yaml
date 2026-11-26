@@ -2,7 +2,8 @@ sig: sig-cn
 series: Cloud Native 101
 theme: Observability
 title: "Observability: Logs, Metrics, Traces"
-subtitle: Aplikasinya lambat, ini cara mulai mencari penyebabnya
+subtitle: Dari mana mulai mencari, tanpa memasang semuanya sekaligus
+problem: Aplikasinya jalan tapi lambat, dan nggak ada yang tahu mulai cari dari mana.
 date: "2027-01-14"
 time: "20:00"
 durationMinutes: 90
@@ -10,11 +11,11 @@ voiceChannel: sig-cn-voice
 host:
   name: Rina (contoh)
   role: Platform Engineer
-  about: Menunjukkan dashboard yang hijau semua padahal aplikasinya lambat.
+  about: Rina punya contoh dashboard yang hijau semua padahal aplikasinya lambat.
 speakers:
   - name: Eko (contoh)
     role: SRE
-    about: Membedah satu kasus aplikasi lambat dan menunjukkan dari mana dia mulai mencari.
+    about: Kasus aplikasi lambat yang pernah Eko tangani dibedah dari awal, termasuk dari mana dia mulai mencari.
 note: Pernah aplikasi lambat, dashboard hijau semua, dan nggak ada yang tahu mulai cari dari mana? Sesi ini mulai dari situ.
 description: Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dijawab logs (catatan kejadian), metrics (angka seperti lama respons) dan traces (jalur satu request), dan cara mulai tanpa memasang semuanya sekaligus.
 topics:

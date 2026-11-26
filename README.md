@@ -50,6 +50,7 @@ series: Cloud Native 101          # optional. Shared by sessions in one series
 theme: Kubernetes                 # required. Shown on the posts as the theme
 title: Kubernetes untuk Pemula    # required. Keep it short so it fits the cover
 subtitle: Dari container ke cluster   # optional
+problem: Aplikasi sudah jalan di laptop, tapi menjalankannya di banyak mesin belum pernah dicoba.   # optional. One plain line on the everyday problem; cover posts use it
 date: "2026-12-12"                # required. YYYY-MM-DD, a real date, WIB
 time: "19:30"                     # required. HH:MM, 24-hour, WIB
 durationMinutes: 90               # optional. Whole minutes, default 90

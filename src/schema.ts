@@ -46,6 +46,7 @@ export const SessionSchema = z.strictObject({
   theme: nonEmpty,
   title: nonEmpty,
   subtitle: z.string().optional(),
+  problem: z.string().optional(),
   date: z.string().refine(isRealDate, { error: (i) => `must be a real date as YYYY-MM-DD, got ${String(i.input)}` }),
   time: z.string().regex(TIME, { error: (i) => `must be HH:MM, got ${String(i.input)}` }),
   durationMinutes: z.number().int("must be a whole number of minutes").positive("must be more than zero").default(90),
