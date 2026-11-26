@@ -11,7 +11,7 @@ Rekap "GitOps dengan Argo CD", Sab, 19 Des.
 3. Pisahkan repo manifest dari repo kode aplikasi. Manifest, file YAML yang menjelaskan aplikasi di cluster, tinggal di repo sendiri. Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
 4. Rollback config cukup dengan git revert. Revert commit yang mengubah manifest, lalu sync, dan riwayatnya tetap tercatat. Batasnya, migrasi database tidak ikut mundur, jadi itu dipikirkan terpisah.
 
-Kalau deploy semalam bikin masalah, di tempatmu rollback-nya lewat apa sekarang?
+Bagian mana dari alur tadi yang masih bikin bingung, atau kalau sudah pernah rollback, caranya lewat apa?
 
 Dokumentasi Argo CD: https://argo-cd.readthedocs.io/
 
@@ -29,7 +29,7 @@ Pisahkan repo manifest dari repo kode aplikasi. Manifest, file YAML yang menjela
 
 ## X 3/3
 
-Kalau deploy semalam bikin masalah, di tempatmu rollback-nya lewat apa sekarang?
+Bagian mana dari alur tadi yang masih bikin bingung, atau kalau sudah pernah rollback, caranya lewat apa?
 Dokumentasi Argo CD https://argo-cd.readthedocs.io/
 Sesi berikutnya diumumkan di Discord FORA. Dengerin aja nggak apa-apa, ngomong juga silakan.
 https://discord.gg/rSepJu7Wb
@@ -46,7 +46,7 @@ Terima kasih Dani (contoh). 11 orang ikut ngobrol di voice channel.
 3. Pisahkan repo manifest dari repo kode aplikasi. Manifest, file YAML yang menjelaskan aplikasi di cluster, tinggal di repo sendiri. Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
 4. Rollback config cukup dengan git revert. Revert commit yang mengubah manifest, lalu sync, dan riwayatnya tetap tercatat. Batasnya, migrasi database tidak ikut mundur, jadi itu dipikirkan terpisah.
 
-Kalau deploy semalam bikin masalah, di tempatmu rollback-nya lewat apa sekarang?
+Bagian mana dari alur tadi yang masih bikin bingung, atau kalau sudah pernah rollback, caranya lewat apa?
 
 Dokumentasi Argo CD: https://argo-cd.readthedocs.io/
 

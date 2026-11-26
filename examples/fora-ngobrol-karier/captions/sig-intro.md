@@ -22,6 +22,6 @@ FORA. Komunitas tech kecil yang ngobrol lewat suara di Discord.
 
 Sesi terdekat soal "Ngobrol Karier di Tech", Sab, 23 Jan, 19.30–21.00 WIB.
 
-Kita ngobrol di voice channel fora-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel fora-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangannya di https://discord.gg/rSepJu7Wb.
 
 #Karier #KomunitasTech #FORA

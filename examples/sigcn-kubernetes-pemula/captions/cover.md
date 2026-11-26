@@ -2,26 +2,31 @@
 
 ## Instagram
 
+Aplikasi sudah jalan di laptop, tapi menjalankannya di banyak mesin sekaligus belum pernah dicoba.
+
 Kubernetes untuk Pemula
 
-Cloud Native 101 bareng SIG CN × FORA, kali ini soal Kubernetes. Satu cluster lokal, dari nol.
+Cloud Native 101 bareng SIG CN × FORA, kali ini soal Kubernetes. Sabtu, 12 Desember 2026, 19.30–21.00 WIB.
 
-Sabtu, 12 Desember 2026, 19.30–21.00 WIB. Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja boleh, mic juga boleh.
+Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja boleh, mic juga boleh.
 
 #FORA #SIGCN #Kubernetes #Container
 
-## X
+## X 1/2
 
-Satu cluster lokal, dari nol.
+Aplikasi sudah jalan di laptop, tapi menjalankannya di banyak mesin sekaligus belum pernah dicoba.
 Kubernetes untuk Pemula
 Sab, 12 Des, 19.30–21.00 WIB
+
+## X 2/2
+
 Di voice channel sig-cn-voice Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Kubernetes
 
 ## LinkedIn
 
-Satu cluster lokal, dari nol.
+Aplikasi sudah jalan di laptop, tapi menjalankannya di banyak mesin sekaligus belum pernah dicoba.
 
 Cloud Native 101 bareng SIG CN × FORA, kali ini soal Kubernetes. Sesinya "Kubernetes untuk Pemula", Sab, 12 Des, 19.30–21.00 WIB.
 

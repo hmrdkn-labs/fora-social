@@ -19,7 +19,7 @@ Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.g
 
 ## X
 
-Bayangkan deploy cukup dengan merge pull request, dan cluster otomatis ikut isi repo Git.
+Pernah ada yang kubectl apply langsung ke prod jam 11 malam?
 GitOps dengan Argo CD
 Sab, 19 Des jam 19.30 WIB.
 Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.

@@ -13,7 +13,7 @@ Pakai headset kalau ada. Dari HP juga bisa. Langsung masuk voice channel fora-vo
 ## X
 
 Nanti jam 19.30 WIB, Ngobrol Karier di Tech.
-Cerita dan tanya jawab, tanpa slide.
+Pakai headset kalau ada, dari HP juga bisa.
 Di voice channel fora-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Karier

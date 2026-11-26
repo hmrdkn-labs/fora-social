@@ -2,9 +2,9 @@
 
 ## Instagram
 
-Dani (contoh), SRE. Menceritakan kenapa timnya pindah dari kubectl apply manual ke GitOps.
+Dani (contoh), SRE. Tim Dani dulu deploy dengan kubectl apply manual, dan dia cerita kenapa akhirnya pindah ke GitOps.
 
-Rina (contoh), Platform Engineer, host. Menyiapkan repo kosong berisi manifest (file YAML yang menjelaskan aplikasi di cluster) dan Argo CD, supaya alurnya bisa diikuti dari nol.
+Rina (contoh), Platform Engineer, host. Rina menyiapkan repo kosong berisi manifest (file YAML yang menjelaskan aplikasi di cluster) dan Argo CD, lalu alurnya dibangun bareng dari nol.
 
 Sesinya "GitOps dengan Argo CD", Sabtu, 19 Desember 2026, 19.30–21.00 WIB.
 
@@ -12,13 +12,9 @@ Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga d
 
 #FORA #SIGCN #GitOps #ArgoCD
 
-## X 1/2
+## X
 
-Dani (contoh), SRE. Menceritakan kenapa timnya pindah dari kubectl apply manual ke GitOps.
-Rina (contoh), Platform Engineer, host. Menyiapkan repo kosong berisi manifest (file YAML yang menjelaskan aplikasi di cluster) dan Argo CD, supaya alurnya bisa diikuti dari nol.
-
-## X 2/2
-
+Dani (contoh), SRE. Tim Dani dulu deploy dengan kubectl apply manual, dan dia cerita kenapa akhirnya pindah ke GitOps.
 "GitOps dengan Argo CD", mulai 19.30 WIB.
 Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
@@ -28,12 +24,12 @@ https://discord.gg/rSepJu7Wb
 
 GitOps dengan Argo CD (SIG CN × FORA)
 
-Dani (contoh), SRE. Menceritakan kenapa timnya pindah dari kubectl apply manual ke GitOps.
+Dani (contoh), SRE. Tim Dani dulu deploy dengan kubectl apply manual, dan dia cerita kenapa akhirnya pindah ke GitOps.
 
-Rina (contoh), Platform Engineer, host. Menyiapkan repo kosong berisi manifest (file YAML yang menjelaskan aplikasi di cluster) dan Argo CD, supaya alurnya bisa diikuti dari nol.
+Rina (contoh), Platform Engineer, host. Rina menyiapkan repo kosong berisi manifest (file YAML yang menjelaskan aplikasi di cluster) dan Argo CD, lalu alurnya dibangun bareng dari nol.
 
 Sabtu, 19 Desember 2026, 19.30–21.00 WIB.
 
-Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangannya di https://discord.gg/rSepJu7Wb.
 
 #GitOps #CloudNative #Kubernetes
