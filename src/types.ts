@@ -89,6 +89,12 @@ export interface Session {
     points: RecapPoint[];
     links?: Link[];
     attendees?: number;
+    /**
+     * Optional, the host's own closing question: one thing people can answer from their own
+     * experience, a tutorial or a class project ("Pod kamu pernah ganti IP dan bikin app error?").
+     * Recap posts end with it. Without it they end without a question; never generate one.
+     */
+    question?: string;
   };
   /** Extra hashtags without "#". */
   hashtags?: string[];
