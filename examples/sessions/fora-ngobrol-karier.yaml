@@ -10,7 +10,7 @@ host:
   name: Dika (contoh)
   role: Software Engineer
   handle: dika_contoh
-  about: Mandu obrolan, cerita soal pindah dari developer ke SRE, lalu tanya balik, kerjaan pertama kalian dapat dari mana?
+  about: Menceritakan bagaimana dia pindah dari developer ke SRE lewat ikut jaga on-call.
 speakers: []
 note: Waktu cari kerja pertama saya kirim 40 lamaran dan cuma dua yang dibalas. Saya mau dengar cara kalian.
 description: "Diskusi terbuka tanpa tamu. Bawa satu cerita soal kerja di tech yang mau kamu ceritakan atau tanyakan."

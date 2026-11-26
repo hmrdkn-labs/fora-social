@@ -11,7 +11,7 @@ host:
   name: Rina (contoh)
   role: Platform Engineer
   handle: rina_contoh
-  about: Memandu, dan mengulang percobaan mematikan satu Pod bareng-bareng.
+  about: Mematikan satu Pod di minikube dan menunjukkan Deployment membuat gantinya.
 speakers:
   - name: Bima (contoh)
     role: DevOps Engineer
@@ -20,7 +20,7 @@ speakers:
   - name: Sari (contoh)
     role: Backend Developer
     handle: sari_contoh
-    about: Cerita dari sisi developer, bagian mana yang bikin bingung waktu pertama deploy ke cluster. Kamu bingung di bagian yang sama?
+    about: Menceritakan bagian mana yang bikin bingung waktu pertama kali deploy ke cluster.
 note: Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
 description: Sesi pertama Cloud Native 101. Di minikube, cluster Kubernetes di laptop, kita deploy satu aplikasi lalu matikan Pod-nya dan lihat Deployment membuat gantinya. Dari situ baru kita kenalan sama istilahnya. Cukup tahu apa itu container.
 topics:
@@ -34,7 +34,7 @@ hashtags:
   - DevOps
 recap:
   attendees: 14
-  question: Waktu Pod-nya dimatikan di minikube, apa yang kamu lihat di kubectl get pods?
+  question: Deployment membuat Pod pengganti sendiri. Waktu proses aplikasimu mati, siapa atau apa yang menyalakannya lagi?
   points:
     - title: Pod adalah unit terkecil yang dijadwalkan
       body: Satu Pod bisa berisi beberapa container yang berbagi network dan storage.

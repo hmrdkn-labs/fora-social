@@ -10,11 +10,11 @@ voiceChannel: sig-cn-voice
 host:
   name: Rina (contoh)
   role: Platform Engineer
-  about: Menyiapkan repo kosong berisi manifest (file YAML yang menjelaskan aplikasi di cluster) dan Argo CD, jadi alurnya bisa diikuti dari nol dengan Git dasar.
+  about: Menyiapkan repo kosong berisi manifest (file YAML yang menjelaskan aplikasi di cluster) dan Argo CD, supaya alurnya bisa diikuti dari nol.
 speakers:
   - name: Dani (contoh)
     role: SRE
-    about: Cerita kenapa timnya pindah ke GitOps, lalu tanya balik, "siapa di sini yang masih kubectl apply ke prod?"
+    about: Menceritakan kenapa timnya pindah dari kubectl apply manual ke GitOps.
 note: Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
 description: Bayangkan deploy cukup dengan merge pull request, dan cluster otomatis ikut isi repo Git. Kita bangun alurnya dari nol pakai Argo CD, jadi yang belum pernah pakai GitOps juga bisa ikut. Cukup tahu Git dasar.
 topics:
@@ -27,7 +27,7 @@ hashtags:
   - DevOps
 recap:
   attendees: 11
-  question: Dari alur tadi, bagian mana yang masih belum kebayang buatmu?
+  question: Kalau deploy semalam bikin masalah, di tempatmu rollback-nya lewat apa sekarang?
   points:
     - title: Git jadi source of truth
       body: Kondisi yang diinginkan ditulis di repo, dan controller yang menyamakan cluster dengan repo. Tidak ada kubectl apply manual.
