@@ -6,7 +6,7 @@ Yang ngisi "Observability: Logs, Metrics, Traces" (Kam, 14 Jan, 20.00 WIB).
 
 Eko (contoh), SRE. Membedah satu kasus aplikasi lambat dan menunjukkan dari mana dia mulai mencari.
 
-Rina (contoh), Platform Engineer, host. Memandu, dan nanya duluan, terakhir kali aplikasimu lambat, kamu mulai cari dari mana?
+Rina (contoh), Platform Engineer, host. Menunjukkan dashboard yang hijau semua padahal aplikasinya lambat.
 
 Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-voice. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
@@ -15,7 +15,7 @@ Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-vo
 ## X 1/2
 
 Eko (contoh), SRE. Membedah satu kasus aplikasi lambat dan menunjukkan dari mana dia mulai mencari.
-Rina (contoh), Platform Engineer, host. Memandu, dan nanya duluan, terakhir kali aplikasimu lambat, kamu mulai cari dari mana?
+Rina (contoh), Platform Engineer, host. Menunjukkan dashboard yang hijau semua padahal aplikasinya lambat.
 
 ## X 2/2
 
@@ -30,7 +30,7 @@ Observability: Logs, Metrics, Traces (SIG CN × FORA)
 
 Eko (contoh), SRE. Membedah satu kasus aplikasi lambat dan menunjukkan dari mana dia mulai mencari.
 
-Rina (contoh), Platform Engineer, host. Memandu, dan nanya duluan, terakhir kali aplikasimu lambat, kamu mulai cari dari mana?
+Rina (contoh), Platform Engineer, host. Menunjukkan dashboard yang hijau semua padahal aplikasinya lambat.
 
 Kamis, 14 Januari 2027, 20.00–21.30 WIB.
 

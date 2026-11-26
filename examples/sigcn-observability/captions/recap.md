@@ -6,8 +6,8 @@ Rekap "Observability: Logs, Metrics, Traces", Kam, 14 Jan.
 
 16 orang ikut ngobrol di voice channel. Makasih Eko (contoh).
 
-1. Log yang terstruktur bisa dicari. Dengan format seperti JSON, field seperti duration_ms bisa disaring, jadi request yang lambat gampang ditemukan di aplikasi lambat tadi.
-2. Metrics itu angka murah yang tahan lama. Jumlah request dan lama respons ringan disimpan berbulan-bulan, jadi cocok untuk dashboard dan alert.
+1. Log yang terstruktur bisa dicari. Dengan format seperti JSON, field seperti duration_ms bisa disaring, jadi request yang lambat gampang ditemukan.
+2. Metrics merangkum request menjadi angka. Yang disimpan jumlah request dan lama respons per menit, satu angka untuk banyak request. Datanya kecil, jadi bisa disimpan berbulan-bulan untuk dashboard dan alert. Log lengkap tiap request jauh lebih besar.
 3. Trace menunjuk service mana yang menghabiskan waktu. Satu request diikuti dari service ke service, lalu bagian yang lambat kelihatan.
 4. OpenTelemetry, pasang kode pencatat sekali. Datanya dikirim lewat OTLP, format standar OpenTelemetry untuk mengirim data, jadi backend-nya bisa diganti tanpa mengubah kode aplikasi.
 5. Alert dari yang dirasakan pengguna. Error rate dan latency yang jadi patokan. CPU tinggi sebentar belum tentu masalah.
@@ -43,8 +43,8 @@ https://discord.gg/rSepJu7Wb
 
 Catatan dari "Observability: Logs, Metrics, Traces":
 
-1. Log yang terstruktur bisa dicari. Dengan format seperti JSON, field seperti duration_ms bisa disaring, jadi request yang lambat gampang ditemukan di aplikasi lambat tadi.
-2. Metrics itu angka murah yang tahan lama. Jumlah request dan lama respons ringan disimpan berbulan-bulan, jadi cocok untuk dashboard dan alert.
+1. Log yang terstruktur bisa dicari. Dengan format seperti JSON, field seperti duration_ms bisa disaring, jadi request yang lambat gampang ditemukan.
+2. Metrics merangkum request menjadi angka. Yang disimpan jumlah request dan lama respons per menit, satu angka untuk banyak request. Datanya kecil, jadi bisa disimpan berbulan-bulan untuk dashboard dan alert. Log lengkap tiap request jauh lebih besar.
 3. Trace menunjuk service mana yang menghabiskan waktu. Satu request diikuti dari service ke service, lalu bagian yang lambat kelihatan.
 4. OpenTelemetry, pasang kode pencatat sekali. Datanya dikirim lewat OTLP, format standar OpenTelemetry untuk mengirim data, jadi backend-nya bisa diganti tanpa mengubah kode aplikasi.
 5. Alert dari yang dirasakan pengguna. Error rate dan latency yang jadi patokan. CPU tinggi sebentar belum tentu masalah.

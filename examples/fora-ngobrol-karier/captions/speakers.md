@@ -2,7 +2,7 @@
 
 ## Instagram
 
-Dika (contoh) @dika_contoh, Software Engineer. Mandu obrolan, cerita soal pindah dari developer ke SRE, lalu tanya balik, kerjaan pertama kalian dapat dari mana?
+Dika (contoh) @dika_contoh, Software Engineer. Menceritakan bagaimana dia pindah dari developer ke SRE lewat ikut jaga on-call.
 
 Tanpa pembicara tamu, jadi yang cerita kita semua.
 
@@ -14,7 +14,7 @@ Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di 
 
 ## X 1/2
 
-Dika (contoh) @dika_contoh, Software Engineer. Mandu obrolan, cerita soal pindah dari developer ke SRE, lalu tanya balik, kerjaan pertama kalian dapat dari mana?
+Dika (contoh) @dika_contoh, Software Engineer. Menceritakan bagaimana dia pindah dari developer ke SRE lewat ikut jaga on-call.
 
 ## X 2/2
 
@@ -27,7 +27,7 @@ https://discord.gg/rSepJu7Wb
 
 Ngobrol Karier di Tech (FORA)
 
-Dika (contoh) @dika_contoh, Software Engineer. Mandu obrolan, cerita soal pindah dari developer ke SRE, lalu tanya balik, kerjaan pertama kalian dapat dari mana?
+Dika (contoh) @dika_contoh, Software Engineer. Menceritakan bagaimana dia pindah dari developer ke SRE lewat ikut jaga on-call.
 
 Tanpa pembicara tamu, jadi yang cerita kita semua.
 

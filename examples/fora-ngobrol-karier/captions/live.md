@@ -13,16 +13,17 @@ Buka discord.gg/rSepJu7Wb (juga ada di bio), lalu ke voice channel fora-voice. D
 ## X
 
 Ngobrol Karier di Tech lagi jalan sekarang.
+Cerita dan tanya jawab, tanpa slide.
 Langsung masuk ke voice channel fora-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Karier
 
 ## LinkedIn
 
-Live sekarang di voice channel fora-voice.
+Sedang live sekarang.
 
-Ngobrol Karier di Tech, dipandu Dika (contoh) @dika_contoh.
+Ngobrol Karier di Tech, dipandu Dika (contoh) @dika_contoh. Cerita dan tanya jawab, tanpa slide.
 
-Undangan Discord: https://discord.gg/rSepJu7Wb. Kita ada di voice channel fora-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
+Kita ada di voice channel fora-voice, undangannya https://discord.gg/rSepJu7Wb. Mau dengarkan saja atau ikut bicara, dua-duanya boleh.
 
 #Karier #KomunitasTech #FORA

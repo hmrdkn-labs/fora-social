@@ -12,7 +12,7 @@ Sabtu, 12 Desember 2026, 19.30–21.00 WIB. Mampir ke voice channel sig-cn-voice
 
 ## X
 
-Cloud Native 101 bareng SIG CN × FORA.
+Satu cluster lokal, dari nol.
 Kubernetes untuk Pemula
 Sab, 12 Des, 19.30–21.00 WIB
 Di voice channel sig-cn-voice Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.

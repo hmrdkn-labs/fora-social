@@ -12,7 +12,7 @@ Sabtu, 19 Desember 2026, 19.30–21.00 WIB. Mampir ke voice channel sig-cn-voice
 
 ## X
 
-Cloud Native 101 bareng SIG CN × FORA.
+Deploy lewat merge pull request, Git dasar sudah cukup.
 GitOps dengan Argo CD
 Sab, 19 Des, 19.30–21.00 WIB
 Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.

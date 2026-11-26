@@ -4,7 +4,7 @@
 
 Observability: Logs, Metrics, Traces
 
-Cloud Native 101 bareng SIG CN × FORA, kali ini soal Observability. Aplikasinya lambat, dan ke mana kita cari jawabannya.
+Cloud Native 101 bareng SIG CN × FORA, kali ini soal Observability. Aplikasinya lambat, ini cara mulai mencari penyebabnya.
 
 Kamis, 14 Januari 2027, 20.00–21.30 WIB. Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
@@ -12,7 +12,7 @@ Kamis, 14 Januari 2027, 20.00–21.30 WIB. Mampir ke voice channel sig-cn-voice 
 
 ## X
 
-Cloud Native 101 bareng SIG CN × FORA.
+Aplikasinya lambat, ini cara mulai mencari penyebabnya.
 Observability: Logs, Metrics, Traces
 Kam, 14 Jan, 20.00–21.30 WIB
 Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
@@ -21,7 +21,7 @@ https://discord.gg/rSepJu7Wb
 
 ## LinkedIn
 
-Aplikasinya lambat, dan ke mana kita cari jawabannya.
+Aplikasinya lambat, ini cara mulai mencari penyebabnya.
 
 Cloud Native 101 bareng SIG CN × FORA, kali ini soal Observability. Sesinya "Observability: Logs, Metrics, Traces", Kam, 14 Jan, 20.00–21.30 WIB.
 

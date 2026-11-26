@@ -14,7 +14,7 @@ Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel fora-voic
 
 ## X
 
-Tema Karier bareng FORA.
+Cerita dan tanya jawab, tanpa slide.
 Ngobrol Karier di Tech
 Sab, 23 Jan, 19.30–21.00 WIB
 Di voice channel fora-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
