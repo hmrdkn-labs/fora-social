@@ -4,7 +4,7 @@
 
 GitOps dengan Argo CD
 
-Sab, 19 Des, nanti jam 19.30 WIB. Buka Discord sepuluh menit lebih awal buat cek suara.
+Sab, 19 Des, nanti jam 19.30 WIB. Kalau ada pertanyaan soal GitOps, tulis dulu biar nggak lupa.
 
 Bersama Dani (contoh), dipandu Rina (contoh).
 
@@ -24,7 +24,7 @@ https://discord.gg/rSepJu7Wb
 Nanti jam 19.30 WIB
 GitOps dengan Argo CD
 
-Bersama Dani (contoh), dipandu Rina (contoh). Buka Discord sepuluh menit lebih awal untuk cek suara.
+Bersama Dani (contoh), dipandu Rina (contoh). Kalau ada pertanyaan soal GitOps, catat dulu supaya tidak lupa.
 
 Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 

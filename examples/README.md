@@ -98,7 +98,7 @@ Jam 19.30 WIB nanti kita ngobrol soal Karier.
 
 Ngobrol Karier di Tech, dipandu Dika (contoh) @dika_contoh.
 
-Mic boleh mati dulu sampai kamu siap ngomong. Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
+Kalau ada pertanyaan soal Karier, tulis dulu biar nggak lupa. Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #Karier #KarierTech #KomunitasTech
 ```
@@ -119,7 +119,7 @@ Hari ini jam 19.30 WIB kita ngobrol soal Karier.
 
 Ngobrol Karier di Tech, Sabtu, 23 Januari 2027. Dipandu Dika (contoh) @dika_contoh.
 
-Mikrofon boleh dimatikan sampai kamu siap bicara. Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Boleh dengarkan saja, boleh juga ikut bicara.
+Kalau ada pertanyaan soal Karier, catat dulu supaya tidak lupa. Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 
 #Karier #KomunitasTech #FORA
 ```
@@ -201,10 +201,12 @@ Undangan Discord: https://discord.gg/rSepJu7Wb. Kita ada di voice channel fora-v
 Ini yang tercatat dari "Ngobrol Karier di Tech" (Sab, 23 Jan).
 
 - Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat. Salah satu peserta cerita, pewawancaranya menghabiskan lima belas menit di satu repo buatannya dan nggak membuka sertifikat sama sekali.
-- Pindah ke SRE bisa mulai dari on-call. Dika minta ikut rotasi on-call sebagai shadow dulu, dan dari situ dapat tugas pertama menulis runbook.
+- Pindah ke SRE bisa mulai dari ikut jaga on-call. Dika minta mendampingi rekan yang sedang on-call, yang menangani sistem kalau bermasalah di luar jam kerja. Dari situ tugas pertamanya menulis runbook, catatan langkah menangani masalah yang sering muncul.
 - Belajar dari satu insiden nyata. Postmortem di kantor lama jadi bahan belajar Terraform yang paling nempel, karena tiap perintah ada alasannya.
 
-9 orang ikut ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh, sampai ketemu lagi. Kamu setuju sama "Belajar dari satu insiden nyata"? Kalau di tempatmu beda, ceritain.
+9 orang ikut ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh, sampai ketemu lagi.
+
+Kalau kamu bikin satu repo kecil minggu ini untuk ditunjukkan ke pewawancara, isinya apa?
 
 Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, mic juga boleh.
 
@@ -226,7 +228,7 @@ Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat. Salah 
 **X 3/3**
 
 ```text
-Kamu setuju sama "Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat"? Kalau di tempatmu beda, ceritain.
+Kalau kamu bikin satu repo kecil minggu ini untuk ditunjukkan ke pewawancara, isinya apa?
 Sesi berikutnya diumumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Karier
@@ -240,10 +242,10 @@ Rekap "Ngobrol Karier di Tech" (Sab, 23 Jan).
 Terima kasih Dika (contoh) @dika_contoh. 9 orang ikut ngobrol di voice channel.
 
 1. Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat. Salah satu peserta cerita, pewawancaranya menghabiskan lima belas menit di satu repo buatannya dan nggak membuka sertifikat sama sekali.
-2. Pindah ke SRE bisa mulai dari on-call. Dika minta ikut rotasi on-call sebagai shadow dulu, dan dari situ dapat tugas pertama menulis runbook.
+2. Pindah ke SRE bisa mulai dari ikut jaga on-call. Dika minta mendampingi rekan yang sedang on-call, yang menangani sistem kalau bermasalah di luar jam kerja. Dari situ tugas pertamanya menulis runbook, catatan langkah menangani masalah yang sering muncul.
 3. Belajar dari satu insiden nyata. Postmortem di kantor lama jadi bahan belajar Terraform yang paling nempel, karena tiap perintah ada alasannya.
 
-Kamu setuju sama "Pindah ke SRE bisa mulai dari on-call"? Kalau di tempatmu beda, ceritain.
+Kalau kamu bikin satu repo kecil minggu ini untuk ditunjukkan ke pewawancara, isinya apa?
 
 Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel fora-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh. https://discord.gg/rSepJu7Wb
 
@@ -512,7 +514,7 @@ Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, b
 ```text
 Kubernetes untuk Pemula
 
-Sab, 12 Des, nanti jam 19.30 WIB. Buka Discord sepuluh menit lebih awal buat cek suara.
+Sab, 12 Des, nanti jam 19.30 WIB. Pakai headset kalau ada. Dari HP juga bisa.
 
 Bersama Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh.
 
@@ -536,7 +538,7 @@ https://discord.gg/rSepJu7Wb
 Nanti jam 19.30 WIB
 Kubernetes untuk Pemula
 
-Bersama Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh. Buka Discord sepuluh menit lebih awal untuk cek suara.
+Bersama Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina (contoh) @rina_contoh. Headset membantu, dan dari ponsel juga bisa.
 
 Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
@@ -627,7 +629,9 @@ Ini yang tercatat dari "Kubernetes untuk Pemula" (Sab, 12 Des).
 Dokumentasi Kubernetes: https://kubernetes.io/docs/home/
 Tutorial minikube: https://minikube.sigs.k8s.io/docs/start/
 
-14 orang ikut ngobrol di voice channel. Makasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, sampai ketemu lagi. Poin 3 ("Service memberi alamat yang stabil"), cocok nggak sama yang kamu temui di kerjaan?
+14 orang ikut ngobrol di voice channel. Makasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, sampai ketemu lagi.
+
+Waktu Pod-nya dimatikan di minikube, apa yang kamu lihat di kubectl get pods?
 
 Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Mau dengerin aja boleh, mau nyalain mic juga boleh.
 
@@ -649,7 +653,7 @@ Service memberi alamat yang stabil. IP Pod berubah tiap kali dibuat ulang, jadi 
 **X 3/3**
 
 ```text
-Poin 3 ("Service memberi alamat yang stabil"), cocok nggak sama yang kamu temui di kerjaan?
+Waktu Pod-nya dimatikan di minikube, apa yang kamu lihat di kubectl get pods?
 Dokumentasi Kubernetes https://kubernetes.io/docs/home/
 Sesi berikutnya diumumkan di Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
@@ -668,7 +672,7 @@ Terima kasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh. 14 orang
 3. Service memberi alamat yang stabil. IP Pod berubah tiap kali dibuat ulang, jadi akses aplikasi lewat Service. Jangan pakai IP Pod langsung.
 4. Mulai debug dari kubectl describe dan logs. Event di describe dan output logs biasanya sudah cukup untuk tahu kenapa Pod gagal jalan.
 
-Kamu setuju sama "Service memberi alamat yang stabil"? Kalau di tempatmu beda, ceritain.
+Waktu Pod-nya dimatikan di minikube, apa yang kamu lihat di kubectl get pods?
 
 Dokumentasi Kubernetes: https://kubernetes.io/docs/home/
 Tutorial minikube: https://minikube.sigs.k8s.io/docs/start/
@@ -807,7 +811,7 @@ Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, b
 **Instagram**
 
 ```text
-Bima (contoh) @bima_contoh, DevOps Engineer. Menunjukkan cara membaca kubectl describe waktu sebuah Pod gagal jalan.
+Bima (contoh) @bima_contoh, DevOps Engineer. Menunjukkan cara membaca kubectl describe waktu aplikasimu mogok di Kubernetes, lewat satu Pod (wadah tempat aplikasi jalan) yang gagal start.
 
 Sari (contoh) @sari_contoh, Backend Developer. Cerita dari sisi developer, bagian mana yang bikin bingung waktu pertama deploy ke cluster. Kamu bingung di bagian yang sama?
 
@@ -823,7 +827,7 @@ Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga d
 **X 1/2**
 
 ```text
-Bima (contoh) @bima_contoh, DevOps Engineer. Menunjukkan cara membaca kubectl describe waktu sebuah Pod gagal jalan.
+Bima (contoh) @bima_contoh, DevOps Engineer. Menunjukkan cara membaca kubectl describe waktu aplikasimu mogok di Kubernetes, lewat satu Pod (wadah tempat aplikasi jalan) yang gagal start.
 ```
 
 **X 2/2**
@@ -840,7 +844,7 @@ https://discord.gg/rSepJu7Wb
 ```text
 Kubernetes untuk Pemula (SIG CN × FORA)
 
-Bima (contoh) @bima_contoh, DevOps Engineer. Menunjukkan cara membaca kubectl describe waktu sebuah Pod gagal jalan.
+Bima (contoh) @bima_contoh, DevOps Engineer. Menunjukkan cara membaca kubectl describe waktu aplikasimu mogok di Kubernetes, lewat satu Pod (wadah tempat aplikasi jalan) yang gagal start.
 
 Sari (contoh) @sari_contoh, Backend Developer. Cerita dari sisi developer, bagian mana yang bikin bingung waktu pertama deploy ke cluster. Kamu bingung di bagian yang sama?
 
@@ -943,7 +947,7 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 ```text
 GitOps dengan Argo CD
 
-Sab, 19 Des, nanti jam 19.30 WIB. Buka Discord sepuluh menit lebih awal buat cek suara.
+Sab, 19 Des, nanti jam 19.30 WIB. Kalau ada pertanyaan soal GitOps, tulis dulu biar nggak lupa.
 
 Bersama Dani (contoh), dipandu Rina (contoh).
 
@@ -967,7 +971,7 @@ https://discord.gg/rSepJu7Wb
 Nanti jam 19.30 WIB
 GitOps dengan Argo CD
 
-Bersama Dani (contoh), dipandu Rina (contoh). Buka Discord sepuluh menit lebih awal untuk cek suara.
+Bersama Dani (contoh), dipandu Rina (contoh). Kalau ada pertanyaan soal GitOps, catat dulu supaya tidak lupa.
 
 Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
 
@@ -1054,10 +1058,10 @@ Rekap "GitOps dengan Argo CD", Sab, 19 Des.
 
 1. Git jadi source of truth. Kondisi yang diinginkan ditulis di repo, dan controller yang menyamakan cluster dengan repo. Tidak ada kubectl apply manual.
 2. Argo CD membandingkan live state dengan Git. Kalau beda, aplikasi berstatus OutOfSync, dan sync menerapkan perubahannya.
-3. Pisahkan repo manifest dari repo kode aplikasi. Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
+3. Pisahkan repo manifest dari repo kode aplikasi. Manifest, file YAML yang menjelaskan aplikasi di cluster, tinggal di repo sendiri. Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
 4. Rollback config cukup dengan git revert. Revert commit yang mengubah manifest, lalu sync, dan riwayatnya tetap tercatat. Batasnya, migrasi database tidak ikut mundur, jadi itu dipikirkan terpisah.
 
-Poin 3 ("Pisahkan repo manifest dari repo kode aplikasi"), cocok nggak sama yang kamu temui di kerjaan?
+Dari alur tadi, bagian mana yang masih belum kebayang buatmu?
 
 Dokumentasi Argo CD: https://argo-cd.readthedocs.io/
 
@@ -1075,13 +1079,13 @@ Rekap "GitOps dengan Argo CD". 11 orang ngobrol di voice channel. Makasih Dani (
 **X 2/3**
 
 ```text
-Pisahkan repo manifest dari repo kode aplikasi. Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
+Pisahkan repo manifest dari repo kode aplikasi. Manifest, file YAML yang menjelaskan aplikasi di cluster, tinggal di repo sendiri. Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
 ```
 
 **X 3/3**
 
 ```text
-Kamu setuju sama "Pisahkan repo manifest dari repo kode aplikasi"? Kalau di tempatmu beda, ceritain.
+Dari alur tadi, bagian mana yang masih belum kebayang buatmu?
 Dokumentasi Argo CD https://argo-cd.readthedocs.io/
 Sesi berikutnya diumumkan di Discord FORA. Dengerin aja nggak apa-apa, ngomong juga silakan.
 https://discord.gg/rSepJu7Wb
@@ -1097,10 +1101,10 @@ Terima kasih Dani (contoh). 11 orang ikut ngobrol di voice channel.
 
 1. Git jadi source of truth. Kondisi yang diinginkan ditulis di repo, dan controller yang menyamakan cluster dengan repo. Tidak ada kubectl apply manual.
 2. Argo CD membandingkan live state dengan Git. Kalau beda, aplikasi berstatus OutOfSync, dan sync menerapkan perubahannya.
-3. Pisahkan repo manifest dari repo kode aplikasi. Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
+3. Pisahkan repo manifest dari repo kode aplikasi. Manifest, file YAML yang menjelaskan aplikasi di cluster, tinggal di repo sendiri. Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
 4. Rollback config cukup dengan git revert. Revert commit yang mengubah manifest, lalu sync, dan riwayatnya tetap tercatat. Batasnya, migrasi database tidak ikut mundur, jadi itu dipikirkan terpisah.
 
-Poin 3 ("Pisahkan repo manifest dari repo kode aplikasi"), cocok nggak sama yang kamu temui di kerjaan?
+Dari alur tadi, bagian mana yang masih belum kebayang buatmu?
 
 Dokumentasi Argo CD: https://argo-cd.readthedocs.io/
 
@@ -1133,7 +1137,7 @@ Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel sig-cn-voice
 ```text
 GitOps dengan Argo CD
 
-Cloud Native 101 bareng SIG CN × FORA, kali ini soal GitOps. Deploy lewat merge pull request, rollback config lewat git revert.
+Cloud Native 101 bareng SIG CN × FORA, kali ini soal GitOps. Deploy lewat merge pull request, Git dasar sudah cukup.
 
 Sabtu, 19 Desember 2026, 19.30–21.00 WIB. Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.gg/rSepJu7Wb. Dengerin aja boleh, mic juga boleh.
 
@@ -1154,7 +1158,7 @@ https://discord.gg/rSepJu7Wb
 **LinkedIn**
 
 ```text
-Deploy lewat merge pull request, rollback config lewat git revert.
+Deploy lewat merge pull request, Git dasar sudah cukup.
 
 Cloud Native 101 bareng SIG CN × FORA, kali ini soal GitOps. Sesinya "GitOps dengan Argo CD", Sab, 19 Des, 19.30–21.00 WIB.
 
@@ -1238,7 +1242,7 @@ Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, b
 ```text
 Dani (contoh), SRE. Cerita kenapa timnya pindah ke GitOps, lalu tanya balik, "siapa di sini yang masih kubectl apply ke prod?"
 
-Rina (contoh), Platform Engineer, host. Menyiapkan repo kosong dan Argo CD, jadi alurnya bisa diikuti dari nol.
+Rina (contoh), Platform Engineer, host. Menyiapkan repo kosong berisi manifest (file YAML yang menjelaskan aplikasi di cluster) dan Argo CD, jadi alurnya bisa diikuti dari nol dengan Git dasar.
 
 Sesinya "GitOps dengan Argo CD", Sabtu, 19 Desember 2026, 19.30–21.00 WIB.
 
@@ -1247,16 +1251,10 @@ Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga d
 #FORA #SIGCN #GitOps #ArgoCD
 ```
 
-**X 1/2**
+**X**
 
 ```text
 Dani (contoh), SRE. Cerita kenapa timnya pindah ke GitOps, lalu tanya balik, "siapa di sini yang masih kubectl apply ke prod?"
-Rina (contoh), Platform Engineer, host. Menyiapkan repo kosong dan Argo CD, jadi alurnya bisa diikuti dari nol.
-```
-
-**X 2/2**
-
-```text
 "GitOps dengan Argo CD", mulai 19.30 WIB.
 Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
@@ -1270,7 +1268,7 @@ GitOps dengan Argo CD (SIG CN × FORA)
 
 Dani (contoh), SRE. Cerita kenapa timnya pindah ke GitOps, lalu tanya balik, "siapa di sini yang masih kubectl apply ke prod?"
 
-Rina (contoh), Platform Engineer, host. Menyiapkan repo kosong dan Argo CD, jadi alurnya bisa diikuti dari nol.
+Rina (contoh), Platform Engineer, host. Menyiapkan repo kosong berisi manifest (file YAML yang menjelaskan aplikasi di cluster) dan Argo CD, jadi alurnya bisa diikuti dari nol dengan Git dasar.
 
 Sabtu, 19 Desember 2026, 19.30–21.00 WIB.
 
@@ -1380,7 +1378,7 @@ Kita ngobrol di voice channel sig-cn-voice Discord FORA. Dengarkan saja boleh, i
 ```text
 Nanti jam 20.00 WIB, Observability: Logs, Metrics, Traces.
 
-Bersama Eko (contoh), dipandu Rina (contoh). Buka Discord sepuluh menit lebih awal buat cek suara.
+Bersama Eko (contoh), dipandu Rina (contoh). Pakai headset kalau ada. Dari HP juga bisa.
 
 Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-voice. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
@@ -1403,7 +1401,7 @@ https://discord.gg/rSepJu7Wb
 Nanti jam 20.00 WIB
 Observability: Logs, Metrics, Traces
 
-Bersama Eko (contoh), dipandu Rina (contoh). Buka Discord sepuluh menit lebih awal untuk cek suara.
+Bersama Eko (contoh), dipandu Rina (contoh). Headset membantu, dan dari ponsel juga bisa.
 
 Kita ngobrol di voice channel sig-cn-voice Discord FORA. Dengarkan saja boleh, ikut bicara juga boleh. Undangan: https://discord.gg/rSepJu7Wb
 
@@ -1488,13 +1486,13 @@ Rekap "Observability: Logs, Metrics, Traces", Kam, 14 Jan.
 
 16 orang ikut ngobrol di voice channel. Makasih Eko (contoh).
 
-1. Log yang terstruktur bisa dicari. Dengan format seperti JSON, satu field duration_ms cukup untuk menemukan request yang menggantung di aplikasi lambat tadi.
+1. Log yang terstruktur bisa dicari. Dengan format seperti JSON, field seperti duration_ms bisa disaring, jadi request yang lambat gampang ditemukan di aplikasi lambat tadi.
 2. Metrics itu angka murah yang tahan lama. Jumlah request dan lama respons ringan disimpan berbulan-bulan, jadi cocok untuk dashboard dan alert.
 3. Trace menunjuk service mana yang menghabiskan waktu. Satu request diikuti dari service ke service, lalu bagian yang lambat kelihatan.
-4. OpenTelemetry, pasang instrumentasi sekali. Datanya bisa dikirim ke backend apa pun yang bisa menerima OTLP.
+4. OpenTelemetry, pasang kode pencatat sekali. Datanya dikirim lewat OTLP, format standar OpenTelemetry untuk mengirim data, jadi backend-nya bisa diganti tanpa mengubah kode aplikasi.
 5. Alert dari yang dirasakan pengguna. Error rate dan latency yang jadi patokan. CPU tinggi sebentar belum tentu masalah.
 
-Soal "Log yang terstruktur bisa dicari", gimana di tempat kamu?
+Kalau aplikasi proyekmu lambat, kamu mau mulai cari dari log atau dari metrics?
 
 Dokumentasi OpenTelemetry: https://opentelemetry.io/docs/
 Dokumentasi Prometheus: https://prometheus.io/docs/introduction/overview/
@@ -1513,13 +1511,13 @@ Rekap "Observability: Logs, Metrics, Traces". 16 orang ngobrol di voice channel.
 **X 2/3**
 
 ```text
-OpenTelemetry, pasang instrumentasi sekali. Datanya bisa dikirim ke backend apa pun yang bisa menerima OTLP.
+OpenTelemetry, pasang kode pencatat sekali. Datanya dikirim lewat OTLP, format standar OpenTelemetry untuk mengirim data, jadi backend-nya bisa diganti tanpa mengubah kode aplikasi.
 ```
 
 **X 3/3**
 
 ```text
-Kamu setuju sama "OpenTelemetry, pasang instrumentasi sekali"? Kalau di tempatmu beda, ceritain.
+Kalau aplikasi proyekmu lambat, kamu mau mulai cari dari log atau dari metrics?
 Dokumentasi OpenTelemetry https://opentelemetry.io/docs/
 Sesi berikutnya diumumkan di Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
@@ -1533,16 +1531,16 @@ https://discord.gg/rSepJu7Wb
 
 Catatan dari "Observability: Logs, Metrics, Traces":
 
-1. Log yang terstruktur bisa dicari. Dengan format seperti JSON, satu field duration_ms cukup untuk menemukan request yang menggantung di aplikasi lambat tadi.
+1. Log yang terstruktur bisa dicari. Dengan format seperti JSON, field seperti duration_ms bisa disaring, jadi request yang lambat gampang ditemukan di aplikasi lambat tadi.
 2. Metrics itu angka murah yang tahan lama. Jumlah request dan lama respons ringan disimpan berbulan-bulan, jadi cocok untuk dashboard dan alert.
 3. Trace menunjuk service mana yang menghabiskan waktu. Satu request diikuti dari service ke service, lalu bagian yang lambat kelihatan.
-4. OpenTelemetry, pasang instrumentasi sekali. Datanya bisa dikirim ke backend apa pun yang bisa menerima OTLP.
+4. OpenTelemetry, pasang kode pencatat sekali. Datanya dikirim lewat OTLP, format standar OpenTelemetry untuk mengirim data, jadi backend-nya bisa diganti tanpa mengubah kode aplikasi.
 5. Alert dari yang dirasakan pengguna. Error rate dan latency yang jadi patokan. CPU tinggi sebentar belum tentu masalah.
 
 Dokumentasi OpenTelemetry: https://opentelemetry.io/docs/
 Dokumentasi Prometheus: https://prometheus.io/docs/introduction/overview/
 
-Soal "Metrics itu angka murah yang tahan lama", gimana di tempat kamu?
+Kalau aplikasi proyekmu lambat, kamu mau mulai cari dari log atau dari metrics?
 
 Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel sig-cn-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh. https://discord.gg/rSepJu7Wb
 

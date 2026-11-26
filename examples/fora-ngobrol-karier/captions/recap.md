@@ -5,10 +5,12 @@
 Ini yang tercatat dari "Ngobrol Karier di Tech" (Sab, 23 Jan).
 
 - Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat. Salah satu peserta cerita, pewawancaranya menghabiskan lima belas menit di satu repo buatannya dan nggak membuka sertifikat sama sekali.
-- Pindah ke SRE bisa mulai dari on-call. Dika minta ikut rotasi on-call sebagai shadow dulu, dan dari situ dapat tugas pertama menulis runbook.
+- Pindah ke SRE bisa mulai dari ikut jaga on-call. Dika minta mendampingi rekan yang sedang on-call, yang menangani sistem kalau bermasalah di luar jam kerja. Dari situ tugas pertamanya menulis runbook, catatan langkah menangani masalah yang sering muncul.
 - Belajar dari satu insiden nyata. Postmortem di kantor lama jadi bahan belajar Terraform yang paling nempel, karena tiap perintah ada alasannya.
 
-9 orang ikut ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh, sampai ketemu lagi. Kamu setuju sama "Belajar dari satu insiden nyata"? Kalau di tempatmu beda, ceritain.
+9 orang ikut ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh, sampai ketemu lagi.
+
+Kalau kamu bikin satu repo kecil minggu ini untuk ditunjukkan ke pewawancara, isinya apa?
 
 Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu7Wb). Dengerin aja boleh, mic juga boleh.
 
@@ -24,7 +26,7 @@ Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat. Salah 
 
 ## X 3/3
 
-Kamu setuju sama "Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat"? Kalau di tempatmu beda, ceritain.
+Kalau kamu bikin satu repo kecil minggu ini untuk ditunjukkan ke pewawancara, isinya apa?
 Sesi berikutnya diumumkan di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Karier
@@ -36,10 +38,10 @@ Rekap "Ngobrol Karier di Tech" (Sab, 23 Jan).
 Terima kasih Dika (contoh) @dika_contoh. 9 orang ikut ngobrol di voice channel.
 
 1. Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat. Salah satu peserta cerita, pewawancaranya menghabiskan lima belas menit di satu repo buatannya dan nggak membuka sertifikat sama sekali.
-2. Pindah ke SRE bisa mulai dari on-call. Dika minta ikut rotasi on-call sebagai shadow dulu, dan dari situ dapat tugas pertama menulis runbook.
+2. Pindah ke SRE bisa mulai dari ikut jaga on-call. Dika minta mendampingi rekan yang sedang on-call, yang menangani sistem kalau bermasalah di luar jam kerja. Dari situ tugas pertamanya menulis runbook, catatan langkah menangani masalah yang sering muncul.
 3. Belajar dari satu insiden nyata. Postmortem di kantor lama jadi bahan belajar Terraform yang paling nempel, karena tiap perintah ada alasannya.
 
-Kamu setuju sama "Pindah ke SRE bisa mulai dari on-call"? Kalau di tempatmu beda, ceritain.
+Kalau kamu bikin satu repo kecil minggu ini untuk ditunjukkan ke pewawancara, isinya apa?
 
 Sesi berikutnya akan kita umumkan di Discord FORA, di voice channel fora-voice. Mau dengarkan saja atau ikut bicara, dua-duanya boleh. https://discord.gg/rSepJu7Wb
 

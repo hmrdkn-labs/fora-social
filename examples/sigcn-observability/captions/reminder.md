@@ -4,7 +4,7 @@
 
 Nanti jam 20.00 WIB, Observability: Logs, Metrics, Traces.
 
-Bersama Eko (contoh), dipandu Rina (contoh). Buka Discord sepuluh menit lebih awal buat cek suara.
+Bersama Eko (contoh), dipandu Rina (contoh). Pakai headset kalau ada. Dari HP juga bisa.
 
 Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-voice. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
@@ -23,7 +23,7 @@ https://discord.gg/rSepJu7Wb
 Nanti jam 20.00 WIB
 Observability: Logs, Metrics, Traces
 
-Bersama Eko (contoh), dipandu Rina (contoh). Buka Discord sepuluh menit lebih awal untuk cek suara.
+Bersama Eko (contoh), dipandu Rina (contoh). Headset membantu, dan dari ponsel juga bisa.
 
 Kita ngobrol di voice channel sig-cn-voice Discord FORA. Dengarkan saja boleh, ikut bicara juga boleh. Undangan: https://discord.gg/rSepJu7Wb
 
