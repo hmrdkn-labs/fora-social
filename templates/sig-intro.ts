@@ -7,6 +7,7 @@ import { escapeHtml as e } from "./html.ts";
 import {
   type Block,
   byline,
+  channel,
   deck,
   FOOT,
   fact,
@@ -41,7 +42,7 @@ const WHO = "Yang penasaran. Pemula juga boleh nanya";
 const HOW = "Ngobrol lewat suara di voice channel Discord";
 
 /** The nearest session, on the accent colour. `width` is the strip's inner width. */
-function nextSession(ctx: TemplateContext, width: number, titleSize: number, withTitle = true): Block {
+function nextSession(ctx: TemplateContext, width: number, titleSize: number, withTitle = true, withChannel = false): Block {
   const { session } = ctx;
   const when = `${formatDateShort(session)} · ${formatTime(session)}`;
   // In the side panel the date wraps under the label.
@@ -51,8 +52,9 @@ function nextSession(ctx: TemplateContext, width: number, titleSize: number, wit
     html: `<div class="next" data-fit>
   <p class="next__meta"><span class="label">Sesi terdekat</span><span class="next__when">${e(when)}</span></p>
   ${title}
+  ${withChannel ? `<p class="next__where">voice channel ${channel(session.voiceChannel)}</p>` : ""}
 </div>`,
-    height: 48 + meta + (withTitle ? 6 + textHeight(session.title, titleSize, width, 1.15) : 0),
+    height: 48 + meta + (withTitle ? 6 + textHeight(session.title, titleSize, width, 1.15) : 0) + (withChannel ? 6 + 26 * 1.3 : 0),
   };
 }
 
@@ -115,6 +117,7 @@ function slides(ctx: TemplateContext): string[] {
   const where = whenWhere(ctx);
   const by = byline(ctx, TALL_WIDTH);
   const nextRoom = room - 50 - by.height - 20 - where.height - 2 * GAP - 8;
+  const upNext = nextSession(ctx, TALL_WIDTH - 64, 32, true, true);
   const nextTitle = heading(session.title, TALL_WIDTH, NEXT_SIZES, nextRoom * 0.45);
   return deck(
     ctx,
@@ -124,10 +127,11 @@ function slides(ctx: TemplateContext): string[] {
       `<main class="main" data-fit>
   <div class="lede">
     <p class="kicker">Kenalan dengan ${e(sig.short)}</p>
-    ${heading(sig.name, TALL_WIDTH, NAME_SIZES, room - 50 - 2 * 20 - 160 - GAP - WAVE_MIN).html}
+    ${heading(sig.name, TALL_WIDTH, NAME_SIZES, room - 50 - 2 * 20 - 160 - 2 * GAP - WAVE_MIN - upNext.height).html}
     <p class="subtitle">${e(sig.tagline)}</p>
   </div>
   ${wave(session.id, 52)}
+  ${upNext.html}
 </main>`,
       `<main class="main" data-fit>
   <div class="lede">

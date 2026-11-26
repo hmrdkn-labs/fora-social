@@ -1,12 +1,11 @@
 // Cover: the theme in the biggest type the canvas allows, on ink. When and where is one quiet
 // line here and on the first slide; decks add a slide about the series and the join slide.
-import { discordUrl, displayUrl, formatDateShort, formatTimeRange } from "../src/format.ts";
+import { discordUrl, displayUrl } from "../src/format.ts";
 import type { Template, TemplateContext } from "../src/types.ts";
 import { fitBlock, SERIF, textHeight } from "./fit.ts";
 import { escapeHtml as e } from "./html.ts";
 import {
   aboutMain,
-  channel,
   deck,
   FOOT,
   GAP,
@@ -17,8 +16,8 @@ import {
   SOLO_WIDTH,
   TALL_WIDTH,
   tallRoom,
+  schedule,
   tidy,
-  whenWhere,
   WAVE_MIN,
   WIDE_GAP,
   WIDE_WAVE_MIN,
@@ -59,10 +58,11 @@ const INTEGRAL = '<span class="integral" aria-hidden="true">∫</span>';
 function single(ctx: TemplateContext): string {
   const isWide = layoutOf(ctx.format) === "wide";
   const url = displayUrl(discordUrl(ctx.session, ctx.community));
+  const sched = schedule(ctx, isWide);
   // The wide cover has no side panel: header, block, wave and the join line share one column.
   const room = isWide
-    ? wideRoom(ctx, "ink") - 2 * WIDE_GAP - WIDE_WAVE_MIN - 26
-    : tallRoom(ctx, "ink", 76) - GAP - WAVE_MIN;
+    ? wideRoom(ctx, "ink") - 2 * WIDE_GAP - WIDE_WAVE_MIN - sched.height
+    : tallRoom(ctx, "ink", sched.height + 34) - GAP - WAVE_MIN;
   return post(
     ctx,
     "ink",
@@ -71,13 +71,13 @@ function single(ctx: TemplateContext): string {
   ${block(ctx, isWide ? SOLO_WIDTH : TALL_WIDTH, isWide ? WIDE_SIZES : TALL_SIZES, room)}
   ${wave(ctx.session.id, isWide ? 72 : 52)}
 </main>
-<p class="whisper" data-fit><span>${e(`${formatDateShort(ctx.session)} · ${formatTimeRange(ctx.session)} · voice channel`)} ${channel(ctx.session.voiceChannel)}</span><b>${e(url)}</b></p>`,
+<div class="whisper" data-fit>${sched.html}<b>${e(url)}</b></div>`,
     "post--cover",
   );
 }
 
 function slides(ctx: TemplateContext): string[] {
-  const where = whenWhere(ctx);
+  const where = schedule(ctx, false);
   const room = tallRoom(ctx, "ink", FOOT) - GAP - WAVE_MIN - where.height - GAP;
   return deck(
     ctx,

@@ -454,6 +454,22 @@ export function whenWhere(ctx: TemplateContext): Block {
   };
 }
 
+/**
+ * When and where as a block a scroller reads after the theme: the day and time large, the voice
+ * channel under it. `wide` is the landscape size. Covers and the first slide use it.
+ */
+export function schedule(ctx: TemplateContext, wide: boolean): Block {
+  const { session } = ctx;
+  const when = `${formatDateShort(session)} · ${formatTimeRange(session)}`;
+  const where = `voice channel ${session.voiceChannel}`;
+  const [big, small] = wide ? [34, 24] : [44, 30];
+  const width = wide ? SOLO_WIDTH : TALL_WIDTH;
+  return {
+    html: `<div class="sched"><p class="sched__when">${e(when)}</p><p class="sched__where">voice channel ${channel(session.voiceChannel)}</p></div>`,
+    height: textHeight(when, big, width, 1.2) + 6 + textHeight(where, small, width, 1.3),
+  };
+}
+
 /** The "about" slide of a deck: the description, the topics (unless `withTopics` is false), and when and where. */
 export function aboutMain(ctx: TemplateContext, theme: Theme, label: string, withTopics = true): string {
   const topics = withTopics ? ctx.session.topics : [];

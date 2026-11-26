@@ -3,7 +3,7 @@
 // "live" or "masuk sekarang"; templates/live.ts is the post for when the talk is running.
 import { formatDate, formatTime, formatTimeRange } from "../src/format.ts";
 import type { Template, TemplateContext } from "../src/types.ts";
-import { fitLine, textHeight } from "./fit.ts";
+import { fitBlock, fitLine, REGULAR, textHeight } from "./fit.ts";
 import { escapeHtml as e } from "./html.ts";
 import {
   type Block,
@@ -17,7 +17,6 @@ import {
   layoutOf,
   lede,
   MAIN_WIDTH,
-  numbered,
   post,
   TALL_WIDTH,
   tallRoom,
@@ -93,22 +92,14 @@ ${stateAndTitle(ctx, MAIN_WIDTH, WIDE_SIZES, room, [104, 88, 72, 60], (max) => l
   );
 }
 
-/** What to have ready: the same three lines for every session, the last one about its theme. */
-function ready(ctx: TemplateContext): string[] {
-  const { session } = ctx;
-  return [
-    `Buka Discord, cari voice channel ${session.voiceChannel}.`,
-    "Headset kalau ada. Dari HP juga bisa.",
-    `Satu pertanyaan soal ${session.theme}, kalau ada.`,
-  ];
-}
+/** The one thing to do before the talk; the channel and time are on the slide already. */
+const READY = "Buka Discord sepuluh menit lebih awal buat cek suara.";
 
 function slides(ctx: TemplateContext): string[] {
   const { session } = ctx;
   const where = whenWhere(ctx);
   const room = tallRoom(ctx, "accent", FOOT) - where.height - 2 * GAP;
   const title = lede(ctx, TALL_WIDTH, SLIDE_SIZES, room * 0.4, false);
-  const list = numbered(ready(ctx), TALL_WIDTH, room * 0.6 - 60, [44, 40, 36, 32, 28]);
   return deck(
     ctx,
     "accent",
@@ -118,8 +109,8 @@ function slides(ctx: TemplateContext): string[] {
       `<main class="main" data-fit>
   ${title.html}
   <div class="lede">
-    <p class="label">Siapkan sebelum ${e(formatTime(session))}</p>
-    ${list}
+    <p class="label">Sebelum ${e(formatTime(session))}</p>
+    <p class="lead" style="font-size:${fitBlock(READY, TALL_WIDTH, room * 0.6 - 60, [56, 52, 48, 44, 40, 36], 1.4, REGULAR) ?? 36}px">${e(READY)}</p>
   </div>
   ${where.html}
 </main>`,
