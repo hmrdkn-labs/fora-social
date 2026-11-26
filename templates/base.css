@@ -353,6 +353,30 @@ body {
   gap: 20px;
 }
 
+/* A line of text with the session's image at its right end (templates/parts.ts withMark). */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.top > :first-child {
+  min-width: 0;
+}
+
+.mark {
+  flex: none;
+  display: block;
+  object-fit: contain;
+  object-position: right center;
+}
+
+/* The art is dark line work; on ink it is inverted to white. */
+.t-ink .mark {
+  filter: invert(1);
+}
+
 .kicker {
   display: flex;
   align-items: center;

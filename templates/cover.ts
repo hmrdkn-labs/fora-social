@@ -25,6 +25,7 @@ import {
   type Block,
   wave,
   wideRoom,
+  withMark,
 } from "./parts.ts";
 
 const TALL_SIZES = [216, 192, 172, 156, 140, 124, 108, 92, 80, 68];
@@ -46,14 +47,18 @@ function block(ctx: TemplateContext, width: number, sizes: readonly number[], ro
   const series = session.series ?? (sig.lockup === ctx.community.logo ? "Talk terbuka" : sig.name);
   // The everyday problem is what a scroller needs before the title; the title is in the caption and on the announcement.
   const line = session.problem ?? (session.title === session.theme ? (session.subtitle ?? "") : session.title);
-  const themeRoom = room - textHeight(series.toUpperCase(), (isWide ? 22 : 28) * 1.16, width, 1.2) - gap;
+  const top = withMark(ctx, width, true, (w) => ({
+    html: `<p class="cover__series">${e(series)}</p>`,
+    height: textHeight(series.toUpperCase(), (isWide ? 22 : 28) * 1.16, w, 1.2),
+  }));
+  const themeRoom = room - top.height - gap;
   const lineHeight = gap + textHeight(line, isWide ? 28 : 44, width, 1.15, SERIF);
   // The problem is worth a smaller theme on the wide cover, which has little height to share.
   const large = sizes.filter((size) => size >= (sizes[0] ?? 0) / (isWide && session.problem ? 3 : 2));
   const withLine = line === "" ? undefined : fitBlock(session.theme, width, themeRoom - lineHeight, large, 0.98, TRACKING);
   const size = withLine ?? fitBlock(session.theme, width, themeRoom, sizes, 0.98, TRACKING) ?? sizes[sizes.length - 1];
   return `<div class="cover">
-  <p class="cover__series">${e(series)}</p>
+  ${top.html}
   <h1 class="cover__theme" style="font-size:${size}px">${e(session.theme)}</h1>
   ${withLine === undefined ? "" : `<p class="subtitle">${e(tidy(line))}</p>`}
 </div>`;

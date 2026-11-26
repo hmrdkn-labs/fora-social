@@ -259,7 +259,7 @@ function coverMain(ctx: TemplateContext): string {
   const names = line.charAt(0).toUpperCase() + line.slice(1);
   const room = tallRoom(ctx, "ink", FOOT) - face - 20 - textHeight(names, 28, TALL_WIDTH, 1.35) - factHeight(40) - 2 * GAP;
   return `<main class="main" data-fit>
-  ${lede(ctx, TALL_WIDTH, COVER_SIZES, Math.min(room, 420), true).html}
+  ${lede(ctx, TALL_WIDTH, COVER_SIZES, Math.min(room, 420), true, false).html}
   <div class="lede">${faces(ctx, shown, face)}<p class="byline">${e(names)}</p></div>
   <div class="facts">${fact("Tanggal", e(formatDate(session)))}${fact("Waktu", e(formatTimeRange(session)))}</div>
 </main>`;

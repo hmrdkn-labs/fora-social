@@ -14,7 +14,10 @@ import { format, lint, type Surface } from "./style.ts";
 
 const community = loadCommunity("community.yaml");
 const sigs = new Map(readdirSync("sigs").map((f) => [f.replace(/\.yaml$/, ""), loadSig(join("sigs", f))]));
-const samples = readdirSync("examples/sessions").map((f) => loadSession(join("examples/sessions", f), "sigs"));
+// The example sessions and the real ones in sessions/ are all held to the same rules.
+const samples = ["examples/sessions", "sessions"].flatMap((dir) =>
+  readdirSync(dir).filter((f) => f.endsWith(".yaml")).map((f) => loadSession(join(dir, f), "sigs")),
+);
 const sigOf = (s: Session): Sig => sigs.get(s.sig)!;
 
 const clean = (text: string, surface: Surface) => {
@@ -170,7 +173,7 @@ describe("data files", () => {
     test(`sigs/${id}.yaml`, () => clean([sig.tagline, sig.description].join("\n"), "data"));
   }
   for (const s of samples) {
-    test(`examples/sessions/${s.id}.yaml`, () => clean(copyOf(s), "data"));
+    test(`session file ${s.id}.yaml`, () => clean(copyOf(s), "data"));
   }
   test("community.yaml and sigs only name real hashtags without spaces", () => {
     const raw = parse(readFileSync("community.yaml", "utf8")) as { hashtags: string[] };

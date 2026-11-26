@@ -100,7 +100,7 @@ function slides(ctx: TemplateContext): string[] {
   const READY = PRACTICAL[practicalIndex(session.id)];
   const where = whenWhere(ctx);
   const room = tallRoom(ctx, "accent", FOOT) - where.height - 2 * GAP;
-  const title = lede(ctx, TALL_WIDTH, SLIDE_SIZES, room * 0.4, false);
+  const title = lede(ctx, TALL_WIDTH, SLIDE_SIZES, room * 0.4, false, false);
   return deck(
     ctx,
     "accent",
