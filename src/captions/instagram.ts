@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { aboutPeople, cap, type Ctx, firstSentence, hashLine, openDoor, recapPrompt, sentence, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPeople, cap, type Ctx, firstSentence, hashLine, openDoor, sentence, shape, themeTag, uniqueTags } from "./context.ts";
 
 function tags(c: Ctx): string {
   return hashLine(
@@ -39,8 +39,7 @@ function practical(c: Ctx): string {
     "Buka Discord sepuluh menit lebih awal buat cek suara.",
     "Pakai headset kalau ada. Dari HP juga bisa.",
     `Kalau ada pertanyaan soal ${c.s.theme}, tulis dulu biar nggak lupa.`,
-    "Mic boleh mati dulu sampai kamu siap ngomong.",
-  ][shape(c, "reminder|practical", 4)]!;
+  ][shape(c, "reminder|practical", 3)]!;
 }
 
 const bullets = (items: string[]): string => items.map((t) => `- ${t}`).join("\n");
@@ -61,7 +60,7 @@ function recap(c: Ctx, variant: number): string[] {
   const r = c.s.recap!;
   const crowd = r.attendees ? `${r.attendees} orang ikut ngobrol di voice channel.` : "Makasih yang sudah mampir ke voice channel.";
   const next = `Sesi berikutnya kita umumkan di Discord FORA (link di bio atau ${c.shortUrl}). ${openDoor(c, "instagram|recap")}`;
-  const prompt = recapPrompt(c, "instagram|recap");
+  const prompt = r.question ?? "";
   if (variant === 0) {
     return [
       `Rekap "${c.s.title}", ${c.dateShort}.`,
@@ -76,7 +75,8 @@ function recap(c: Ctx, variant: number): string[] {
     `Ini yang tercatat dari "${c.s.title}" (${c.dateShort}).`,
     recapPoints(c, "dash"),
     recapLinks(c),
-    `${crowd} Makasih ${c.thanks}, sampai ketemu lagi. ${prompt}`,
+    `${crowd} Makasih ${c.thanks}, sampai ketemu lagi.`,
+    prompt,
     next,
   ];
 }

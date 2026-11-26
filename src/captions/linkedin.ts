@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { aboutPeople, cap, type Ctx, firstSentence, hashLine, openDoor, recapPrompt, sentence, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPeople, cap, type Ctx, firstSentence, hashLine, openDoor, sentence, shape, themeTag, uniqueTags } from "./context.ts";
 
 function tags(c: Ctx): string {
   return hashLine(uniqueTags(themeTag(c.s), c.sig.hashtags.slice(1), c.sig.hashtags.slice(0, 1), c.s.hashtags, c.community.hashtags).slice(0, 3));
@@ -27,8 +27,7 @@ function practical(c: Ctx): string {
     "Buka Discord sepuluh menit lebih awal untuk cek suara.",
     "Headset membantu, dan dari ponsel juga bisa.",
     `Kalau ada pertanyaan soal ${c.s.theme}, catat dulu supaya tidak lupa.`,
-    "Mikrofon boleh dimatikan sampai kamu siap bicara.",
-  ][shape(c, "reminder|practical", 4)]!;
+  ][shape(c, "reminder|practical", 3)]!;
 }
 
 const bullets = (items: string[]): string => items.map((t) => `• ${t}`).join("\n");
@@ -39,7 +38,7 @@ function recap(c: Ctx, variant: number): string[] {
   const links = (r.links ?? []).map((l) => `${l.label}: ${l.url}`).join("\n");
   const crowd = r.attendees ? `${r.attendees} orang ikut ngobrol di voice channel.` : "Terima kasih untuk semua yang sudah ikut ngobrol.";
   const next = `Sesi berikutnya akan kita umumkan di Discord FORA, di ${c.voice}. ${openDoor(c, "linkedin|recap", true)} ${c.url}`;
-  const prompt = recapPrompt(c, "linkedin|recap");
+  const prompt = r.question ?? "";
   if (variant === 0) {
     return [`Rekap "${c.s.title}" (${c.dateShort}).`, `Terima kasih ${c.thanks}. ${crowd}`, points, prompt, links, next];
   }

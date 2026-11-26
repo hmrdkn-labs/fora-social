@@ -49,6 +49,15 @@ for (const [name, { session, sig }] of Object.entries(variants)) {
   }
 }
 
+test("a recap ends with the host's own question, and asks none without one", () => {
+  const { session, sig } = variants["two speakers, role and handle everywhere"];
+  const question = "Waktu Pod-nya dimatikan, apa yang kamu lihat di kubectl get pods?";
+  const asked = buildCaptions({ ...session, recap: { ...session.recap!, question } }, sig, community, "recap");
+  for (const text of [asked.instagram, asked.x.join("\n"), asked.linkedin]) assert.ok(text.includes(question));
+  const silent = buildCaptions({ ...session, recap: { ...session.recap!, question: undefined } }, sig, community, "recap");
+  for (const text of [silent.instagram, silent.x.join("\n"), silent.linkedin]) assert.ok(!text.includes("?"), text);
+});
+
 test("recap captions carry the takeaways and the attendee count", () => {
   const { session, sig } = variants["two speakers, role and handle everywhere"];
   const c = buildCaptions(session, sig, community, "recap");

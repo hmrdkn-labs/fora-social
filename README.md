@@ -70,6 +70,7 @@ hashtags:                         # optional. Without "#"
   - Container
 recap:                            # optional. Fill in after the talk. Recap posts need it
   attendees: 14                   # optional. Whole number
+  question: Waktu Pod-nya dimatikan, apa yang kamu lihat di kubectl get pods?   # optional. Recap ends with it; without it, no question
   points:                         # required with recap, at least one
     - title: Pod adalah unit terkecil yang dijadwalkan
       body: Satu Pod bisa berisi satu atau beberapa container.   # optional

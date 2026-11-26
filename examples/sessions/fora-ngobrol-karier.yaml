@@ -22,10 +22,11 @@ hashtags:
   - KarierTech
 recap:
   attendees: 9
+  question: Kalau kamu bikin satu repo kecil minggu ini untuk ditunjukkan ke pewawancara, isinya apa?
   points:
     - title: Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat
       body: Salah satu peserta cerita, pewawancaranya menghabiskan lima belas menit di satu repo buatannya dan nggak membuka sertifikat sama sekali.
-    - title: Pindah ke SRE bisa mulai dari on-call
-      body: Dika minta ikut rotasi on-call sebagai shadow dulu, dan dari situ dapat tugas pertama menulis runbook.
+    - title: Pindah ke SRE bisa mulai dari ikut jaga on-call
+      body: Dika minta mendampingi rekan yang sedang on-call, yang menangani sistem kalau bermasalah di luar jam kerja. Dari situ tugas pertamanya menulis runbook, catatan langkah menangani masalah yang sering muncul.
     - title: Belajar dari satu insiden nyata
       body: Postmortem di kantor lama jadi bahan belajar Terraform yang paling nempel, karena tiap perintah ada alasannya.

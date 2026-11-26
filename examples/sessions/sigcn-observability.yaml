@@ -29,15 +29,16 @@ hashtags:
   - Prometheus
 recap:
   attendees: 16
+  question: Kalau aplikasi proyekmu lambat, kamu mau mulai cari dari log atau dari metrics?
   points:
     - title: Log yang terstruktur bisa dicari
-      body: Dengan format seperti JSON, satu field duration_ms cukup untuk menemukan request yang menggantung di aplikasi lambat tadi.
+      body: Dengan format seperti JSON, field seperti duration_ms bisa disaring, jadi request yang lambat gampang ditemukan di aplikasi lambat tadi.
     - title: Metrics itu angka murah yang tahan lama
       body: Jumlah request dan lama respons ringan disimpan berbulan-bulan, jadi cocok untuk dashboard dan alert.
     - title: Trace menunjuk service mana yang menghabiskan waktu
       body: Satu request diikuti dari service ke service, lalu bagian yang lambat kelihatan.
-    - title: OpenTelemetry, pasang instrumentasi sekali
-      body: Datanya bisa dikirim ke backend apa pun yang bisa menerima OTLP.
+    - title: OpenTelemetry, pasang kode pencatat sekali
+      body: Datanya dikirim lewat OTLP, format standar OpenTelemetry untuk mengirim data, jadi backend-nya bisa diganti tanpa mengubah kode aplikasi.
     - title: Alert dari yang dirasakan pengguna
       body: Error rate dan latency yang jadi patokan. CPU tinggi sebentar belum tentu masalah.
   links:

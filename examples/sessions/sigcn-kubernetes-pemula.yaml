@@ -16,7 +16,7 @@ speakers:
   - name: Bima (contoh)
     role: DevOps Engineer
     handle: bima_contoh
-    about: Menunjukkan cara membaca kubectl describe waktu sebuah Pod gagal jalan.
+    about: Menunjukkan cara membaca kubectl describe waktu aplikasimu mogok di Kubernetes, lewat satu Pod (wadah tempat aplikasi jalan) yang gagal start.
   - name: Sari (contoh)
     role: Backend Developer
     handle: sari_contoh
@@ -34,6 +34,7 @@ hashtags:
   - DevOps
 recap:
   attendees: 14
+  question: Waktu Pod-nya dimatikan di minikube, apa yang kamu lihat di kubectl get pods?
   points:
     - title: Pod adalah unit terkecil yang dijadwalkan
       body: Satu Pod bisa berisi beberapa container yang berbagi network dan storage.

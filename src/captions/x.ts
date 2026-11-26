@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { aboutPerson, cap, type Ctx, everyone, firstSentence, hashLine, openDoor, recapPrompt, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPerson, cap, type Ctx, everyone, firstSentence, hashLine, openDoor, shape, themeTag, uniqueTags } from "./context.ts";
 import { xLength } from "./xlength.ts";
 
 const LIMIT = 280;
@@ -81,9 +81,9 @@ function recapThread(c: Ctx): string[] {
   const explained = pick.body ? `${pick.title}. ${pick.body}` : pick.title;
   const middle = [{ text: explained }];
   const links = r.links?.length ? [{ text: `${r.links[0].label} ${r.links[0].url}`, optional: true }] : [];
-  const prompt = recapPrompt(c, "x|recap");
+  const prompt = r.question ?? "";
   const closing = plain(`Sesi berikutnya diumumkan di Discord FORA. ${openDoor(c, "x|recap")}`, c.url, tags(c));
-  const posts = [compose(plain(head)), compose(middle), compose([{ text: prompt, optional: true }, ...links, ...closing])];
+  const posts = [compose(plain(head)), compose(middle), compose([...(prompt ? [{ text: prompt, optional: true }] : []), ...links, ...closing])];
   if (posts.length > MAX_POSTS) throw new Error(`X thread has ${posts.length} posts, at most ${MAX_POSTS}`);
   return posts;
 }

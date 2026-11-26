@@ -152,22 +152,3 @@ export function aboutPeople(c: Ctx, withHandle: boolean): string[] {
 export function dayOnly(c: Ctx): string {
   return c.date.replace(",", "").replace(/ \d{4}$/, "");
 }
-
-/**
- * One answerable question about the recap, built from one of its points: `shape` picks the point
- * and the wording, so sessions ask about different things.
- */
-export function recapPrompt(c: Ctx, scope: string): string {
-  const points = c.s.recap?.points ?? [];
-  if (points.length === 0) return "";
-  const at = shape(c, `${scope}|point`, points.length);
-  const title = points[at]!.title;
-  switch (shape(c, `${scope}|wording`, 3)) {
-    case 0:
-      return `Poin ${at + 1} ("${title}"), cocok nggak sama yang kamu temui di kerjaan?`;
-    case 1:
-      return `Kamu setuju sama "${title}"? Kalau di tempatmu beda, ceritain.`;
-    default:
-      return `Soal "${title}", gimana di tempat kamu?`;
-  }
-}

@@ -35,6 +35,7 @@ const PersonSchema = z.strictObject({
 const RecapSchema = z.strictObject({
   points: z.array(z.strictObject({ title: nonEmpty, body: z.string().optional() })).min(1, "must have at least one point"),
   links: z.array(z.strictObject({ label: nonEmpty, url: httpUrl })).optional(),
+  question: nonEmpty.optional(),
   attendees: z.number().int("must be a whole number").nonnegative("must not be negative").optional(),
 });
 
