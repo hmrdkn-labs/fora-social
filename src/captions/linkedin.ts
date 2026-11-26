@@ -18,7 +18,7 @@ function joinLive(c: Ctx, variant: number): string {
   if (variant % 2 === 0) {
     return `Langsung masuk ke ${c.voice} lewat ${c.url}. ${openDoor(c, "linkedin|live", true)}`;
   }
-  return `Undangan Discord: ${c.url}. Kita ada di ${c.voice}. ${openDoor(c, "linkedin|live", true)}`;
+  return `Kita ada di ${c.voice}, undangannya ${c.url}. ${openDoor(c, "linkedin|live", true)}`;
 }
 
 /** One practical detail for the reminder. */
@@ -26,8 +26,7 @@ function practical(c: Ctx): string {
   return [
     "Buka Discord sepuluh menit lebih awal untuk cek suara.",
     "Headset membantu, dan dari ponsel juga bisa.",
-    `Kalau ada pertanyaan soal ${c.s.theme}, catat dulu supaya tidak lupa.`,
-  ][shape(c, "reminder|practical", 3)]!;
+  ][shape(c, "reminder|practical", 2)]!;
 }
 
 const bullets = (items: string[]): string => items.map((t) => `• ${t}`).join("\n");
@@ -75,7 +74,7 @@ export function linkedin(c: Ctx, type: PostType): string {
           ? [`${s.title} sedang berjalan.`, `${what} ${cap(c.who)}.`, joinLive(c, 0)]
           : v === 1
             ? [`Kita sudah mulai (${c.time}).`, `${s.title}. ${what}`, joinLive(c, 1)]
-            : [`Live sekarang di ${c.voice}.`, `${s.title}, ${c.who}.`, joinLive(c, 1)];
+            : [`Sedang live sekarang.`, `${s.title}, ${c.who}. ${sub}`, joinLive(c, 1)];
       break;
     case "recap":
       blocks = recap(c, v % 2);

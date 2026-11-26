@@ -2,7 +2,7 @@
 // line here and on the first slide; decks add a slide about the series and the join slide.
 import { discordUrl, displayUrl } from "../src/format.ts";
 import type { Template, TemplateContext } from "../src/types.ts";
-import { fitBlock, SERIF, textHeight } from "./fit.ts";
+import { fitBlock, fitLine, SERIF, textHeight } from "./fit.ts";
 import { escapeHtml as e } from "./html.ts";
 import {
   aboutMain,
@@ -10,6 +10,7 @@ import {
   FOOT,
   GAP,
   header,
+  joinBar,
   joinMain,
   layoutOf,
   post,
@@ -21,14 +22,17 @@ import {
   WAVE_MIN,
   WIDE_GAP,
   WIDE_WAVE_MIN,
+  type Block,
   wave,
   wideRoom,
 } from "./parts.ts";
 
 const TALL_SIZES = [216, 192, 172, 156, 140, 124, 108, 92, 80, 68];
-const WIDE_SIZES = [152, 136, 120, 104, 88, 72, 60, 50];
+const WIDE_SIZES = [152, 136, 120, 104, 88, 72, 60, 50, 42];
 /** The theme is set with tight tracking, so it runs narrower than the estimate. */
 const TRACKING = 0.93;
+/** Gap between the schedule and the join bar of a tall cover. */
+const COVER_GAP = 24;
 
 /**
  * Series (or the SIG's name), the theme as large as `room` allows, and the session title as a
@@ -55,14 +59,29 @@ function block(ctx: TemplateContext, width: number, sizes: readonly number[], ro
 
 const INTEGRAL = '<span class="integral" aria-hidden="true">∫</span>';
 
+/** Wide cover: when and where on the left, the invite as a chip on the right, in one panel. */
+function wideJoin(ctx: TemplateContext, url: string): Block {
+  const sched = schedule(ctx, true);
+  const size = fitLine(url, 300, 24, 18);
+  const chip = size * 1.2 + 24;
+  return {
+    html: `<aside class="join join--bar join--row" data-fit>${sched.html}<p class="join__url" style="font-size:${size}px">${e(url)}</p></aside>`,
+    height: Math.max(sched.height, chip) + 32,
+  };
+}
+
 function single(ctx: TemplateContext): string {
   const isWide = layoutOf(ctx.format) === "wide";
   const url = displayUrl(discordUrl(ctx.session, ctx.community));
-  const sched = schedule(ctx, isWide);
-  // The wide cover has no side panel: header, block, wave and the join line share one column.
+  // The join route is a panel, not fine print: tall covers show the day and time, then the join bar
+  // (channel, listen-only line, invite chip); the wide cover has one row with all of it.
+  const sched = schedule(ctx, false, false);
+  const join = isWide ? wideJoin(ctx, url) : joinBar(ctx);
+  const foot = isWide ? join.height : sched.height + COVER_GAP + join.height;
+  // The wide cover has no side panel: header, block, wave and the join panel share one column.
   const room = isWide
-    ? wideRoom(ctx, "ink") - 2 * WIDE_GAP - WIDE_WAVE_MIN - sched.height
-    : tallRoom(ctx, "ink", sched.height + 34) - GAP - WAVE_MIN;
+    ? wideRoom(ctx, "ink") - 2 * WIDE_GAP - WIDE_WAVE_MIN - foot
+    : tallRoom(ctx, "ink", foot + 34) - GAP - WAVE_MIN;
   return post(
     ctx,
     "ink",
@@ -71,7 +90,7 @@ function single(ctx: TemplateContext): string {
   ${block(ctx, isWide ? SOLO_WIDTH : TALL_WIDTH, isWide ? WIDE_SIZES : TALL_SIZES, room)}
   ${wave(ctx.session.id, isWide ? 72 : 52)}
 </main>
-<div class="whisper" data-fit>${sched.html}<b>${e(url)}</b></div>`,
+<div class="whisper" data-fit>${isWide ? "" : sched.html}${join.html}</div>`,
     "post--cover",
   );
 }

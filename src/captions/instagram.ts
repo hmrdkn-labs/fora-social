@@ -38,8 +38,7 @@ function practical(c: Ctx): string {
   return [
     "Buka Discord sepuluh menit lebih awal buat cek suara.",
     "Pakai headset kalau ada. Dari HP juga bisa.",
-    `Kalau ada pertanyaan soal ${c.s.theme}, tulis dulu biar nggak lupa.`,
-  ][shape(c, "reminder|practical", 3)]!;
+  ][shape(c, "reminder|practical", 2)]!;
 }
 
 const bullets = (items: string[]): string => items.map((t) => `- ${t}`).join("\n");

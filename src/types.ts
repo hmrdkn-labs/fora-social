@@ -37,7 +37,11 @@ export interface Person {
    * templates show the neutral silhouette from brand/people/.
    */
   photo?: string;
-  /** One plain line on what they will share or ask in this session. Speakers posts lead with it. */
+  /**
+   * One concrete thing they did or will show, in the third person ("Menunjukkan cara membaca
+   * kubectl describe …"). Cards and captions print it as it stands, so no instructions to the
+   * host and no question to the audience.
+   */
   about?: string;
 }
 

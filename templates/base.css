@@ -1165,8 +1165,38 @@ body {
   font-weight: 800;
 }
 
+.post--cover .whisper {
+  gap: 24px;
+}
+
 .post--cover .whisper b {
   font-size: 26px;
+}
+
+/* Wide cover: schedule left, invite chip right, in the join panel. */
+.join--row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 24px;
+  border-radius: 22px;
+}
+
+.join--row .sched {
+  color: var(--join-fg);
+}
+
+.post--wide .join--row .sched__when {
+  font-size: 30px;
+}
+
+.post--wide .join--row .sched__where {
+  font-size: 22px;
+}
+
+.join--row .join__url {
+  padding: 12px 20px;
 }
 
 .post--wide .sched__when {
@@ -1413,4 +1443,14 @@ body {
 
 .side .next__when {
   font-size: 20px;
+}
+
+.whisper .join b {
+  color: inherit;
+  font-size: inherit;
+}
+
+.post--wide .whisper .join--row {
+  flex: 1;
+  min-width: 0;
 }

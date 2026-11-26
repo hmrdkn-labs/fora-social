@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { aboutPerson, cap, type Ctx, everyone, firstSentence, hashLine, openDoor, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPerson, cap, type Ctx, everyone, firstSentence, hashLine, openDoor, sentence, shape, themeTag, uniqueTags } from "./context.ts";
 import { xLength } from "./xlength.ts";
 
 const LIMIT = 280;
@@ -38,6 +38,9 @@ function tags(c: Ctx): string {
 }
 
 const plain = (...texts: string[]): Line[] => texts.map((text) => ({ text }));
+
+/** The subtitle as one short line, the everyday problem a title may not say; none without one. */
+const sub = (c: Ctx): string[] => (c.s.subtitle ? [sentence(c.s.subtitle)] : []);
 
 /**
  * One concrete situation leads the single post: the host's note when it fits, else the first
@@ -119,19 +122,19 @@ export function x(c: Ctx, type: PostType): string[] {
     case "reminder":
       return build([
         v === 0
-          ? plain(`Nanti jam ${c.time}, ${s.title}.`)
+          ? plain(`Nanti jam ${c.time}, ${s.title}.`, ...sub(c))
           : v === 1
-            ? plain(`${s.title}, ${c.dateShort}, nanti jam ${c.time}.`)
-            : plain(`Jam ${c.time} nanti, ${s.title}.`, `${cap(c.who)}.`),
+            ? plain(`${s.title}, ${c.dateShort}, nanti jam ${c.time}.`, ...sub(c))
+            : plain(`Jam ${c.time} nanti, ${s.title}.`, ...(s.subtitle ? sub(c) : [`${cap(c.who)}.`])),
         joinPart(c, v),
       ]);
     case "live":
       return build([
         v === 0
-          ? plain(`${s.title} lagi jalan sekarang.`)
+          ? plain(`${s.title} lagi jalan sekarang.`, ...sub(c))
           : v === 1
-            ? plain(`Live sekarang, ${s.title}.`)
-            : plain(`Sudah mulai jam ${c.time}, ${s.title}.`),
+            ? plain(`Live sekarang, ${s.title}.`, ...sub(c))
+            : plain(`Sudah mulai jam ${c.time}, ${s.title}.`, ...sub(c)),
         joinPart(c, v, true),
       ]);
     case "recap":
@@ -139,8 +142,10 @@ export function x(c: Ctx, type: PostType): string[] {
     case "cover":
       return build([
         v === 1
-          ? plain(s.title, `${c.series}, ${c.dateShort}, ${c.range}`)
-          : plain(`${s.series ? `${c.series} bareng ${c.brand}.` : `Tema ${s.theme} bareng ${c.brand}.`}`, s.title, `${c.dateShort}, ${c.range}`),
+          ? plain(s.title, ...sub(c), `${c.dateShort}, ${c.range}`)
+          : s.subtitle
+            ? plain(...sub(c), s.title, `${c.dateShort}, ${c.range}`)
+            : plain(`${s.series ? `${c.series} bareng ${c.brand}.` : `Tema ${s.theme} bareng ${c.brand}.`}`, s.title, `${c.dateShort}, ${c.range}`),
         joinPart(c, v),
       ]);
     case "sig-intro":
