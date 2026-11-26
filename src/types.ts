@@ -84,6 +84,12 @@ export interface Session {
    * for them once, what they want to hear from others). Captions lead with it when present.
    */
   note?: string;
+  /**
+   * Optional, one plain line: the everyday problem this session is about, in words a newcomer
+   * knows ("Aplikasinya jalan tapi lambat, dan kita nggak tahu kenapa."). Short posts (X, live,
+   * cover) use it instead of repeating `subtitle` or `description`.
+   */
+  problem?: string;
   /** What will be discussed, 0 to 6 short items. */
   topics: string[];
   /** Overrides Community.discord. */
