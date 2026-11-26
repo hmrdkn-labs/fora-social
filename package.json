@@ -12,6 +12,7 @@
   "scripts": {
     "render": "node src/cli.ts render",
     "examples": "node src/cli.ts examples",
+    "sheets": "node src/sheets.ts",
     "check": "tsc --noEmit && node --test \"test/**/*.test.ts\" \"src/**/*.test.ts\""
   },
   "dependencies": {

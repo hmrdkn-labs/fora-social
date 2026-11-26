@@ -53,7 +53,12 @@ export const base: Session = {
   recap: { points: [{ title: "Pod adalah unit terkecil", body: "Berisi satu atau beberapa container." }] },
 };
 
-export const person = (n: string) => ({ name: `${n} (contoh)`, role: "Engineer", handle: `${n.toLowerCase()}_contoh` });
+export const person = (n: string) => ({
+  name: `${n} (contoh)`,
+  role: "Engineer",
+  handle: `${n.toLowerCase()}_contoh`,
+  about: `Cerita soal pengalaman ${n} dengan Pod yang tiba-tiba mati.`,
+});
 
 export const variants: Record<string, { session: Session; sig: Sig }> = {
   "two speakers, role and handle everywhere": {

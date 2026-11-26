@@ -48,20 +48,22 @@ interface Scale {
   name: readonly [max: number, min: number];
   meta: number;
   part: number;
+  /** Size of the person's `about` line; 0 leaves it out. */
+  about: number;
 }
 
 /** By number of people, one to three. Tall formats keep to the 24-unit minimum of brand/README.md. */
 const TALL_SCALES: readonly Scale[] = [
-  { name: [80, 44], meta: 34, part: 26 },
-  { name: [56, 36], meta: 28, part: 24 },
-  { name: [40, 28], meta: 24, part: 24 },
+  { name: [80, 44], meta: 34, part: 26, about: 32 },
+  { name: [56, 36], meta: 28, part: 24, about: 26 },
+  { name: [40, 28], meta: 24, part: 24, about: 24 },
 ];
 const WIDE_SCALES: readonly Scale[] = [
-  { name: [44, 28], meta: 24, part: 20 },
-  { name: [32, 22], meta: 20, part: 18 },
-  { name: [24, 20], meta: 18, part: 18 },
+  { name: [44, 28], meta: 24, part: 20, about: 22 },
+  { name: [32, 22], meta: 20, part: 18, about: 18 },
+  { name: [24, 20], meta: 18, part: 18, about: 0 },
 ];
-const SLIDE_SCALE: Scale = { name: [104, 56], meta: 40, part: 28 };
+const SLIDE_SCALE: Scale = { name: [104, 56], meta: 40, part: 28, about: 0 };
 
 const INFO_SIZES = [52, 46, 40, 34, 30];
 const COVER_SIZES = [104, 92, 80, 70, 60, 54, 48, 42];
@@ -82,13 +84,16 @@ function text(ctx: TemplateContext, p: Person, width: number, scale: Scale, size
   const meta = [p.role ?? "", handle].filter((part) => part !== "");
   const part = withPart ? `<p class="spot__part">${e(partOf(ctx, p))}</p>` : "";
   const metaHtml = meta.length > 0 ? `<p class="spot__meta">${meta.map((item) => `<span>${e(item)}</span>`).join("")}</p>` : "";
+  const said = scale.about > 0 && p.about ? p.about : "";
+  const aboutHtml = said === "" ? "" : `<p class="spot__about" style="font-size:${scale.about}px">${e(said)}</p>`;
   return {
-    html: `<div class="spot__text">${part}<p class="spot__name">${e(p.name)}</p>${metaHtml}</div>`,
+    html: `<div class="spot__text">${part}<p class="spot__name">${e(p.name)}</p>${metaHtml}${aboutHtml}</div>`,
     height:
       (withPart ? scale.part * 1.2 + 6 : 0) +
       textHeight(p.name, size, width, 1.08) +
       (meta.length > 0 ? 8 : 0) +
-      meta.reduce((sum, item) => sum + textHeight(item, scale.meta, width, 1.25, REGULAR), 0),
+      meta.reduce((sum, item) => sum + textHeight(item, scale.meta, width, 1.25, REGULAR), 0) +
+      (said === "" ? 0 : 12 + textHeight(said, scale.about, width, 1.3, REGULAR)),
   };
 }
 
@@ -260,11 +265,6 @@ function coverMain(ctx: TemplateContext): string {
 </main>`;
 }
 
-/** The first sentence of the host's note. */
-function firstSentence(note: string): string {
-  return note.match(/^.*?[.?!](?=\s|$)/s)?.[0] ?? note;
-}
-
 /** One person, large: the portrait with their part beside it in the serif, then name, role and handle. */
 function personMain(ctx: TemplateContext, p: Person): string {
   const { session } = ctx;
@@ -273,8 +273,8 @@ function personMain(ctx: TemplateContext, p: Person): string {
   const about = text(ctx, p, TALL_WIDTH, SLIDE_SCALE, size, false);
   const foot = kickerHeight(session.title, TALL_WIDTH) + 12 + where.height;
   const free = tallRoom(ctx, "ink", FOOT) - foot - about.height - 2 * GAP - 28;
-  // Only the host's own words are quoted, and only their first sentence.
-  const said = p === session.host && session.note ? firstSentence(session.note) : "";
+  // What this person will share or ask, set as a quote; the host's note is not repeated here.
+  const said = p.about ?? "";
   const quoteWidth = TALL_WIDTH - 32;
   const quoteSize = fitBlock(said, quoteWidth, free - 320 - GAP, [44, 40, 36, 32, 28], 1.25, SERIF) ?? 28;
   const quote: Block =

@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { castLine, type Ctx, hashLine, openDoor, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPerson, cap, type Ctx, everyone, firstSentence, hashLine, openDoor, sentence, shape, themeTag, uniqueTags } from "./context.ts";
 import { xLength } from "./xlength.ts";
 
 const LIMIT = 280;
@@ -39,19 +39,31 @@ function tags(c: Ctx): string {
 
 const plain = (...texts: string[]): Line[] => texts.map((text) => ({ text }));
 
-/** The host's note leads the single post, unchanged, when everything still fits in it; otherwise it is left out. */
-function noted(c: Ctx, body: Line[]): string[] {
-  if (c.s.note) {
-    const text = [c.s.note, ...body.map((l) => l.text)].join("\n");
+/** The subtitle as one short line, the everyday problem a title may not say; none without one. */
+const sub = (c: Ctx): string[] => (c.s.subtitle ? [sentence(c.s.subtitle)] : []);
+
+/**
+ * One concrete situation leads the single post: the host's note when it fits, else the first
+ * sentence of the description, else nothing. The image already shows the logistics, so they
+ * stay short.
+ */
+function hooked(c: Ctx, body: Line[]): string[] {
+  const rest = body.map((l) => l.text);
+  for (const lead of [c.s.note, firstSentence(c.s.description)]) {
+    if (!lead) continue;
+    const text = [lead, ...rest].join("\n");
     if (xLength(text) <= LIMIT) return [text];
   }
   return build([body]);
 }
 
 /** How to join and that anyone can listen or talk: said once, worded two ways. */
-function joinPart(c: Ctx, variant: number): Line[] {
-  const open =
-    variant % 2 === 0
+function joinPart(c: Ctx, variant: number, live = false): Line[] {
+  const open = live
+    ? variant % 2 === 0
+      ? `Langsung masuk ke ${c.voice} di Discord FORA. ${openDoor(c, "x|join")}`
+      : `Masuk lewat link ini, ke ${c.voice}. ${openDoor(c, "x|join")}`
+    : variant % 2 === 0
       ? `Di ${c.voice} Discord FORA. ${openDoor(c, "x|join")}`
       : `Masuk aja ke ${c.voice} di Discord FORA. ${openDoor(c, "x|join")}`;
   return [...plain(open, c.url), { text: tags(c) }];
@@ -66,26 +78,32 @@ function recapThread(c: Ctx): string[] {
     v === 0
       ? `Rekap "${c.s.title}". ${crowd}. Makasih ${c.thanks}.`
       : `${crowd} buat "${c.s.title}". Makasih ${c.thanks}, ini catatannya.`;
-  const mark = (i: number) => (v === 0 ? `${i + 1}.` : "-");
-  const numbered = r.points.map((p, i): Line => ({ text: `${mark(i)} ${p.title}`, optional: i > 0 }));
-  // Split the points over at most two posts, filling the first as far as it goes.
-  const first: Line[] = v === 0 ? [{ text: "Intinya:" }] : [];
-  const rest: Line[] = [];
-  for (const line of numbered) {
-    const fits = first.length === 0 || xLength([...first, line].map((l) => l.text).join("\n")) <= LIMIT;
-    if (rest.length === 0 && fits) first.push(line);
-    else rest.push(line);
-  }
-  const closing =
-    v === 0
-      ? plain(`Sesi berikutnya diumumkan di Discord FORA. ${openDoor(c, "x|recap")}`, c.url, tags(c))
-      : plain(`Sesi berikutnya kita umumkan di Discord FORA. ${openDoor(c, "x|recap")}`, c.url, tags(c));
+  // The middle post spends its room on one point, explained, not on a list of titles.
+  const withBody = r.points.filter((p) => p.body);
+  const pick = withBody.length > 0 ? withBody[shape(c, "x|recap|point", withBody.length)]! : r.points[0]!;
+  const explained = pick.body ? `${pick.title}. ${pick.body}` : pick.title;
+  const middle = [{ text: explained }];
   const links = r.links?.length ? [{ text: `${r.links[0].label} ${r.links[0].url}`, optional: true }] : [];
-  const posts = [compose(plain(head)), compose(first)];
-  if (rest.length) posts.push(compose(rest));
-  posts.push(compose([...links, ...closing]));
+  const prompt = r.question ?? "";
+  const closing = plain(`Sesi berikutnya diumumkan di Discord FORA. ${openDoor(c, "x|recap")}`, c.url, tags(c));
+  const posts = [compose(plain(head)), compose(middle), compose([...(prompt ? [{ text: prompt, optional: true }] : []), ...links, ...closing])];
   if (posts.length > MAX_POSTS) throw new Error(`X thread has ${posts.length} posts, at most ${MAX_POSTS}`);
   return posts;
+}
+
+/** Who talks and what they will share, as many people as fit one post; a long cast is counted. */
+function speakersIntro(c: Ctx): string {
+  const people = everyone(c);
+  const fits = (text: string) => xLength(text) <= LIMIT;
+  for (const withHandle of [true, false]) {
+    const all = people.map((p) => aboutPerson(c, p, withHandle)).join("\n");
+    if (fits(all)) return all;
+  }
+  for (const withHandle of [true, false]) {
+    const first = aboutPerson(c, people[0]!, withHandle);
+    if (fits(first)) return first;
+  }
+  return `Ada ${c.s.speakers.length} pembicara, dipandu ${c.s.host.name}.`;
 }
 
 export function x(c: Ctx, type: PostType): string[] {
@@ -93,8 +111,8 @@ export function x(c: Ctx, type: PostType): string[] {
   const v = shape(c, `x|${type}`, 3);
   switch (type) {
     case "announce":
-      return noted(c, [
-          ...(v === 0
+      return hooked(c, [
+        ...(v === 0
           ? plain(s.title, `${c.dateShort}, ${c.range}`)
           : v === 1
             ? plain(s.title, `${c.dateShort} jam ${c.time}.`)
@@ -102,22 +120,33 @@ export function x(c: Ctx, type: PostType): string[] {
         ...joinPart(c, v),
       ]);
     case "reminder":
-      return noted(c, [
-          ...(v === 0
-          ? plain(`Hari ini jam ${c.time}, ${s.title}.`)
+      return build([
+        v === 0
+          ? plain(`Nanti jam ${c.time}, ${s.title}.`, ...sub(c))
           : v === 1
-            ? plain(`${s.title} mulai ${c.time}.`, "Kalau sudah jalan, nyusul aja.")
-            : plain(`Jam ${c.time} nanti, ${s.title}.`)),
-        ...joinPart(c, v),
+            ? plain(`${s.title}, ${c.dateShort}, nanti jam ${c.time}.`, ...sub(c))
+            : plain(`Jam ${c.time} nanti, ${s.title}.`, ...(s.subtitle ? sub(c) : [`${cap(c.who)}.`])),
+        joinPart(c, v),
+      ]);
+    case "live":
+      return build([
+        v === 0
+          ? plain(`${s.title} lagi jalan sekarang.`, ...sub(c))
+          : v === 1
+            ? plain(`Live sekarang, ${s.title}.`, ...sub(c))
+            : plain(`Sudah mulai jam ${c.time}, ${s.title}.`, ...sub(c)),
+        joinPart(c, v, true),
       ]);
     case "recap":
       return recapThread(c);
     case "cover":
-      return noted(c, [
-          ...(v === 1
-          ? plain(s.title, `${c.series}, ${c.dateShort}, ${c.range}`)
-          : plain(`${c.series} bareng ${c.brand}.`, s.title, `${c.dateShort}, ${c.range}`)),
-        ...joinPart(c, v),
+      return build([
+        v === 1
+          ? plain(s.title, ...sub(c), `${c.dateShort}, ${c.range}`)
+          : s.subtitle
+            ? plain(...sub(c), s.title, `${c.dateShort}, ${c.range}`)
+            : plain(`${s.series ? `${c.series} bareng ${c.brand}.` : `Tema ${s.theme} bareng ${c.brand}.`}`, s.title, `${c.dateShort}, ${c.range}`),
+        joinPart(c, v),
       ]);
     case "sig-intro":
       return build([
@@ -125,12 +154,7 @@ export function x(c: Ctx, type: PostType): string[] {
         plain(`Sesi terdekat soal "${s.title}", ${c.dateShort}.`),
         joinPart(c, v),
       ]);
-    case "speakers": {
-      // Handles go first when the sentence still fits one post; a long cast is counted instead of named.
-      const intro =
-        [castLine(c, true), castLine(c, false)].find((line) => xLength(line) <= LIMIT) ??
-        `Ada ${s.speakers.length} pembicara, dipandu ${s.host.name}.`;
-      return build([plain(intro), [...plain(`"${s.title}", mulai ${c.time}.`), ...joinPart(c, v)]]);
-    }
+    case "speakers":
+      return build([plain(speakersIntro(c)), [...plain(`"${s.title}", mulai ${c.time}.`), ...joinPart(c, v)]]);
   }
 }

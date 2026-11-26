@@ -37,3 +37,12 @@ Do not merge to `main`.
 ## Report
 
 Fill in below: model, commits, checks, sheet count. Reply in at most 5 lines.
+
+### Result (2026-11-26)
+
+- **Model:** anthropic/claude-haiku-5-5, thinking xhigh.
+- **Commits** on `09-review-loop` (pushed, not merged):
+  - ce09178d48 feat(sheets): contact sheets per session and post type (`src/sheets.ts`, `test/sheets.test.ts`, `pnpm sheets` in `package.json`)
+  - this commit: docs(brief): record 09-contact-sheets result
+- **Checks:** `pnpm check` passes (tsc clean, 169/169). `pnpm sheets` wrote 24 sheets to `out/sheets/` (4 sessions × 6 post types; every sample has a recap). Width is the content width, clamped to 2000 px.
+- **Looked at:** `fora-ngobrol-karier--announce` (FORA, 2000 px wide, 5 tiles per row, four carousel slides), `sigcn-gitops-argocd--recap` (carousel-heavy, six slides wrap onto a second row), `sigcn-kubernetes-pemula--cover` (landscape `x` and `li-link`). Labels and tiles readable at full size; grey background shows the poster edges.

@@ -454,9 +454,26 @@ export function whenWhere(ctx: TemplateContext): Block {
   };
 }
 
-/** The "about" slide of a deck: the description, the topics, and when and where. */
-export function aboutMain(ctx: TemplateContext, theme: Theme, label: string): string {
-  const { topics } = ctx.session;
+/**
+ * When and where as a block a scroller reads after the theme: the day and time large, the voice
+ * channel under it. `wide` is the landscape size. Covers and the first slide use it.
+ */
+export function schedule(ctx: TemplateContext, wide: boolean, withWhere = true): Block {
+  const { session } = ctx;
+  const when = `${formatDateShort(session)} · ${formatTimeRange(session)}`;
+  const where = `voice channel ${session.voiceChannel}`;
+  const [big, small] = wide ? [34, 24] : [44, 30];
+  const width = wide ? SOLO_WIDTH : TALL_WIDTH;
+  if (!withWhere) return { html: `<div class="sched"><p class="sched__when">${e(when)}</p></div>`, height: textHeight(when, big, width, 1.2) };
+  return {
+    html: `<div class="sched"><p class="sched__when">${e(when)}</p><p class="sched__where">voice channel ${channel(session.voiceChannel)}</p></div>`,
+    height: textHeight(when, big, width, 1.2) + 6 + textHeight(where, small, width, 1.3),
+  };
+}
+
+/** The "about" slide of a deck: the description, the topics (unless `withTopics` is false), and when and where. */
+export function aboutMain(ctx: TemplateContext, theme: Theme, label: string, withTopics = true): string {
+  const topics = withTopics ? ctx.session.topics : [];
   // A session without a description still says what its SIG is about.
   const description = ctx.session.description || ctx.sig.description;
   const where = whenWhere(ctx);
@@ -464,7 +481,7 @@ export function aboutMain(ctx: TemplateContext, theme: Theme, label: string): st
   // The description goes down a size at a time until every topic fits under it at a size that still reads as a list.
   const listSizes = [44, 40, 36, 32, 28];
   const used = (candidate: number) => textHeight(description, candidate, TALL_WIDTH, 1.4, REGULAR);
-  const sizes = [48, 44, 40, 36, 32, 28];
+  const sizes = topics.length === 0 ? [64, 58, 52, 48, 44, 40, 36, 32, 28] : [48, 44, 40, 36, 32, 28];
   const size =
     sizes.find((candidate) => {
       if (topics.length === 0) return used(candidate) <= room;

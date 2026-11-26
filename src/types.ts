@@ -1,9 +1,9 @@
 // Shared contract between the loader, templates and captions.
 // Change it only through the orchestrator (briefs/00-orchestrator.md).
 
-export type PostType = "announce" | "reminder" | "recap" | "cover" | "sig-intro" | "speakers";
+export type PostType = "announce" | "reminder" | "live" | "recap" | "cover" | "sig-intro" | "speakers";
 
-export const POST_TYPES: readonly PostType[] = ["announce", "reminder", "recap", "cover", "sig-intro", "speakers"];
+export const POST_TYPES: readonly PostType[] = ["announce", "reminder", "live", "recap", "cover", "sig-intro", "speakers"];
 
 export type FormatId = "ig-feed" | "ig-carousel" | "ig-story" | "x" | "li-link" | "li-doc";
 
@@ -37,6 +37,12 @@ export interface Person {
    * templates show the neutral silhouette from brand/people/.
    */
   photo?: string;
+  /**
+   * One concrete thing they did or will show, in the third person ("Menunjukkan cara membaca
+   * kubectl describe …"). Cards and captions print it as it stands, so no instructions to the
+   * host and no question to the audience.
+   */
+  about?: string;
 }
 
 export interface RecapPoint {
@@ -87,6 +93,12 @@ export interface Session {
     points: RecapPoint[];
     links?: Link[];
     attendees?: number;
+    /**
+     * Optional, the host's own closing question: one thing people can answer from their own
+     * experience, a tutorial or a class project ("Pod kamu pernah ganti IP dan bikin app error?").
+     * Recap posts end with it. Without it they end without a question; never generate one.
+     */
+    question?: string;
   };
   /** Extra hashtags without "#". */
   hashtags?: string[];

@@ -33,11 +33,21 @@ export interface Ctx {
   thanks: string;
   /** "SIG CN di FORA", or "FORA" for the general community. */
   introName: string;
-  /** The host's own words if the session has a note, else the description. */
+  /** The host's own words if the session has a note, else the description. Only the announce uses it. */
   lead: string;
+  /** The first sentence of `lead`: a short hook for X. */
+  hook: string;
   /** `who`, capitalised, as a sentence without the full stop. */
   Who: string;
 }
+
+/** The first sentence of `text`, or all of it. */
+export function firstSentence(text: string): string {
+  return text.match(/^.*?[.?!](?=\s|$)/s)?.[0] ?? text;
+}
+
+/** `text` with a full stop at the end unless it already has closing punctuation. */
+export const sentence = (text: string): string => (/[.?!]$/.test(text) ? text : `${text}.`);
 
 export const cap = (text: string): string => text.charAt(0).toUpperCase() + text.slice(1);
 
@@ -60,6 +70,7 @@ export function makeCtx(s: Session, sig: Sig, community: Community): Ctx {
     brand: sig.id === "fora" ? community.name : `${sig.short} × ${community.name}`,
     introName: sig.id === "fora" ? community.name : `${sig.short} di ${community.name}`,
     lead: s.note ?? s.description,
+    hook: firstSentence(s.note ?? s.description),
     Who: cap(speakerLine(s, true)),
     thanks: joinNames(people.map((p) => (p.handle ? `${p.name} @${p.handle}` : p.name))),
   };
@@ -116,20 +127,28 @@ export function shape(c: Ctx, scope: string, count: number): number {
   return hash(`${c.s.id}|${scope}`) % count;
 }
 
-/**
- * Who talks, as one sentence: "Sabtu 12 Desember yang cerita A dan B, dipandu C." A session
- * without speakers says who hosts and that there is no guest.
- */
-export function castLine(c: Ctx, withHandles: boolean): string {
-  const name = (p: Person) => (withHandles && p.handle ? `${p.name} @${p.handle}` : p.name);
-  const day = c.date.replace(",", "").replace(/ \d{4}$/, "");
-  if (c.s.speakers.length === 0) return `${day} yang mandu ${name(c.s.host)}. Tanpa pembicara tamu, jadi yang cerita kita semua.`;
-  return `${day} yang cerita ${joinNames(c.s.speakers.map(name))}, dipandu ${name(c.s.host)}.`;
+/** Everyone who talks, speakers first, then the host. */
+export function everyone(c: Ctx): Person[] {
+  return [...c.s.speakers, c.s.host];
 }
 
-/** One entry per person, speakers first: name, role, "host" for the host, and the handle when `withHandles`. */
-export function roster(c: Ctx, withHandles: boolean): string[] {
-  return [...c.s.speakers, c.s.host].map((p) =>
-    [p.name, p.role, p === c.s.host ? "host" : "", withHandles && p.handle ? `@${p.handle}` : ""].filter(Boolean).join(", "),
-  );
+/**
+ * One paragraph about a person: name, handle and role, then what they will share or ask when the
+ * session file says so. The host of a session with speakers is named as the host.
+ */
+export function aboutPerson(c: Ctx, p: Person, withHandle: boolean): string {
+  const host = p === c.s.host && c.s.speakers.length > 0 ? "host" : "";
+  const name = [`${p.name}${withHandle && p.handle ? ` @${p.handle}` : ""}`, p.role, host].filter(Boolean).join(", ");
+  return p.about ? `${name}. ${p.about}` : `${name}.`;
+}
+
+/** Who talks, with a plain sentence for a session that has no guest. */
+export function aboutPeople(c: Ctx, withHandle: boolean): string[] {
+  const people = everyone(c).map((p) => aboutPerson(c, p, withHandle));
+  return c.s.speakers.length === 0 ? [...people, "Tanpa pembicara tamu, jadi yang cerita kita semua."] : people;
+}
+
+/** Sentences for the schedule: "Sabtu 12 Desember" without the year. */
+export function dayOnly(c: Ctx): string {
+  return c.date.replace(",", "").replace(/ \d{4}$/, "");
 }

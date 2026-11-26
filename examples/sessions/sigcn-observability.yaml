@@ -2,7 +2,7 @@ sig: sig-cn
 series: Cloud Native 101
 theme: Observability
 title: "Observability: Logs, Metrics, Traces"
-subtitle: Aplikasinya lambat, dan ke mana kita cari jawabannya
+subtitle: Aplikasinya lambat, ini cara mulai mencari penyebabnya
 date: "2027-01-14"
 time: "20:00"
 durationMinutes: 90
@@ -10,33 +10,37 @@ voiceChannel: sig-cn-voice
 host:
   name: Rina (contoh)
   role: Platform Engineer
+  about: Menunjukkan dashboard yang hijau semua padahal aplikasinya lambat.
 speakers:
   - name: Eko (contoh)
     role: SRE
-description: Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dijawab logs, metrics, dan traces, dan cara mulai tanpa pasang semuanya sekaligus.
+    about: Membedah satu kasus aplikasi lambat dan menunjukkan dari mana dia mulai mencari.
+note: Pernah aplikasi lambat, dashboard hijau semua, dan nggak ada yang tahu mulai cari dari mana? Sesi ini mulai dari situ.
+description: Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa. Kita lihat apa yang dijawab logs (catatan kejadian), metrics (angka seperti lama respons) dan traces (jalur satu request), dan cara mulai tanpa memasang semuanya sekaligus.
 topics:
   - Monitoring vs observability
   - Logs terstruktur
-  - Metrics dan Prometheus
+  - Metrics dan Prometheus, alat pengumpul metrics
   - Distributed tracing
-  - OpenTelemetry dan OTLP
+  - OpenTelemetry, satu kode untuk banyak backend
   - Alert yang nggak bikin capek
 hashtags:
   - OpenTelemetry
   - Prometheus
 recap:
   attendees: 16
+  question: Kalau aplikasi proyekmu lambat, kamu mau mulai cari dari log atau dari metrics?
   points:
-    - title: Logs menjawab apa yang terjadi
-      body: Pakai format terstruktur seperti JSON supaya gampang dicari dan difilter.
-    - title: Metrics menjawab seberapa sering dan seberapa lama
-      body: Angka agregat itu murah disimpan, dan cocok untuk dashboard dan alert.
-    - title: Traces menjawab di mana waktunya habis
-      body: Satu request diikuti lintas service, jadi bagian yang lambat kelihatan.
-    - title: OpenTelemetry memisahkan instrumentasi dari backend
-      body: Kode diinstrumentasi sekali, datanya bisa dikirim ke backend apa saja yang mendukung OTLP.
-    - title: Alert pada gejala yang dirasakan pengguna
-      body: Contohnya error rate dan latency. CPU tinggi sebentar belum tentu masalah.
+    - title: Log yang terstruktur bisa dicari
+      body: Dengan format seperti JSON, field seperti duration_ms bisa disaring, jadi request yang lambat gampang ditemukan.
+    - title: Metrics merangkum request menjadi angka
+      body: Yang disimpan jumlah request dan lama respons per menit, satu angka untuk banyak request. Datanya kecil, jadi bisa disimpan berbulan-bulan untuk dashboard dan alert. Log lengkap tiap request jauh lebih besar.
+    - title: Trace menunjuk service mana yang menghabiskan waktu
+      body: Satu request diikuti dari service ke service, lalu bagian yang lambat kelihatan.
+    - title: OpenTelemetry, pasang kode pencatat sekali
+      body: Datanya dikirim lewat OTLP, format standar OpenTelemetry untuk mengirim data, jadi backend-nya bisa diganti tanpa mengubah kode aplikasi.
+    - title: Alert dari yang dirasakan pengguna
+      body: Error rate dan latency yang jadi patokan. CPU tinggi sebentar belum tentu masalah.
   links:
     - label: Dokumentasi OpenTelemetry
       url: https://opentelemetry.io/docs/

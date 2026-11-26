@@ -687,6 +687,15 @@ body {
   overflow-wrap: anywhere;
 }
 
+.spot__about {
+  margin-top: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--fg);
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
 .spot__hero {
   display: flex;
   align-items: flex-end;
@@ -1132,6 +1141,72 @@ body {
   color: var(--fg);
 }
 
+/* The schedule is what a scroller reads after the theme, so it is the foreground colour, not muted. */
+.sched {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--fg);
+}
+
+.sched__when {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.sched__where {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.sched__where b {
+  font-weight: 800;
+}
+
+.post--cover .whisper {
+  gap: 24px;
+}
+
+.post--cover .whisper b {
+  font-size: 26px;
+}
+
+/* Wide cover: schedule left, invite chip right, in the join panel. */
+.join--row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 24px;
+  border-radius: 22px;
+}
+
+.join--row .sched {
+  color: var(--join-fg);
+}
+
+.post--wide .join--row .sched__when {
+  font-size: 30px;
+}
+
+.post--wide .join--row .sched__where {
+  font-size: 22px;
+}
+
+.join--row .join__url {
+  padding: 12px 20px;
+}
+
+.post--wide .sched__when {
+  font-size: 34px;
+}
+
+.post--wide .sched__where {
+  font-size: 24px;
+}
+
 /* The FORA mark's integral, as a very quiet background figure. */
 .integral {
   position: absolute;
@@ -1168,6 +1243,12 @@ body {
   font-weight: 800;
   line-height: 1.15;
   text-wrap: balance;
+}
+
+.next__where {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .next__meta {
@@ -1291,6 +1372,7 @@ body {
 
 .post--wide .whisper {
   flex-direction: row;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
   font-size: 20px;
@@ -1361,4 +1443,14 @@ body {
 
 .side .next__when {
   font-size: 20px;
+}
+
+.whisper .join b {
+  color: inherit;
+  font-size: inherit;
+}
+
+.post--wide .whisper .join--row {
+  flex: 1;
+  min-width: 0;
 }

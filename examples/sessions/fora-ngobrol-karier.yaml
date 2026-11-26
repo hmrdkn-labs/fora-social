@@ -10,8 +10,10 @@ host:
   name: Dika (contoh)
   role: Software Engineer
   handle: dika_contoh
+  about: Menceritakan bagaimana dia pindah dari developer ke SRE lewat ikut jaga on-call.
 speakers: []
-description: "Diskusi terbuka tanpa tamu. Bawa cerita dan pertanyaan soal kerja di tech."
+note: Waktu cari kerja pertama saya kirim 40 lamaran dan cuma dua yang dibalas. Saya mau dengar cara kalian.
+description: "Diskusi terbuka tanpa tamu. Bawa satu cerita soal kerja di tech yang mau kamu ceritakan atau tanyakan."
 topics:
   - Cari kerja pertama di tech
   - Belajar sambil kerja
@@ -20,10 +22,11 @@ hashtags:
   - KarierTech
 recap:
   attendees: 9
+  question: Kalau kamu bikin satu repo kecil minggu ini untuk ditunjukkan ke pewawancara, isinya apa?
   points:
-    - title: Proyek kecil yang selesai lebih berguna daripada banyak kursus
-      body: Satu proyek yang bisa dijelaskan tuntas lebih gampang dinilai daripada daftar sertifikat.
-    - title: Belajar dengan target yang jelas
-      body: Pilih satu masalah nyata di kerjaan atau proyek, lalu pelajari apa yang dibutuhkan untuk menyelesaikannya.
-    - title: Pindah peran bisa dimulai dari tugas di sekitar peran tujuan
-      body: Ambil kerjaan yang beririsan, misalnya on-call atau pipeline CI, sebelum pindah penuh.
+    - title: Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat
+      body: Salah satu peserta cerita, pewawancaranya menghabiskan lima belas menit di satu repo buatannya dan nggak membuka sertifikat sama sekali.
+    - title: Pindah ke SRE bisa mulai dari ikut jaga on-call
+      body: Dika minta mendampingi rekan yang sedang on-call, yang menangani sistem kalau bermasalah di luar jam kerja. Dari situ tugas pertamanya menulis runbook, catatan langkah menangani masalah yang sering muncul.
+    - title: Belajar dari satu insiden nyata
+      body: Postmortem di kantor lama jadi bahan belajar Terraform yang paling nempel, karena tiap perintah ada alasannya.

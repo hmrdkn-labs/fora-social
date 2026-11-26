@@ -71,3 +71,7 @@ brief relies on. Workers: read `~/workspace/AGENTS.md`, `docs/BRIEF.md` and this
   doc slides); no overflow or clipping found. Open questions sent to the person.
 - 2026-11-24: 06 human voice merged (voice guide, varied caption shapes, style linter,
   optional `Session.note`). CI green.
+- 2026-11-26: 09 contact sheets and the content review loop merged (`docs/review/`). Four
+  rounds, four Codex reviewers, Sonnet editor. Contract: `live` post type, `Person.about`,
+  `recap.question`. Strict bar not met at round 4: 0 `slop`, 0 blocking, community clean;
+  slop and newcomer still give some 3s (see `docs/review/rounds/4/summary.md`).
