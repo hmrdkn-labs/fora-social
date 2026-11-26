@@ -4,7 +4,7 @@
 
 Ini yang tercatat dari "Kubernetes untuk Pemula" (Sab, 12 Des).
 
-- Pod adalah wadah tempat aplikasimu jalan. Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan dan memindahkan aplikasi per Pod.
+- Pod adalah wadah tempat aplikasimu jalan. Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan aplikasi per Pod. Kalau satu Pod hilang, yang muncul adalah Pod baru di salah satu mesin yang masih hidup.
 - Deployment menjaga jumlah salinan Pod. Kamu bilang maunya tiga salinan (replika), dan kalau satu Pod mati, Deployment langsung membuat gantinya sampai jumlahnya pas.
 - Service memberi alamat yang stabil. IP Pod berubah tiap kali dibuat ulang, jadi akses aplikasi lewat Service. Jangan pakai IP Pod langsung.
 - Mulai debug dari kubectl describe dan logs. Event di describe dan output logs biasanya sudah cukup untuk tahu kenapa Pod gagal jalan.
@@ -41,7 +41,7 @@ Rekap "Kubernetes untuk Pemula" (Sab, 12 Des).
 
 Terima kasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh. 14 orang ikut ngobrol di voice channel.
 
-1. Pod adalah wadah tempat aplikasimu jalan. Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan dan memindahkan aplikasi per Pod.
+1. Pod adalah wadah tempat aplikasimu jalan. Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan aplikasi per Pod. Kalau satu Pod hilang, yang muncul adalah Pod baru di salah satu mesin yang masih hidup.
 2. Deployment menjaga jumlah salinan Pod. Kamu bilang maunya tiga salinan (replika), dan kalau satu Pod mati, Deployment langsung membuat gantinya sampai jumlahnya pas.
 3. Service memberi alamat yang stabil. IP Pod berubah tiap kali dibuat ulang, jadi akses aplikasi lewat Service. Jangan pakai IP Pod langsung.
 4. Mulai debug dari kubectl describe dan logs. Event di describe dan output logs biasanya sudah cukup untuk tahu kenapa Pod gagal jalan.

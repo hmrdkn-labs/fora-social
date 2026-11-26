@@ -2,7 +2,7 @@
 
 ## Instagram
 
-Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server sekarang.
+Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server.
 
 GitOps dengan Argo CD
 
@@ -14,7 +14,7 @@ Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.g
 
 ## X
 
-Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server sekarang.
+Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server.
 GitOps dengan Argo CD
 Sab, 19 Des, 19.30–21.00 WIB
 Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
@@ -23,7 +23,7 @@ https://discord.gg/rSepJu7Wb
 
 ## LinkedIn
 
-Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server sekarang.
+Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server.
 
 Cloud Native 101 bareng SIG CN × FORA, kali ini soal GitOps. Sesinya "GitOps dengan Argo CD", Sab, 19 Des, 19.30–21.00 WIB.
 

@@ -42,12 +42,24 @@ const WHO = "Yang penasaran. Pemula juga boleh nanya";
 const HOW = "Ngobrol lewat suara di voice channel Discord";
 
 /** The nearest session, on the accent colour. `width` is the strip's inner width. */
-function nextSession(ctx: TemplateContext, width: number, titleSize: number, withTitle = true, withChannel = false): Block {
+function nextSession(ctx: TemplateContext, width: number, titleSize: number, withTitle = true, withChannel = false, stacked = false): Block {
   const { session } = ctx;
   const when = `${formatDateShort(session)} · ${formatTime(session)}`;
+  const title = withTitle ? `<p class="next__title">${e(tidy(session.title))}</p>` : "";
+  if (stacked) {
+    // The side panel: day and time as two big lines, easy to take in at a glance.
+    return {
+      html: `<div class="next" data-fit>
+  <p class="label">Sesi terdekat</p>
+  <p class="next__big">${e(formatDateShort(session))}</p>
+  <p class="next__big">${e(formatTime(session))}</p>
+  ${title}
+</div>`,
+      height: 48 + 22 + 2 * 6 + 2 * 30 * 1.1 + (withTitle ? 6 + textHeight(session.title, titleSize, width, 1.15) : 0),
+    };
+  }
   // In the side panel the date wraps under the label.
   const meta = width < 400 ? 22 + 2 + 26 : 31;
-  const title = withTitle ? `<p class="next__title">${e(tidy(session.title))}</p>` : "";
   return {
     html: `<div class="next" data-fit>
   <p class="next__meta"><span class="label">Sesi terdekat</span><span class="next__when">${e(when)}</span></p>
@@ -58,9 +70,12 @@ function nextSession(ctx: TemplateContext, width: number, titleSize: number, wit
   };
 }
 
+/** The description's second sentence: the everyday example, short enough for the wide image. */
+const example = (text: string): string => text.split(/(?<=[.!?])\s+/)[1] ?? text;
+
 /** The SIG's description at the largest of `sizes` that fits `room`; `fits` is false when none does. */
-function description(ctx: TemplateContext, width: number, room: number, sizes: readonly number[]): Block & { fits: boolean } {
-  const text = ctx.sig.description;
+function description(ctx: TemplateContext, width: number, room: number, sizes: readonly number[], brief = false): Block & { fits: boolean } {
+  const text = brief ? example(ctx.sig.description) : ctx.sig.description;
   const { size } = fitList([text], width, room, sizes, { lineHeight: 1.45, factor: REGULAR });
   const height = textHeight(text, size, width, 1.45, REGULAR);
   return { html: `<p class="lead" style="font-size:${size}px">${e(text)}</p>`, height, fits: height <= room };
@@ -105,8 +120,8 @@ function landscape(ctx: TemplateContext): string {
     "paper",
     `${header(ctx, "paper", TAG)}
 ${tagline.html}
-${description(ctx, MAIN_WIDTH, room - tagline.height, [24, 22, 20]).html}`,
-    [{ ...nextSession(ctx, 260, 24), fallback: nextSession(ctx, 260, 24, false) }],
+${description(ctx, MAIN_WIDTH, room - tagline.height, [34, 30, 28, 26, 24], true).html}`,
+    [{ ...nextSession(ctx, 260, 24, true, false, true), fallback: nextSession(ctx, 260, 24, false, false, true) }],
   );
 }
 

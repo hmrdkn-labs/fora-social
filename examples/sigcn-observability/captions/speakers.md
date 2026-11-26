@@ -4,20 +4,23 @@
 
 Yang ngisi "Observability: Logs, Metrics, Traces" (Kam, 14 Jan, 20.00 WIB).
 
-Eko (contoh), SRE. Kasus aplikasi lambat yang pernah Eko tangani dibedah dari awal, termasuk dari mana dia mulai mencari.
+Eko (contoh), SRE. Eko pegang log dan trace, yaitu cara menemukan request yang lambat lewat field duration_ms lalu mengikutinya antar service.
 
-Rina (contoh), Platform Engineer, host. Rina punya contoh dashboard yang hijau semua padahal aplikasinya lambat.
+Rina (contoh), Platform Engineer, host. Rina pegang bagian metrics, yaitu angka mana di dashboard yang dia lihat dulu waktu aplikasi lambat.
 
 Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-voice. Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #SIGCN #Observability #OpenTelemetry
 
-## X 1/2
+## X 1/3
 
-Eko (contoh), SRE. Kasus aplikasi lambat yang pernah Eko tangani dibedah dari awal, termasuk dari mana dia mulai mencari.
-Rina (contoh), Platform Engineer, host. Rina punya contoh dashboard yang hijau semua padahal aplikasinya lambat.
+Eko (contoh), SRE. Eko pegang log dan trace, yaitu cara menemukan request yang lambat lewat field duration_ms lalu mengikutinya antar service.
 
-## X 2/2
+## X 2/3
+
+Rina (contoh), Platform Engineer, host. Rina pegang bagian metrics, yaitu angka mana di dashboard yang dia lihat dulu waktu aplikasi lambat.
+
+## X 3/3
 
 "Observability: Logs, Metrics, Traces", mulai 20.00 WIB.
 Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
@@ -28,9 +31,9 @@ https://discord.gg/rSepJu7Wb
 
 Observability: Logs, Metrics, Traces (SIG CN × FORA)
 
-Eko (contoh), SRE. Kasus aplikasi lambat yang pernah Eko tangani dibedah dari awal, termasuk dari mana dia mulai mencari.
+Eko (contoh), SRE. Eko pegang log dan trace, yaitu cara menemukan request yang lambat lewat field duration_ms lalu mengikutinya antar service.
 
-Rina (contoh), Platform Engineer, host. Rina punya contoh dashboard yang hijau semua padahal aplikasinya lambat.
+Rina (contoh), Platform Engineer, host. Rina pegang bagian metrics, yaitu angka mana di dashboard yang dia lihat dulu waktu aplikasi lambat.
 
 Kamis, 14 Januari 2027, 20.00–21.30 WIB.
 

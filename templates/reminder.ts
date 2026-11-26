@@ -1,6 +1,7 @@
 // Reminder: posted earlier on the day, before the talk has started. One loud state on the SIG's
 // accent colour, "NANTI" over the start time, and the full date in a small line. It never says
 // "live" or "masuk sekarang"; templates/live.ts is the post for when the talk is running.
+import { PRACTICAL, practicalIndex } from "../src/captions/context.ts";
 import { formatDate, formatTime, formatTimeRange } from "../src/format.ts";
 import type { Template, TemplateContext } from "../src/types.ts";
 import { fitBlock, fitLine, REGULAR, textHeight } from "./fit.ts";
@@ -92,11 +93,11 @@ ${stateAndTitle(ctx, MAIN_WIDTH, WIDE_SIZES, room, [104, 88, 72, 60], (max) => l
   );
 }
 
-/** The one thing to do before the talk; the channel and time are on the slide already. */
-const READY = "Buka Discord sepuluh menit lebih awal buat cek suara.";
 
 function slides(ctx: TemplateContext): string[] {
   const { session } = ctx;
+  // The one thing to do before the talk, the same detail as the caption; channel and time are on the slide already.
+  const READY = PRACTICAL[practicalIndex(session.id)];
   const where = whenWhere(ctx);
   const room = tallRoom(ctx, "accent", FOOT) - where.height - 2 * GAP;
   const title = lede(ctx, TALL_WIDTH, SLIDE_SIZES, room * 0.4, false);

@@ -4,6 +4,8 @@
 
 Nanti jam 20.00 WIB, Observability: Logs, Metrics, Traces.
 
+Pengguna lapor aplikasinya lambat. Dicek dari mana dulu?
+
 Bersama Eko (contoh), dipandu Rina (contoh). Buka Discord sepuluh menit lebih awal buat cek suara.
 
 Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-voice. Dengerin aja nggak apa-apa, ngomong juga silakan.
@@ -13,7 +15,7 @@ Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-vo
 ## X
 
 Jam 20.00 WIB nanti, Observability: Logs, Metrics, Traces.
-Bersama Eko (contoh), dipandu Rina (contoh). Buka Discord sepuluh menit lebih awal buat cek suara.
+Pengguna lapor aplikasinya lambat. Dicek dari mana dulu?
 Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Observability
@@ -22,6 +24,8 @@ https://discord.gg/rSepJu7Wb
 
 Nanti jam 20.00 WIB
 Observability: Logs, Metrics, Traces
+
+Pengguna lapor aplikasinya lambat. Dicek dari mana dulu?
 
 Bersama Eko (contoh), dipandu Rina (contoh). Buka Discord sepuluh menit lebih awal untuk cek suara.
 

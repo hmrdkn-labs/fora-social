@@ -3,7 +3,7 @@ series: Cloud Native 101
 theme: Kubernetes
 title: Kubernetes untuk Pemula
 subtitle: Satu cluster lokal, dari nol
-problem: Aplikasi sudah jalan di laptop, tapi menjalankannya di banyak mesin sekaligus belum pernah dicoba.
+problem: Aplikasi sudah jalan di laptop, tapi belum pernah dicoba di Kubernetes.
 date: "2026-12-12"
 time: "19:30"
 durationMinutes: 90
@@ -38,7 +38,7 @@ recap:
   question: Deployment membuat Pod pengganti sendiri. Waktu proses aplikasimu mati, siapa atau apa yang menyalakannya lagi?
   points:
     - title: Pod adalah wadah tempat aplikasimu jalan
-      body: Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan dan memindahkan aplikasi per Pod.
+      body: Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan aplikasi per Pod. Kalau satu Pod hilang, yang muncul adalah Pod baru di salah satu mesin yang masih hidup.
     - title: Deployment menjaga jumlah salinan Pod
       body: Kamu bilang maunya tiga salinan (replika), dan kalau satu Pod mati, Deployment langsung membuat gantinya sampai jumlahnya pas.
     - title: Service memberi alamat yang stabil

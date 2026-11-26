@@ -4,6 +4,8 @@
 
 GitOps dengan Argo CD
 
+Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server.
+
 Sab, 19 Des, nanti jam 19.30 WIB. Buka Discord sepuluh menit lebih awal buat cek suara.
 
 Bersama Dani (contoh), dipandu Rina (contoh).
@@ -15,7 +17,7 @@ Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.g
 ## X
 
 GitOps dengan Argo CD, Sab, 19 Des, nanti jam 19.30 WIB.
-Buka Discord sepuluh menit lebih awal buat cek suara.
+Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server.
 Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #GitOps
@@ -24,6 +26,8 @@ https://discord.gg/rSepJu7Wb
 
 Nanti jam 19.30 WIB
 GitOps dengan Argo CD
+
+Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server.
 
 Bersama Dani (contoh), dipandu Rina (contoh). Buka Discord sepuluh menit lebih awal untuk cek suara.
 

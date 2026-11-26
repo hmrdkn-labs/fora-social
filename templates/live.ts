@@ -1,7 +1,7 @@
 // Live: posted at the start time, while the talk is running. Present tense, "LIVE SEKARANG" in
 // the biggest type the canvas allows over the time it began, and the join block says to come in
 // now. Same accent surface as the reminder, so the two read as one family with two states.
-import { formatTime, formatTimeRange } from "../src/format.ts";
+import { formatDate, formatDateShort, formatTime, formatTimeRange } from "../src/format.ts";
 import type { Template, TemplateContext } from "../src/types.ts";
 import { fitLine } from "./fit.ts";
 import { escapeHtml as e } from "./html.ts";
@@ -32,6 +32,9 @@ import { stateAndTitle, TIGHT } from "./state.ts";
 
 const TAG = "Live";
 
+/** Air between the outlined time and the date under it. */
+const DATE_GAP = 16;
+
 const TALL_SIZES = [64, 56, 48, 42, 38, 34, 30];
 const WIDE_SIZES = [44, 38, 34, 30, 26];
 const SLIDE_SIZES = [104, 92, 80, 70, 60, 54, 48, 42];
@@ -42,18 +45,21 @@ const SLIDE_SIZES = [104, 92, 80, 70, 60, 54, 48, 42];
  */
 function liveNow(ctx: TemplateContext, width: number, scale: number): Block {
   const time = `Sejak ${formatTime(ctx.session)}`;
+  const date = formatDateShort(ctx.session);
   const sizes = [
     fitLine("LIVE", width, 320 * scale, 48),
     fitLine("SEKARANG", width, 176 * scale, 48),
     fitLine(time.toUpperCase(), width, 104 * scale, 40),
+    fitLine(date.toUpperCase(), width, 72 * scale, 32),
   ];
   return {
     html: `<div class="now">
   <p class="now__big" style="font-size:${sizes[0]}px">Live</p>
   <p class="now__big" style="font-size:${sizes[1]}px">Sekarang</p>
   <p class="now__time" style="font-size:${sizes[2]}px">${e(time)}</p>
+  <p class="now__big" style="font-size:${sizes[3]}px;margin-top:${DATE_GAP}px">${e(date)}</p>
 </div>`,
-    height: sizes.reduce((sum, size) => sum + size * TIGHT, 0),
+    height: sizes.reduce((sum, size) => sum + size * TIGHT, 0) + DATE_GAP,
   };
 }
 
@@ -69,6 +75,7 @@ function tall(ctx: TemplateContext, foot: Block): string {
 
 function landscape(ctx: TemplateContext): string {
   const { session } = ctx;
+  const [weekday = "", date = ""] = formatDate(session).split(", ");
   const room = wideRoom(ctx, "accent") - WIDE_GAP;
   return wide(
     ctx,
@@ -78,10 +85,11 @@ ${stateAndTitle(ctx, MAIN_WIDTH, WIDE_SIZES, room, [0.5, 0.42, 0.34, 0.28], (sca
     [
       {
         html: `<div class="when">
-  <p class="when__day">Lagi jalan</p>
-  <p class="when__date">${e(formatTimeRange(session))}</p>
+  <p class="when__day">${e(weekday)}</p>
+  <p class="when__date">${e(date)}</p>
+  <p class="when__time">${e(formatTimeRange(session))}</p>
 </div>`,
-        height: 71,
+        height: 110,
       },
       byline(ctx, 304, 21),
       { html: wave(session.id, 20), height: 44, optional: true },

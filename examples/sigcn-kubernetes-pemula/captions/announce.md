@@ -12,6 +12,7 @@ Bersama Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina 
 
 ## X
 
+Aplikasi sudah jalan di laptop, tapi belum pernah dicoba di Kubernetes.
 Sab, 12 Des jam 19.30 WIB, kita kumpul di voice.
 Kubernetes untuk Pemula
 Di voice channel sig-cn-voice Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.

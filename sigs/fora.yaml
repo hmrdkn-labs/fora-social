@@ -9,8 +9,9 @@ lockup: brand/logos/fora-mark.svg
 tagline: Komunitas tech kecil yang ngobrol lewat suara di Discord.
 description: >-
   FORA (Forum Rangkai) itu komunitas tech kecil berbahasa Indonesia di Discord.
-  Obrolannya lewat suara, satu sesi satu topik. Ada sesi umum seperti karier, dan ada
-  SIG (special interest group) yang pegang satu bidang, misalnya SIG CN untuk cloud native.
+  Contohnya sesi karier, tempat orang cerita soal lamaran dan kerjaan lewat suara, satu topik
+  per sesi. Ada juga SIG (special interest group) yang pegang satu bidang, misalnya SIG CN
+  untuk cloud native.
 hashtags:
   - FORA
   - KomunitasTech

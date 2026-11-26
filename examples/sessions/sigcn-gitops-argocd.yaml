@@ -3,7 +3,7 @@ series: Cloud Native 101
 theme: GitOps
 title: GitOps dengan Argo CD
 subtitle: Deploy lewat merge pull request, Git dasar sudah cukup
-problem: Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server sekarang.
+problem: Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server.
 date: "2026-12-19"
 time: "19:30"
 durationMinutes: 90
@@ -11,7 +11,7 @@ voiceChannel: sig-cn-voice
 host:
   name: Rina (contoh)
   role: Platform Engineer
-  about: Rina menyiapkan repo kosong berisi manifest (file YAML yang menjelaskan aplikasi di cluster) dan Argo CD, lalu alurnya dibangun bareng dari nol.
+  about: Rina menyiapkan Argo CD yang sudah terpasang. Repo manifest (file YAML yang menjelaskan aplikasi di cluster) dan alurnya dibuat bareng dari nol.
 speakers:
   - name: Dani (contoh)
     role: SRE
@@ -28,12 +28,12 @@ hashtags:
   - DevOps
 recap:
   attendees: 11
-  question: Bagian mana dari alur tadi yang masih bikin bingung, atau kalau sudah pernah rollback, caranya lewat apa?
+  question: Bagian mana dari GitOps yang masih bikin kamu bingung?
   points:
     - title: Git jadi source of truth
-      body: Kondisi yang diinginkan ditulis di repo, dan controller yang menyamakan cluster dengan repo. Tidak ada kubectl apply manual.
-    - title: Argo CD membandingkan live state dengan Git
-      body: Kalau beda, aplikasi berstatus OutOfSync, dan sync menerapkan perubahannya.
+      body: Jumlah salinan aplikasi ditulis di file YAML dalam repo. Ganti angka 2 jadi 3 lalu commit, dan Argo CD, program yang menjaga servernya, menambah salinan ketiga. Tidak ada kubectl apply manual.
+    - title: Argo CD membandingkan isi repo dengan yang jalan di server
+      body: Kalau beda, aplikasinya berstatus OutOfSync, dan sync menyamakannya dengan repo.
     - title: Pisahkan repo manifest dari repo kode aplikasi
       body: Manifest, file YAML yang menjelaskan aplikasi di cluster, tinggal di repo sendiri. Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
     - title: Rollback config cukup dengan git revert

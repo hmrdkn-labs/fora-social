@@ -1259,6 +1259,12 @@ body {
   gap: 2px 24px;
 }
 
+.next__big {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
 .next__when {
   font-size: 24px;
   font-weight: 700;
@@ -1441,7 +1447,13 @@ body {
   font-size: 24px;
 }
 
-.side .next__when {
+.side .next__big {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.next__when {
   font-size: 20px;
 }
 

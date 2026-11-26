@@ -14,11 +14,16 @@ Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga d
 
 #FORA #SIGCN #Kubernetes #Container
 
-## X 1/2
+## X 1/3
 
 Bima (contoh) @bima_contoh, DevOps Engineer. Bima membaca kubectl describe dari satu Pod (wadah tempat aplikasi jalan) yang gagal start.
+Sari (contoh) @sari_contoh, Backend Developer. Sari cerita bagian mana yang bikin dia bingung waktu pertama kali deploy ke cluster.
 
-## X 2/2
+## X 2/3
+
+Rina (contoh) @rina_contoh, Platform Engineer, host. Rina mematikan satu Pod di minikube supaya kelihatan Deployment membuat gantinya.
+
+## X 3/3
 
 "Kubernetes untuk Pemula", mulai 19.30 WIB.
 Masuk aja ke voice channel sig-cn-voice di Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.

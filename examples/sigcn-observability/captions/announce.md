@@ -21,6 +21,7 @@ Mampir ke voice channel sig-cn-voice di Discord FORA, link di bio atau discord.g
 
 ## X
 
+Pengguna lapor aplikasinya lambat. Dicek dari mana dulu?
 Observability: Logs, Metrics, Traces
 Kam, 14 Jan jam 20.00 WIB.
 Masuk aja ke voice channel sig-cn-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
