@@ -389,7 +389,7 @@ Kita ngobrol di voice channel fora-voice Discord FORA. Boleh dengarkan saja, bol
 **Instagram**
 
 ```text
-Dika (contoh) @dika_contoh, Software Engineer. Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
+Dika (contoh) @dika_contoh, SRE. Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
 
 Tanpa pembicara tamu, jadi yang cerita kita semua.
 
@@ -403,7 +403,7 @@ Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di 
 **X 1/2**
 
 ```text
-Dika (contoh) @dika_contoh, Software Engineer. Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
+Dika (contoh) @dika_contoh, SRE. Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
 ```
 
 **X 2/2**
@@ -420,7 +420,7 @@ https://discord.gg/rSepJu7Wb
 ```text
 Ngobrol Karier di Tech (FORA)
 
-Dika (contoh) @dika_contoh, Software Engineer. Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
+Dika (contoh) @dika_contoh, SRE. Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
 
 Tanpa pembicara tamu, jadi yang cerita kita semua.
 
@@ -639,7 +639,7 @@ Kita ada di voice channel sig-cn-voice, undangannya https://discord.gg/rSepJu7Wb
 ```text
 Ini yang tercatat dari "Kubernetes untuk Pemula" (Sab, 12 Des).
 
-- Pod adalah wadah tempat aplikasimu jalan. Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan aplikasi per Pod. Kalau satu Pod hilang, yang muncul adalah Pod baru di salah satu mesin yang masih hidup.
+- Pod adalah wadah tempat aplikasimu jalan. Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan aplikasi per Pod. Pod yang dibuat sendirian tidak diganti kalau hilang; yang menggantinya adalah Deployment, poin berikutnya.
 - Deployment menjaga jumlah salinan Pod. Kamu bilang maunya tiga salinan (replika), dan kalau satu Pod mati, Deployment langsung membuat gantinya sampai jumlahnya pas.
 - Service memberi alamat yang stabil. IP Pod berubah tiap kali dibuat ulang, jadi akses aplikasi lewat Service. Jangan pakai IP Pod langsung.
 - Mulai debug dari kubectl describe dan logs. Event di describe dan output logs biasanya sudah cukup untuk tahu kenapa Pod gagal jalan.
@@ -684,7 +684,7 @@ Rekap "Kubernetes untuk Pemula" (Sab, 12 Des).
 
 Terima kasih Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh. 14 orang ikut ngobrol di voice channel.
 
-1. Pod adalah wadah tempat aplikasimu jalan. Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan aplikasi per Pod. Kalau satu Pod hilang, yang muncul adalah Pod baru di salah satu mesin yang masih hidup.
+1. Pod adalah wadah tempat aplikasimu jalan. Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan aplikasi per Pod. Pod yang dibuat sendirian tidak diganti kalau hilang; yang menggantinya adalah Deployment, poin berikutnya.
 2. Deployment menjaga jumlah salinan Pod. Kamu bilang maunya tiga salinan (replika), dan kalau satu Pod mati, Deployment langsung membuat gantinya sampai jumlahnya pas.
 3. Service memberi alamat yang stabil. IP Pod berubah tiap kali dibuat ulang, jadi akses aplikasi lewat Service. Jangan pakai IP Pod langsung.
 4. Mulai debug dari kubectl describe dan logs. Event di describe dan output logs biasanya sudah cukup untuk tahu kenapa Pod gagal jalan.

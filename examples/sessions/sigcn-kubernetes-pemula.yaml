@@ -38,7 +38,7 @@ recap:
   question: Deployment membuat Pod pengganti sendiri. Waktu proses aplikasimu mati, siapa atau apa yang menyalakannya lagi?
   points:
     - title: Pod adalah wadah tempat aplikasimu jalan
-      body: Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan aplikasi per Pod. Kalau satu Pod hilang, yang muncul adalah Pod baru di salah satu mesin yang masih hidup.
+      body: Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan aplikasi per Pod. Pod yang dibuat sendirian tidak diganti kalau hilang; yang menggantinya adalah Deployment, poin berikutnya.
     - title: Deployment menjaga jumlah salinan Pod
       body: Kamu bilang maunya tiga salinan (replika), dan kalau satu Pod mati, Deployment langsung membuat gantinya sampai jumlahnya pas.
     - title: Service memberi alamat yang stabil

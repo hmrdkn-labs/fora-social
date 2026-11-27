@@ -9,7 +9,7 @@ durationMinutes: 90
 voiceChannel: fora-voice
 host:
   name: Dika (contoh)
-  role: Software Engineer
+  role: SRE
   handle: dika_contoh
   about: Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
 speakers: []
