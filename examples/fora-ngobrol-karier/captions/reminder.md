@@ -4,16 +4,18 @@
 
 Jam 19.30 WIB nanti kita ngobrol soal Karier.
 
+Lamaran sudah dikirim ke mana-mana, tapi nggak ada kabar dan nggak jelas salahnya di mana.
+
 Ngobrol Karier di Tech, dipandu Dika (contoh) @dika_contoh.
 
-Pakai headset kalau ada. Dari HP juga bisa. Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
+Pakai headset kalau ada, dari HP juga bisa. Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #Karier #KarierTech #KomunitasTech
 
 ## X
 
 Nanti jam 19.30 WIB, Ngobrol Karier di Tech.
-Cerita dan tanya jawab, tanpa slide.
+Lamaran sudah dikirim ke mana-mana, tapi nggak ada kabar dan nggak jelas salahnya di mana.
 Di voice channel fora-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Karier
@@ -21,6 +23,8 @@ https://discord.gg/rSepJu7Wb
 ## LinkedIn
 
 Hari ini jam 19.30 WIB kita ngobrol soal Karier.
+
+Lamaran sudah dikirim ke mana-mana, tapi nggak ada kabar dan nggak jelas salahnya di mana.
 
 Ngobrol Karier di Tech, Sabtu, 23 Januari 2027. Dipandu Dika (contoh) @dika_contoh.
 

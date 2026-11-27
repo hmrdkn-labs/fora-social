@@ -12,7 +12,7 @@ Bersama Bima (contoh) @bima_contoh dan Sari (contoh) @sari_contoh, dipandu Rina 
 
 ## X
 
-Sesi pertama Cloud Native 101.
+Aplikasi sudah jalan di laptop, tapi belum pernah dicoba di Kubernetes.
 Sab, 12 Des jam 19.30 WIB, kita kumpul di voice.
 Kubernetes untuk Pemula
 Di voice channel sig-cn-voice Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
@@ -33,6 +33,6 @@ Sabtu, 12 Desember 2026, 19.30–21.00 WIB, bersama Bima (contoh) @bima_contoh d
 • Service, alamat tetap untuk Pod yang berganti
 • Debug dasar pakai kubectl describe dan logs
 
-Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangannya di https://discord.gg/rSepJu7Wb.
 
 #Kubernetes #CloudNative #DevOpsIndonesia

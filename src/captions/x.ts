@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { aboutPerson, cap, type Ctx, everyone, firstSentence, hashLine, openDoor, sentence, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPerson, type Ctx, everyone, firstSentence, hashLine, openDoor, PRACTICAL, practicalIndex, sentence, shape, themeTag, uniqueTags } from "./context.ts";
 import { xLength } from "./xlength.ts";
 
 const LIMIT = 280;
@@ -39,20 +39,34 @@ function tags(c: Ctx): string {
 
 const plain = (...texts: string[]): Line[] => texts.map((text) => ({ text }));
 
-/** The subtitle as one short line, the everyday problem a title may not say; none without one. */
-const sub = (c: Ctx): string[] => (c.s.subtitle ? [sentence(c.s.subtitle)] : []);
+/** The everyday problem as one short line, which a title may not say; none without one. */
+const problem = (c: Ctx): string[] => (c.s.problem ? [sentence(c.s.problem)] : []);
+
+/** The reminder's one practical detail. */
+const practical = (c: Ctx): string => PRACTICAL[practicalIndex(c.s.id)];
+
+/** One post if the lines fit, dropping optional ones from the end; a thread only when the rest cannot fit. */
+function one(lines: Line[], parts: Line[][]): string[] {
+  try {
+    return [compose(lines)];
+  } catch {
+    return build(parts);
+  }
+}
 
 /**
- * One concrete situation leads the single post: the host's note when it fits, else the first
- * sentence of the description, else nothing. The image already shows the logistics, so they
- * stay short.
+ * One concrete situation leads the single post: the host's note when it fits, else its first
+ * sentence, else the session's plain problem. The image already shows the logistics, so when the
+ * lead is long they shrink to one line. Nothing fits: the logistics alone.
  */
-function hooked(c: Ctx, body: Line[]): string[] {
-  const rest = body.map((l) => l.text);
-  for (const lead of [c.s.note, firstSentence(c.s.description)]) {
-    if (!lead) continue;
-    const text = [lead, ...rest].join("\n");
-    if (xLength(text) <= LIMIT) return [text];
+function hooked(c: Ctx, body: Line[], compact: Line[]): string[] {
+  const leads = [c.s.note, c.s.note ? firstSentence(c.s.note) : firstSentence(c.s.description), ...problem(c)];
+  for (const rest of [body, compact]) {
+    for (const lead of leads) {
+      if (!lead) continue;
+      const text = [lead, ...rest.map((l) => l.text)].join("\n");
+      if (xLength(text) <= LIMIT) return [text];
+    }
   }
   return build([body]);
 }
@@ -91,19 +105,26 @@ function recapThread(c: Ctx): string[] {
   return posts;
 }
 
-/** Who talks and what they will share, as many people as fit one post; a long cast is counted. */
-function speakersIntro(c: Ctx): string {
+/**
+ * Who talks and what they will share, packed into as few posts as fit, so each person keeps
+ * their line. Too many people for the thread: only the first, then a count.
+ */
+function speakersThread(c: Ctx): string[] {
   const people = everyone(c);
-  const fits = (text: string) => xLength(text) <= LIMIT;
+  const room = MAX_POSTS - 1;
   for (const withHandle of [true, false]) {
-    const all = people.map((p) => aboutPerson(c, p, withHandle)).join("\n");
-    if (fits(all)) return all;
+    const posts: string[] = [];
+    for (const p of people) {
+      const text = aboutPerson(c, p, withHandle);
+      const last = posts.length - 1;
+      if (last >= 0 && xLength(`${posts[last]}\n${text}`) <= LIMIT) posts[last] = `${posts[last]}\n${text}`;
+      else posts.push(text);
+    }
+    if (posts.length <= room && posts.every((p) => xLength(p) <= LIMIT)) return posts;
   }
-  for (const withHandle of [true, false]) {
-    const first = aboutPerson(c, people[0]!, withHandle);
-    if (fits(first)) return first;
-  }
-  return `Ada ${c.s.speakers.length} pembicara, dipandu ${c.s.host.name}.`;
+  const first = aboutPerson(c, people[0]!, false);
+  if (xLength(first) <= LIMIT) return [first, `Ada ${people.length - 1} orang lagi, dipandu ${c.s.host.name}.`];
+  return [`Ada ${c.s.speakers.length} pembicara, dipandu ${c.s.host.name}.`];
 }
 
 export function x(c: Ctx, type: PostType): string[] {
@@ -111,40 +132,37 @@ export function x(c: Ctx, type: PostType): string[] {
   const v = shape(c, `x|${type}`, 3);
   switch (type) {
     case "announce":
-      return hooked(c, [
-        ...(v === 0
-          ? plain(s.title, `${c.dateShort}, ${c.range}`)
-          : v === 1
-            ? plain(s.title, `${c.dateShort} jam ${c.time}.`)
-            : plain(`${c.dateShort} jam ${c.time}, kita kumpul di voice.`, s.title)),
-        ...joinPart(c, v),
-      ]);
-    case "reminder":
-      return build([
-        v === 0
-          ? plain(`Nanti jam ${c.time}, ${s.title}.`, ...sub(c))
-          : v === 1
-            ? plain(`${s.title}, ${c.dateShort}, nanti jam ${c.time}.`, ...sub(c))
-            : plain(`Jam ${c.time} nanti, ${s.title}.`, ...(s.subtitle ? sub(c) : [`${cap(c.who)}.`])),
-        joinPart(c, v),
-      ]);
-    case "live":
-      return build([
-        v === 0
-          ? plain(`${s.title} lagi jalan sekarang.`, ...sub(c))
-          : v === 1
-            ? plain(`Live sekarang, ${s.title}.`, ...sub(c))
-            : plain(`Sudah mulai jam ${c.time}, ${s.title}.`, ...sub(c)),
-        joinPart(c, v, true),
-      ]);
+      return hooked(
+        c,
+        [
+          ...(v === 0
+            ? plain(s.title, `${c.dateShort}, ${c.range}`)
+            : v === 1
+              ? plain(s.title, `${c.dateShort} jam ${c.time}.`)
+              : plain(`${c.dateShort} jam ${c.time}, kita kumpul di voice.`, s.title)),
+          ...joinPart(c, v),
+        ],
+        [...plain(`${s.title}, ${c.dateShort} jam ${c.time}.`), ...joinPart(c, v)],
+      );
+    case "reminder": {
+      const first = v === 0 ? `Nanti jam ${c.time}, ${s.title}.` : v === 1 ? `${s.title}, ${c.dateShort}, nanti jam ${c.time}.` : `Jam ${c.time} nanti, ${s.title}.`;
+      // The problem outranks the practical detail: the poster's second slide already carries that one.
+      const extra = [...problem(c), practical(c)].map((text) => ({ text, optional: true }));
+      return one([{ text: first }, ...extra, ...joinPart(c, v)], [[{ text: first }, ...extra], joinPart(c, v)]);
+    }
+    case "live": {
+      const first = v === 0 ? `${s.title} lagi jalan sekarang.` : v === 1 ? `Live sekarang, ${s.title}.` : `Sudah mulai jam ${c.time}, ${s.title}.`;
+      const lines: Line[] = [{ text: first }, ...problem(c).map((text) => ({ text, optional: true })), ...joinPart(c, v, true)];
+      return one(lines, [[{ text: first }, ...problem(c).map((text) => ({ text }))], joinPart(c, v, true)]);
+    }
     case "recap":
       return recapThread(c);
     case "cover":
       return build([
         v === 1
-          ? plain(s.title, ...sub(c), `${c.dateShort}, ${c.range}`)
-          : s.subtitle
-            ? plain(...sub(c), s.title, `${c.dateShort}, ${c.range}`)
+          ? plain(s.title, ...problem(c), `${c.dateShort}, ${c.range}`)
+          : s.problem
+            ? plain(...problem(c), s.title, `${c.dateShort}, ${c.range}`)
             : plain(`${s.series ? `${c.series} bareng ${c.brand}.` : `Tema ${s.theme} bareng ${c.brand}.`}`, s.title, `${c.dateShort}, ${c.range}`),
         joinPart(c, v),
       ]);
@@ -155,6 +173,6 @@ export function x(c: Ctx, type: PostType): string[] {
         joinPart(c, v),
       ]);
     case "speakers":
-      return build([plain(speakersIntro(c)), [...plain(`"${s.title}", mulai ${c.time}.`), ...joinPart(c, v)]]);
+      return build([...speakersThread(c).map((text) => plain(text)), [...plain(`"${s.title}", mulai ${c.time}.`), ...joinPart(c, v)]]);
   }
 }

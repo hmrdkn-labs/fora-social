@@ -44,10 +44,12 @@ function block(ctx: TemplateContext, width: number, sizes: readonly number[], ro
   const gap = isWide ? 12 : 20;
   // A general community session without a series says what kind of session it is instead of repeating the name.
   const series = session.series ?? (sig.lockup === ctx.community.logo ? "Talk terbuka" : sig.name);
-  const line = session.title === session.theme ? (session.subtitle ?? "") : session.title;
+  // The everyday problem is what a scroller needs before the title; the title is in the caption and on the announcement.
+  const line = session.problem ?? (session.title === session.theme ? (session.subtitle ?? "") : session.title);
   const themeRoom = room - textHeight(series.toUpperCase(), (isWide ? 22 : 28) * 1.16, width, 1.2) - gap;
   const lineHeight = gap + textHeight(line, isWide ? 28 : 44, width, 1.15, SERIF);
-  const large = sizes.filter((size) => size >= (sizes[0] ?? 0) / 2);
+  // The problem is worth a smaller theme on the wide cover, which has little height to share.
+  const large = sizes.filter((size) => size >= (sizes[0] ?? 0) / (isWide && session.problem ? 3 : 2));
   const withLine = line === "" ? undefined : fitBlock(session.theme, width, themeRoom - lineHeight, large, 0.98, TRACKING);
   const size = withLine ?? fitBlock(session.theme, width, themeRoom, sizes, 0.98, TRACKING) ?? sizes[sizes.length - 1];
   return `<div class="cover">
@@ -108,7 +110,7 @@ function slides(ctx: TemplateContext): string[] {
   ${wave(ctx.session.id, 52)}
   ${where.html}
 </main>`,
-      aboutMain(ctx, "ink", "Soal seri ini", false),
+      aboutMain(ctx, "ink", "Yang kita bahas", true, ctx.session.subtitle ?? ""),
     ],
     joinMain(ctx, "ink"),
   );

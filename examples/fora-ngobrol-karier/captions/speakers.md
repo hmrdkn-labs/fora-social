@@ -2,7 +2,7 @@
 
 ## Instagram
 
-Dika (contoh) @dika_contoh, Software Engineer. Menceritakan bagaimana dia pindah dari developer ke SRE lewat ikut jaga on-call.
+Dika (contoh) @dika_contoh, SRE. Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
 
 Tanpa pembicara tamu, jadi yang cerita kita semua.
 
@@ -14,7 +14,7 @@ Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di 
 
 ## X 1/2
 
-Dika (contoh) @dika_contoh, Software Engineer. Menceritakan bagaimana dia pindah dari developer ke SRE lewat ikut jaga on-call.
+Dika (contoh) @dika_contoh, SRE. Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
 
 ## X 2/2
 
@@ -27,12 +27,12 @@ https://discord.gg/rSepJu7Wb
 
 Ngobrol Karier di Tech (FORA)
 
-Dika (contoh) @dika_contoh, Software Engineer. Menceritakan bagaimana dia pindah dari developer ke SRE lewat ikut jaga on-call.
+Dika (contoh) @dika_contoh, SRE. Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
 
 Tanpa pembicara tamu, jadi yang cerita kita semua.
 
 Sabtu, 23 Januari 2027, 19.30–21.00 WIB.
 
-Kita ngobrol di voice channel fora-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel fora-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangannya di https://discord.gg/rSepJu7Wb.
 
 #Karier #KomunitasTech #FORA

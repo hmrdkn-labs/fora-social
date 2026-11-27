@@ -2,11 +2,11 @@
 
 ## Instagram
 
-Bima (contoh) @bima_contoh, DevOps Engineer. Menunjukkan cara membaca kubectl describe waktu aplikasimu mogok di Kubernetes, lewat satu Pod (wadah tempat aplikasi jalan) yang gagal start.
+Bima (contoh) @bima_contoh, DevOps Engineer. Bima membaca kubectl describe dari satu Pod (wadah tempat aplikasi jalan) yang gagal start.
 
-Sari (contoh) @sari_contoh, Backend Developer. Menceritakan bagian mana yang bikin bingung waktu pertama kali deploy ke cluster.
+Sari (contoh) @sari_contoh, Backend Developer. Sari cerita bagian mana yang bikin dia bingung waktu pertama kali deploy ke cluster.
 
-Rina (contoh) @rina_contoh, Platform Engineer, host. Mematikan satu Pod di minikube dan menunjukkan Deployment membuat gantinya.
+Rina (contoh) @rina_contoh, Platform Engineer, host. Rina mematikan satu Pod di minikube supaya kelihatan Deployment membuat gantinya.
 
 Sesinya "Kubernetes untuk Pemula", Sabtu, 12 Desember 2026, 19.30–21.00 WIB.
 
@@ -14,11 +14,16 @@ Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga d
 
 #FORA #SIGCN #Kubernetes #Container
 
-## X 1/2
+## X 1/3
 
-Bima (contoh) @bima_contoh, DevOps Engineer. Menunjukkan cara membaca kubectl describe waktu aplikasimu mogok di Kubernetes, lewat satu Pod (wadah tempat aplikasi jalan) yang gagal start.
+Bima (contoh) @bima_contoh, DevOps Engineer. Bima membaca kubectl describe dari satu Pod (wadah tempat aplikasi jalan) yang gagal start.
+Sari (contoh) @sari_contoh, Backend Developer. Sari cerita bagian mana yang bikin dia bingung waktu pertama kali deploy ke cluster.
 
-## X 2/2
+## X 2/3
+
+Rina (contoh) @rina_contoh, Platform Engineer, host. Rina mematikan satu Pod di minikube supaya kelihatan Deployment membuat gantinya.
+
+## X 3/3
 
 "Kubernetes untuk Pemula", mulai 19.30 WIB.
 Masuk aja ke voice channel sig-cn-voice di Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
@@ -29,14 +34,14 @@ https://discord.gg/rSepJu7Wb
 
 Kubernetes untuk Pemula (SIG CN × FORA)
 
-Bima (contoh) @bima_contoh, DevOps Engineer. Menunjukkan cara membaca kubectl describe waktu aplikasimu mogok di Kubernetes, lewat satu Pod (wadah tempat aplikasi jalan) yang gagal start.
+Bima (contoh) @bima_contoh, DevOps Engineer. Bima membaca kubectl describe dari satu Pod (wadah tempat aplikasi jalan) yang gagal start.
 
-Sari (contoh) @sari_contoh, Backend Developer. Menceritakan bagian mana yang bikin bingung waktu pertama kali deploy ke cluster.
+Sari (contoh) @sari_contoh, Backend Developer. Sari cerita bagian mana yang bikin dia bingung waktu pertama kali deploy ke cluster.
 
-Rina (contoh) @rina_contoh, Platform Engineer, host. Mematikan satu Pod di minikube dan menunjukkan Deployment membuat gantinya.
+Rina (contoh) @rina_contoh, Platform Engineer, host. Rina mematikan satu Pod di minikube supaya kelihatan Deployment membuat gantinya.
 
 Sabtu, 12 Desember 2026, 19.30–21.00 WIB.
 
-Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangan: https://discord.gg/rSepJu7Wb
+Kita ngobrol di voice channel sig-cn-voice Discord FORA. Boleh dengarkan saja, boleh juga ikut bicara. Undangannya di https://discord.gg/rSepJu7Wb.
 
 #Kubernetes #CloudNative #DevOpsIndonesia

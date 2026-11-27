@@ -3,6 +3,7 @@ series: Cloud Native 101
 theme: Kubernetes
 title: Kubernetes untuk Pemula
 subtitle: Satu cluster lokal, dari nol
+problem: Aplikasi sudah jalan di laptop, tapi belum pernah dicoba di Kubernetes.
 date: "2026-12-12"
 time: "19:30"
 durationMinutes: 90
@@ -11,16 +12,16 @@ host:
   name: Rina (contoh)
   role: Platform Engineer
   handle: rina_contoh
-  about: Mematikan satu Pod di minikube dan menunjukkan Deployment membuat gantinya.
+  about: Rina mematikan satu Pod di minikube supaya kelihatan Deployment membuat gantinya.
 speakers:
   - name: Bima (contoh)
     role: DevOps Engineer
     handle: bima_contoh
-    about: Menunjukkan cara membaca kubectl describe waktu aplikasimu mogok di Kubernetes, lewat satu Pod (wadah tempat aplikasi jalan) yang gagal start.
+    about: Bima membaca kubectl describe dari satu Pod (wadah tempat aplikasi jalan) yang gagal start.
   - name: Sari (contoh)
     role: Backend Developer
     handle: sari_contoh
-    about: Menceritakan bagian mana yang bikin bingung waktu pertama kali deploy ke cluster.
+    about: Sari cerita bagian mana yang bikin dia bingung waktu pertama kali deploy ke cluster.
 note: Dulu saya baru paham Pod setelah sengaja mematikan satu dan lihat Deployment membuat gantinya. Kita ulangi percobaan itu bareng-bareng.
 description: Sesi pertama Cloud Native 101. Di minikube, cluster Kubernetes di laptop, kita deploy satu aplikasi lalu matikan Pod-nya dan lihat Deployment membuat gantinya. Dari situ baru kita kenalan sama istilahnya. Cukup tahu apa itu container.
 topics:
@@ -36,10 +37,10 @@ recap:
   attendees: 14
   question: Deployment membuat Pod pengganti sendiri. Waktu proses aplikasimu mati, siapa atau apa yang menyalakannya lagi?
   points:
-    - title: Pod adalah unit terkecil yang dijadwalkan
-      body: Satu Pod bisa berisi beberapa container yang berbagi network dan storage.
-    - title: Deployment menjaga jumlah replika
-      body: Kalau satu Pod mati, Deployment langsung membuat gantinya sampai jumlah replika sesuai.
+    - title: Pod adalah wadah tempat aplikasimu jalan
+      body: Satu Pod bisa berisi beberapa container yang berbagi network dan storage. Kubernetes menjalankan aplikasi per Pod. Pod yang dibuat sendirian tidak diganti kalau hilang; yang menggantinya adalah Deployment, poin berikutnya.
+    - title: Deployment menjaga jumlah salinan Pod
+      body: Kamu bilang maunya tiga salinan (replika), dan kalau satu Pod mati, Deployment langsung membuat gantinya sampai jumlahnya pas.
     - title: Service memberi alamat yang stabil
       body: IP Pod berubah tiap kali dibuat ulang, jadi akses aplikasi lewat Service. Jangan pakai IP Pod langsung.
     - title: Mulai debug dari kubectl describe dan logs

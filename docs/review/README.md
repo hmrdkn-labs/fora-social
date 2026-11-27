@@ -36,4 +36,5 @@ first finishes.
    with the orchestrator's call.
 4. If the round passes, stop. Otherwise start the editor: "Read docs/review/editor.md and do
    what it says. Round `<n>`." Then start round `n + 1` from step 1.
-5. Stop after a pass, or after 4 rounds; then report what remains.
+5. Stop after a pass, or after 4 rounds (the person may ask for more); then report what
+   remains.

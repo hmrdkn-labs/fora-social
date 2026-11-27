@@ -3,6 +3,7 @@ series: Cloud Native 101
 theme: GitOps
 title: GitOps dengan Argo CD
 subtitle: Deploy lewat merge pull request, Git dasar sudah cukup
+problem: Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server.
 date: "2026-12-19"
 time: "19:30"
 durationMinutes: 90
@@ -10,11 +11,11 @@ voiceChannel: sig-cn-voice
 host:
   name: Rina (contoh)
   role: Platform Engineer
-  about: Menyiapkan repo kosong berisi manifest (file YAML yang menjelaskan aplikasi di cluster) dan Argo CD, supaya alurnya bisa diikuti dari nol.
+  about: Rina menyiapkan Argo CD yang sudah terpasang. Repo manifest (file YAML yang menjelaskan aplikasi di cluster) dan alurnya dibuat bareng dari nol.
 speakers:
   - name: Dani (contoh)
     role: SRE
-    about: Menceritakan kenapa timnya pindah dari kubectl apply manual ke GitOps.
+    about: Tim Dani dulu deploy dengan kubectl apply manual, dan dia cerita kenapa akhirnya pindah ke GitOps.
 note: Pernah ada yang kubectl apply langsung ke prod jam 11 malam? Di tim saya pernah, dan dari situ saya pindah ke GitOps.
 description: Bayangkan deploy cukup dengan merge pull request, dan cluster otomatis ikut isi repo Git. Kita bangun alurnya dari nol pakai Argo CD, jadi yang belum pernah pakai GitOps juga bisa ikut. Cukup tahu Git dasar.
 topics:
@@ -27,12 +28,12 @@ hashtags:
   - DevOps
 recap:
   attendees: 11
-  question: Kalau deploy semalam bikin masalah, di tempatmu rollback-nya lewat apa sekarang?
+  question: Bagian mana dari GitOps yang masih bikin kamu bingung?
   points:
     - title: Git jadi source of truth
-      body: Kondisi yang diinginkan ditulis di repo, dan controller yang menyamakan cluster dengan repo. Tidak ada kubectl apply manual.
-    - title: Argo CD membandingkan live state dengan Git
-      body: Kalau beda, aplikasi berstatus OutOfSync, dan sync menerapkan perubahannya.
+      body: Jumlah salinan aplikasi ditulis di file YAML dalam repo. Ganti angka 2 jadi 3 lalu commit, dan Argo CD, program yang menjaga servernya, menambah salinan ketiga. Tidak ada kubectl apply manual.
+    - title: Argo CD membandingkan isi repo dengan yang jalan di server
+      body: Kalau beda, aplikasinya berstatus OutOfSync, dan sync menyamakannya dengan repo.
     - title: Pisahkan repo manifest dari repo kode aplikasi
       body: Manifest, file YAML yang menjelaskan aplikasi di cluster, tinggal di repo sendiri. Perubahan konfigurasi tidak ikut memicu build, dan histori deploy lebih rapi.
     - title: Rollback config cukup dengan git revert

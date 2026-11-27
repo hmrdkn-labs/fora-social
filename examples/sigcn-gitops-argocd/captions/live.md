@@ -4,7 +4,7 @@
 
 Sudah mulai jam 19.30 WIB. GitOps dengan Argo CD
 
-Bayangkan deploy cukup dengan merge pull request, dan cluster otomatis ikut isi repo Git.
+Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server.
 
 Link di bio, atau discord.gg/rSepJu7Wb. Masuknya ke voice channel sig-cn-voice. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 
@@ -13,7 +13,7 @@ Link di bio, atau discord.gg/rSepJu7Wb. Masuknya ke voice channel sig-cn-voice. 
 ## X
 
 GitOps dengan Argo CD lagi jalan sekarang.
-Deploy lewat merge pull request, Git dasar sudah cukup.
+Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server.
 Langsung masuk ke voice channel sig-cn-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #GitOps
@@ -22,7 +22,9 @@ https://discord.gg/rSepJu7Wb
 
 Kita sudah mulai (19.30 WIB).
 
-GitOps dengan Argo CD. Bayangkan deploy cukup dengan merge pull request, dan cluster otomatis ikut isi repo Git.
+GitOps dengan Argo CD
+
+Deploy masih lewat perintah manual, dan nggak ada yang yakin apa yang sebenarnya jalan di server.
 
 Kita ada di voice channel sig-cn-voice, undangannya https://discord.gg/rSepJu7Wb. Dengarkan saja boleh, ikut bicara juga boleh.
 

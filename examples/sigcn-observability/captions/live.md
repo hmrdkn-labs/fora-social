@@ -4,7 +4,7 @@
 
 Observability: Logs, Metrics, Traces lagi jalan sekarang.
 
-Aplikasi jalan tapi lambat, dan kita nggak tahu kenapa.
+Pengguna lapor aplikasinya lambat. Dicek dari mana dulu?
 
 Langsung masuk voice channel sig-cn-voice, link Discord di bio (discord.gg/rSepJu7Wb). Dengerin aja boleh, mic juga boleh.
 
@@ -13,7 +13,7 @@ Langsung masuk voice channel sig-cn-voice, link Discord di bio (discord.gg/rSepJ
 ## X
 
 Observability: Logs, Metrics, Traces lagi jalan sekarang.
-Aplikasinya lambat, ini cara mulai mencari penyebabnya.
+Pengguna lapor aplikasinya lambat. Dicek dari mana dulu?
 Langsung masuk ke voice channel sig-cn-voice di Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Observability
@@ -22,7 +22,9 @@ https://discord.gg/rSepJu7Wb
 
 Sedang live sekarang.
 
-Observability: Logs, Metrics, Traces, bersama Eko (contoh), dipandu Rina (contoh). Aplikasinya lambat, ini cara mulai mencari penyebabnya.
+Observability: Logs, Metrics, Traces, bersama Eko (contoh), dipandu Rina (contoh).
+
+Pengguna lapor aplikasinya lambat. Dicek dari mana dulu?
 
 Kita ada di voice channel sig-cn-voice, undangannya https://discord.gg/rSepJu7Wb. Boleh dengarkan saja, boleh juga ikut bicara.
 

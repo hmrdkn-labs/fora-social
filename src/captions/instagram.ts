@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { aboutPeople, cap, type Ctx, firstSentence, hashLine, openDoor, sentence, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPeople, cap, type Ctx, firstSentence, hashLine, openDoor, PRACTICAL, practicalIndex, problemLine, sentence, shape, themeTag, uniqueTags } from "./context.ts";
 
 function tags(c: Ctx): string {
   return hashLine(
@@ -33,13 +33,8 @@ function joinLive(c: Ctx, variant: number): string {
   }
 }
 
-/** One practical detail for the reminder, the same wording for a session every time. */
-function practical(c: Ctx): string {
-  return [
-    "Buka Discord sepuluh menit lebih awal buat cek suara.",
-    "Pakai headset kalau ada. Dari HP juga bisa.",
-  ][shape(c, "reminder|practical", 2)]!;
-}
+/** One practical detail for the reminder, the same wording for a session on every surface. */
+const practical = (c: Ctx): string => PRACTICAL[practicalIndex(c.s.id)];
 
 const bullets = (items: string[]): string => items.map((t) => `- ${t}`).join("\n");
 
@@ -85,7 +80,8 @@ export function instagram(c: Ctx, type: PostType): string {
   const v = shape(c, `instagram|${type}`, 3);
   const when = `${c.date}, ${c.range}`;
   const what = firstSentence(s.description);
-  const sub = sentence(s.subtitle ?? what);
+  // Cover leads with the everyday problem; the title follows.
+  const problem = sentence(s.problem ?? s.subtitle ?? what);
   let blocks: string[];
   switch (type) {
     case "announce":
@@ -103,18 +99,18 @@ export function instagram(c: Ctx, type: PostType): string {
     case "reminder":
       blocks =
         v === 0
-          ? [`Nanti jam ${c.time}, ${s.title}.`, `${c.Who}. ${practical(c)}`, join(c, 0)]
+          ? [`Nanti jam ${c.time}, ${s.title}.`, problemLine(c), `${c.Who}. ${practical(c)}`, join(c, 0)]
           : v === 1
-            ? [s.title, `${c.dateShort}, nanti jam ${c.time}. ${practical(c)}`, `${c.Who}.`, join(c, 1)]
-            : [`Jam ${c.time} nanti kita ngobrol soal ${s.theme}.`, `${s.title}, ${c.who}.`, `${practical(c)} ${join(c, 2)}`];
+            ? [s.title, problemLine(c), `${c.dateShort}, nanti jam ${c.time}. ${practical(c)}`, `${c.Who}.`, join(c, 1)]
+            : [`Jam ${c.time} nanti kita ngobrol soal ${s.theme}.`, problemLine(c), `${s.title}, ${c.who}.`, `${practical(c)} ${join(c, 2)}`];
       break;
     case "live":
       blocks =
         v === 0
-          ? [`${s.title} lagi jalan sekarang.`, what, joinLive(c, 0)]
+          ? [`${s.title} lagi jalan sekarang.`, problemLine(c), joinLive(c, 0)]
           : v === 1
-            ? [`Live sekarang, ${c.who}.`, s.title, joinLive(c, 1)]
-            : [`Sudah mulai jam ${c.time}. ${s.title}`, what, joinLive(c, 2)];
+            ? [`Live sekarang, ${c.who}.`, s.title, problemLine(c), joinLive(c, 1)]
+            : [`Sudah mulai jam ${c.time}. ${s.title}`, problemLine(c), joinLive(c, 2)];
       break;
     case "recap":
       blocks = recap(c, v % 2);
@@ -123,8 +119,8 @@ export function instagram(c: Ctx, type: PostType): string {
       const series = s.series ? `${cap(c.series)} bareng ${c.brand}, kali ini soal ${s.theme}.` : `Tema ${s.theme} bareng ${c.brand}.`;
       blocks =
         v === 0
-          ? [series, sub, `Sesinya "${s.title}", ${when}.`, join(c, 0)]
-          : [s.title, `${series} ${sub}`, `${when}. ${join(c, 1)}`];
+          ? [problem, `${series} Sesinya "${s.title}", ${when}.`, join(c, 0)]
+          : [problem, s.title, `${series} ${when}.`, join(c, 1)];
       break;
     }
     case "sig-intro":

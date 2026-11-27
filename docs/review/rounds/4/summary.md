@@ -41,3 +41,13 @@ remains are 3s from the slop reviewer (manusia) and the newcomer (pemula), plus 
 - Round 3 → 4 moved slop and newcomer from `slop` verdicts / blocking to 3s, which is the
   limit of what a single rubric score separates; another round is likely to trade issues
   between these two reviewers rather than clear both.
+
+## Calls for the round 4 editor (loop extended to round 6 by the person)
+
+- Items 1 and 5: new optional `Session.problem` (contract, this branch): one plain line on the
+  everyday problem. Fill it for every sample session. Each post type gets its own line: cover
+  and X cover use `problem`, reminder gives the practical detail, live only says "it's on, join
+  now". `subtitle` stays on announce and the posters' title area; don't repeat it in X captions.
+  The observability cover leads with the problem, not the term.
+- Item 2: vary the sample `about` lines; each a plain sentence with a subject.
+- Items 3, 4, 6, 7 as written above.

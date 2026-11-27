@@ -128,7 +128,7 @@ function cast(ctx: TemplateContext): string {
   const hostCard = { ...host, role: ["Host", host.role].filter(Boolean).join(" · ") };
   const count = speakers.length + 1;
   const heading =
-    speakers.length > 0 ? "Yang bakal cerita di depan." : "Bawa cerita dan pertanyaanmu.";
+    speakers.length > 0 ? "Yang cerita duluan." : "Bawa cerita dan pertanyaanmu.";
   const size = count <= 3 ? "person--card" : "person--mid";
   const cards =
     count <= 6
