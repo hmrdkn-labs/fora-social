@@ -156,29 +156,31 @@ export function kickerHeight(text: string, width: number, wideLayout = false): n
   return textHeight(text.toUpperCase(), size * 1.12, width - 34, 1.25);
 }
 
-/** Side of the square box a session's `image` is drawn in, on tall and story posts and on wide ones. */
-const MARK_SIZE = { tall: 72, wide: 56 };
-const MARK_GAP = 16;
+/** Width over height of the session's `image` (PNG header; 1 for any other file, e.g. SVG). */
+function aspectOf(path: string): number {
+  const file = readFileSync(joinPath(REPO_ROOT, path));
+  if (file.length < 24 || file.readUInt32BE(0) !== 0x89504e47) return 1;
+  return file.readUInt32BE(16) / file.readUInt32BE(20);
+}
 
 /**
- * A line of text with the session's `image` at its right end, as a supporting mark: the box is
- * square, so the text gets `width` minus the box and the row is at least as high as the box.
- * Without an image, or with `show` false, it is the text alone. `text` builds the block for the
- * width it is given.
+ * The session's `image` as the quiet figure behind a cover's text, in the place of the integral:
+ * the right-hand side of the canvas, dim, inverted on ink (templates/base.css sizes it by layout).
  */
-export function withMark(ctx: TemplateContext, width: number, show: boolean, text: (width: number) => Block): Block {
+export function backdrop(ctx: TemplateContext, fallback: string): string {
   const image = ctx.session.image;
-  if (image === undefined || !show) return text(width);
-  const size = layoutOf(ctx.format) === "wide" ? MARK_SIZE.wide : MARK_SIZE.tall;
-  const inner = text(width - size - MARK_GAP);
-  const img = `<img class="mark" style="width:${size}px;height:${size}px" src="${e(ctx.asset(image.src))}" alt="${e(image.alt)}">`;
-  return { html: `<div class="top">${inner.html}${img}</div>`, height: Math.max(inner.height, size) };
+  if (image === undefined) return fallback;
+  return `<img class="mark mark--back" src="${e(ctx.asset(image.src))}" alt="${e(image.alt)}">`;
 }
+
+/** Height of the session's `image` beside the title, at most, and the gap to the text. */
+const MARK_HEIGHT = { tall: 280, wide: 170 };
+const MARK_GAP = 28;
 
 /**
  * Kicker, the session title at the largest of `sizes` that fits `room` units of height, and
  * the subtitle when the title can keep at least 60% of its largest size beside it. The session's
- * `image` sits at the right of the kicker unless `withImage` is false.
+ * `image` stands to the right of all three, as tall as `room` allows, unless `withImage` is false.
  * `fits` is false when even the smallest title is too tall for `room`.
  */
 export function lede(
@@ -192,19 +194,26 @@ export function lede(
   const { title, subtitle = "" } = ctx.session;
   const isWide = layoutOf(ctx.format) === "wide";
   const gap = isWide ? 12 : 20;
-  const top = withMark(ctx, width, withImage, (w) => ({
-    html: kicker(ctx),
-    height: kickerHeight(kickerText(ctx, ""), w, isWide),
-  }));
-  const titleRoom = room - top.height - gap;
+  const image = withImage ? ctx.session.image : undefined;
+  const markHeight = Math.min(room, isWide ? MARK_HEIGHT.wide : MARK_HEIGHT.tall);
+  const markWidth = image === undefined ? 0 : Math.round(markHeight * aspectOf(image.src));
+  const outer = width;
+  width = image === undefined ? width : outer - markWidth - MARK_GAP;
+  const topHeight = kickerHeight(kickerText(ctx, ""), width, isWide);
+  const titleRoom = room - topHeight - gap;
   const subHeight = gap + textHeight(subtitle, isWide ? 28 : 44, width, 1.15, SERIF);
   const large = sizes.filter((size) => size >= (sizes[0] ?? 0) * 0.6);
   const withSub = withSubtitle && subtitle !== "" ? fitBlock(title, width, titleRoom - subHeight, large) : undefined;
   const size = withSub ?? fitBlock(title, width, titleRoom, sizes);
   const sub = withSub !== undefined ? `<p class="subtitle">${e(subtitle)}</p>` : "";
   const shown = size ?? sizes[sizes.length - 1] ?? 24;
+  const text = `<div class="lede">${kicker(ctx)}<h1 class="title" style="font-size:${shown}px">${e(tidy(title))}</h1>${sub}</div>`;
+  const img =
+    image === undefined
+      ? ""
+      : `<img class="mark mark--side" style="width:${markWidth}px;height:${markHeight}px" src="${e(ctx.asset(image.src))}" alt="${e(image.alt)}">`;
   return {
-    html: `<div class="lede">${top.html}<h1 class="title" style="font-size:${shown}px">${e(tidy(title))}</h1>${sub}</div>`,
+    html: image === undefined ? text : `<div class="lede-row">${text}${img}</div>`,
     fits: size !== undefined,
   };
 }

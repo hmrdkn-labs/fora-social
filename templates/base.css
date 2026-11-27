@@ -119,7 +119,7 @@ body {
   list-style: none;
 }
 
-.post > :not(.integral, .wave--zone) {
+.post > :not(.integral, .mark--back, .wave--zone) {
   position: relative;
 }
 
@@ -353,15 +353,16 @@ body {
   gap: 20px;
 }
 
-/* A line of text with the session's image at its right end (templates/parts.ts withMark). */
-.top {
+/* The session's image (templates/parts.ts): beside the title, or behind a cover's text. */
+.lede-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 28px;
 }
 
-.top > :first-child {
+.lede-row > .lede {
+  flex: 1 1 0;
   min-width: 0;
 }
 
@@ -369,12 +370,32 @@ body {
   flex: none;
   display: block;
   object-fit: contain;
-  object-position: right center;
 }
 
 /* The art is dark line work; on ink it is inverted to white. */
 .t-ink .mark {
   filter: invert(1);
+}
+
+.mark--back {
+  position: absolute;
+  z-index: -1;
+  right: 56px;
+  top: 170px;
+  width: auto;
+  height: 570px;
+  opacity: 0.5;
+}
+
+.post--story .mark--back {
+  top: 330px;
+  height: 770px;
+}
+
+.post--wide .mark--back {
+  top: 60px;
+  right: 40px;
+  height: calc(var(--h) - 120px);
 }
 
 .kicker {
