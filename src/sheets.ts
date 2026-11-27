@@ -156,9 +156,10 @@ function escapeHtml(text: string): string {
 
 if (import.meta.main) {
   try {
-    const examplesDir = join(REPO_ROOT, "examples");
+    // `pnpm sheets` covers the examples; `pnpm sheets out` covers what `pnpm render` wrote.
+    const examplesDir = join(REPO_ROOT, process.argv[2] ?? "examples");
     const jobs = await findSheets(examplesDir);
-    if (jobs.length === 0) throw new Error(`${examplesDir}: no rendered images; run pnpm examples first`);
+    if (jobs.length === 0) throw new Error(`${examplesDir}: no rendered images; run pnpm examples or pnpm render first`);
     const outDir = join(REPO_ROOT, "out", "sheets");
     const paths = await writeSheets(jobs, outDir);
     console.log(`wrote ${paths.length} sheets to ${relative(REPO_ROOT, outDir)}/`);

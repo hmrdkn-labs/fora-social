@@ -6,6 +6,7 @@ import { fitBlock, fitLine, SERIF, textHeight } from "./fit.ts";
 import { escapeHtml as e } from "./html.ts";
 import {
   aboutMain,
+  backdrop,
   deck,
   FOOT,
   GAP,
@@ -87,7 +88,7 @@ function single(ctx: TemplateContext): string {
   return post(
     ctx,
     "ink",
-    `${INTEGRAL}${header(ctx, "ink")}
+    `${backdrop(ctx, INTEGRAL)}${header(ctx, "ink")}
 <main class="main" data-fit>
   ${block(ctx, isWide ? SOLO_WIDTH : TALL_WIDTH, isWide ? WIDE_SIZES : TALL_SIZES, room)}
   ${wave(ctx.session.id, isWide ? 72 : 52)}
@@ -105,7 +106,7 @@ function slides(ctx: TemplateContext): string[] {
     "ink",
     "",
     [
-      `${INTEGRAL}<main class="main" data-fit>
+      `${backdrop(ctx, INTEGRAL)}<main class="main" data-fit>
   ${block(ctx, TALL_WIDTH, TALL_SIZES, room)}
   ${wave(ctx.session.id, 52)}
   ${where.html}

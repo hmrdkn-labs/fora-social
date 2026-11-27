@@ -1,0 +1,22 @@
+sig: fora
+theme: Kacabenggala
+title: Apa di Balik Kacabenggala Editions
+subtitle: Arsip buku lama yang ditata ulang untuk layar sekarang
+problem: Buku lama yang sudah tidak dicetak makin sulit dibaca di layar zaman ini.
+image:
+  src: sessions/assets/kacabenggala.png
+  alt: Bingkai cermin Kacabenggala dalam garis hitam
+date: "2026-11-29"
+time: "19:00"
+voiceChannel: general
+host:
+  name: Andre Pramaditya
+  about: Andre anggota FORA dan salah satu kontributor Kacabenggala Editions.
+speakers: []
+description: Kacabenggala Editions adalah arsip nonkomersial yang memulihkan dan menata ulang buku, esai, dan artikel yang sudah tidak dicetak. Andre cerita soal membangun dan menjalankan arsip digital ini, dan soal menata ulang buku lama untuk layar sekarang.
+topics:
+  - Arsip nonkomersial untuk karya yang sudah tidak dicetak
+  - Menata ulang buku lama supaya enak dibaca di layar
+  - Unduhan PDF dan EPUB, dari Demokrasi Kita (1960) sampai Oslan Husein (1963)
+  - Ilalang, proyek saudara untuk puisi dan cerpen
+  - Kacabenggala, cermin dalam Ramayana Jawa

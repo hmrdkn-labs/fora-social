@@ -48,19 +48,22 @@ export function parseSession(text: string, file: string, sigsDir: string): Sessi
   }
   const people: [string, Person][] = [["host", data.host], ...data.speakers.map((p, i): [string, Person] => [`speakers[${i}]`, p])];
   for (const [field, person] of people) {
-    if (person.photo !== undefined && !isPortraitFile(person.photo)) {
+    if (person.photo !== undefined && !isRepoFile(person.photo, /\.(?:jpe?g|png)$/i)) {
       problems.push(
         `${file}: ${field}.photo (${person.name}) must name an existing .jpg, .jpeg or .png file in the repo, got "${person.photo}"`,
       );
     }
   }
+  if (data.image !== undefined && !isRepoFile(data.image.src, /\.(?:png|svg)$/i)) {
+    problems.push(`${file}: image.src must name an existing .png or .svg file in the repo, got "${data.image.src}"`);
+  }
   if (problems.length > 0) throw new Error(problems.join("\n"));
   return { ...data, id };
 }
 
-/** True for a repo-relative path of an existing JPEG or PNG file inside the repo. */
-function isPortraitFile(path: string): boolean {
-  if (!/\.(?:jpe?g|png)$/i.test(path) || isAbsolute(path)) return false;
+/** True for a repo-relative path of an existing file inside the repo whose name matches `extension`. */
+function isRepoFile(path: string, extension: RegExp): boolean {
+  if (!extension.test(path) || isAbsolute(path)) return false;
   const full = join(REPO_ROOT, path);
   return !relative(REPO_ROOT, full).startsWith("..") && statSync(full, { throwIfNoEntry: false })?.isFile() === true;
 }

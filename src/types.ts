@@ -90,6 +90,13 @@ export interface Session {
    * cover) use it instead of repeating `subtitle` or `description`.
    */
   problem?: string;
+  /**
+   * Optional logo or artwork of the thing the session is about (a project, a book, a tool),
+   * never a person. Repo-relative path to a PNG or SVG with a transparent background, plus alt
+   * text. Posters show it as a supporting mark next to the theme; dark line art is inverted to
+   * read on the dark background.
+   */
+  image?: { src: string; alt: string };
   /** What will be discussed, 0 to 6 short items. */
   topics: string[];
   /** Overrides Community.discord. */

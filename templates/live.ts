@@ -102,7 +102,7 @@ function slides(ctx: TemplateContext): string[] {
   const { session } = ctx;
   const where = whenWhere(ctx);
   const room = tallRoom(ctx, "accent", FOOT) - where.height - 2 * GAP;
-  const title = lede(ctx, TALL_WIDTH, SLIDE_SIZES, room * 0.4, false);
+  const title = lede(ctx, TALL_WIDTH, SLIDE_SIZES, room * 0.4, false, false);
   const about =
     numbered(session.topics, TALL_WIDTH, room * 0.6 - 60, [44, 40, 36, 32, 28]) ||
     `<p class="lead">${e(session.description)}</p>`;
