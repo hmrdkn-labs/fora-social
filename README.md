@@ -26,12 +26,12 @@ pnpm check    # type check and tests
 
 `<type>` is one of the post types:
 
-- `announce`: an upcoming session.
+- `announce`: an upcoming session. Only made for sessions with a `date`.
 - `reminder`: posted earlier on the day, before the talk starts: "nanti jam 19.30 WIB".
-- `live`: posted at the start time, while the talk runs: "live sekarang", come in now.
-- `recap`: takeaways after the talk. Only made for sessions with a `recap` section.
+- `live`: posted at the start time, while the talk runs: "live sekarang", come in now. Only made for sessions with a `date`.
+- `recap`: takeaways after the talk. Only made for sessions with a `date` and a `recap` section.
 - `cover`: a series or theme cover.
-- `sig-intro`: what the SIG is and how to join.
+- `sig-intro`: what the SIG is and how to join, with the SIG's `agenda` and `people` when `sigs/<id>.yaml` has them.
 - `speakers`: who talks, with large portraits of the speakers and the host.
 
 Captions are in `out/<id>/captions/<type>.md`, with one section each for Instagram, X and LinkedIn.
@@ -54,7 +54,8 @@ problem: Aplikasi sudah jalan di laptop, tapi menjalankannya di banyak mesin bel
 image:                            # optional. Logo or artwork of what the session is about (a project, a book), never a person
   src: sessions/assets/mark.png   # required with image. PNG or SVG with a transparent background, in the repo
   alt: Emblem of the project      # required with image
-date: "2026-12-12"                # required. YYYY-MM-DD, a real date, WIB
+date: "2026-12-12"                # YYYY-MM-DD, a real date, WIB. Exactly one of date and when is required
+# when: Minggu depan, harinya menyusul   # instead of date while the day isn't fixed. Free text, shown with the time. Only cover, sig-intro and speakers are made; set date to get announce, reminder, live and recap
 time: "19:30"                     # required. HH:MM, 24-hour, WIB
 durationMinutes: 90               # optional. Whole minutes, default 90
 voiceChannel: sig-cn-voice        # required. Discord voice channel name, without "#"
@@ -127,7 +128,7 @@ A SIG needs its own colour, a wordmark and a `sigs/<id>.yaml` file. [brand/READM
 
 1. Pick a colour and a text colour (`colorInk`) with at least 4.5:1 contrast on it. Add the colour to `brand/tools/build_tokens.py` and run `python3 brand/tools/build_tokens.py`.
 2. Build the wordmark SVG the way `brand/logos/sigcn.svg` is built, in `brand/tools/build_logos.py` (needs `fonttools` and `brotli`). Also write the `-white` variant and a lockup with the FORA mark.
-3. Add `sigs/<id>.yaml` with every field: `id` (optional, must equal the file name), `short`, `code`, `name`, `color` and `colorInk` (both `#RRGGBB`), `lockup` (path to the lockup SVG), `tagline` (one line of Indonesian), `description` (two to four sentences of Indonesian) and `hashtags` (without `#`). See `sigs/sig-cn.yaml`.
+3. Add `sigs/<id>.yaml` with every field: `id` (optional, must equal the file name), `short`, `code`, `name`, `color` and `colorInk` (both `#RRGGBB`), `lockup` (path to the lockup SVG), `tagline` (one line of Indonesian), `description` (two to four sentences of Indonesian) and `hashtags` (without `#`). Two optional fields fill the `sig-intro` post: `agenda` (1 to 5 short items on what the SIG is working on now) and `people` (the people active now: `name`, plus `about`, a fragment that follows the name, like "lagi persiapan sertifikasi Kubernetes"; `handle` and `photo` work as in a session). See `sigs/sig-cn.yaml`.
 4. Use `sig: <id>` in sessions. Look at the lockup in a browser before you post it.
 
 ## Repository layout

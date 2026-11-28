@@ -1,0 +1,21 @@
+sig: sig-cn
+theme: AI Inference
+title: Cara Kerja Model AI
+subtitle: Apa yang terjadi antara prompt dan jawaban
+problem: Kamu kirim prompt, jawaban muncul, dan nggak jelas apa yang terjadi di tengahnya.
+when: Minggu depan, harinya menyusul
+time: "19:30"
+durationMinutes: 90
+voiceChannel: general
+format: Mustafa cerita, yang lain nimbrung atau nanya
+host:
+  name: Mustafa Zaki Assegaf
+  about: Berbagi soal inference engineering, lanjutan dari IDSW.
+speakers: []
+description: Mustafa cerita apa yang terjadi antara prompt yang kamu kirim dan jawaban yang muncul, dan apa itu inference. Lanjutan dari IDSW, minggu depan habis isya di voice channel general.
+topics:
+  - Apa yang terjadi waktu kamu kirim prompt
+  - Apa itu inference
+  - Kenapa menjalankan model itu masalah engineering
+hashtags:
+  - AIInference

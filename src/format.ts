@@ -22,7 +22,13 @@ const clock = new Intl.DateTimeFormat("en-GB", {
   hourCycle: "h23",
 });
 
+/** A session with `when` instead of `date`: the day isn't fixed, so only the start time is known. */
+export function isUndated(s: Session): boolean {
+  return s.date === undefined;
+}
+
 export function startsAt(s: Session): Date {
+  if (s.date === undefined) throw new Error(`session ${s.id} has no date, only "when"`);
   return new Date(`${s.date}T${s.time}:00+07:00`);
 }
 
@@ -30,14 +36,14 @@ export function endsAt(s: Session): Date {
   return new Date(startsAt(s).getTime() + s.durationMinutes * 60_000);
 }
 
-/** "Sabtu, 6 Desember 2026" */
+/** "Sabtu, 6 Desember 2026", or `when` ("Minggu depan, harinya menyusul") without a date. */
 export function formatDate(s: Session): string {
-  return longDate.format(startsAt(s));
+  return s.date === undefined ? (s.when ?? "") : longDate.format(startsAt(s));
 }
 
-/** "Sab, 6 Des" */
+/** "Sab, 6 Des", or `when` without a date. */
 export function formatDateShort(s: Session): string {
-  return shortDate.format(startsAt(s));
+  return s.date === undefined ? (s.when ?? "") : shortDate.format(startsAt(s));
 }
 
 function clockText(d: Date): string {
@@ -46,11 +52,12 @@ function clockText(d: Date): string {
 
 /** "19.30 WIB" */
 export function formatTime(s: Session): string {
-  return `${clockText(startsAt(s))} WIB`;
+  return `${s.date === undefined ? s.time.replace(":", ".") : clockText(startsAt(s))} WIB`;
 }
 
-/** "19.30–21.00 WIB"; may end after midnight ("22.00–00.30 WIB"). */
+/** "19.30–21.00 WIB"; may end after midnight ("22.00–00.30 WIB"). Without a date, only the start. */
 export function formatTimeRange(s: Session): string {
+  if (s.date === undefined) return formatTime(s);
   return `${clockText(startsAt(s))}–${clockText(endsAt(s))} WIB`;
 }
 

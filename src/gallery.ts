@@ -57,7 +57,7 @@ export function galleryMarkdown(runs: SessionRun[], community: Community, dir: s
 }
 
 function sortKey(run: SessionRun): string {
-  return `${run.session.sig}\n${run.session.date}\n${run.session.id}`;
+  return `${run.session.sig}\n${run.session.date ?? ""}\n${run.session.id}`;
 }
 
 function sessionMarkdown(run: SessionRun, community: Community, dir: string): string {

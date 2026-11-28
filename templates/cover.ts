@@ -2,7 +2,7 @@
 // line here and on the first slide; decks add a slide about the series and the join slide.
 import { discordUrl, displayUrl } from "../src/format.ts";
 import type { Template, TemplateContext } from "../src/types.ts";
-import { fitBlock, fitLine, SERIF, textHeight } from "./fit.ts";
+import { emWidth, fitBlock, fitLine, SERIF, textHeight } from "./fit.ts";
 import { escapeHtml as e } from "./html.ts";
 import {
   aboutMain,
@@ -64,9 +64,11 @@ const INTEGRAL = '<span class="integral" aria-hidden="true">∫</span>';
 
 /** Wide cover: when and where on the left, the invite as a chip on the right, in one panel. */
 function wideJoin(ctx: TemplateContext, url: string): Block {
-  const sched = schedule(ctx, true);
   const size = fitLine(url, 300, 24, 18);
   const chip = size * 1.2 + 24;
+  // The day and time share the row with the chip. A date is short enough to stay on one line; the
+  // free text of an undated session ("Minggu depan, harinya menyusul") wraps in what the chip leaves.
+  const sched = schedule(ctx, true, true, ctx.session.date === undefined ? SOLO_WIDTH - 64 - emWidth(url) * size * 1.03 - 36 - 48 : undefined);
   return {
     html: `<aside class="join join--bar join--row" data-fit>${sched.html}<p class="join__url" style="font-size:${size}px">${e(url)}</p></aside>`,
     height: Math.max(sched.height, chip) + 32,

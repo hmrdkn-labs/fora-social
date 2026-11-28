@@ -39,7 +39,7 @@ const RecapSchema = z.strictObject({
   attendees: z.number().int("must be a whole number").nonnegative("must not be negative").optional(),
 });
 
-export const SessionSchema = z.strictObject({
+const SessionShape = z.strictObject({
   id: nonEmpty,
   sig: z.string().regex(ID, { error: (i) => `must name a SIG such as sig-cn, got ${String(i.input)}` }),
   series: nonEmpty.optional(),
@@ -49,7 +49,8 @@ export const SessionSchema = z.strictObject({
   problem: z.string().optional(),
   format: nonEmpty.optional(),
   image: z.strictObject({ src: nonEmpty, alt: nonEmpty }).optional(),
-  date: z.string().refine(isRealDate, { error: (i) => `must be a real date as YYYY-MM-DD, got ${String(i.input)}` }),
+  date: z.string().refine(isRealDate, { error: (i) => `must be a real date as YYYY-MM-DD, got ${String(i.input)}` }).optional(),
+  when: nonEmpty.optional(),
   time: z.string().regex(TIME, { error: (i) => `must be HH:MM, got ${String(i.input)}` }),
   durationMinutes: z.number().int("must be a whole number of minutes").positive("must be more than zero").default(90),
   voiceChannel: nonEmpty,
@@ -67,8 +68,23 @@ export const SessionSchema = z.strictObject({
   hashtags: z.array(hashtag).optional(),
 });
 
+/** Exactly one of `date` and `when`: a fixed day, or free text while the day is open. */
+function dateOrWhen(s: { date?: string | undefined; when?: string | undefined }, ctx: z.core.ParsePayload<unknown>): void {
+  if ((s.date === undefined) === (s.when === undefined)) {
+    ctx.issues.push({
+      code: "custom",
+      input: s,
+      message: s.date === undefined ? "needs date (YYYY-MM-DD) or when (free text); set one of them" : "has both date and when; set only one",
+    });
+  }
+}
+
+export const SessionSchema = SessionShape.check((ctx) => dateOrWhen(ctx.value, ctx));
+
 /** Session files may omit `id` (it is the file name); if present it must match. */
-export const SessionFileSchema = SessionSchema.omit({ id: true }).extend({ id: z.string().optional() });
+export const SessionFileSchema = SessionShape.omit({ id: true })
+  .extend({ id: z.string().optional() })
+  .check((ctx) => dateOrWhen(ctx.value, ctx));
 
 export const SigSchema = z.strictObject({
   id: z.string().regex(ID),
@@ -81,6 +97,10 @@ export const SigSchema = z.strictObject({
   tagline: nonEmpty,
   description: nonEmpty,
   hashtags: z.array(hashtag),
+  agenda: z.array(nonEmpty).min(1, "must have at least one item").max(5, {
+    error: (i) => `must have at most 5 items, got ${Array.isArray(i.input) ? i.input.length : "?"}`,
+  }).optional(),
+  people: z.array(PersonSchema).min(1, "must have at least one person").optional(),
 });
 
 /** Sig files may omit `id` (it is the file name); if present it must match. */

@@ -66,8 +66,17 @@ export interface Session {
   theme: string;
   title: string;
   subtitle?: string;
-  /** "YYYY-MM-DD", in WIB (Asia/Jakarta, UTC+7). */
-  date: string;
+  /**
+   * "YYYY-MM-DD", in WIB (Asia/Jakarta, UTC+7). Leave it out while the day isn't fixed and set
+   * `when` instead; exactly one of the two is required.
+   */
+  date?: string;
+  /**
+   * Free text for a session whose day isn't fixed yet ("Minggu depan, harinya menyusul").
+   * Without `date`, only post types that don't need the day are made: cover, sig-intro and
+   * speakers. Announce, reminder, live and recap wait for `date`.
+   */
+  when?: string;
   /** "HH:MM", 24-hour, WIB. */
   time: string;
   /** Default 90. */
@@ -144,6 +153,13 @@ export interface Sig {
   description: string;
   /** Without "#". */
   hashtags: string[];
+  /** Optional, what the SIG is working on now, 1 to 5 short items. Shown on sig-intro. */
+  agenda?: string[];
+  /**
+   * Optional, the people active in the SIG now, each with an optional `about` line on what
+   * they're doing ("lagi persiapan sertifikasi Kubernetes"). Shown on sig-intro.
+   */
+  people?: Person[];
 }
 
 /** From community.yaml. */

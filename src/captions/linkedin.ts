@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { aboutPeople, cap, type Ctx, firstSentence, hashLine, openDoor, practicalIndex, problemLine, sentence, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPeople, cap, type Ctx, firstSentence, hashLine, nextAt, openDoor, practicalIndex, problemLine, sentence, shape, sigAgenda, sigCrew, themeTag, uniqueTags } from "./context.ts";
 
 function tags(c: Ctx): string {
   return hashLine(uniqueTags(themeTag(c.s), c.sig.hashtags.slice(1), c.sig.hashtags.slice(0, 1), c.s.hashtags, c.community.hashtags).slice(0, 3));
@@ -83,12 +83,18 @@ export function linkedin(c: Ctx, type: PostType): string {
           : [problem, `${series} Sesinya "${s.title}", ${c.dateShort}, ${c.range}.`, join(c, 1)];
       break;
     }
-    case "sig-intro":
+    case "sig-intro": {
+      const crew = sigCrew(c, true);
+      const agenda = sigAgenda(c);
+      const who = crew.length > 0 ? `Yang aktif sekarang.\n${bullets(crew)}` : "";
+      const work = agenda.length > 0 ? `Yang lagi dikerjakan.\n${bullets(agenda)}` : "";
+      const next = (long: boolean) => (s.date === undefined ? nextAt(c) : long ? `${c.date}, ${c.range}` : nextAt(c, true));
       blocks =
         v === 0
-          ? [`${c.introName}. ${sig.tagline}`, `Sesi terdekat soal "${s.title}", ${c.dateShort}, ${c.range}.`, join(c, 0)]
-          : [sig.description, `Sesi terdekat soal "${s.title}", ${c.date}, ${c.range}.`, join(c, 1)];
+          ? [`${c.introName}. ${sig.tagline}`, who, work, `Sesi terdekat soal "${s.title}", ${next(false)}.`, join(c, 0)]
+          : [sig.description, who, work, `Sesi terdekat soal "${s.title}", ${next(true)}.`, join(c, 1)];
       break;
+    }
     case "speakers":
       blocks =
         v % 2 === 0

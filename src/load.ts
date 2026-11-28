@@ -25,9 +25,18 @@ export function loadSig(file: string): Sig {
 export function parseSig(text: string, file: string): Sig {
   const id = idOf(file);
   const data = validate(SigFileSchema, text, file);
+  const problems: string[] = [];
   if (data.id !== undefined && data.id !== id) {
-    throw new Error(`${file}: id must match the file name "${id}", got "${data.id}"`);
+    problems.push(`${file}: id must match the file name "${id}", got "${data.id}"`);
   }
+  for (const [index, person] of (data.people ?? []).entries()) {
+    if (person.photo !== undefined && !isRepoFile(person.photo, /\.(?:jpe?g|png)$/i)) {
+      problems.push(
+        `${file}: people[${index}].photo (${person.name}) must name an existing .jpg, .jpeg or .png file in the repo, got "${person.photo}"`,
+      );
+    }
+  }
+  if (problems.length > 0) throw new Error(problems.join("\n"));
   return { ...data, id };
 }
 

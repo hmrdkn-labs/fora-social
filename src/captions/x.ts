@@ -1,5 +1,6 @@
 import type { PostType } from "../types.ts";
-import { aboutPerson, type Ctx, everyone, firstSentence, hashLine, openDoor, PRACTICAL, practicalIndex, sentence, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPerson, type Ctx, everyone, firstSentence, hashLine, nextAt, openDoor, PRACTICAL, practicalIndex, sentence, shape, shortName, sigAgenda, themeTag, uniqueTags } from "./context.ts";
+import { joinNames } from "../format.ts";
 import { xLength } from "./xlength.ts";
 
 const LIMIT = 280;
@@ -166,12 +167,18 @@ export function x(c: Ctx, type: PostType): string[] {
             : plain(`${s.series ? `${c.series} bareng ${c.brand}.` : `Tema ${s.theme} bareng ${c.brand}.`}`, s.title, `${c.dateShort}, ${c.range}`),
         joinPart(c, v),
       ]);
-    case "sig-intro":
-      return build([
-        v === 1 ? plain(`${sig.tagline}`) : plain(`${c.introName}. ${sig.tagline}`),
-        plain(`Sesi terdekat soal "${s.title}", ${c.dateShort}.`),
-        joinPart(c, v),
-      ]);
+    case "sig-intro": {
+      // Names, then the agenda as bullets that drop from the end when the post is full. The agenda
+      // items lose their parenthetical: the long explanation belongs to Instagram and LinkedIn.
+      const people = sig.people ?? [];
+      const names: Line[] = people.length > 0 ? [{ text: `Sekarang yang aktif ${joinNames(people.map(shortName))}.` }] : [];
+      const items = sigAgenda(c).map((item) => item.replace(/\s*\(.*\)$/, ""));
+      const work: Line[] = items.length > 0 ? [{ text: "Yang lagi dikerjakan.", optional: true }, ...items.map((text) => ({ text: `- ${text}`, optional: true }))] : [];
+      const next = plain(`Sesi terdekat soal "${s.title}", ${s.date === undefined ? nextAt(c) : c.dateShort}.`);
+      const intro = v === 1 ? plain(`${sig.tagline}`) : plain(`${c.introName}. ${sig.tagline}`);
+      if (names.length + work.length === 0) return build([intro, next, joinPart(c, v)]);
+      return build([intro, [...names, ...work], [...next, ...joinPart(c, v)]]);
+    }
     case "speakers":
       return build([...speakersThread(c).map((text) => plain(text)), [...plain(`"${s.title}", mulai ${c.time}.`), ...joinPart(c, v)]]);
   }

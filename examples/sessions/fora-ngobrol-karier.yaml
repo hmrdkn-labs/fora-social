@@ -8,10 +8,10 @@ time: "19:30"
 durationMinutes: 90
 voiceChannel: fora-voice
 host:
-  name: Dika (contoh)
+  name: Bayu (contoh)
   role: SRE
-  handle: dika_contoh
-  about: Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
+  handle: bayu_contoh
+  about: Bayu dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
 speakers: []
 note: Waktu cari kerja pertama saya kirim 40 lamaran dan cuma dua yang dibalas. Saya mau dengar cara kalian.
 description: "Diskusi terbuka tanpa tamu. Bawa satu cerita soal kerja di tech yang mau kamu ceritakan atau tanyakan."
@@ -28,6 +28,6 @@ recap:
     - title: Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat
       body: Salah satu peserta cerita, pewawancaranya menghabiskan lima belas menit di satu repo buatannya dan nggak membuka sertifikat sama sekali.
     - title: Pindah ke SRE bisa mulai dari ikut jaga on-call
-      body: Dika minta mendampingi rekan yang sedang on-call, yang menangani sistem kalau bermasalah di luar jam kerja. Dari situ tugas pertamanya menulis runbook, catatan langkah menangani masalah yang sering muncul.
+      body: Bayu minta mendampingi rekan yang sedang on-call, yang menangani sistem kalau bermasalah di luar jam kerja. Dari situ tugas pertamanya menulis runbook, catatan langkah menangani masalah yang sering muncul.
     - title: Belajar Terraform dari satu insiden nyata
       body: Postmortem, catatan pembahasan insiden di kantor lama, jadi bahan belajar Terraform (alat untuk membuat server lewat file konfigurasi) yang paling nempel, karena tiap perintah ada alasannya.

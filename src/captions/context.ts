@@ -160,3 +160,23 @@ export function aboutPeople(c: Ctx, withHandle: boolean): string[] {
 export function dayOnly(c: Ctx): string {
   return c.date.replace(",", "").replace(/ \d{4}$/, "");
 }
+
+/** Where the nearest session is, for a sentence: "Sab, 12 Des jam 19.30 WIB", or the open day plus the time. */
+export function nextAt(c: Ctx, withRange = false): string {
+  if (c.s.date === undefined) return `${c.dateShort}, jam ${c.time}`;
+  return withRange ? `${c.dateShort}, ${c.range}` : `${c.dateShort} jam ${c.time}`;
+}
+
+/** A person's name without a parenthetical: "Dika (Azzam Muhammadi Rizqun Karima)" is "Dika". */
+export const shortName = (p: Person): string => p.name.replace(/\s*\(.*?\)/g, "");
+
+/** One sentence per person active in the SIG: name, then what they are doing ("Hamzah lagi persiapan …"). */
+export function sigCrew(c: Ctx, withHandle: boolean): string[] {
+  return (c.sig.people ?? []).map((p) => {
+    const name = `${p.name}${withHandle && p.handle ? ` @${p.handle}` : ""}`;
+    return p.about ? sentence(`${name} ${p.about}`) : sentence(name);
+  });
+}
+
+/** The SIG's agenda items, one per line of a list. */
+export const sigAgenda = (c: Ctx): string[] => c.sig.agenda ?? [];

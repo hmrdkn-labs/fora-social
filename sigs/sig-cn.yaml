@@ -5,14 +5,27 @@ name: Cloud Native
 color: "#0086FF"
 colorInk: "#0B0C10"
 lockup: brand/logos/fora-x-sigcn.svg
-tagline: Ngobrol soal menjalankan aplikasi di cloud, lewat suara.
+tagline: Ngobrol soal cloud native, dari Linux sampai model AI.
 description: >-
-  SIG CN itu grup FORA untuk ngobrol soal menjalankan aplikasi di cloud (cloud native).
-  Contohnya aplikasi yang tiba-tiba lambat dan harus dicari penyebabnya, atau deploy yang
-  bikin semuanya mogok. Tiap sesi satu tema, misalnya Kubernetes atau GitOps, di voice
-  channel Discord. Satu orang cerita, yang lain nimbrung atau nanya.
+  SIG CN itu grup FORA untuk ngobrol soal cloud native, pada dasarnya semua yang digarap CNCF.
+  Bahasannya luas, termasuk menjalankan aplikasi di cloud, Linux dan systems engineering,
+  Kubernetes, dan menjalankan model AI (inference). Tiap sesi satu tema, di voice channel
+  Discord. Satu orang cerita, yang lain nimbrung atau nanya.
 hashtags:
   - SIGCN
   - CloudNative
   - Kubernetes
   - DevOpsIndonesia
+agenda:
+  - Persiapan sertifikasi Kubernetes, targetnya Kubestronaut (program CNCF buat yang memegang semua sertifikasi Kubernetes)
+  - Belajar Linux dan systems engineering
+  - Inference engineering bareng Mustafa
+people:
+  - name: Dika (Azzam Muhammadi Rizqun Karima)
+    about: lagi persiapan sertifikasi Kubernetes, targetnya Kubestronaut
+  - name: Hamzah Chairil Salim
+    about: belajar buat sertifikasi Kubernetes juga, sasarannya Kubestronaut
+  - name: Ammar Alfian
+    about: ikut persiapan sertifikasi Kubernetes, mengejar Kubestronaut
+  - name: Mustafa Zaki Assegaf
+    about: berbagi soal inference engineering, lanjutan dari IDSW
