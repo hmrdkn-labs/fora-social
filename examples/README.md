@@ -32,7 +32,7 @@ Ngobrol Karier di Tech
 
 Waktu cari kerja pertama saya kirim 40 lamaran dan cuma dua yang dibalas. Saya mau dengar cara kalian.
 
-Sab, 23 Jan, 19.30–21.00 WIB. Ngobrol bareng Dika (contoh) @dika_contoh.
+Sab, 23 Jan, 19.30–21.00 WIB. Ngobrol bareng Bayu (contoh) @bayu_contoh.
 
 - Cari kerja pertama di tech
 - Belajar sambil kerja
@@ -65,7 +65,7 @@ Sab, 23 Jan, 19.30–21.00 WIB. Waktu cari kerja pertama saya kirim 40 lamaran d
 • Belajar sambil kerja
 • Pindah dari developer ke SRE
 
-Ngobrol bareng Dika (contoh) @dika_contoh.
+Ngobrol bareng Bayu (contoh) @bayu_contoh.
 
 Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 
@@ -98,7 +98,7 @@ Jam 19.30 WIB nanti kita ngobrol soal Karier.
 
 Lamaran sudah dikirim ke mana-mana, tapi nggak ada kabar dan nggak jelas salahnya di mana.
 
-Ngobrol Karier di Tech, ngobrol bareng Dika (contoh) @dika_contoh.
+Ngobrol Karier di Tech, ngobrol bareng Bayu (contoh) @bayu_contoh.
 
 Pakai headset kalau ada, dari HP juga bisa. Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
@@ -122,7 +122,7 @@ Hari ini jam 19.30 WIB kita ngobrol soal Karier.
 
 Lamaran sudah dikirim ke mana-mana, tapi nggak ada kabar dan nggak jelas salahnya di mana.
 
-Ngobrol Karier di Tech, Sabtu, 23 Januari 2027. Ngobrol bareng Dika (contoh) @dika_contoh.
+Ngobrol Karier di Tech, Sabtu, 23 Januari 2027. Ngobrol bareng Bayu (contoh) @bayu_contoh.
 
 Headset membantu, dan dari ponsel juga bisa. Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 
@@ -151,7 +151,7 @@ Headset membantu, dan dari ponsel juga bisa. Gabung lewat https://discord.gg/rSe
 **Instagram**
 
 ```text
-Live sekarang, ngobrol bareng Dika (contoh) @dika_contoh.
+Live sekarang, ngobrol bareng Bayu (contoh) @bayu_contoh.
 
 Ngobrol Karier di Tech
 
@@ -177,7 +177,7 @@ https://discord.gg/rSepJu7Wb
 ```text
 Sedang live sekarang.
 
-Ngobrol Karier di Tech, ngobrol bareng Dika (contoh) @dika_contoh.
+Ngobrol Karier di Tech, ngobrol bareng Bayu (contoh) @bayu_contoh.
 
 Lamaran sudah dikirim ke mana-mana, tapi nggak ada kabar dan nggak jelas salahnya di mana.
 
@@ -211,10 +211,10 @@ Kita ada di voice channel fora-voice, undangannya https://discord.gg/rSepJu7Wb. 
 Ini yang tercatat dari "Ngobrol Karier di Tech" (Sab, 23 Jan).
 
 - Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat. Salah satu peserta cerita, pewawancaranya menghabiskan lima belas menit di satu repo buatannya dan nggak membuka sertifikat sama sekali.
-- Pindah ke SRE bisa mulai dari ikut jaga on-call. Dika minta mendampingi rekan yang sedang on-call, yang menangani sistem kalau bermasalah di luar jam kerja. Dari situ tugas pertamanya menulis runbook, catatan langkah menangani masalah yang sering muncul.
+- Pindah ke SRE bisa mulai dari ikut jaga on-call. Bayu minta mendampingi rekan yang sedang on-call, yang menangani sistem kalau bermasalah di luar jam kerja. Dari situ tugas pertamanya menulis runbook, catatan langkah menangani masalah yang sering muncul.
 - Belajar Terraform dari satu insiden nyata. Postmortem, catatan pembahasan insiden di kantor lama, jadi bahan belajar Terraform (alat untuk membuat server lewat file konfigurasi) yang paling nempel, karena tiap perintah ada alasannya.
 
-9 orang ikut ngobrol di voice channel. Makasih Dika (contoh) @dika_contoh, sampai ketemu lagi.
+9 orang ikut ngobrol di voice channel. Makasih Bayu (contoh) @bayu_contoh, sampai ketemu lagi.
 
 Kalau kamu bikin satu repo kecil minggu ini untuk ditunjukkan ke pewawancara, isinya apa?
 
@@ -226,7 +226,7 @@ Sesi berikutnya kita umumkan di Discord FORA (link di bio atau discord.gg/rSepJu
 **X 1/3**
 
 ```text
-9 orang ngobrol di voice channel buat "Ngobrol Karier di Tech". Makasih Dika (contoh) @dika_contoh, ini catatannya.
+9 orang ngobrol di voice channel buat "Ngobrol Karier di Tech". Makasih Bayu (contoh) @bayu_contoh, ini catatannya.
 ```
 
 **X 2/3**
@@ -249,10 +249,10 @@ https://discord.gg/rSepJu7Wb
 ```text
 Rekap "Ngobrol Karier di Tech" (Sab, 23 Jan).
 
-Terima kasih Dika (contoh) @dika_contoh. 9 orang ikut ngobrol di voice channel.
+Terima kasih Bayu (contoh) @bayu_contoh. 9 orang ikut ngobrol di voice channel.
 
 1. Repo kecil yang bisa dijelaskan lebih berguna daripada daftar sertifikat. Salah satu peserta cerita, pewawancaranya menghabiskan lima belas menit di satu repo buatannya dan nggak membuka sertifikat sama sekali.
-2. Pindah ke SRE bisa mulai dari ikut jaga on-call. Dika minta mendampingi rekan yang sedang on-call, yang menangani sistem kalau bermasalah di luar jam kerja. Dari situ tugas pertamanya menulis runbook, catatan langkah menangani masalah yang sering muncul.
+2. Pindah ke SRE bisa mulai dari ikut jaga on-call. Bayu minta mendampingi rekan yang sedang on-call, yang menangani sistem kalau bermasalah di luar jam kerja. Dari situ tugas pertamanya menulis runbook, catatan langkah menangani masalah yang sering muncul.
 3. Belajar Terraform dari satu insiden nyata. Postmortem, catatan pembahasan insiden di kantor lama, jadi bahan belajar Terraform (alat untuk membuat server lewat file konfigurasi) yang paling nempel, karena tiap perintah ada alasannya.
 
 Kalau kamu bikin satu repo kecil minggu ini untuk ditunjukkan ke pewawancara, isinya apa?
@@ -389,7 +389,7 @@ Kita ngobrol di voice channel fora-voice Discord FORA. Boleh dengarkan saja, bol
 **Instagram**
 
 ```text
-Dika (contoh) @dika_contoh, SRE. Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
+Bayu (contoh) @bayu_contoh, SRE. Bayu dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
 
 Tanpa pembicara tamu, jadi yang cerita kita semua.
 
@@ -403,7 +403,7 @@ Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di 
 **X 1/2**
 
 ```text
-Dika (contoh) @dika_contoh, SRE. Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
+Bayu (contoh) @bayu_contoh, SRE. Bayu dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
 ```
 
 **X 2/2**
@@ -420,7 +420,7 @@ https://discord.gg/rSepJu7Wb
 ```text
 Ngobrol Karier di Tech (FORA)
 
-Dika (contoh) @dika_contoh, SRE. Dika dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
+Bayu (contoh) @bayu_contoh, SRE. Bayu dulu developer, sekarang SRE, tugasnya menjaga sistem tetap jalan. Pindahnya mulai dari ikut jaga on-call, yaitu siaga kalau ada masalah di luar jam kerja.
 
 Tanpa pembicara tamu, jadi yang cerita kita semua.
 
@@ -761,7 +761,7 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 
 **Instagram**
 
-<img src="sigcn-kubernetes-pemula/ig-feed/sig-intro.png" width="270" alt="SIG intro, ig-feed"> <img src="sigcn-kubernetes-pemula/ig-carousel/sig-intro-01.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-carousel/sig-intro-02.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-carousel/sig-intro-03.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-carousel/sig-intro-04.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-story/sig-intro.png" width="270" alt="SIG intro, ig-story">
+<img src="sigcn-kubernetes-pemula/ig-feed/sig-intro.png" width="270" alt="SIG intro, ig-feed"> <img src="sigcn-kubernetes-pemula/ig-carousel/sig-intro-01.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-carousel/sig-intro-02.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-carousel/sig-intro-03.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-carousel/sig-intro-04.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-carousel/sig-intro-05.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-kubernetes-pemula/ig-story/sig-intro.png" width="270" alt="SIG intro, ig-story">
 
 **X**
 
@@ -769,7 +769,7 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 
 **LinkedIn**
 
-<img src="sigcn-kubernetes-pemula/li-link/sig-intro.png" width="400" alt="SIG intro, li-link"> <img src="sigcn-kubernetes-pemula/li-doc/sig-intro-01.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-kubernetes-pemula/li-doc/sig-intro-02.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-kubernetes-pemula/li-doc/sig-intro-03.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-kubernetes-pemula/li-doc/sig-intro-04.png" width="270" alt="SIG intro, li-doc"> [PDF](sigcn-kubernetes-pemula/li-doc/sig-intro.pdf)
+<img src="sigcn-kubernetes-pemula/li-link/sig-intro.png" width="400" alt="SIG intro, li-link"> <img src="sigcn-kubernetes-pemula/li-doc/sig-intro-01.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-kubernetes-pemula/li-doc/sig-intro-02.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-kubernetes-pemula/li-doc/sig-intro-03.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-kubernetes-pemula/li-doc/sig-intro-04.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-kubernetes-pemula/li-doc/sig-intro-05.png" width="270" alt="SIG intro, li-doc"> [PDF](sigcn-kubernetes-pemula/li-doc/sig-intro.pdf)
 
 <details>
 <summary>Captions</summary>
@@ -777,7 +777,18 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 **Instagram**
 
 ```text
-SIG CN di FORA. Ngobrol soal menjalankan aplikasi di cloud, lewat suara.
+SIG CN di FORA. Ngobrol soal cloud native, dari Linux sampai model AI.
+
+Yang aktif sekarang.
+- Dika (Azzam Muhammadi Rizqun Karima) lagi persiapan sertifikasi Kubernetes, targetnya Kubestronaut.
+- Hamzah Chairil Salim belajar buat sertifikasi Kubernetes juga, sasarannya Kubestronaut.
+- Ammar Alfian ikut persiapan sertifikasi Kubernetes, mengejar Kubestronaut.
+- Mustafa Zaki Assegaf berbagi soal inference engineering, lanjutan dari IDSW.
+
+Yang lagi dikerjakan.
+- Persiapan sertifikasi Kubernetes, targetnya Kubestronaut (program CNCF buat yang memegang semua sertifikasi Kubernetes)
+- Belajar Linux dan systems engineering
+- Inference engineering bareng Mustafa
 
 Sesi terdekat soal "Kubernetes untuk Pemula", Sab, 12 Des jam 19.30 WIB.
 
@@ -786,10 +797,25 @@ Link Discord ada di bio (discord.gg/rSepJu7Wb). Masuk ke voice channel sig-cn-vo
 #FORA #SIGCN #Kubernetes #Container
 ```
 
-**X**
+**X 1/3**
 
 ```text
-SIG CN di FORA. Ngobrol soal menjalankan aplikasi di cloud, lewat suara.
+SIG CN di FORA. Ngobrol soal cloud native, dari Linux sampai model AI.
+```
+
+**X 2/3**
+
+```text
+Sekarang yang aktif Dika, Hamzah Chairil Salim, Ammar Alfian dan Mustafa Zaki Assegaf.
+Yang lagi dikerjakan.
+- Persiapan sertifikasi Kubernetes, targetnya Kubestronaut
+- Belajar Linux dan systems engineering
+- Inference engineering bareng Mustafa
+```
+
+**X 3/3**
+
+```text
 Sesi terdekat soal "Kubernetes untuk Pemula", Sab, 12 Des.
 Di voice channel sig-cn-voice Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
@@ -799,7 +825,18 @@ https://discord.gg/rSepJu7Wb
 **LinkedIn**
 
 ```text
-SIG CN di FORA. Ngobrol soal menjalankan aplikasi di cloud, lewat suara.
+SIG CN di FORA. Ngobrol soal cloud native, dari Linux sampai model AI.
+
+Yang aktif sekarang.
+• Dika (Azzam Muhammadi Rizqun Karima) lagi persiapan sertifikasi Kubernetes, targetnya Kubestronaut.
+• Hamzah Chairil Salim belajar buat sertifikasi Kubernetes juga, sasarannya Kubestronaut.
+• Ammar Alfian ikut persiapan sertifikasi Kubernetes, mengejar Kubestronaut.
+• Mustafa Zaki Assegaf berbagi soal inference engineering, lanjutan dari IDSW.
+
+Yang lagi dikerjakan.
+• Persiapan sertifikasi Kubernetes, targetnya Kubestronaut (program CNCF buat yang memegang semua sertifikasi Kubernetes)
+• Belajar Linux dan systems engineering
+• Inference engineering bareng Mustafa
 
 Sesi terdekat soal "Kubernetes untuk Pemula", Sab, 12 Des, 19.30–21.00 WIB.
 
@@ -1209,7 +1246,7 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 
 **Instagram**
 
-<img src="sigcn-gitops-argocd/ig-feed/sig-intro.png" width="270" alt="SIG intro, ig-feed"> <img src="sigcn-gitops-argocd/ig-carousel/sig-intro-01.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-gitops-argocd/ig-carousel/sig-intro-02.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-gitops-argocd/ig-carousel/sig-intro-03.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-gitops-argocd/ig-carousel/sig-intro-04.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-gitops-argocd/ig-story/sig-intro.png" width="270" alt="SIG intro, ig-story">
+<img src="sigcn-gitops-argocd/ig-feed/sig-intro.png" width="270" alt="SIG intro, ig-feed"> <img src="sigcn-gitops-argocd/ig-carousel/sig-intro-01.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-gitops-argocd/ig-carousel/sig-intro-02.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-gitops-argocd/ig-carousel/sig-intro-03.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-gitops-argocd/ig-carousel/sig-intro-04.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-gitops-argocd/ig-carousel/sig-intro-05.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-gitops-argocd/ig-story/sig-intro.png" width="270" alt="SIG intro, ig-story">
 
 **X**
 
@@ -1217,7 +1254,7 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 
 **LinkedIn**
 
-<img src="sigcn-gitops-argocd/li-link/sig-intro.png" width="400" alt="SIG intro, li-link"> <img src="sigcn-gitops-argocd/li-doc/sig-intro-01.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-gitops-argocd/li-doc/sig-intro-02.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-gitops-argocd/li-doc/sig-intro-03.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-gitops-argocd/li-doc/sig-intro-04.png" width="270" alt="SIG intro, li-doc"> [PDF](sigcn-gitops-argocd/li-doc/sig-intro.pdf)
+<img src="sigcn-gitops-argocd/li-link/sig-intro.png" width="400" alt="SIG intro, li-link"> <img src="sigcn-gitops-argocd/li-doc/sig-intro-01.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-gitops-argocd/li-doc/sig-intro-02.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-gitops-argocd/li-doc/sig-intro-03.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-gitops-argocd/li-doc/sig-intro-04.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-gitops-argocd/li-doc/sig-intro-05.png" width="270" alt="SIG intro, li-doc"> [PDF](sigcn-gitops-argocd/li-doc/sig-intro.pdf)
 
 <details>
 <summary>Captions</summary>
@@ -1225,17 +1262,43 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 **Instagram**
 
 ```text
-SIG CN itu grup FORA untuk ngobrol soal menjalankan aplikasi di cloud (cloud native). Contohnya aplikasi yang tiba-tiba lambat dan harus dicari penyebabnya, atau deploy yang bikin semuanya mogok. Tiap sesi satu tema, misalnya Kubernetes atau GitOps, di voice channel Discord. Satu orang cerita, yang lain nimbrung atau nanya.
+SIG CN itu grup FORA untuk ngobrol soal cloud native, pada dasarnya semua yang digarap CNCF. Bahasannya luas, termasuk menjalankan aplikasi di cloud, Linux dan systems engineering, Kubernetes, dan menjalankan model AI (inference). Tiap sesi satu tema, di voice channel Discord. Satu orang cerita, yang lain nimbrung atau nanya.
+
+Yang aktif sekarang.
+- Dika (Azzam Muhammadi Rizqun Karima) lagi persiapan sertifikasi Kubernetes, targetnya Kubestronaut.
+- Hamzah Chairil Salim belajar buat sertifikasi Kubernetes juga, sasarannya Kubestronaut.
+- Ammar Alfian ikut persiapan sertifikasi Kubernetes, mengejar Kubestronaut.
+- Mustafa Zaki Assegaf berbagi soal inference engineering, lanjutan dari IDSW.
+
+Yang lagi dikerjakan.
+- Persiapan sertifikasi Kubernetes, targetnya Kubestronaut (program CNCF buat yang memegang semua sertifikasi Kubernetes)
+- Belajar Linux dan systems engineering
+- Inference engineering bareng Mustafa
 
 Yang terdekat "GitOps dengan Argo CD", Sab, 19 Des jam 19.30 WIB. Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja boleh, mic juga boleh.
 
 #FORA #SIGCN #GitOps #ArgoCD
 ```
 
-**X**
+**X 1/3**
 
 ```text
-SIG CN di FORA. Ngobrol soal menjalankan aplikasi di cloud, lewat suara.
+SIG CN di FORA. Ngobrol soal cloud native, dari Linux sampai model AI.
+```
+
+**X 2/3**
+
+```text
+Sekarang yang aktif Dika, Hamzah Chairil Salim, Ammar Alfian dan Mustafa Zaki Assegaf.
+Yang lagi dikerjakan.
+- Persiapan sertifikasi Kubernetes, targetnya Kubestronaut
+- Belajar Linux dan systems engineering
+- Inference engineering bareng Mustafa
+```
+
+**X 3/3**
+
+```text
 Sesi terdekat soal "GitOps dengan Argo CD", Sab, 19 Des.
 Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
@@ -1245,7 +1308,18 @@ https://discord.gg/rSepJu7Wb
 **LinkedIn**
 
 ```text
-SIG CN di FORA. Ngobrol soal menjalankan aplikasi di cloud, lewat suara.
+SIG CN di FORA. Ngobrol soal cloud native, dari Linux sampai model AI.
+
+Yang aktif sekarang.
+• Dika (Azzam Muhammadi Rizqun Karima) lagi persiapan sertifikasi Kubernetes, targetnya Kubestronaut.
+• Hamzah Chairil Salim belajar buat sertifikasi Kubernetes juga, sasarannya Kubestronaut.
+• Ammar Alfian ikut persiapan sertifikasi Kubernetes, mengejar Kubestronaut.
+• Mustafa Zaki Assegaf berbagi soal inference engineering, lanjutan dari IDSW.
+
+Yang lagi dikerjakan.
+• Persiapan sertifikasi Kubernetes, targetnya Kubestronaut (program CNCF buat yang memegang semua sertifikasi Kubernetes)
+• Belajar Linux dan systems engineering
+• Inference engineering bareng Mustafa
 
 Sesi terdekat soal "GitOps dengan Argo CD", Sab, 19 Des, 19.30–21.00 WIB.
 
@@ -1663,7 +1737,7 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 
 **Instagram**
 
-<img src="sigcn-observability/ig-feed/sig-intro.png" width="270" alt="SIG intro, ig-feed"> <img src="sigcn-observability/ig-carousel/sig-intro-01.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-observability/ig-carousel/sig-intro-02.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-observability/ig-carousel/sig-intro-03.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-observability/ig-carousel/sig-intro-04.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-observability/ig-story/sig-intro.png" width="270" alt="SIG intro, ig-story">
+<img src="sigcn-observability/ig-feed/sig-intro.png" width="270" alt="SIG intro, ig-feed"> <img src="sigcn-observability/ig-carousel/sig-intro-01.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-observability/ig-carousel/sig-intro-02.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-observability/ig-carousel/sig-intro-03.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-observability/ig-carousel/sig-intro-04.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-observability/ig-carousel/sig-intro-05.png" width="270" alt="SIG intro, ig-carousel"> <img src="sigcn-observability/ig-story/sig-intro.png" width="270" alt="SIG intro, ig-story">
 
 **X**
 
@@ -1671,7 +1745,7 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 
 **LinkedIn**
 
-<img src="sigcn-observability/li-link/sig-intro.png" width="400" alt="SIG intro, li-link"> <img src="sigcn-observability/li-doc/sig-intro-01.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-observability/li-doc/sig-intro-02.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-observability/li-doc/sig-intro-03.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-observability/li-doc/sig-intro-04.png" width="270" alt="SIG intro, li-doc"> [PDF](sigcn-observability/li-doc/sig-intro.pdf)
+<img src="sigcn-observability/li-link/sig-intro.png" width="400" alt="SIG intro, li-link"> <img src="sigcn-observability/li-doc/sig-intro-01.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-observability/li-doc/sig-intro-02.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-observability/li-doc/sig-intro-03.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-observability/li-doc/sig-intro-04.png" width="270" alt="SIG intro, li-doc"> <img src="sigcn-observability/li-doc/sig-intro-05.png" width="270" alt="SIG intro, li-doc"> [PDF](sigcn-observability/li-doc/sig-intro.pdf)
 
 <details>
 <summary>Captions</summary>
@@ -1679,17 +1753,43 @@ Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel sig-cn-vo
 **Instagram**
 
 ```text
-SIG CN itu grup FORA untuk ngobrol soal menjalankan aplikasi di cloud (cloud native). Contohnya aplikasi yang tiba-tiba lambat dan harus dicari penyebabnya, atau deploy yang bikin semuanya mogok. Tiap sesi satu tema, misalnya Kubernetes atau GitOps, di voice channel Discord. Satu orang cerita, yang lain nimbrung atau nanya.
+SIG CN itu grup FORA untuk ngobrol soal cloud native, pada dasarnya semua yang digarap CNCF. Bahasannya luas, termasuk menjalankan aplikasi di cloud, Linux dan systems engineering, Kubernetes, dan menjalankan model AI (inference). Tiap sesi satu tema, di voice channel Discord. Satu orang cerita, yang lain nimbrung atau nanya.
+
+Yang aktif sekarang.
+- Dika (Azzam Muhammadi Rizqun Karima) lagi persiapan sertifikasi Kubernetes, targetnya Kubestronaut.
+- Hamzah Chairil Salim belajar buat sertifikasi Kubernetes juga, sasarannya Kubestronaut.
+- Ammar Alfian ikut persiapan sertifikasi Kubernetes, mengejar Kubestronaut.
+- Mustafa Zaki Assegaf berbagi soal inference engineering, lanjutan dari IDSW.
+
+Yang lagi dikerjakan.
+- Persiapan sertifikasi Kubernetes, targetnya Kubestronaut (program CNCF buat yang memegang semua sertifikasi Kubernetes)
+- Belajar Linux dan systems engineering
+- Inference engineering bareng Mustafa
 
 Yang terdekat "Observability: Logs, Metrics, Traces", Kam, 14 Jan jam 20.00 WIB. Langsung masuk voice channel sig-cn-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
 #FORA #SIGCN #Observability #OpenTelemetry
 ```
 
-**X**
+**X 1/3**
 
 ```text
-SIG CN di FORA. Ngobrol soal menjalankan aplikasi di cloud, lewat suara.
+SIG CN di FORA. Ngobrol soal cloud native, dari Linux sampai model AI.
+```
+
+**X 2/3**
+
+```text
+Sekarang yang aktif Dika, Hamzah Chairil Salim, Ammar Alfian dan Mustafa Zaki Assegaf.
+Yang lagi dikerjakan.
+- Persiapan sertifikasi Kubernetes, targetnya Kubestronaut
+- Belajar Linux dan systems engineering
+- Inference engineering bareng Mustafa
+```
+
+**X 3/3**
+
+```text
 Sesi terdekat soal "Observability: Logs, Metrics, Traces", Kam, 14 Jan.
 Di voice channel sig-cn-voice Discord FORA. Dengerin aja boleh, mic juga boleh.
 https://discord.gg/rSepJu7Wb
@@ -1699,7 +1799,18 @@ https://discord.gg/rSepJu7Wb
 **LinkedIn**
 
 ```text
-SIG CN itu grup FORA untuk ngobrol soal menjalankan aplikasi di cloud (cloud native). Contohnya aplikasi yang tiba-tiba lambat dan harus dicari penyebabnya, atau deploy yang bikin semuanya mogok. Tiap sesi satu tema, misalnya Kubernetes atau GitOps, di voice channel Discord. Satu orang cerita, yang lain nimbrung atau nanya.
+SIG CN itu grup FORA untuk ngobrol soal cloud native, pada dasarnya semua yang digarap CNCF. Bahasannya luas, termasuk menjalankan aplikasi di cloud, Linux dan systems engineering, Kubernetes, dan menjalankan model AI (inference). Tiap sesi satu tema, di voice channel Discord. Satu orang cerita, yang lain nimbrung atau nanya.
+
+Yang aktif sekarang.
+• Dika (Azzam Muhammadi Rizqun Karima) lagi persiapan sertifikasi Kubernetes, targetnya Kubestronaut.
+• Hamzah Chairil Salim belajar buat sertifikasi Kubernetes juga, sasarannya Kubestronaut.
+• Ammar Alfian ikut persiapan sertifikasi Kubernetes, mengejar Kubestronaut.
+• Mustafa Zaki Assegaf berbagi soal inference engineering, lanjutan dari IDSW.
+
+Yang lagi dikerjakan.
+• Persiapan sertifikasi Kubernetes, targetnya Kubestronaut (program CNCF buat yang memegang semua sertifikasi Kubernetes)
+• Belajar Linux dan systems engineering
+• Inference engineering bareng Mustafa
 
 Sesi terdekat soal "Observability: Logs, Metrics, Traces", Kamis, 14 Januari 2027, 20.00–21.30 WIB.
 

@@ -82,8 +82,7 @@ describe("captions", () => {
     ...Object.entries(variants).map(([name, v]): [string, Session, Sig] => [name, v.session, v.sig]),
   ];
   for (const [name, session, sig] of cases) {
-    for (const type of POST_TYPES) {
-      if (type === "recap" && !session.recap) continue;
+    for (const type of postTypesFor(session)) {
       test(`${name} / ${type}`, () => {
         const c = buildCaptions(session, sig, community, type);
         clean(c.instagram, "instagram");
@@ -102,7 +101,7 @@ describe("captions", () => {
       const x = c.x.join("\n");
       assert.ok(!x.includes(s.note!) || (c.x.length === 1 && x.startsWith(s.note!)), "X announce: the note leads a single post or is left out");
       assert.ok(c.linkedin.includes(s.note!), "LinkedIn announce");
-      for (const type of POST_TYPES.filter((type) => type !== "announce" && (type !== "recap" || s.recap))) {
+      for (const type of postTypesFor(s).filter((type) => type !== "announce")) {
         const other = buildCaptions(s, sigOf(s), community, type);
         const all = [other.instagram, ...other.x, other.linkedin].join("\n");
         assert.ok(!all.includes(s.note!) && !all.includes(firstSentence(s.note!)), `${s.id} / ${type} repeats the host's note`);
@@ -123,7 +122,7 @@ describe("captions", () => {
   });
 
   test("a reminder says later and a live post says now, never both", () => {
-    for (const s of samples) {
+    for (const s of samples.filter((s) => s.date !== undefined)) {
       const reminder = buildCaptions(s, sigOf(s), community, "reminder");
       const live = buildCaptions(s, sigOf(s), community, "live");
       const r = [reminder.instagram, ...reminder.x, reminder.linkedin].join("\n");
@@ -170,7 +169,8 @@ describe("templates", () => {
 
 describe("data files", () => {
   for (const [id, sig] of sigs) {
-    test(`sigs/${id}.yaml`, () => clean([sig.tagline, sig.description].join("\n"), "data"));
+    test(`sigs/${id}.yaml`, () =>
+      clean([sig.tagline, sig.description, ...(sig.agenda ?? []), ...(sig.people ?? []).flatMap((p) => [p.name, p.about ?? ""])].join("\n"), "data"));
   }
   for (const s of samples) {
     test(`session file ${s.id}.yaml`, () => clean(copyOf(s), "data"));

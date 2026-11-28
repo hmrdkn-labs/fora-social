@@ -46,9 +46,19 @@ export interface RunResult {
   failures: string[];
 }
 
-/** Recap posts exist only for sessions that have a recap. */
+/** Post types that need the day: a session with `when` instead of `date` gets none of them. */
+const NEEDS_DATE: readonly PostType[] = ["announce", "reminder", "live", "recap"];
+
+/** Why a post type is not made for `session`, or undefined when it is. */
+export function skipReason(session: Session, type: PostType): string | undefined {
+  if (session.date === undefined && NEEDS_DATE.includes(type)) return `${type}: skipped, the session has no date yet (set date instead of when)`;
+  if (type === "recap" && session.recap === undefined) return "recap: skipped, the session has no recap section";
+  return undefined;
+}
+
+/** Recap posts exist only for sessions that have a recap; day-bound posts only for sessions with a date. */
 export function postTypesFor(session: Session): PostType[] {
-  return POST_TYPES.filter((type) => type !== "recap" || session.recap !== undefined);
+  return POST_TYPES.filter((type) => skipReason(session, type) === undefined);
 }
 
 export async function runSessions(files: readonly string[], options: RunOptions): Promise<RunResult> {
@@ -76,6 +86,10 @@ export async function runSessions(files: readonly string[], options: RunOptions)
 
       const run: SessionRun = { session, sig, outputs: [] };
       const outDir = join(options.outRoot, session.id);
+      for (const type of POST_TYPES) {
+        const reason = skipReason(session, type);
+        if (reason !== undefined) options.log(`${session.id} · ${reason}`);
+      }
       for (const postType of postTypesFor(session)) {
         try {
           await writeCaptions(outDir, session, sig, options.community, postType);

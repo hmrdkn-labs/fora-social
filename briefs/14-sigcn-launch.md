@@ -94,3 +94,24 @@ Fill below: commits, check result, the sig-intro X caption and the SIG CN descri
 (before → after), anything guessed. At most 15 lines in your reply.
 
 ### Result
+
+- **Commits:** see `git log 14-sigcn-launch` (one feature commit).
+- **Check:** `pnpm check` passes (tsc, 231 tests, style linter included). `pnpm render` and `pnpm examples` report no overflow in any format.
+- **Sheets:** cover, sig-intro and speakers sheets of `sigcn-cara-kerja-model-ai` looked at; posts copied to `posts/sigcn-cara-kerja-model-ai/` (sig-intro first, "SIG CN launch post (post this first)").
+- **SIG CN description, before:** "SIG CN itu grup FORA untuk ngobrol soal menjalankan aplikasi di cloud (cloud native). Contohnya aplikasi yang tiba-tiba lambat dan harus dicari penyebabnya, atau deploy yang bikin semuanya mogok. Tiap sesi satu tema, misalnya Kubernetes atau GitOps, di voice channel Discord. Satu orang cerita, yang lain nimbrung atau nanya."
+- **After:** "SIG CN itu grup FORA untuk ngobrol soal cloud native, pada dasarnya semua yang digarap CNCF. Bahasannya luas, termasuk menjalankan aplikasi di cloud, Linux dan systems engineering, Kubernetes, dan menjalankan model AI (inference). Tiap sesi satu tema, di voice channel Discord. Satu orang cerita, yang lain nimbrung atau nanya."
+- **Tagline, before → after:** "Ngobrol soal menjalankan aplikasi di cloud, lewat suara." → "Ngobrol soal cloud native, dari Linux sampai model AI."
+- **sig-intro X caption (thread of 3):**
+  1. "SIG CN di FORA. Ngobrol soal cloud native, dari Linux sampai model AI."
+  2. "Sekarang yang aktif Dika, Hamzah Chairil Salim, Ammar Alfian dan Mustafa Zaki Assegaf. / Yang lagi dikerjakan. / - Persiapan sertifikasi Kubernetes, targetnya Kubestronaut / - Belajar Linux dan systems engineering / - Inference engineering bareng Mustafa"
+  3. "Sesi terdekat soal "Cara Kerja Model AI", Minggu depan, harinya menyusul, jam 19.30 WIB. / Di voice channel general Discord FORA. … / https://discord.gg/rSepJu7Wb / #SIGCN"
+- **Guessed:**
+  - `when` is "Minggu depan, harinya menyusul". "Habis isya" appears only in the session description, not in captions or images, because no field carries it.
+  - Dika's `name` is "Dika (Azzam Muhammadi Rizqun Karima)" (full name as given); X captions use "Dika".
+  - Mustafa's `handle` is left out (not given).
+  - The Kubestronaut explanation sits in the first agenda item, so it shows on IG, LinkedIn and the tall images. The X caption leaves it out for length.
+  - Hamzah's and Ammar's `about` lines are my rewording of the one line given.
+  - The session's `format`, `problem`, `description` and `topics` are my wording from the facts.
+  - On ig-feed the SIG description and "Untuk siapa" don't fit next to people and agenda, so that poster drops them. Wide formats show names only.
+  - On an undated session the posts README says "post this first" for the sig-intro.
+- **Also changed:** the wide cover narrows the schedule's width estimate for undated sessions only; dated covers are unchanged.

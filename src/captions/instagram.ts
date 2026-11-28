@@ -1,5 +1,5 @@
 import type { PostType } from "../types.ts";
-import { aboutPeople, cap, type Ctx, firstSentence, hashLine, openDoor, PRACTICAL, practicalIndex, problemLine, sentence, shape, themeTag, uniqueTags } from "./context.ts";
+import { aboutPeople, cap, type Ctx, firstSentence, hashLine, nextAt, openDoor, PRACTICAL, practicalIndex, problemLine, sentence, shape, sigAgenda, sigCrew, themeTag, uniqueTags } from "./context.ts";
 
 function tags(c: Ctx): string {
   return hashLine(
@@ -123,12 +123,17 @@ export function instagram(c: Ctx, type: PostType): string {
           : [problem, s.title, `${series} ${when}.`, join(c, 1)];
       break;
     }
-    case "sig-intro":
+    case "sig-intro": {
+      const crew = sigCrew(c, true);
+      const agenda = sigAgenda(c);
+      const who = crew.length > 0 ? `Yang aktif sekarang.\n${bullets(crew)}` : "";
+      const work = agenda.length > 0 ? `Yang lagi dikerjakan.\n${bullets(agenda)}` : "";
       blocks =
         v === 0
-          ? [`${c.introName}. ${sig.tagline}`, `Sesi terdekat soal "${s.title}", ${c.dateShort} jam ${c.time}.`, join(c, 0)]
-          : [sig.description, `Yang terdekat "${s.title}", ${c.dateShort} jam ${c.time}. ${join(c, 2)}`];
+          ? [`${c.introName}. ${sig.tagline}`, who, work, `Sesi terdekat soal "${s.title}", ${nextAt(c)}.`, join(c, 0)]
+          : [sig.description, who, work, `Yang terdekat "${s.title}", ${nextAt(c)}. ${join(c, 2)}`];
       break;
+    }
     case "speakers":
       blocks =
         v === 0

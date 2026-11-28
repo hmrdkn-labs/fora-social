@@ -41,7 +41,12 @@ const SECTIONS: Section[] = [
 /** Posts are listed in the order they are published. */
 const ORDER: PostType[] = ["announce", "reminder", "live", "recap", "cover", "speakers", "sig-intro"];
 
-function heading(type: PostType, session: Session): string {
+/** A session without a date is a SIG launch: the SIG intro goes out first, then the cover and the speakers. */
+const LAUNCH_ORDER: PostType[] = ["sig-intro", "cover", "speakers"];
+
+export const orderFor = (session: Session): PostType[] => (session.date === undefined ? LAUNCH_ORDER : ORDER);
+
+function heading(type: PostType, session: Session, sig: Sig): string {
   const day = formatDate(session).split(",")[0];
   switch (type) {
     case "announce":
@@ -57,7 +62,7 @@ function heading(type: PostType, session: Session): string {
     case "speakers":
       return session.speakers.length > 0 ? "Speakers" : "Host";
     case "sig-intro":
-      return "Kenalan FORA";
+      return session.date === undefined ? `${sig.short} launch post (post this first)` : "Kenalan FORA";
   }
 }
 
@@ -93,12 +98,12 @@ export function postsReadme(dir: string, session: Session, sig: Sig, community: 
     `Jump to: ${SECTIONS.map((s) => `[${s.platform}](#${s.platform.toLowerCase()})`).join(" · ")}`,
     "",
   ];
-  const types = ORDER.filter((type) => SECTIONS.some((s) => s.groups.some((g) => images(dir, g.format, type).length > 0)));
+  const types = orderFor(session).filter((type) => SECTIONS.some((s) => s.groups.some((g) => images(dir, g.format, type).length > 0)));
   for (const section of SECTIONS) {
     lines.push(`## ${section.platform}`, "");
     for (const type of types) {
       if (!section.groups.some((g) => images(dir, g.format, type).length > 0)) continue;
-      lines.push(`### ${heading(type, session)}`, "");
+      lines.push(`### ${heading(type, session, sig)}`, "");
       lines.push(...postBlock(dir, section, type, buildCaptions(session, sig, community, type)));
     }
   }

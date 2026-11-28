@@ -2,7 +2,7 @@
 
 ## Instagram
 
-Live sekarang, ngobrol bareng Dika (contoh) @dika_contoh.
+Live sekarang, ngobrol bareng Bayu (contoh) @bayu_contoh.
 
 Ngobrol Karier di Tech
 
@@ -24,7 +24,7 @@ https://discord.gg/rSepJu7Wb
 
 Sedang live sekarang.
 
-Ngobrol Karier di Tech, ngobrol bareng Dika (contoh) @dika_contoh.
+Ngobrol Karier di Tech, ngobrol bareng Bayu (contoh) @bayu_contoh.
 
 Lamaran sudah dikirim ke mana-mana, tapi nggak ada kabar dan nggak jelas salahnya di mana.
 
