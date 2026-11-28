@@ -101,12 +101,12 @@ test("a session crossing midnight ends the next day", () => {
 });
 
 test("speakerLine reads naturally", () => {
-  assert.equal(speakerLine(base), "dipandu Rina (contoh)");
+  assert.equal(speakerLine(base), "ngobrol bareng Rina (contoh)");
   const two = { ...base, speakers: [{ name: "A" }, { name: "B" }] };
   assert.equal(speakerLine(two), "bersama A dan B, dipandu Rina (contoh)");
   const three = { ...base, speakers: [{ name: "A" }, { name: "B" }, { name: "C" }] };
   assert.equal(speakerLine(three), "bersama A, B dan C, dipandu Rina (contoh)");
-  assert.equal(speakerLine({ ...base, host: { name: "R", handle: "r" } }, true), "dipandu R @r");
+  assert.equal(speakerLine({ ...base, host: { name: "R", handle: "r" } }, true), "ngobrol bareng R @r");
 });
 
 test("the plain problem leads the cover, and reminder and live use it once each without the subtitle", () => {

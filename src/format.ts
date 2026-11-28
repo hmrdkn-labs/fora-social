@@ -74,12 +74,11 @@ export function joinNames(names: string[]): string {
 }
 
 /**
- * "bersama A dan B, dipandu C" or "dipandu C" when there are no speakers.
+ * "bersama A dan B, dipandu C" or "ngobrol bareng C" when there are no speakers.
  * With `withHandles`, each person is followed by their handle when they have one.
  */
 export function speakerLine(s: Session, withHandles = false): string {
   const name = (p: Person) => (withHandles && p.handle ? `${p.name} ${handle(p)}` : p.name);
-  const host = `dipandu ${name(s.host)}`;
-  if (s.speakers.length === 0) return host;
-  return `bersama ${joinNames(s.speakers.map(name))}, ${host}`;
+  if (s.speakers.length === 0) return `ngobrol bareng ${name(s.host)}`;
+  return `bersama ${joinNames(s.speakers.map(name))}, dipandu ${name(s.host)}`;
 }

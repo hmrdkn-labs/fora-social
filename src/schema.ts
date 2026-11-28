@@ -47,6 +47,7 @@ export const SessionSchema = z.strictObject({
   title: nonEmpty,
   subtitle: z.string().optional(),
   problem: z.string().optional(),
+  format: nonEmpty.optional(),
   image: z.strictObject({ src: nonEmpty, alt: nonEmpty }).optional(),
   date: z.string().refine(isRealDate, { error: (i) => `must be a real date as YYYY-MM-DD, got ${String(i.input)}` }),
   time: z.string().regex(TIME, { error: (i) => `must be HH:MM, got ${String(i.input)}` }),

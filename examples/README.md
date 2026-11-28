@@ -32,7 +32,7 @@ Ngobrol Karier di Tech
 
 Waktu cari kerja pertama saya kirim 40 lamaran dan cuma dua yang dibalas. Saya mau dengar cara kalian.
 
-Sab, 23 Jan, 19.30–21.00 WIB. Dipandu Dika (contoh) @dika_contoh.
+Sab, 23 Jan, 19.30–21.00 WIB. Ngobrol bareng Dika (contoh) @dika_contoh.
 
 - Cari kerja pertama di tech
 - Belajar sambil kerja
@@ -65,7 +65,7 @@ Sab, 23 Jan, 19.30–21.00 WIB. Waktu cari kerja pertama saya kirim 40 lamaran d
 • Belajar sambil kerja
 • Pindah dari developer ke SRE
 
-Dipandu Dika (contoh) @dika_contoh.
+Ngobrol bareng Dika (contoh) @dika_contoh.
 
 Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 
@@ -98,7 +98,7 @@ Jam 19.30 WIB nanti kita ngobrol soal Karier.
 
 Lamaran sudah dikirim ke mana-mana, tapi nggak ada kabar dan nggak jelas salahnya di mana.
 
-Ngobrol Karier di Tech, dipandu Dika (contoh) @dika_contoh.
+Ngobrol Karier di Tech, ngobrol bareng Dika (contoh) @dika_contoh.
 
 Pakai headset kalau ada, dari HP juga bisa. Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
@@ -122,7 +122,7 @@ Hari ini jam 19.30 WIB kita ngobrol soal Karier.
 
 Lamaran sudah dikirim ke mana-mana, tapi nggak ada kabar dan nggak jelas salahnya di mana.
 
-Ngobrol Karier di Tech, Sabtu, 23 Januari 2027. Dipandu Dika (contoh) @dika_contoh.
+Ngobrol Karier di Tech, Sabtu, 23 Januari 2027. Ngobrol bareng Dika (contoh) @dika_contoh.
 
 Headset membantu, dan dari ponsel juga bisa. Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 
@@ -151,7 +151,7 @@ Headset membantu, dan dari ponsel juga bisa. Gabung lewat https://discord.gg/rSe
 **Instagram**
 
 ```text
-Live sekarang, dipandu Dika (contoh) @dika_contoh.
+Live sekarang, ngobrol bareng Dika (contoh) @dika_contoh.
 
 Ngobrol Karier di Tech
 
@@ -177,7 +177,7 @@ https://discord.gg/rSepJu7Wb
 ```text
 Sedang live sekarang.
 
-Ngobrol Karier di Tech, dipandu Dika (contoh) @dika_contoh.
+Ngobrol Karier di Tech, ngobrol bareng Dika (contoh) @dika_contoh.
 
 Lamaran sudah dikirim ke mana-mana, tapi nggak ada kabar dan nggak jelas salahnya di mana.
 

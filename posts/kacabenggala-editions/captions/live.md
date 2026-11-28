@@ -4,7 +4,7 @@
 
 Apa di Balik Kacabenggala Editions lagi jalan sekarang.
 
-Buku lama yang sudah tidak dicetak makin sulit dibaca di layar zaman ini.
+Buku lama susah dibaca di layar. Andre ngobrol soal OCR dan LaTeX di balik arsipnya.
 
 Langsung masuk voice channel general, link Discord di bio (discord.gg/rSepJu7Wb). Dengerin aja boleh, mic juga boleh.
 
@@ -13,7 +13,7 @@ Langsung masuk voice channel general, link Discord di bio (discord.gg/rSepJu7Wb)
 ## X
 
 Live sekarang, Apa di Balik Kacabenggala Editions.
-Buku lama yang sudah tidak dicetak makin sulit dibaca di layar zaman ini.
+Buku lama susah dibaca di layar. Andre ngobrol soal OCR dan LaTeX di balik arsipnya.
 Masuk lewat link ini, ke voice channel general. Mau dengerin aja boleh, mau nyalain mic juga boleh.
 https://discord.gg/rSepJu7Wb
 #Kacabenggala
@@ -22,9 +22,9 @@ https://discord.gg/rSepJu7Wb
 
 Apa di Balik Kacabenggala Editions sedang berjalan.
 
-Buku lama yang sudah tidak dicetak makin sulit dibaca di layar zaman ini.
+Buku lama susah dibaca di layar. Andre ngobrol soal OCR dan LaTeX di balik arsipnya.
 
-Dipandu Andre Pramaditya.
+Ngobrol bareng Andre Pramaditya.
 
 Langsung masuk ke voice channel general lewat https://discord.gg/rSepJu7Wb. Dengarkan saja boleh, ikut bicara juga boleh.
 

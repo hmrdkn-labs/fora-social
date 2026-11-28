@@ -60,7 +60,7 @@ function people(ctx: TemplateContext): Block {
   const { host, speakers } = ctx.session;
   const hostHeight = personHeight(host, RIGHT);
   if (speakers.length === 0) {
-    const format = "Diskusi terbuka, tanpa tamu";
+    const format = ctx.session.format ?? "Diskusi terbuka, tanpa tamu";
     return {
       html: fact("Host", person(ctx, host)) + fact("Format", format),
       height: factHeight(Math.max(personHeight(host, LEFT), textHeight(format, 34, RIGHT, 1.18))),
@@ -136,7 +136,7 @@ function cast(ctx: TemplateContext): string {
       : `<p class="lead">${e(joinNames(speakers.map((p) => p.name)))}</p>${person(ctx, hostCard, size)}`;
   return `<main class="main" data-fit>
   <div class="lede">
-    <p class="kicker">${speakers.length > 0 ? "Bersama" : "Dipandu"}</p>
+    <p class="kicker">${speakers.length > 0 ? "Bersama" : "Ngobrol bareng"}</p>
     ${count <= 3 ? `<h2 class="h2">${heading}</h2>` : ""}
   </div>
   <div class="cast">${cards}</div>

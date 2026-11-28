@@ -91,6 +91,12 @@ export interface Session {
    */
   problem?: string;
   /**
+   * Optional, a few words on how the session runs, shown as "Format" on posters
+   * ("Open space, ngobrol di general"). Default for sessions without speakers: an open
+   * discussion with no guests.
+   */
+  format?: string;
+  /**
    * Optional logo or artwork of the thing the session is about (a project, a book, a tool),
    * never a person. Repo-relative path to a PNG or SVG with a transparent background, plus alt
    * text. Posters show it as a supporting mark next to the theme; dark line art is inverted to
