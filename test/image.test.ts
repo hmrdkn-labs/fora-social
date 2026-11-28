@@ -22,6 +22,20 @@ function html(s: Session, postType: PostType, id: FormatId): string {
   return TEMPLATES[postType]({ session: s, sig: SIG, community: COMMUNITY, format, asset: (path) => `file:///${path}` }).join("\n");
 }
 
+describe("session format line", () => {
+  const withFormat = (format?: string) => parseSession(stringify({ ...BASE, speakers: [], format }), "sessions/f.yaml", SIGS);
+
+  test("announce shows the session's own format", () => {
+    const out = html(withFormat("Open space, ngobrol di general"), "announce", "ig-feed");
+    assert.match(out, /Open space, ngobrol di general/);
+    assert.doesNotMatch(out, /Diskusi terbuka/);
+  });
+
+  test("announce falls back to the open-discussion line without one", () => {
+    assert.match(html(withFormat(), "announce", "ig-feed"), /Diskusi terbuka, tanpa tamu/);
+  });
+});
+
 describe("session image", () => {
   test("is drawn as a mark on cover, announce, reminder and live, in tall and wide formats", () => {
     const s = session(IMAGE);

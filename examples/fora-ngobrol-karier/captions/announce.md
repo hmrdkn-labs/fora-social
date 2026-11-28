@@ -6,7 +6,7 @@ Ngobrol Karier di Tech
 
 Waktu cari kerja pertama saya kirim 40 lamaran dan cuma dua yang dibalas. Saya mau dengar cara kalian.
 
-Sab, 23 Jan, 19.30–21.00 WIB. Dipandu Dika (contoh) @dika_contoh.
+Sab, 23 Jan, 19.30–21.00 WIB. Ngobrol bareng Dika (contoh) @dika_contoh.
 
 - Cari kerja pertama di tech
 - Belajar sambil kerja
@@ -35,7 +35,7 @@ Sab, 23 Jan, 19.30–21.00 WIB. Waktu cari kerja pertama saya kirim 40 lamaran d
 • Belajar sambil kerja
 • Pindah dari developer ke SRE
 
-Dipandu Dika (contoh) @dika_contoh.
+Ngobrol bareng Dika (contoh) @dika_contoh.
 
 Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 

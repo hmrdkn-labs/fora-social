@@ -6,7 +6,7 @@ Jam 19.30 WIB nanti kita ngobrol soal Karier.
 
 Lamaran sudah dikirim ke mana-mana, tapi nggak ada kabar dan nggak jelas salahnya di mana.
 
-Ngobrol Karier di Tech, dipandu Dika (contoh) @dika_contoh.
+Ngobrol Karier di Tech, ngobrol bareng Dika (contoh) @dika_contoh.
 
 Pakai headset kalau ada, dari HP juga bisa. Langsung masuk voice channel fora-voice lewat discord.gg/rSepJu7Wb (ada juga di bio). Dengerin aja nggak apa-apa, ngomong juga silakan.
 
@@ -26,7 +26,7 @@ Hari ini jam 19.30 WIB kita ngobrol soal Karier.
 
 Lamaran sudah dikirim ke mana-mana, tapi nggak ada kabar dan nggak jelas salahnya di mana.
 
-Ngobrol Karier di Tech, Sabtu, 23 Januari 2027. Dipandu Dika (contoh) @dika_contoh.
+Ngobrol Karier di Tech, Sabtu, 23 Januari 2027. Ngobrol bareng Dika (contoh) @dika_contoh.
 
 Headset membantu, dan dari ponsel juga bisa. Gabung lewat https://discord.gg/rSepJu7Wb, lalu masuk ke voice channel fora-voice. Boleh dengarkan saja, boleh juga ikut bicara.
 

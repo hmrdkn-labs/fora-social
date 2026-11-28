@@ -67,6 +67,7 @@ host:                             # required
 speakers: []                      # optional, default []. Same fields as host
 note: Dulu saya baru paham Pod setelah sengaja mematikan satu. # optional. One or two sentences in your voice; captions lead with it
 description: Sesi pertama Cloud Native 101. Kita mulai dari kenapa container butuh orkestrasi.   # required. At most 280 characters
+format: Open space, ngobrol di general   # optional. A few words on how the session runs, shown as "Format" on the announce poster. Default without speakers: "Diskusi terbuka, tanpa tamu"
 topics:                           # optional. 0 to 6 short items
   - Pod, Deployment, dan Service
 discord: https://discord.gg/rSepJu7Wb   # optional. Overrides the invite in community.yaml

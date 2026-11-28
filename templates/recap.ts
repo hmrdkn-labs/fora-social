@@ -51,7 +51,7 @@ function attendance(ctx: TemplateContext): string {
 
 function thanks(ctx: TemplateContext): string {
   const { host, speakers } = ctx.session;
-  if (speakers.length === 0) return `Terima kasih ${host.name} yang memandu, dan semua yang ikut ngobrol.`;
+  if (speakers.length === 0) return `Terima kasih ${host.name} yang sudah ngobrol bareng kita, dan semua yang ikut nimbrung.`;
   return `Terima kasih ${joinNames(speakers.map((p) => p.name))} yang sudah berbagi, dan ${host.name} yang memandu.`;
 }
 
