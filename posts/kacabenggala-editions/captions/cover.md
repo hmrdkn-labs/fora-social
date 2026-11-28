@@ -2,7 +2,7 @@
 
 ## Instagram
 
-Buku lama yang sudah tidak dicetak makin sulit dibaca di layar zaman ini.
+Buku lama susah dibaca di layar. Andre ngobrol soal OCR dan LaTeX di balik arsipnya.
 
 Apa di Balik Kacabenggala Editions
 
@@ -14,7 +14,7 @@ Mampir ke voice channel general di Discord FORA, link di bio atau discord.gg/rSe
 
 ## X
 
-Buku lama yang sudah tidak dicetak makin sulit dibaca di layar zaman ini.
+Buku lama susah dibaca di layar. Andre ngobrol soal OCR dan LaTeX di balik arsipnya.
 Apa di Balik Kacabenggala Editions
 Min, 29 Nov, 19.00–20.30 WIB
 Di voice channel general Discord FORA. Mau dengerin aja boleh, mau nyalain mic juga boleh.
@@ -23,7 +23,7 @@ https://discord.gg/rSepJu7Wb
 
 ## LinkedIn
 
-Buku lama yang sudah tidak dicetak makin sulit dibaca di layar zaman ini.
+Buku lama susah dibaca di layar. Andre ngobrol soal OCR dan LaTeX di balik arsipnya.
 
 Tema Kacabenggala bareng FORA. Sesinya "Apa di Balik Kacabenggala Editions", Minggu, 29 November 2026, 19.00–20.30 WIB.
 

@@ -69,3 +69,12 @@ Fill below: commits, check result, before/after of the Kacabenggala description,
 X announce caption. At most 15 lines in your reply.
 
 ### Result
+
+Commits: see `git log 13-kacabenggala-copy`. `pnpm check` passes (213 tests, style linter included).
+All six sheets looked at; no overflow, mirror backdrop unchanged, grey silhouette kept.
+
+**Description.** Before: "… Andre cerita soal membangun dan menjalankan arsip digital ini, dan soal menata ulang buku lama untuk layar sekarang." After: "… Andre ngobrol soal cara arsipnya dibuat: OCR untuk mengambil teks dari scan buku lama, dan LaTeX untuk menata ulang halamannya."
+
+**Topics.** Before: arsip nonkomersial; menata ulang buku lama; unduhan PDF/EPUB; Ilalang; Kacabenggala cermin dalam Ramayana Jawa. After: OCR (mengambil teks dari hasil scan buku lama); LaTeX (menata ulang halaman supaya rapi dibaca di layar); arsip nonkomersial; unduhan PDF/EPUB; Ilalang. Ramayana and the "menata ulang" topic dropped (merged into LaTeX).
+
+**X announce caption.** Before: "Buku lama yang sudah tidak dicetak makin sulit dibaca di layar zaman ini. / Apa di Balik Kacabenggala Editions, Min, 29 Nov jam 19.00 WIB. / …". After: "Buku lama susah dibaca di layar. Andre ngobrol soal OCR dan LaTeX di balik arsipnya. / Apa di Balik Kacabenggala Editions, Min, 29 Nov jam 19.00 WIB. / …". The problem line was cut to fit the X length limit; a longer one pushed the cover into a two-post thread.
